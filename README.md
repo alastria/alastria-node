@@ -27,7 +27,7 @@ Es necesario habilitar los siguientes puertos de E/S en la maquina en la que vam
 Para configurar e instalar Quorum y Constellation, debe clonar el repositorio git que indicamos a continuación en el servidor de aplicaciones y ejecutar el siguiente script `scripts/bootstrap.sh`.
 
 ```
-$ git clone https://github.com/marcossanlab/alastria-node.git
+$ git clone https://github.com/alastria/alastria-node.git
 $ cd alastria-node/scripts/
 $ sudo -H ./bootstrap.sh
 ```
@@ -39,9 +39,13 @@ $ sudo -H ./bootstrap.sh
 
 	Configura el nodo Quorum junto con Constellation. 
 	
-	Al ejecutar este script debemos de pasar como parametro la IP pública del nodo que estamos configurando.
+	Al ejecutar este script debemos de pasar como parametro la IP pública del nodo que estamos configurando:
 	```
 	$ ./init.sh <<PUBLIC_IP_HOST_MACHINE>>
+	```
+	O con el parámetro **auto** para detectarla automáticamente:
+	```
+	$ ./init.sh auto
 	```
 
 2. **Configuración del fichero de nodos Quorum**
