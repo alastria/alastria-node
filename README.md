@@ -86,9 +86,17 @@ Con el fin de realizar este procedimiento se debe indicar al administrador del p
 
 ## Build/Run with Docker
 
-Para poder ejecutar **Quorum** y **Constellation** con [Docker](https://www.docker.com/) se añade el fichero `Dockerfile`.
+**NOTA**
+Ejecución con Docker es muy experimental y se requiere ejecutar el contenedor en modo interactivo y desde allí ejecutar los scripts `init.sh` y `start.sh`.
 
-Primer paso sería crear la imagen en base del fichero `Dockerfile` con este commando:
+
+Existen dos posibilidades cómo ejecutar **Quorum** y **Constellation** con [Docker](https://www.docker.com/):
+- Primera posibilidad es la más fácil y depende de una imagen de Docker disponible en [Docker Hub](hub.docker.com). En este caso lo único que se requiere es ejecutar el siguiente comando:
+```
+docker run -it --rm --name alastria koubek/alastria-node bash
+```
+
+- La segundo opción supone de que la imagen se quiere construir por el usuario mismo y para ello sirve el fichero `Dockerfile`. Para crear la imagen propia hay que ejecutar el siguiente este commando desde la carpeta dónde se encuentra el mismo fichero `Dockerfile`:
 ```
 docker build -t alastria .
 ```
@@ -97,7 +105,3 @@ Al tener la imagen preparada se puede ejecutar (ahora en forma experimental e in
 ```
 docker run -it --rm --name alastria alastria bash
 ```
-
-Y ahora, dentro del shell del contenedor se pueden ejecutar los scripts `init.sh` y `start.sh`.
-
-Posiblemente en futuro habrá la imagen disponible para descargar en [docker hub](https://hub.docker.com/) y por eso no hará falta realizar la construcción de la imagen (el primer paso).

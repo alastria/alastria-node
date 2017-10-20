@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-LABEL maintainer "Jakub Vanak"
+LABEL maintainer "Jakub Vanak (https://github.com/Koubek)"
 
 COPY data /root/alastria-node/data
 RUN chmod -R u+x /root/alastria-node/data
