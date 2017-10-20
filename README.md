@@ -93,7 +93,7 @@ Ejecución con Docker es muy experimental y se requiere ejecutar el contenedor e
 Existen dos posibilidades cómo ejecutar **Quorum** y **Constellation** con [Docker](https://www.docker.com/):
 - Primera posibilidad es la más fácil y depende de una imagen de Docker disponible en [Docker Hub](hub.docker.com). En este caso lo único que se requiere es ejecutar el siguiente comando:
 ```
-docker run -it --rm --name alastria koubek/alastria-node bash
+docker run -it --rm --name alastria -p 9000:9000 -p 21000:21000 -p 22000:22000 -p 41000:41000 koubek/alastria-node bash
 ```
 
 - La segundo opción supone de que la imagen se quiere construir por el usuario mismo y para ello sirve el fichero `Dockerfile`. Para crear la imagen propia hay que ejecutar el siguiente este commando desde la carpeta dónde se encuentra el mismo fichero `Dockerfile`:
@@ -103,5 +103,5 @@ docker build -t alastria .
 
 Al tener la imagen preparada se puede ejecutar (ahora en forma experimental e interactiva solo):
 ```
-docker run -it --rm --name alastria alastria bash
+docker run -it --rm --name alastria -p 9000:9000 -p 21000:21000 -p 22000:22000 -p 41000:41000 alastria bash
 ```
