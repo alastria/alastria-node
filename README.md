@@ -82,3 +82,22 @@ A la hora de realizar transacciones en la red de Alastria es necesario realizar 
 Una vez que se levantado el nodo, es necesaria la realización de una transferencia de fondos de la cuenta principal a la cuenta que acaba de ser generada al iniciarse el nodo.
 
 Con el fin de realizar este procedimiento se debe indicar al administrador del primer nodo de la red, poseedor de la cuenta principal, la cuenta que se ha generado al levantar el nodo. Tras esto, el administrador deberá asignar a la cuenta del nodo la cantidad que se haya acordado.
+
+
+## Build/Run with Docker
+
+Para poder ejecutar **Quorum** y **Constellation** con [Docker](https://www.docker.com/) se añade el fichero `Dockerfile`.
+
+Primer paso sería crear la imagen en base del fichero `Dockerfile` con este commando:
+```
+docker build -t alastria .
+```
+
+Al tener la imagen preparada se puede ejecutar (ahora en forma experimental e interactiva solo):
+```
+docker run -it --rm --name alastria alastria bash
+```
+
+Y ahora, dentro del shell del contenedor se pueden ejecutar los scripts `init.sh` y `start.sh`.
+
+Posiblemente en futuro habrá la imagen disponible para descargar en [docker hub](https://hub.docker.com/) y por eso no hará falta realizar la construcción de la imagen (el primer paso).
