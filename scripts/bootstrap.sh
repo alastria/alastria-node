@@ -3,9 +3,28 @@
 set -e
 
 GOREL="go1.7.3.linux-amd64.tar.gz"
-PATH="$PATH:/usr/local/go/bin"
 
-sudo rm -Rf /usr/local/go
+#Do not mess with Go instalations
+if ! type "go" > /dev/null; then
+  #INSTALACION DE GO
+  PATH="$PATH:/usr/local/go/bin"
+  echo "Installing GO"
+  wget -q "https://storage.googleapis.com/golang/${GOREL}"
+  tar -xvzf "${GOREL}"
+  mv go /usr/local/go
+  sudo rm "${GOREL}"
+else
+  V1=$(go version | grep -oP '\d+(?:\.\d+)+')
+  V2=$(echo $GOREL | grep -oP '\d+(?:\.\d+)+')
+  nV1=$(echo $V1 | sed 's/\.//g')
+  nV2=$(echo $V2 | sed 's/\.//g')
+  if (( $nV1 >= $nV2 )); then
+     echo "Using your own version of Go"
+  else
+     echo "Your version of go is smaller than required"
+     exit
+  fi
+fi
 
 sudo apt-get update && sudo apt-get install -y
 
@@ -21,12 +40,6 @@ unxz constellation-0.1.0-ubuntu1604.tar.xz
 tar -xf constellation-0.1.0-ubuntu1604.tar
 sudo cp constellation-0.1.0-ubuntu1604/constellation-node /usr/local/bin && sudo chmod 0755 /usr/local/bin/constellation-node
 sudo rm -rf constellation-0.1.0-ubuntu1604.tar.xz constellation-0.1.0-ubuntu1604.tar constellation-0.1.0-ubuntu1604
-
-#INSTALACION DE GO
-wget -q "https://storage.googleapis.com/golang/${GOREL}"
-tar -xvzf "${GOREL}"
-mv go /usr/local/go
-sudo rm "${GOREL}"
 
 #INSTALACION DE QUORUM
 git clone https://github.com/jpmorganchase/quorum.git
