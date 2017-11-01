@@ -15,7 +15,7 @@ RUN sed -i -e 's/\r$//' init.sh && sed -i -e 's/\r$//' bootstrap.sh && sed -i -e
 RUN \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -q -y curl \
-  libcurl3 unzip wget git make gcc libsodium-dev build-essential libdb-dev zlib1g-dev libtinfo-dev sysvbanner wrk psmisc
+  libcurl3 unzip wget git make gcc libsodium-dev build-essential libdb-dev zlib1g-dev libtinfo-dev sysvbanner wrk psmisc sudo
 
 WORKDIR /root/alastria-node/scripts
 RUN ./bootstrap.sh
