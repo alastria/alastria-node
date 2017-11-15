@@ -31,21 +31,32 @@ sudo apt-get update && sudo apt-get install -y
 #INSTALACION DE LIBRERIAS
 sudo apt-get install -y software-properties-common unzip wget git make gcc libsodium-dev build-essential libdb-dev zlib1g-dev libtinfo-dev sysvbanner wrk psmisc
 
+#LEVELDB FIX
+git clone https://github.com/google/leveldb.git
+cd leveldb/
+make
+sudo scp -r out-static/lib* out-shared/lib* /usr/local/lib/
+cd include/
+sudo scp -r leveldb /usr/local/include/
+sudo ldconfig
+cd ../..
+rm -r leveldb
+
 #INSTALACION ETHEREUM
-sudo add-apt-repository -y ppa:ethereum/ethereum && sudo apt-get update && sudo apt-get install -y solc
+sudo add-apt-repository -y ppa:ethereum/ethereum && sudo add-apt-repository -y ppa:ethereum/ethereum-dev && sudo apt-get update && sudo apt-get install -y solc
 
 #INSTALACION CONSTELLATION 0.1.0
-wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.1.0/constellation-0.1.0-ubuntu1604.tar.xz 
-unxz constellation-0.1.0-ubuntu1604.tar.xz 
-tar -xf constellation-0.1.0-ubuntu1604.tar
-sudo cp constellation-0.1.0-ubuntu1604/constellation-node /usr/local/bin && sudo chmod 0755 /usr/local/bin/constellation-node
-sudo rm -rf constellation-0.1.0-ubuntu1604.tar.xz constellation-0.1.0-ubuntu1604.tar constellation-0.1.0-ubuntu1604
+wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.2.0/constellation-0.2.0-ubuntu1604.tar.xz 
+unxz constellation-0.2.0-ubuntu1604.tar.xz 
+tar -xf constellation-0.2.0-ubuntu1604.tar
+sudo cp constellation-0.2.0-ubuntu1604/constellation-node /usr/local/bin && sudo chmod 0755 /usr/local/bin/constellation-node
+sudo rm -rf constellation-0.2.0-ubuntu1604.tar.xz constellation-0.2.0-ubuntu1604.tar constellation-0.2.0-ubuntu1604
 
 #INSTALACION DE QUORUM
 git clone https://github.com/jpmorganchase/quorum.git
-cd quorum && git checkout tags/v1.1.0 && make all &&  cp build/bin/geth /usr/local/bin && cp build/bin/bootnode /usr/local/bin
+cd quorum && git checkout tags/v2.0.0 && make all &&  cp build/bin/geth /usr/local/bin && cp build/bin/bootnode /usr/local/bin
 
 cd ..
-sudo rm -rf constellation-0.1.0-ubuntu1604.tar.xz constellation-0.1.0-ubuntu1604.tar constellation-0.1.0-ubuntu1604 quorum
+sudo rm -rf constellation-0.2.0-ubuntu1604.tar.xz constellation-0.2.0-ubuntu1604.tar constellation-0.2.0-ubuntu1604 quorum
 
 set +e
