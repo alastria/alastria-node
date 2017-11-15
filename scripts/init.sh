@@ -99,7 +99,9 @@ echo "Passw0rd" > ~/alastria/data/passwords.txt
 echo "[*] Initializing quorum"
 geth --datadir ~/alastria/data init ~/alastria-node/data/genesis.json
 cd ~/alastria/data/geth
-ENODE_KEY=$(bootnode -genkey nodekey -writeaddress)
+bootnode -genkey nodekey
+ENODE_KEY=$(bootnode -nodekey nodekey -writeaddress)
+echo "ENODE -> ${ENODE_KEY}"
 cd ~
 update_static_nodes "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?raftport=41000"
 cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
