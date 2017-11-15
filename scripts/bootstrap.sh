@@ -45,7 +45,7 @@ rm -r leveldb
 #INSTALACION ETHEREUM
 sudo add-apt-repository -y ppa:ethereum/ethereum && sudo add-apt-repository -y ppa:ethereum/ethereum-dev && sudo apt-get update && sudo apt-get install -y solc
 
-#INSTALACION CONSTELLATION 0.1.0
+#INSTALACION CONSTELLATION 0.2.0
 wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.2.0/constellation-0.2.0-ubuntu1604.tar.xz 
 unxz constellation-0.2.0-ubuntu1604.tar.xz 
 tar -xf constellation-0.2.0-ubuntu1604.tar
