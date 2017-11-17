@@ -6,7 +6,7 @@
 | Santander | Marcos Serradilla (@mserradilla, marcos@sanlab.io), Juan Luis García (@Juan Luis, juanluis.garcia@isban.com) | enode://60885eb65783a6c7bdee131b9b70dd3b0dc084bbfafe4adef7d4ba740ec834bf7df467a747b7e150c822d7a7c7e8885c1f571e901b577408182990433dc83f91@35.176.197.87:21000?raftport=41000 |
 | Repsol | Manuel Polo (@mrmx, mistermx@gmail.com) |  |
 | Repsol |  Manuel Polo (@mrmx, mistermx@gmail.com) |  |
-| Indra | Alfonso de la Rocha (arocha@minsait.com, https://github.com/arochaga) |  |
+| Indra | Alfonso de la Rocha (@arocha, arocha@minsait.com) | enode://669da0c4581e4cd04bb67690acfa739f27bd1f69522d7df73820b865cd78ceb2ad1c29fd982845194db1efe81a4d814c248707a97be00b903feb7215cf07e211@40.118.64.233:21000?raftport=41000 |
 | CaixaBank | Josep Grau Miró (@josepgraumiro, jgrau@silk.es) |  |
 | Onlife Networks -Telefonica I+D | Juan Roldán Parra (juan.roldanparra@telefonica.com, https://github.com/juanroldanparra) |  |
 | visualtis | n0p (https://github.com/n0p) |  |
