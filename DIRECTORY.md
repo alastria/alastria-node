@@ -1,4 +1,4 @@
-# Directorio de nodos para la testnet
+﻿# Directorio de nodos para la testnet
 
 | Propietario | Contacto (slack, email, git user...) | enode |
 | ----------- | ------------------------------------ | ----- |
@@ -7,6 +7,6 @@
 | Repsol | Manuel Polo (@mrmx, mistermx@gmail.com) |  |
 | Repsol |  Manuel Polo (@mrmx, mistermx@gmail.com) |  |
 | Indra | Alfonso de la Rocha (@arocha, arocha@minsait.com) | enode://669da0c4581e4cd04bb67690acfa739f27bd1f69522d7df73820b865cd78ceb2ad1c29fd982845194db1efe81a4d814c248707a97be00b903feb7215cf07e211@40.118.64.233:21000?raftport=41000 |
-| CaixaBank | Josep Grau Miró (@josepgraumiro, jgrau@silk.es) |  |
+| CaixaBank | Josep Grau Miró (@josepgraumiro, jgrau@silk.es), Joan Arcas Sanz (@Joan Arcas, joan.arcas.sanz@accenture.com) | enode://e09ff0ef7c031799d9eafc171308435e10b27566230060fb03ada522104113065e493dbad1b936da9dd093226b19e68482901a554dcbfe70db45e5ba878a61ca@158.177.89.28:21000?raftport=41000 |
 | Onlife Networks -Telefonica I+D | Juan Roldán Parra (juan.roldanparra@telefonica.com, https://github.com/juanroldanparra) |  |
 | visualtis | n0p (https://github.com/n0p) |  |
