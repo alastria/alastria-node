@@ -4,8 +4,8 @@
 | ----------- | ------------------------------------ | ----- |
 | Santander | Marcos Serradilla (@mserradilla, marcos@sanlab.io), Juan Luis García (@Juan Luis, juanluis.garcia@isban.com) | enode://9c11f1a41f5cbad2b59a64f2ec15f0a2b39f40aa88f0a3f77df0300f1a9a13af61d85f90894d9d7f71812be9c8c1b5bc2c2e6a055c8d4a40bddf45407c711b1b@52.56.69.220:21000?raftport=41000 |
 | Santander | Marcos Serradilla (@mserradilla, marcos@sanlab.io), Juan Luis García (@Juan Luis, juanluis.garcia@isban.com) | enode://60885eb65783a6c7bdee131b9b70dd3b0dc084bbfafe4adef7d4ba740ec834bf7df467a747b7e150c822d7a7c7e8885c1f571e901b577408182990433dc83f91@35.176.197.87:21000?raftport=41000 |
-| Repsol | Esteban Montenegro (@EMG, montenegro.garcia.esteban@repsol.com) |  |
-| Repsol | Esteban Montenegro (@EMG, montenegro.garcia.esteban@repsol.com) |  |
+| Repsol | Esteban Montenegro (montenegro.garcia.esteban@repsol.com) |  |
+| Repsol | Esteban Montenegro (montenegro.garcia.esteban@repsol.com) |  |
 | Indra | Alfonso de la Rocha (@arocha, arocha@minsait.com) | enode://669da0c4581e4cd04bb67690acfa739f27bd1f69522d7df73820b865cd78ceb2ad1c29fd982845194db1efe81a4d814c248707a97be00b903feb7215cf07e211@40.118.64.233:21000?raftport=41000 |
 | CaixaBank | Josep Grau Miró (@josepgraumiro, jgrau@silk.es), Joan Arcas Sanz (@Joan Arcas, joan.arcas.sanz@accenture.com) | enode://e09ff0ef7c031799d9eafc171308435e10b27566230060fb03ada522104113065e493dbad1b936da9dd093226b19e68482901a554dcbfe70db45e5ba878a61ca@158.177.89.28:21000?raftport=41000 |
 | Onlife Networks -Telefonica I+D | Juan Roldán Parra (juan.roldanparra@telefonica.com, https://github.com/juanroldanparra) |  |
