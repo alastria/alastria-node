@@ -2,8 +2,8 @@
 set -u
 set -e
 
-NETID=963232369
-GLOBAL_ARGS="--networkid $NETID --raft --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum"
+NETID=963252369
+GLOBAL_ARGS="--networkid $NETID --raft --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,raft"
 
 _TIME=$(date +%Y%m%d%H%M%S)
 
@@ -14,9 +14,9 @@ sleep 6
 echo "[*] Starting quorum node"
 PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf
 if ( [ $# -ne 1 ] ); then
-    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --rpcport 22000 --port 21000 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --rpcport 22000 --port 21000 --raftport 41000 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
 else
-    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --rpcport 22000 --port 21000 --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --rpcport 22000 --port 21000 --raftport 41000 --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
 fi
 
 set +u
