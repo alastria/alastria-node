@@ -12,3 +12,4 @@
 | visualtis | n0p (https://github.com/n0p) |  |
 | IngenierosWeb | Víctor García (@vgpastor vgpastor@ingenierosweb.co) | enode://c7fc7e34b0cf828a997c7c2032b32117121f1aab0c265240ea20fbdb688a166b50d19471d6000d68790a5fc593c6180e9522d6f1abd491b805683d9012af132b@13.94.239.188:21000?raftport=41000 |
 | BBVA | José Antonio Dongil (joseantonio.dongil@bbva.com), Oliver Díaz (oliver.diaz@bbva.com) | "enode://c391f8e413c65ce1d930f5773c6f9e557de49e3d32ce2fb4849bb9b360845c1d76db5d6362816b341451853b3e9cd6a368df90253a64b78e7c552ac07cef257a@52.16.39.13:21000?raftport=41000" |
+| Councilbox | Alberto Doval Iglesias (alberto.doval@councilbox.com) | "enode://2bd34ad1daf7c37e7127726f093fc64af00622717b6f146cf3bf98faa436d9ea74875dee920f3f566075ba85d7e4fcf8fc61e7a5fd931245227268c82f63ddde@145.239.197.140:21000?raftport=41000" |
