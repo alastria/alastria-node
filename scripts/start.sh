@@ -24,12 +24,13 @@ sleep 6
 
 echo "[*] Starting quorum node"
 PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf
+# Se elimina --permissioned por fallo en el nodo 'Alastria'
 if [ -f ~/alastria/data/RAFT_ID ]; then 
     mapfile -t RAFT_ID <~/alastria/data/RAFT_ID
-    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --permissioned --rpcport 22000 --port 21000 --raftport 41000 --raftjoinexisting $RAFT_ID 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --rpcport 22000 --port 21000 --raftport 41000 --raftjoinexisting $RAFT_ID 2>> ~/alastria/logs/quorum_"${_TIME}".log &
 else
     if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
-        nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --permissioned --rpcport 22000 --port 21000 --raftport 41000 --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+        nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --rpcport 22000 --port 21000 --raftport 41000 --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
     fi
 fi
 
