@@ -52,13 +52,15 @@ $ sudo -H ./bootstrap.sh
 
 	El nodo quorum que estamos desplegando se configura automaticamente con el script de inicialización ejecutado en el paso anterior.
 
-	Una vez que comprobemos que el fichero de nodos `static-nodes.json` tiene añadido nuestro enode, es necesario subirlo de nuevo al repositorio git, para que todos los integrantes de la red tengan actualizado su fichero de nodos.
+	Con el **enode** informado, se actualiza el fichero de directorio de nodos `DIRECTORY.md` incluyendo la información de contacto del nodo, la información del host, la clave del private for y el enode del nodo a la rama develop de este repositorio.
 
-3. **Configurción del fichero de nodos de Constellation**
+	Una vez procesado el **pull request**, se remitirá al contacto del nodo el RAFT_ID y se actualizará el fichero `DIRECTORY.md`.
+
+	Este fichero se colocará en la carpeta `~/alastria/data/`.
+
+3. **Configuración del fichero de nodos de Constellation**
 
 	El nodo Constellation que estamos desplegando se configura automaticamente con el script de inicialización ejecutado en el paso anterior.
-
-	Una vez que comprobemos que el fichero de nodos de constellation `constellation-nodes.json` tiene añadido nuestro nodo, es necesario subirlo de nuevo al repositorio git, para que todos los integrantes de la red tengan actualizado su fichero de nodos de constellation.
 
 **NOTA**
 En este punto ya tendriamos desplegado un nuevo nodo en la red, que incluiria el despliegue y configuración de Quorum y Constellation.
@@ -70,13 +72,8 @@ Una vez instalado y configurado todo ya podemos arrancar nuestro nodo. Para arra
 ```
 $ ./start.sh
 ```
-**NOTA**
-Si el nodo que vamos a levantar es el primer nodo de la red, debemos arrancar con la siguiente orden:
-```
-$ ./start.sh init
-``` 
 
-## Habilitar el nodo para empezar a realizar transacciones
+## Habilitar el nodo/account para empezar a emitir transacciones
 A la hora de realizar transacciones en la red de Alastria es necesario realizar el siguiente procedimiento:
 
 Una vez que se levantado el nodo, es necesaria la realización de una transferencia de fondos de la cuenta principal a la cuenta que acaba de ser generada al iniciarse el nodo.
