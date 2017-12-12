@@ -2,12 +2,12 @@
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | RAFT_ID | Clave private for * | enode |
 | ------- | ------------------------------------ | ---------------------------------- | ------- | ------------- | ----- |
-| Alastria | Marcos Serradilla (@mserradilla, marcos@sanlab.io), Juan Luis García (@Juan Luis, juanluis.garcia@isban.com) | Amazon AWS (2C/4Gb/30Gb) | 1 |  |  |
-| Santander | Marcos Serradilla (@mserradilla, marcos@sanlab.io), Juan Luis García (@Juan Luis, juanluis.garcia@isban.com) | Amazon AWS (2C/4Gb/30Gb) | 2 |  |  |
+| Alastria | Marcos Serradilla (@mserradilla, marcos@sanlab.io), Juan Luis García (@Juan Luis, juanluis.garcia@isban.com) | Amazon AWS (2C/4Gb/30Gb) | 1 | UJn+SPgtxCcMFGyUzsngDf0xPk0VrX2lfyOzywf3DRE= | enode://2c453696c8ef94d9f82c4f4fe3da89a37e430ddd015b698dca9c3b9d722624a3fdc083df4cf54e3255c0d75c794687459e4c8c0c5367546cf19a01b8b2d14439@52.56.69.220:21000?raftport=41000 |
+| Santander | Marcos Serradilla (@mserradilla, marcos@sanlab.io), Juan Luis García (@Juan Luis, juanluis.garcia@isban.com) | Amazon AWS (2C/4Gb/30Gb) | 2 | pZevJFOmtUvcKNAbVDHgCKaQDD430OpzMJjGbZkBXBg= | enode://812689acebbeb47e7c3749abc5290059ffc67a78bcbf60b991270425e981f35d2072bcd2ae6225d4d66d1c6f4a5e2d73b64513846ec15927c7bb41c43922d8c7@[::]:21000 |
 | Repsol | Esteban Montenegro (@Esteban Montenegro, montenegro.garcia.esteban@repsol.com) |  |  |  |  |
 | Repsol | Esteban Montenegro (@Esteban Montenegro, montenegro.garcia.esteban@repsol.com) |  |  |  |  |
 | Indra | Alfonso de la Rocha (@arocha, arocha@minsait.com) |  |  |  |  |
-| CaixaBank | Josep Grau Miró (@josepgraumiro, jgrau@silk.es), Joan Arcas Sanz (@Joan Arcas, joan.arcas.sanz@accenture.com) |  |  |  |   enode://e09ff0ef7c031799d9eafc171308435e10b27566230060fb03ada522104113065e493dbad1b936da9dd093226b19e68482901a554dcbfe70db45e5ba878a61ca@158.177.89.28:21000?raftport=41000 |
+| CaixaBank | Josep Grau Miró (@josepgraumiro, jgrau@silk.es), Joan Arcas Sanz (@Joan Arcas, joan.arcas.sanz@accenture.com) |  |  |  |  |
 | IngenierosWeb | Víctor García (@vgpastor vgpastor@ingenierosweb.co) |  |  |  |  |
 | BBVA | José Antonio Dongil (joseantonio.dongil@bbva.com), Oliver Díaz (oliver.diaz@bbva.com) |  |  |  |  |
 | Grant Thornton | Jaime Morales Rodríguez de Lope (jaime.morales@es.gt.com) |  |  |  |  |
