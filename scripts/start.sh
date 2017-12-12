@@ -30,7 +30,7 @@ if [ -f ~/alastria/data/RAFT_ID ]; then
     nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --raftjoinexisting $RAFT_ID 2>> ~/alastria/logs/quorum_"${_TIME}".log &
 else
     if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
-        nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --unlock 0 --password ~/alastria/data/passwords.txt --dev 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+        nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
     fi
 fi
 
