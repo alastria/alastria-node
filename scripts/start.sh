@@ -12,8 +12,6 @@ if [[ ! -f ~/alastria/data/RAFT_ID && "$CURRENT_HOST_IP" != "52.56.69.220" ]]; t
     echo " " 
     exit
 fi
-echo "DONE"
-exit
 
 NETID=963262369
 GLOBAL_ARGS="--networkid $NETID --raft --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,raft"
