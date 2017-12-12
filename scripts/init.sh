@@ -20,26 +20,6 @@ PWD="$(pwd)"
 CONSTELLATION_NODES=$(cat ../data/constellation-nodes.json)
 STATIC_NODES=$(cat ../data/static-nodes.json)
 
-update_constellation_nodes() {
-    NODE_IP="$1"
-    CONSTELLATION_PORT="$2"
-    URL=",
-    \"http://$NODE_IP:$CONSTELLATION_PORT/\"
-]"
-    CONSTELLATION_NODES=${CONSTELLATION_NODES::-2}
-    CONSTELLATION_NODES="$CONSTELLATION_NODES$URL"
-    echo "$CONSTELLATION_NODES" > ~/alastria-node/data/constellation-nodes.json
-}
-
-update_static_nodes() {
-    ENODE=",
-    \"$1\"
-]"
-    STATIC_NODES=${STATIC_NODES::-2}
-    STATIC_NODES="$STATIC_NODES$ENODE"
-    echo "$STATIC_NODES" > ~/alastria-node/data/static-nodes.json
-}
-
 generate_conf() {
    #define parameters which are passed in.
    NODE_IP="$1"
@@ -87,7 +67,7 @@ verbosity = 2
 EOF
 }
 
-echo "[*] Cleaning up temporary data directories"
+echo "[*] Cleaning up temporary data directories."
 rm -rf ~/alastria
 mkdir -p ~/alastria/data/{keystore,geth,constellation}
 mkdir -p ~/alastria/data/constellation/{data,keystore}
@@ -101,21 +81,28 @@ geth --datadir ~/alastria/data init ~/alastria-node/data/genesis.json
 cd ~/alastria/data/geth
 bootnode -genkey nodekey
 ENODE_KEY=$(bootnode -nodekey nodekey -writeaddress)
-echo "ENODE -> ${ENODE_KEY}"
+echo "ENODE -> 'enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?raftport=41000'"
 cd ~
-update_static_nodes "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?raftport=41000"
-cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
+if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
+    cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
+    cp ~/alastria-node/data/static-nodes.json ~/alastria/data/permissioned-nodes.json
+fi
 
 echo "     Por favor, introduzca como contraseña 'Passw0rd'."
 geth --datadir ~/alastria/data account new
 
-echo "[*] Initializing Constellation node"
-update_constellation_nodes "${CURRENT_HOST_IP}" "9000"
+echo "[*] Initializing Constellation node."
 generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
 cd ~/alastria/data/constellation/keystore
 cat ~/alastria/data/passwords.txt | constellation-node --generatekeys=node
 echo "______"
 cd ~
+
+echo "[*] Initialization was completed successfully."
+echo " "
+echo "      Update DIRECTORY.md from alastria-node repository and send a Pull Request."
+echo "      The network administrator will send a RAFT_ID file. It will be stored in '~/alastria/data/' directory."
+echo " "
 
 set +u
 set +e
