@@ -14,7 +14,7 @@ if [[ ! -f ~/alastria/data/RAFT_ID && "$CURRENT_HOST_IP" != "52.56.69.220" ]]; t
 fi
 
 NETID=963262369
-GLOBAL_ARGS="--networkid $NETID --raft --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,raft --nodiscover --rpcport 22000 --port 21000 --raftport 41000 "
+GLOBAL_ARGS="--networkid $NETID --raft --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,raft --rpcport 22000 --port 21000 --raftport 41000 "
 
 _TIME=$(date +%Y%m%d%H%M%S)
 
@@ -27,7 +27,7 @@ PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf
 # Se elimina --permissioned por fallo en el nodo 'Alastria'
 if [ -f ~/alastria/data/RAFT_ID ]; then 
     mapfile -t RAFT_ID <~/alastria/data/RAFT_ID
-    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --raftjoinexisting $RAFT_ID 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --raftjoinexisting $RAFT_ID --bootnodes enode://3905f943ba5446eba164c07ab5f53a84ce17d74ec4d7591f6ec54b9d7608f57cae7cfdf946616385f59cfb5b910161a1f8520cb6f992bcc0d1ab932601205e91@52.56.69.220:21000?raftport=41000 2>> ~/alastria/logs/quorum_"${_TIME}".log &
 else
     if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
         nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
