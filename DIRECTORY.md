@@ -9,7 +9,7 @@
 | Indra | Alfonso de la Rocha (@arocha, arocha@minsait.com) |  | 3 |  | enode://669da0c4581e4cd04bb67690acfa739f27bd1f69522d7df73820b865cd78ceb2ad1c29fd982845194db1efe81a4d814c248707a97be00b903feb7215cf07e211@40.118.64.233:21000?raftport=41000 |
 | CaixaBank | Josep Grau Miró (@josepgraumiro, jgrau@silk.es), Joan Arcas Sanz (@Joan Arcas, joan.arcas.sanz@accenture.com) |  |  |  |  |
 | IngenierosWeb | Víctor García (@vgpastor vgpastor@ingenierosweb.co) |  |  |  |  |
-| BBVA | José Antonio Dongil (joseantonio.dongil@bbva.com), Oliver Díaz (oliver.diaz@bbva.com) | Amazon AWS (2C/4Gb/30Gb) |  |  | enode://c391f8e413c65ce1d930f5773c6f9e557de49e3d32ce2fb4849bb9b360845c1d76db5d6362816b341451853b3e9cd6a368df90253a64b78e7c552ac07cef257a@52.16.39.13:21000?raftport=41000 |
+| BBVA | José Antonio Dongil (joseantonio.dongil@bbva.com), Oliver Díaz (oliver.diaz@bbva.com) | Amazon AWS (2C/4Gb/30Gb) |  | qf0BlgkUvonqK+hNfYQSOKGnoVaTBeIecb17GZd/o34= | enode://c391f8e413c65ce1d930f5773c6f9e557de49e3d32ce2fb4849bb9b360845c1d76db5d6362816b341451853b3e9cd6a368df90253a64b78e7c552ac07cef257a@52.16.39.13:21000?raftport=41000 |
 | Grant Thornton | Jaime Morales Rodríguez de Lope (jaime.morales@es.gt.com) |  |  |  |  |
 | Councilbox | Alberto Doval Iglesias (alberto.doval@councilbox.com) |  |  |  |  |
 
