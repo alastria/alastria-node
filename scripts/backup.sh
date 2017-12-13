@@ -31,7 +31,15 @@ if ( [ "full" == "$1" ]); then
     cp -r ~/alastria  ~/alastria-backup-$CURRENT_DATE
     echo "Cleaning unnecessary files..."
     rm -Rf ~/alastria-backup-$CURRENT_DATE/logs/*
-    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/keystore/*
-    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/geth/nodekey
-    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/constellation/keystore/*
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/geth/chainData
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/geth/nodes
+    rm ~/alastria-backup-$CURRENT_DATE/data/geth/LOCK
+    rm ~/alastria-backup-$CURRENT_DATE/data/geth/transactions.rpl
+    rm ~/alastria-backup-$CURRENT_DATE/data/geth.ipc
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/quorum-raft-state
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/raft-snap
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/raft-wal
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/constellation/data
+    rm ~/alastria-backup-$CURRENT_DATE/data/constellation/constellation.ipc
+
 fi
