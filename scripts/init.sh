@@ -2,7 +2,7 @@
 set -u
 set -e
 
-MESSAGE="Usage: init CURRENT_HOST_IP | auto"
+MESSAGE="Usage: init CURRENT_HOST_IP | auto | backup"
 if ( [ $# -ne 1 ] ); then
     echo "$MESSAGE"
     exit
@@ -10,10 +10,25 @@ fi
 
 CURRENT_HOST_IP="$1"
 
-if ( [ "auto" == "$1" ]); then 
+if ( [ "auto" == "$1" -o "backup" == "$1" ]); then 
     echo "Autodiscovering public host IP ..."
     CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
     echo "Public host IP found: $CURRENT_HOST_IP"
+fi
+
+if ( [ "backup" == "$1" ]); then 
+    echo "Backuping current node keys ..."
+    #Backup directory tree
+    mkdir ~/alastria-keysBackup
+    mkdir ~/alastria-keysBackup/data
+    mkdir ~/alastria-keysBackup/data/geth
+    mkdir ~/alastria-keysBackup/data/constellation
+    echo "Saving constellation keys ..."
+    cp -r ~/alastria/data/constellation/keystore ~/alastria-keysBackup/data/constellation/
+    echo "Saving node keys ..."
+    cp -r ~/alastria/data/keystore ~/alastria-keysBackup/data
+    echo "Saving enode ID ..."
+    cp ~/alastria/data/geth/nodekey ~/alastria-keysBackup/data/geth/nodekey
 fi
 
 PWD="$(pwd)"
@@ -97,6 +112,22 @@ cd ~/alastria/data/constellation/keystore
 cat ~/alastria/data/passwords.txt | constellation-node --generatekeys=node
 echo "______"
 cd ~
+
+if ( [ "backup" == "$1" ]); then 
+    echo "Recovering keys from backup ..."
+    rm -rf ~/alastria/data/constellation/keystore
+    rm -rf ~/alastria/data/keystore
+    rm ~/alastria/data/geth/nodekey
+
+    echo "Recovering constellation keys ..."
+    cp -rf ~/alastria-keysBackup/data/constellation/keystore ~/alastria/data/constellation/
+    echo "Recovering node keys ..."
+    cp -rf ~/alastria-keysBackup/data/keystore ~/alastria/data/ 
+    echo "Recovering enode ID ..."
+    cp ~/alastria-keysBackup/data/geth/nodekey ~/alastria/data/geth/nodekey
+    echo "Cleaning backup files ..."
+    rm -rf ~/alastria-keysBackup
+fi
 
 echo "[*] Initialization was completed successfully."
 echo " "
