@@ -12,5 +12,6 @@
 | BBVA | José Antonio Dongil (joseantonio.dongil@bbva.com), Oliver Díaz (oliver.diaz@bbva.com) | Amazon AWS (2C/4Gb/30Gb) | 4 | qf0BlgkUvonqK+hNfYQSOKGnoVaTBeIecb17GZd/o34= | enode://c391f8e413c65ce1d930f5773c6f9e557de49e3d32ce2fb4849bb9b360845c1d76db5d6362816b341451853b3e9cd6a368df90253a64b78e7c552ac07cef257a@52.16.39.13:21000?raftport=41000 |
 | Grant Thornton | Jaime Morales Rodríguez de Lope (jaime.morales@es.gt.com) |  |  |  |  |
 | Councilbox | Alberto Doval Iglesias (alberto.doval@councilbox.com) |  |  |  |  |
+| BME | Guillermo Rodríguez (@grodriguezbme, grodriguez@grupobme.es) | Internal (2C/4Gb/30Gb) | | | | |
 
 * **Clave private for**: ser extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
