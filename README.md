@@ -53,7 +53,8 @@ $ sudo -H ./bootstrap.sh
 	```
 	$ ./init.sh backup
 	```
-	Este será el procedimiento a seguir ante actualizaciones en la testnet.
+	Este será el procedimiento a seguir ante actualizaciones en la testnet para evitar la 
+	generación de un nuevo enode.
 
 2. **Configuración del fichero de nodos Quorum**
 
@@ -79,9 +80,8 @@ Una vez instalado y configurado todo ya podemos arrancar nuestro nodo. Para arra
 ```
 $ ./start.sh
 ```
-Antes errores en el nodo, podemos optar por realizar un reinicio limpio del nodo, para ello debemos
+Ante errores en el nodo, podemos optar por realizar un reinicio limpio del nodo, para ello debemos
 ejecutar los siguientes comados:
-orden:
 ```
 $ ./stop.sh
 $ ./start.sh clean
@@ -95,17 +95,17 @@ Una vez que se levantado el nodo, es necesaria la realización de una transferen
 Con el fin de realizar este procedimiento se debe indicar al administrador del primer nodo de la red, poseedor de la cuenta principal, la cuenta que se ha generado al levantar el nodo. Tras esto, el administrador deberá asignar a la cuenta del nodo la cantidad que se haya acordado.
 
 ## Hacer backups del estado de la blockchain y limpiar el nodo
-El script `./scripts/backup.sh` permite realizar copias de seguridad del estado de la blockchain.
+El script `./scripts/backup.sh` permite realizar copias de seguridad del estado del nodo.
 Ejecutando `./scripts/backup.sh keys` se hace una copia de seguridad de las claves y el enode de
-nuestro nodo actual.
+nuestro nodo.
 
 Con `./scripts/backup.sh full` realizamos una copia de seguridad de todo el estado del nodo y de la
 blockchain. Todas las copias de seguridad se almacenan en el directorio home
 como `~/alastria-keysBackup-<date>/` y `~/alastria-backup-<date>/`, respectivamente.
 
 Existe un script `./scripts/clean.sh` que limpia el nodo actual y exige una resincronización
-del mismo al inicializarlo para solventar posibles errores. Su efecto es el mismo que al
-ejecutar directamente `./scripts/start.sh clean`
+del mismo al iniciarlo de nuevo. Esto solventa posibles errores de sincronización.
+Su efecto es el mismo que el de ejecutar directamente `./scripts/start.sh clean`
 
 
 ## Build/Run with Docker
