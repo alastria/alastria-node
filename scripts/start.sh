@@ -4,6 +4,25 @@ set -e
 
 CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
 
+echo "Optional use for a clean start: start clean"
+
+if ( [ "clean" == "$1" ]); then 
+
+    echo "Cleaning your node ..."
+    #Backup directory tree
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/logs/*
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/geth/chainData
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/geth/nodes
+    rm ~/alastria-backup-$CURRENT_DATE/data/geth/LOCK
+    rm ~/alastria-backup-$CURRENT_DATE/data/geth/transactions.rpl
+    rm ~/alastria-backup-$CURRENT_DATE/data/geth.ipc
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/quorum-raft-state
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/raft-snap
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/raft-wal
+    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/constellation/data
+    rm ~/alastria-backup-$CURRENT_DATE/data/constellation/constellation.ipc
+fi
+
 if [[ ! -f ~/alastria/data/RAFT_ID && "$CURRENT_HOST_IP" != "52.56.69.220" ]]; then
     echo "[*] The node don't have ~/alastria/data/RAFT_ID file, please:"
     echo " "
