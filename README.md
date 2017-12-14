@@ -47,6 +47,14 @@ $ sudo -H ./bootstrap.sh
 	```
 	$ ./init.sh auto
 	```
+	Si ya disponemos de un nodo Alastria instalado en la máquina, y deseamos realizar una nueva
+	inicialización limpia del nodo manteniendo nuestro **enode**, 
+	nuestras claves constellation y nuestras cuentas actuales, podemos ejecutar:
+	```
+	$ ./init.sh backup
+	```
+	Este será el procedimiento a seguir ante actualizaciones en la testnet para evitar la 
+	generación de un nuevo enode.
 
 2. **Configuración del fichero de nodos Quorum**
 
@@ -60,17 +68,23 @@ $ sudo -H ./bootstrap.sh
 
 3. **Configuración del fichero de nodos de Constellation**
 
-	El nodo Constellation que estamos desplegando se configura automaticamente con el script de inicialización ejecutado en el paso anterior.
+	El nodo Constellation que estamos desplegando se configura automáticamente con el script de inicialización ejecutado en el paso anterior.
 
 **NOTA**
 En este punto ya tendriamos desplegado un nuevo nodo en la red, que incluiria el despliegue y configuración de Quorum y Constellation.
 
-Si necesitamos desplegar mas nodos para nuestra red, es necesario volver a realizar los pasos descritos anteriormente.
+Si necesitamos desplegar más nodos para nuestra red, es necesario volver a realizar los pasos descritos en el paso 2.
 
 ## Arranque de nodo Quorum + Constellation
 Una vez instalado y configurado todo ya podemos arrancar nuestro nodo. Para arrancar ejecutamos la siguiente orden:
 ```
 $ ./start.sh
+```
+Ante errores en el nodo, podemos optar por realizar un reinicio limpio del nodo, para ello debemos
+ejecutar los siguientes comados:
+```
+$ ./stop.sh
+$ ./start.sh clean
 ```
 
 ## Habilitar el nodo/account para empezar a emitir transacciones
@@ -79,6 +93,19 @@ A la hora de realizar transacciones en la red de Alastria es necesario realizar 
 Una vez que se levantado el nodo, es necesaria la realización de una transferencia de fondos de la cuenta principal a la cuenta que acaba de ser generada al iniciarse el nodo.
 
 Con el fin de realizar este procedimiento se debe indicar al administrador del primer nodo de la red, poseedor de la cuenta principal, la cuenta que se ha generado al levantar el nodo. Tras esto, el administrador deberá asignar a la cuenta del nodo la cantidad que se haya acordado.
+
+## Hacer backups del estado de la blockchain y limpiar el nodo
+El script `./scripts/backup.sh` permite realizar copias de seguridad del estado del nodo.
+Ejecutando `./scripts/backup.sh keys` se hace una copia de seguridad de las claves y el enode de
+nuestro nodo.
+
+Con `./scripts/backup.sh full` realizamos una copia de seguridad de todo el estado del nodo y de la
+blockchain. Todas las copias de seguridad se almacenan en el directorio home
+como `~/alastria-keysBackup-<date>/` y `~/alastria-backup-<date>/`, respectivamente.
+
+Existe un script `./scripts/clean.sh` que limpia el nodo actual y exige una resincronización
+del mismo al iniciarlo de nuevo. Esto solventa posibles errores de sincronización.
+Su efecto es el mismo que el de ejecutar directamente `./scripts/start.sh clean`
 
 
 ## Build/Run with Docker
