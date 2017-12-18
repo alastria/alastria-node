@@ -54,7 +54,8 @@ sudo rm -rf constellation-0.2.0-ubuntu1604.tar.xz constellation-0.2.0-ubuntu1604
 
 #INSTALACION DE QUORUM
 git clone https://github.com/jpmorganchase/quorum.git
-cd quorum && git checkout tags/v2.0.0 && make all &&  cp build/bin/geth /usr/local/bin && cp build/bin/bootnode /usr/local/bin
+
+cd quorum && git checkout a6f117d13818d3e685181533404297ff61dbbd42 && make all &&  cp build/bin/geth /usr/local/bin && cp build/bin/bootnode /usr/local/bin
 
 cd ..
 sudo rm -rf constellation-0.2.0-ubuntu1604.tar.xz constellation-0.2.0-ubuntu1604.tar constellation-0.2.0-ubuntu1604 quorum
