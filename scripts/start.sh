@@ -25,14 +25,14 @@ fi
 
 NETID=953474359
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
-GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 "
+GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000 "
 
 _TIME=$(date +%Y%m%d%H%M%S)
 
 mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 
-echo "[*] Starting Constellation node"
 if [[ "$NODE_TYPE" == "general" ]]; then
+    echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
     sleep 6
 fi
