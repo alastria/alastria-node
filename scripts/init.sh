@@ -2,13 +2,18 @@
 set -u
 set -e
 
-MESSAGE="Usage: init CURRENT_HOST_IP | auto | backup"
-if ( [ $# -ne 1 ] ); then
+MESSAGE='Usage: init <mode> <node-type> <node-name>
+    mode: CURRENT_HOST_IP | auto | backup
+    node-type: validator | general
+    node-name: NODE_NAME (example: Alastria)'
+
+if ( [ $# -ne 4 ] ); then
     echo "$MESSAGE"
     exit
 fi
 
 CURRENT_HOST_IP="$1"
+NODE_NAME="$3"
 
 if ( [ "auto" == "$1" -o "backup" == "$1" ]); then 
     echo "Autodiscovering public host IP ..."
@@ -29,6 +34,12 @@ if ( [ "backup" == "$1" ]); then
     cp -r ~/alastria/data/keystore ~/alastria-keysBackup/data
     echo "Saving enode ID ..."
     cp ~/alastria/data/geth/nodekey ~/alastria-keysBackup/data/geth/nodekey
+fi
+
+if ( [ "validator" == "$2" ]); then 
+    echo "Selected node type validator..."
+elif ( [ "general" == "$2" ]); then 
+    echo "Selected node type validator..." 
 fi
 
 PWD="$(pwd)"
