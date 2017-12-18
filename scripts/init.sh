@@ -13,6 +13,7 @@ if ( [ $# -ne 4 ] ); then
 fi
 
 CURRENT_HOST_IP="$1"
+NODE_TYPE="$2"
 NODE_NAME="$3"
 
 if ( [ "auto" == "$1" -o "backup" == "$1" ]); then 
@@ -36,15 +37,18 @@ if ( [ "backup" == "$1" ]); then
     cp ~/alastria/data/geth/nodekey ~/alastria-keysBackup/data/geth/nodekey
 fi
 
-if ( [ "validator" == "$2" ]); then 
-    echo "Selected node type validator..."
-elif ( [ "general" == "$2" ]); then 
-    echo "Selected node type validator..." 
-fi
-
 PWD="$(pwd)"
 CONSTELLATION_NODES=$(cat ../data/constellation-nodes.json)
 STATIC_NODES=$(cat ../data/static-nodes.json)
+PERMISSIONED_NODES_VALIDATOR=$(CAT ../data/permissioned-nodes_validator.json)
+PERMISSIONED_NODES_GENERAL=$(CAT ../data/permissioned-nodes_general.json)
+
+echo "$NODE_TYPE" > ~/alastria/data/NODE_TYPE
+if ( [ "validator" == "$NODE_TYPE" ]); then 
+    echo "Selected node type validator..."
+elif ( [ "general" == "$NODE_TYPE" ]); then 
+    echo "Selected node type validator..." 
+fi
 
 generate_conf() {
    #define parameters which are passed in.
