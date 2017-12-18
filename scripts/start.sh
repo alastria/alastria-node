@@ -37,6 +37,11 @@ if [[ "$NODE_TYPE" == "general" ]]; then
     sleep 6
 fi
 
+if [[ -f "permissioned-nodes.json" ]]; then
+    # Esto es necesario por un bug de Quorum https://github.com/jpmorganchase/quorum/issues/225
+    ln -s ~/alastria/data/permissioned-nodes.json permissioned-nodes.json
+fi
+
 echo "[*] Starting quorum node"
 if [[ "$NODE_TYPE" == "general" ]]; then
     PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf
