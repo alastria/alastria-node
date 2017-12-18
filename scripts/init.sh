@@ -147,6 +147,14 @@ cd ~
 if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/permissioned-nodes.json
+else 
+    if [[ "$NODE_TYPE" == "general" ]]; then
+        cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria/data/permissioned-nodes.json
+        cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria/data/static-nodes.json
+    else 
+        cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/permissioned-nodes.json
+        cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/static-nodes.json
+    fi
 fi
 
 
