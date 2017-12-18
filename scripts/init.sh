@@ -149,8 +149,12 @@ if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/permissioned-nodes.json
 fi
 
-echo "     Por favor, introduzca como contraseña 'Passw0rd'."
-geth --datadir ~/alastria/data account new
+
+if ( [ "general" == "$NODE_TYPE" ]); then 
+    echo "     Por favor, introduzca como contraseña 'Passw0rd'."
+    geth --datadir ~/alastria/data account new
+fi
+
 
 echo "[*] Initializing Constellation node."
 update_constellation_nodes "${CURRENT_HOST_IP}" "9000"
