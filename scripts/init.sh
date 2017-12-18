@@ -141,8 +141,8 @@ geth --datadir ~/alastria/data init ~/alastria-node/data/genesis.json
 cd ~/alastria/data/geth
 bootnode -genkey nodekey
 ENODE_KEY=$(bootnode -nodekey nodekey -writeaddress)
-echo "ENODE -> 'enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?raftport=41000'"
-update_nodes_list "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?raftport=41000"
+echo "ENODE -> 'enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0'"
+update_nodes_list "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0"
 cd ~
 if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
@@ -183,7 +183,7 @@ fi
 echo "[*] Initialization was completed successfully."
 echo " "
 echo "      Update DIRECTORY.md from alastria-node repository and send a Pull Request."
-echo "      The network administrator will send a RAFT_ID file. It will be stored in '~/alastria/data/' directory."
+echo "      Don't forget the .json files in data folder!."
 echo " "
 
 set +u
