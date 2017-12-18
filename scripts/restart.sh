@@ -2,8 +2,8 @@
 set -u
 set -e
 
-MESSAGE="Usage: restart CURRENT_HOST_IP | auto"
-if ( [ $# -ne 1 ] ); then
+MESSAGE="Usage: restart CURRENT_HOST_IP | auto | onlyUpdate"
+if ( [ $# -ne 2 ] ); then
     echo "$MESSAGE"
     exit
 fi
@@ -12,6 +12,7 @@ CONSTELLATION_NODES=$(cat ../data/constellation-nodes.json)
 STATIC_NODES=$(cat ../data/static-nodes.json)
 CURRENT_HOST_IP="$1"
 PWD="$HOME"
+mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 
 if ( [ "auto" == "$1" ]); then 
     echo "Autodiscovering public host IP ..."
@@ -68,9 +69,19 @@ EOF
 }
 
 cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
-generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
+if [[ "$NODE_TYPE" == "general" ]]; then
+    generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
+    cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria/data/permissioned-nodes.json
+else
+    cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/permissioned-nodes.json
+fi
 
-~/alastria-node/scripts/start.sh
+
+if [[ CURRENT_HOST_IP != "onlyUpdate" ]]; then
+    ~/alastria-node/scripts/stop.sh
+    sleep 6
+    ~/alastria-node/scripts/start.sh
+if
 
 set +u
 set +e
