@@ -153,16 +153,15 @@ fi
 if ( [ "general" == "$NODE_TYPE" ]); then 
     echo "     Por favor, introduzca como contraseña 'Passw0rd'."
     geth --datadir ~/alastria/data account new
+
+    echo "[*] Initializing Constellation node."
+    update_constellation_nodes "${CURRENT_HOST_IP}" "9000"
+    generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
+    cd ~/alastria/data/constellation/keystore
+    cat ~/alastria/data/passwords.txt | constellation-node --generatekeys=node
+    echo "______"
+    cd ~
 fi
-
-
-echo "[*] Initializing Constellation node."
-update_constellation_nodes "${CURRENT_HOST_IP}" "9000"
-generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
-cd ~/alastria/data/constellation/keystore
-cat ~/alastria/data/passwords.txt | constellation-node --generatekeys=node
-echo "______"
-cd ~
 
 if ( [ "backup" == "$1" ]); then 
     echo "Recovering keys from backup ..."
