@@ -2,6 +2,7 @@
 
 set -e
 
-pkill -f alastria
+pkill -f constellation-node
+pkill -f geth
 
 set +e
