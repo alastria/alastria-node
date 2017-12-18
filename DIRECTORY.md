@@ -10,7 +10,7 @@
 | CaixaBank | Josep Grau Miró (@josepgraumiro, jgrau@silk.es), Joan Arcas Sanz (@Joan Arcas, joan.arcas.sanz@accenture.com) |  |  |  |  |
 | IngenierosWeb | Víctor García (@vgpastor vgpastor@ingenierosweb.co) |  |  |  |  |
 | BBVA | José Antonio Dongil (joseantonio.dongil@bbva.com), Oliver Díaz (oliver.diaz@bbva.com) | Amazon AWS (2C/4Gb/30Gb) | 4 | qf0BlgkUvonqK+hNfYQSOKGnoVaTBeIecb17GZd/o34= | enode://c391f8e413c65ce1d930f5773c6f9e557de49e3d32ce2fb4849bb9b360845c1d76db5d6362816b341451853b3e9cd6a368df90253a64b78e7c552ac07cef257a@52.16.39.13:21000?raftport=41000 |
-| Grant Thornton | Jaime Morales Rodríguez de Lope (jaime.morales@es.gt.com) |  |  |  |  |
+| Grant Thornton | Jaime Morales Rodríguez de Lope (jaime.morales@es.gt.com) |Amazon AWS (2C/4Gb/30Gb)  |  |  GPMkHWqHzhk9xvWAhqaYs798M25FtLCnR+NstjvR9BI=|  enode://bde71235c493304fda103824ab2a2f17f54457ac3814cba998f4a44a1879e4c76b74d9f4562a13f679c71d1e13ca495822e497b8fa54810109b7ef7ae3af6de0@34.242.192.72:21000?raftport=41000|
 | Councilbox | Alberto Doval Iglesias (alberto.doval@councilbox.com) |  |  |  |  |
 | Sefide | Juan Pedro Ortega Liétor (@jpol, juanpedroortega@momopocket.com) | VMware VSphere Virtual Machine (4C/8Gb/50Gb) | 6 | ro8KeAtAXBnOw4LA4Z9zydT9EACh7t5qEKulktgLNTI= | enode://a3394b8aa6d34482337e3af9c035fb20dcdab4a4cb34db2f7a4bb026137c899e5d81c28997eaf463907333561f47a664f3b76923223538653156e2da9fa1cecc@87.253.228.27:21000?raftport=41000 |
 
