@@ -20,6 +20,11 @@ if ( [ "auto" == "$1" ]); then
     echo "Public host IP found: $CURRENT_HOST_IP"
 fi
 
+echo "Backing up current node keys ..."
+    #Backup directory tree
+    echo "Saving enode ID ..."
+    cp ~/alastria/data/geth/nodekey ~/nodekey
+
 
 generate_conf() {
    #define parameters which are passed in.
@@ -76,6 +81,7 @@ else
     cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/permissioned-nodes.json
 fi
 
+cp ~/nodekey ~/alastria/data/geth/nodekey
 
 if [[ CURRENT_HOST_IP != "onlyUpdate" ]]; then
     ~/alastria-node/scripts/stop.sh
