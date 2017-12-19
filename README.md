@@ -33,44 +33,72 @@ $ sudo -H ./bootstrap.sh
 ## Configuración del nodo
  Es necesario seguir los siguientes pasos para la configuración de los nodos:
 
-1. **Ejecutar script init.sh (CAMBIA)**
+1a. **Inicialización de un nuevo nodo**
+Para inicializar un nuevo nodo a la red debe ejecutarse el sript init.sh pasando como parámetros la ip del nodo, el tipo de nodo a inicializar (validator o general), y el nombre del nodo que estamos configurando:
+	```
+	$ ./init.sh <<PUBLIC_IP_HOST_MACHINE>> <<NODE_TYPE>> <<NODE_NAME>>
+	```
+Por comodidad también puede utilizarse el el parámetro **auto** para detectar automáticamente la IP del nodo de la siguiente forma:
+	```
+	$ ./init.sh auto <<NODE_TYPE>> <<NODE_NAME>>
+	```
+Así si queremos inicializar un nodo **validator** ejecutaremos, por ejemplo: 
+	```
+	$ ./init.sh auto validator <<NODE_NAME>>
+	```
+Y para ejecutar un nodo **general**:
+	```
+	$ ./init.sh auto general <<NODE_NAME>>
+	```
 
-	Configura el nodo Quorum junto con Constellation. 
-	
-	Al ejecutar este script debemos de pasar como parametro la IP pública del nodo que estamos configurando:
+1b. **Reinicialización de un nodo existente**
+Si ya disponemos de un nodo Alastria instalado en la máquina, y deseamos realizar una inicialización limpia del nodo manteniendo nuestro **enode**, 
+nuestras claves constellation y nuestras cuentas actuales, podemos ejecutar:
+    ```
+	$ ./init.sh backup <<NODE_TYPE>> <<NODE_NAME>>
 	```
-	$ ./init.sh <<PUBLIC_IP_HOST_MACHINE>>
-	```
-	O con el parámetro **auto** para detectarla automáticamente:
-	```
-	$ ./init.sh auto
-	```
-	Si ya disponemos de un nodo Alastria instalado en la máquina, y deseamos realizar una nueva
-	inicialización limpia del nodo manteniendo nuestro **enode**, 
-	nuestras claves constellation y nuestras cuentas actuales, podemos ejecutar:
-	```
-	$ ./init.sh backup
-	```
-	Este será el procedimiento a seguir ante actualizaciones en la testnet para evitar la 
-	generación de un nuevo enode.
+Este será el procedimiento a seguir por los nodos miembros ante actualizaciones de la infraestructura.
 
 2. **Configuración del fichero de nodos Quorum**
 
-	El nodo quorum que estamos desplegando se configura automaticamente con el script de inicialización ejecutado en el paso anterior.
+El nodo quorum que estamos desplegando se configura automaticamente con el script de
+inicialización ejecutado en el paso anterior. Si en el paso anterior se ha realizado la 
+inicialización de un nodo nuevo a la red (paso 1a), deberá realizarse un pull request al 
+repositorio `alastria-node` con las modificaciones
+realizadas por el script `init.sh` en los archivos `data/static-nodes.json`,
+`data/permissioned-nodes_general.json` y `data/permissioned-nodes_validator.json`.
+En función del tipo de nodo inicializado habrán cambiado todos o algunos de estos
+ficheros.
 
-	Con el **enode** informado, se actualiza el fichero de directorio de nodos `DIRECTORY.md` incluyendo la información de contacto del nodo, la información del host, la clave del private for y el enode del nodo a la rama develop de este repositorio.
-	
-	**INDICAR QUE DEBEN SUBIRSE LOS FICHEROS CAMBIADOS (static-nodes, permissioned-nodes).**
+Además de estos archivos, en el pull request deberá incluirse la actualización
+del fichero `DIRECTORY.md` incluyendo la información de contacto del nodo, 
+la información del host, 
+la clave del private for de Constellation y el enode del nodo.
 
-    **INDICAR QUE HAY QUE SUMINISTRAR EL address del nodo recigido del log (Sólo si ers validator)**
+Para los **nodos regulares**, aquí acaba el proceso de configuración. Los 
+**nodos validadores**, por el contrario, deben realizar un paso más.
+Deberan iniciar el nodo utilizando el script `start.sh`. Una vez iniciado,
+nos dirigimos a los logs del nodo en `~/alastria/logs/quorum-XXX.log`.
+En el log aparecerá el siguiente mensaje de error:
+```
+ERROR[12-19|12:25:05] Failed to decode message from payload    address=0x59d9F63451811C2c3C287BE40a2206d201DC3BfF err="unauthorized address"
+```
+Esto es debido a que el resto de validadores de la red no han aceptado todavía
+al nodo como validador. Para ello, debemos enviar el address que aparece en
+este mensaje de error (`0x59d9F63451811C2c3C287BE40a2206d201DC3BfF`) a alguno
+de los administradores de los nodos validadores para que den de alta el nuevo
+nodo como validador.
 
-    **Si es regular, ser ha terminado subiendo los ficheros**
-    
-    **Si es validador, hay que esperar a la votación del resto de los nodos**
+Una vez incluido el nuevo nodo como validador, se debe ejecutar el
+script `restart.sh` con la opción onlyUpdate:
+```
+$ ./restart.sh onlyUpdate
+```
+Y nuestro nodo se levantará ya configurado y sincronizado con la red.
 
 3. **Configuración del fichero de nodos de Constellation**
-
-	El nodo Constellation que estamos desplegando se configura automáticamente con el script de inicialización ejecutado en el paso anterior.
+	El nodo Constellation que estamos desplegando se configura automáticamente con el script de inicialización ejecutado en el paso anterior. En el caso de nodos validadores, no
+	es necesario ejecutar el constellation.
 
 **NOTA**
 En este punto ya tendriamos desplegado un nuevo nodo en la red, que incluiria el despliegue y configuración de Quorum y Constellation.
@@ -88,13 +116,24 @@ ejecutar los siguientes comados:
 $ ./stop.sh
 $ ./start.sh clean
 ```
+Finalmente, disponemos de un script de restart para actualizar y reiniciar el nodo
+(por ejemplo ante actualizaciones del permissioned-nodes*):
+```
+$ ./restart.sh onlyUpdate
+```
+O para reiniciar completamente
+el nodo:
+```
+$ ./restart.sh auto || <<CURRENT_HOST_IP>>
+```
 
 ## Hacer backups del estado de la blockchain y limpiar el nodo
 El script `./scripts/backup.sh` permite realizar copias de seguridad del estado del nodo.
-Ejecutando `./scripts/backup.sh keys` se hace una copia de seguridad de las claves y el enode de
-nuestro nodo.
+Ejecutando `./scripts/backup.sh keys` se hace una copia de seguridad de las claves
+y el enode de nuestro nodo.
 
-Con `./scripts/backup.sh full` realizamos una copia de seguridad de todo el estado del nodo y de la
+Con `./scripts/backup.sh full` realizamos una copia de seguridad 
+de todo el estado del nodo y de la
 blockchain. Todas las copias de seguridad se almacenan en el directorio home
 como `~/alastria-keysBackup-<date>/` y `~/alastria-backup-<date>/`, respectivamente.
 
@@ -102,8 +141,9 @@ Existe un script `./scripts/clean.sh` que limpia el nodo actual y exige una resi
 del mismo al iniciarlo de nuevo. Esto solventa posibles errores de sincronización.
 Su efecto es el mismo que el de ejecutar directamente `./scripts/start.sh clean`
 
+<!-- EN PROCESO DE REVISIÓN
 
-## Build/Run with Docker (A REVISAR)
+## Build/Run with Docker
 
 **NOTA**
 Ejecución con Docker es muy experimental y se requiere ejecutar el contenedor en modo interactivo y desde allí ejecutar los scripts `init.sh` y `start.sh`.
@@ -123,4 +163,4 @@ docker build -t alastria .
 Al tener la imagen preparada se puede ejecutar (ahora en forma experimental e interactiva solo):
 ```
 docker run -it --rm --name alastria -p 9000:9000 -p 21000:21000 -p 22000:22000 -p 41000:41000 alastria bash
-```
+``` -->
