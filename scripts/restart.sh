@@ -3,7 +3,7 @@ set -u
 set -e
 
 MESSAGE="Usage: restart CURRENT_HOST_IP | auto | onlyUpdate"
-if ( [ $# -ne 2 ] ); then
+if ( [ $# -ne 1 ] ); then
     echo "$MESSAGE"
     exit
 fi
@@ -87,7 +87,7 @@ if [[ CURRENT_HOST_IP != "onlyUpdate" ]]; then
     ~/alastria-node/scripts/stop.sh
     sleep 6
     ~/alastria-node/scripts/start.sh
-if
+fi
 
 set +u
 set +e
