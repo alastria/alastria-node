@@ -75,9 +75,18 @@ del fichero `DIRECTORY.md` incluyendo la información de contacto del nodo,
 la información del host, 
 la clave del private for de Constellation y el enode del nodo.
 
+Para iniciar el nodo se utilizará el script `start.sh`.
+
 Para los **nodos regulares**, aquí acaba el proceso de configuración. Los 
-**nodos validadores**, por el contrario, deben realizar un paso más.
-Deberan iniciar el nodo utilizando el script `start.sh`. Una vez iniciado,
+**nodos validadores**, por el contrario, deben realizar un paso más. 
+
+Una vez incluido el nuevo, se debe ejecutar el
+script `restart.sh` con la opción onlyUpdate:
+```
+$ ./restart.sh onlyUpdate
+```
+
+Acto seguido,
 nos dirigimos a los logs del nodo en `~/alastria/logs/quorum-XXX.log`.
 En el log aparecerá el siguiente mensaje de error:
 ```
@@ -85,16 +94,9 @@ ERROR[12-19|12:25:05] Failed to decode message from payload    address=0x59d9F63
 ```
 Esto es debido a que el resto de validadores de la red no han aceptado todavía
 al nodo como validador. Para ello, debemos enviar el address que aparece en
-este mensaje de error (`0x59d9F63451811C2c3C287BE40a2206d201DC3BfF`) a alguno
-de los administradores de los nodos validadores para que den de alta el nuevo
-nodo como validador.
+este mensaje de error (`0x59d9F63451811C2c3C287BE40a2206d201DC3BfF`) a los administradores del nodo alastria, que solicitarán al resto de nodos el que voten por el nuevo validador.
 
-Una vez incluido el nuevo nodo como validador, se debe ejecutar el
-script `restart.sh` con la opción onlyUpdate:
-```
-$ ./restart.sh onlyUpdate
-```
-Y nuestro nodo se levantará ya configurado y sincronizado con la red.
+Así, nuestro nodo estará levantado y sincronizado con la red.
 
 3. **Configuración del fichero de nodos de Constellation**
 	El nodo Constellation que estamos desplegando se configura automáticamente con el script de inicialización ejecutado en el paso anterior. En el caso de nodos validadores, no
