@@ -16,8 +16,6 @@ Es necesario habilitar los siguientes puertos de E/S en la maquina en la que vam
 
 * **21000**: TCP/UDP - Puerto para establecer la comunicación entre procesos geth.
 
-* **41000**: TCP - Puerto para el consenso RAFT de Quorum.
-
 * **9000**: TCP - Puerto para la comunicación de Constellation.
 
 * **22000**: TCP - Puerto para establecer la comunicación RPC.
@@ -35,7 +33,7 @@ $ sudo -H ./bootstrap.sh
 ## Configuración del nodo
  Es necesario seguir los siguientes pasos para la configuración de los nodos:
 
-1. **Ejecutar script init.sh**
+1. **Ejecutar script init.sh (CAMBIA)**
 
 	Configura el nodo Quorum junto con Constellation. 
 	
@@ -61,10 +59,14 @@ $ sudo -H ./bootstrap.sh
 	El nodo quorum que estamos desplegando se configura automaticamente con el script de inicialización ejecutado en el paso anterior.
 
 	Con el **enode** informado, se actualiza el fichero de directorio de nodos `DIRECTORY.md` incluyendo la información de contacto del nodo, la información del host, la clave del private for y el enode del nodo a la rama develop de este repositorio.
+	
+	**INDICAR QUE DEBEN SUBIRSE LOS FICHEROS CAMBIADOS (static-nodes, permissioned-nodes).**
 
-	Una vez procesado el **pull request**, se remitirá al contacto del nodo el RAFT_ID y se actualizará el fichero `DIRECTORY.md`.
+    **INDICAR QUE HAY QUE SUMINISTRAR EL address del nodo recigido del log (Sólo si ers validator)**
 
-	Este fichero se colocará en la carpeta `~/alastria/data/`.
+    **Si es regular, ser ha terminado subiendo los ficheros**
+    
+    **Si es validador, hay que esperar a la votación del resto de los nodos**
 
 3. **Configuración del fichero de nodos de Constellation**
 
@@ -75,7 +77,7 @@ En este punto ya tendriamos desplegado un nuevo nodo en la red, que incluiria el
 
 Si necesitamos desplegar más nodos para nuestra red, es necesario volver a realizar los pasos descritos en el paso 2.
 
-## Arranque de nodo Quorum + Constellation
+## Arranque de nodo Quorum + Constellation (CAMBIAR)
 Una vez instalado y configurado todo ya podemos arrancar nuestro nodo. Para arrancar ejecutamos la siguiente orden:
 ```
 $ ./start.sh
@@ -86,13 +88,6 @@ ejecutar los siguientes comados:
 $ ./stop.sh
 $ ./start.sh clean
 ```
-
-## Habilitar el nodo/account para empezar a emitir transacciones
-A la hora de realizar transacciones en la red de Alastria es necesario realizar el siguiente procedimiento:
-
-Una vez que se levantado el nodo, es necesaria la realización de una transferencia de fondos de la cuenta principal a la cuenta que acaba de ser generada al iniciarse el nodo.
-
-Con el fin de realizar este procedimiento se debe indicar al administrador del primer nodo de la red, poseedor de la cuenta principal, la cuenta que se ha generado al levantar el nodo. Tras esto, el administrador deberá asignar a la cuenta del nodo la cantidad que se haya acordado.
 
 ## Hacer backups del estado de la blockchain y limpiar el nodo
 El script `./scripts/backup.sh` permite realizar copias de seguridad del estado del nodo.
@@ -108,7 +103,7 @@ del mismo al iniciarlo de nuevo. Esto solventa posibles errores de sincronizaci�
 Su efecto es el mismo que el de ejecutar directamente `./scripts/start.sh clean`
 
 
-## Build/Run with Docker
+## Build/Run with Docker (A REVISAR)
 
 **NOTA**
 Ejecución con Docker es muy experimental y se requiere ejecutar el contenedor en modo interactivo y desde allí ejecutar los scripts `init.sh` y `start.sh`.
