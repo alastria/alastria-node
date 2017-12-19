@@ -60,11 +60,11 @@ Este será el procedimiento a seguir por los nodos miembros ante actualizaciones
 
 2. **Configuración del fichero de nodos Quorum**
 
-El nodo quorum que estamos desplegando se configura automaticamente con el script de inicialización ejecutado en el paso anterior. Si se ha realizado la inicialización de un nodo nuevo a la red (paso 1a), deberá realizarse un pull request al repositorio `alastria-node` con las modificaciones realizadas por el script `init.sh` en los archivos `data/static-nodes.json`, `data/permissioned-nodes_general.json` y `data/permissioned-nodes_validator.json`.
+El nodo quorum que estamos desplegando se configura automaticamente con el script de inicialización ejecutado en el paso anterior. Si se ha realizado la inicialización de un nodo nuevo a la red (paso 1a), deberá realizarse un pull request al repositorio `alastria-node` con las modificaciones realizadas por el script `init.sh` en los archivos [data/static-nodes.json](data/static-nodes.json), [data/permissioned-nodes_general.json](data/permissioned-nodes_general.json) y [data/permissioned-nodes_validator.json](data/permissioned-nodes_validator.json).
 
 En función del tipo de nodo inicializado habrán cambiado todos o algunos de estos ficheros.
 
-Además de estos archivos, en el pull request deberá incluirse la actualización del fichero `DIRECTORY_VALIDATOR.md` o `DIRECTORY_REGULAR.md` incluyendo la información de contacto del nodo, la información del host, la clave del private for de Constellation y el enode del nodo.
+Además de estos archivos, en el pull request deberá incluirse la actualización del fichero [DIRECTORY_VALIDATOR.md](DIRECTORY_VALIDATOR.md) o [DIRECTORY_REGULAR.md](DIRECTORY_REGULAR.md) incluyendo la información de contacto del nodo, la información del host, la clave del private for de Constellation y el enode del nodo.
 
 Para iniciar el nodo se utilizará el script `start.sh`.
 
