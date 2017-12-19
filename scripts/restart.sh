@@ -3,7 +3,7 @@ set -u
 set -e
 
 MESSAGE="Usage: restart CURRENT_HOST_IP | auto | onlyUpdate"
-if ( [ $# -ne 2 ] ); then
+if ( [ $# -ne 1 ] ); then
     echo "$MESSAGE"
     exit
 fi
