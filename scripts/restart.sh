@@ -81,7 +81,7 @@ if [[ CURRENT_HOST_IP != "onlyUpdate" ]]; then
     ~/alastria-node/scripts/stop.sh
     sleep 6
     ~/alastria-node/scripts/start.sh
-if
+fi
 
 set +u
 set +e
