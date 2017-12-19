@@ -4,11 +4,11 @@
 
 Caracteristicas de la máquina:
 
-* **CPU's**: 2
+* **CPU's**: 4 cores
 
-* **Memoria**: 4 Gb
+* **Memoria**: 32 Gb
 
-* **Disco duro**: 30 Gb
+* **Disco duro**: 100 Gb SSD
 
 * **Sistema operativo**: Ubuntu 16.04 64 bits
 
@@ -64,7 +64,7 @@ El nodo quorum que estamos desplegando se configura automaticamente con el scrip
 
 En función del tipo de nodo inicializado habrán cambiado todos o algunos de estos ficheros.
 
-Además de estos archivos, en el pull request deberá incluirse la actualización del fichero `DIRECTORY.md` incluyendo la información de contacto del nodo, la información del host, la clave del private for de Constellation y el enode del nodo.
+Además de estos archivos, en el pull request deberá incluirse la actualización del fichero `DIRECTORY_VALIDATOR.md` o `DIRECTORY_REGULAR.md` incluyendo la información de contacto del nodo, la información del host, la clave del private for de Constellation y el enode del nodo.
 
 Para iniciar el nodo se utilizará el script `start.sh`.
 
