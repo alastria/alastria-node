@@ -52,8 +52,7 @@ Y para ejecutar un nodo **general**:
 	```
 
 1b. **Reinicialización de un nodo existente**
-Si ya disponemos de un nodo Alastria instalado en la máquina, y deseamos realizar una inicialización limpia del nodo manteniendo nuestro **enode**, 
-nuestras claves constellation y nuestras cuentas actuales, podemos ejecutar:
+Si ya disponemos de un nodo Alastria instalado en la máquina, y deseamos realizar una inicialización limpia del nodo manteniendo nuestro **enode**, nuestras claves constellation y nuestras cuentas actuales, podemos ejecutar:
     ```
 	$ ./init.sh backup <<NODE_TYPE>> <<NODE_NAME>>
 	```
@@ -61,46 +60,38 @@ Este será el procedimiento a seguir por los nodos miembros ante actualizaciones
 
 2. **Configuración del fichero de nodos Quorum**
 
-El nodo quorum que estamos desplegando se configura automaticamente con el script de
-inicialización ejecutado en el paso anterior. Si en el paso anterior se ha realizado la 
-inicialización de un nodo nuevo a la red (paso 1a), deberá realizarse un pull request al 
-repositorio `alastria-node` con las modificaciones
-realizadas por el script `init.sh` en los archivos `data/static-nodes.json`,
-`data/permissioned-nodes_general.json` y `data/permissioned-nodes_validator.json`.
-En función del tipo de nodo inicializado habrán cambiado todos o algunos de estos
-ficheros.
+El nodo quorum que estamos desplegando se configura automaticamente con el script de inicialización ejecutado en el paso anterior. Si se ha realizado la inicialización de un nodo nuevo a la red (paso 1a), deberá realizarse un pull request al repositorio `alastria-node` con las modificaciones realizadas por el script `init.sh` en los archivos `data/static-nodes.json`, `data/permissioned-nodes_general.json` y `data/permissioned-nodes_validator.json`.
 
-Además de estos archivos, en el pull request deberá incluirse la actualización
-del fichero `DIRECTORY.md` incluyendo la información de contacto del nodo, 
-la información del host, 
-la clave del private for de Constellation y el enode del nodo.
+En función del tipo de nodo inicializado habrán cambiado todos o algunos de estos ficheros.
+
+Además de estos archivos, en el pull request deberá incluirse la actualización del fichero `DIRECTORY.md` incluyendo la información de contacto del nodo, la información del host, la clave del private for de Constellation y el enode del nodo.
 
 Para iniciar el nodo se utilizará el script `start.sh`.
 
-Para los **nodos regulares**, aquí acaba el proceso de configuración. Los 
-**nodos validadores**, por el contrario, deben realizar un paso más. 
+Para los **nodos regulares**, aquí acaba el proceso de configuración. Los **nodos validadores**, por el contrario, deben realizar un paso más. 
 
-Una vez incluido el nuevo, se debe ejecutar el
-script `restart.sh` con la opción onlyUpdate:
+Cada uno de los nodos validadores, deben ejecutar el script `restart.sh` con la opción onlyUpdate:
 ```
 $ ./restart.sh onlyUpdate
 ```
 
-Acto seguido,
-nos dirigimos a los logs del nodo en `~/alastria/logs/quorum-XXX.log`.
-En el log aparecerá el siguiente mensaje de error:
+Acto seguido, nos dirigimos a los logs del nodo en `~/alastria/logs/quorum-XXX.log` del nuevo nodo validador en el log aparecerá el siguiente mensaje de error:
 ```
 ERROR[12-19|12:25:05] Failed to decode message from payload    address=0x59d9F63451811C2c3C287BE40a2206d201DC3BfF err="unauthorized address"
 ```
-Esto es debido a que el resto de validadores de la red no han aceptado todavía
-al nodo como validador. Para ello, debemos enviar el address que aparece en
-este mensaje de error (`0x59d9F63451811C2c3C287BE40a2206d201DC3BfF`) a los administradores del nodo alastria, que solicitarán al resto de nodos el que voten por el nuevo validador.
+Esto es debido a que el resto de validadores de la red no han aceptado todavía al nodo como validador. Para ello, debemos enviar el address que aparece en este mensaje de error (`0x59d9F63451811C2c3C287BE40a2206d201DC3BfF`) que debe ser notificada al resto de validadores a través de un pull request, a través de slack u otro medio que informe al resto de administradores de nodos validadores.
+
+Esto provocará una ronda de votación a través del RPC API:
+
+```
+> istanbul.propose("0x59d9F63451811C2c3C287BE40a2206d201DC3BfF", true);
+```
 
 Así, nuestro nodo estará levantado y sincronizado con la red.
 
 3. **Configuración del fichero de nodos de Constellation**
-	El nodo Constellation que estamos desplegando se configura automáticamente con el script de inicialización ejecutado en el paso anterior. En el caso de nodos validadores, no
-	es necesario ejecutar el constellation.
+	El nodo Constellation que estamos desplegando se configura automáticamente con el script de inicialización ejecutado en el paso anterior. 
+    En el caso de nodos validadores, no	es necesario ejecutar el constellation.
 
 **NOTA**
 En este punto ya tendriamos desplegado un nuevo nodo en la red, que incluiria el despliegue y configuración de Quorum y Constellation.
@@ -112,14 +103,12 @@ Una vez instalado y configurado todo ya podemos arrancar nuestro nodo. Para arra
 ```
 $ ./start.sh
 ```
-Ante errores en el nodo, podemos optar por realizar un reinicio limpio del nodo, para ello debemos
-ejecutar los siguientes comados:
+Ante errores en el nodo, podemos optar por realizar un reinicio limpio del nodo, para ello debemos ejecutar los siguientes comados:
 ```
 $ ./stop.sh
 $ ./start.sh clean
 ```
-Finalmente, disponemos de un script de restart para actualizar y reiniciar el nodo
-(por ejemplo ante actualizaciones del permissioned-nodes*):
+Finalmente, disponemos de un script de restart para actualizar y reiniciar el nodo (por ejemplo ante actualizaciones del permissioned-nodes*):
 ```
 $ ./restart.sh onlyUpdate
 ```
