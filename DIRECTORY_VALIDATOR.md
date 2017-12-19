@@ -8,7 +8,7 @@
 | Repsol | Esteban Montenegro (@Esteban Montenegro, montenegro.garcia.esteban@repsol.com) |  |  |
 | Indra | Alfonso de la Rocha (@arocha, @arochaga, arocha@minsait.com) | Azure (2C/4Gb/30Gb) | enode://669da0c4581e4cd04bb67690acfa739f27bd1f69522d7df73820b865cd78ceb2ad1c29fd982845194db1efe81a4d814c248707a97be00b903feb7215cf07e211@40.118.64.233:21000?discport=0 |
 | CaixaBank | Josep Grau Miró (@josepgraumiro, jgrau@silk.es), Joan Arcas Sanz (@Joan Arcas, joan.arcas.sanz@accenture.com) | Bluemix |  |
-| IngenierosWeb | Víctor García (@vgpastor vgpastor@ingenierosweb.co) |  |  |  |  |
+| IngenierosWeb | Víctor García (@vgpastor vgpastor@ingenierosweb.co) | XenServer VM (8C/4GB/200GB) | enode://738f4443187587bc499e25783683ce5e079fc6283f08279d5f895458472a6a2e263be3dd2616d29e74439cb31ebb1216e11e717b4a7f3ab6618757a50b3d82af@84.78.197.19:21000 |
 | BBVA | José Antonio Dongil (joseantonio.dongil@bbva.com), Oliver Díaz (oliver.diaz@bbva.com) | Amazon AWS (2C/4Gb/30Gb) |  |
 | Grant Thornton | Jaime Morales Rodríguez de Lope (jaime.morales@es.gt.com) |  |  |  |
 | Councilbox | Alberto Doval Iglesias (alberto.doval@councilbox.com) |  |  |
