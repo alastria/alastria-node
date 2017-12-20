@@ -125,7 +125,8 @@ EOF
 }
 
 echo "[*] Cleaning up temporary data directories."
-rm -rf ~/alastria
+rm -rf ~/alastria/data
+rm -rf ~/alastria/logs
 mkdir -p ~/alastria/data/{keystore,geth,constellation}
 mkdir -p ~/alastria/data/constellation/{data,keystore}
 mkdir -p ~/alastria/logs
@@ -189,7 +190,7 @@ fi
 
 echo "[*] Initialization was completed successfully."
 echo " "
-echo "      Update DIRECTORY.md from alastria-node repository and send a Pull Request."
+echo "      Update DIRECTORY_REGULAR.md or DIRECTORY_VALIDATOR.md from alastria-node repository and send a Pull Request."
 echo "      Don't forget the .json files in data folder!."
 echo " "
 
