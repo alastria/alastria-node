@@ -23,33 +23,36 @@ if ( [ "clean" == "$1" ]); then
     rm ~/alastria-backup-$CURRENT_DATE/data/constellation/constellation.ipc
 fi
 
-if [[ ! -f ~/alastria/data/RAFT_ID && "$CURRENT_HOST_IP" != "52.56.69.220" ]]; then
-    echo "[*] The node don't have ~/alastria/data/RAFT_ID file, please:"
-    echo " "
-    echo "      Update DIRECTORY.md from alastria-node repository and send a Pull Request."
-    echo "      The network administrator will send a RAFT_ID file. It will be stored in '~/alastria/data/' directory."
-    echo " " 
-    exit
-fi
-
-NETID=963262369
-GLOBAL_ARGS="--networkid $NETID --raft --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,raft --rpcport 22000 --port 21000 --raftport 41000 "
+NETID=953474359
+mapfile -t IDENTITY <~/alastria/data/IDENTITY
+GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000 "
 
 _TIME=$(date +%Y%m%d%H%M%S)
 
-echo "[*] Starting Constellation node"
-nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
-sleep 6
+mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
+
+if [[ "$NODE_TYPE" == "general" ]]; then
+    echo "[*] Starting Constellation node"
+    nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
+    sleep 6
+fi
+
+if [[ ! -f "permissioned-nodes.json" ]]; then
+    # Esto es necesario por un bug de Quorum https://github.com/jpmorganchase/quorum/issues/225
+    ln -s ~/alastria/data/permissioned-nodes.json permissioned-nodes.json
+fi
 
 echo "[*] Starting quorum node"
-PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf
-# Se elimina --permissioned por fallo en el nodo 'Alastria'
-if [ -f ~/alastria/data/RAFT_ID ]; then 
-    mapfile -t RAFT_ID <~/alastria/data/RAFT_ID
-    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --raftjoinexisting $RAFT_ID --bootnodes enode://3905f943ba5446eba164c07ab5f53a84ce17d74ec4d7591f6ec54b9d7608f57cae7cfdf946616385f59cfb5b910161a1f8520cb6f992bcc0d1ab932601205e91@52.56.69.220:21000?raftport=41000 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+if [[ "$NODE_TYPE" == "general" ]]; then
+    PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf
+    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
 else
-    if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
-        nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    if [[ "$NODE_TYPE" == "validator" ]]; then
+        if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
+            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --mine --minerthreads 1 --syncmode "full" --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+        else
+            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --mine --minerthreads 1 --syncmode "full" 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+        fi
     fi
 fi
 

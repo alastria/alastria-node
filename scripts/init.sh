@@ -2,13 +2,19 @@
 set -u
 set -e
 
-MESSAGE="Usage: init CURRENT_HOST_IP | auto | backup"
-if ( [ $# -ne 1 ] ); then
+MESSAGE='Usage: init <mode> <node-type> <node-name>
+    mode: CURRENT_HOST_IP | auto | backup
+    node-type: validator | general
+    node-name: NODE_NAME (example: Alastria)'
+
+if ( [ $# -ne 3 ] ); then
     echo "$MESSAGE"
     exit
 fi
 
 CURRENT_HOST_IP="$1"
+NODE_TYPE="$2"
+NODE_NAME="$3"
 
 if ( [ "auto" == "$1" -o "backup" == "$1" ]); then 
     echo "Autodiscovering public host IP ..."
@@ -17,7 +23,7 @@ if ( [ "auto" == "$1" -o "backup" == "$1" ]); then
 fi
 
 if ( [ "backup" == "$1" ]); then 
-    echo "Backuping current node keys ..."
+    echo "Backing up current node keys ..."
     #Backup directory tree
     mkdir ~/alastria-keysBackup
     mkdir ~/alastria-keysBackup/data
@@ -34,6 +40,42 @@ fi
 PWD="$(pwd)"
 CONSTELLATION_NODES=$(cat ../data/constellation-nodes.json)
 STATIC_NODES=$(cat ../data/static-nodes.json)
+PERMISSIONED_NODES_VALIDATOR=$(cat ../data/permissioned-nodes_validator.json)
+PERMISSIONED_NODES_GENERAL=$(cat ../data/permissioned-nodes_general.json)
+
+update_constellation_nodes() {
+    NODE_IP="$1"
+    CONSTELLATION_PORT="$2"
+    URL=",
+    \"http://$NODE_IP:$CONSTELLATION_PORT/\"
+]"
+    CONSTELLATION_NODES=${CONSTELLATION_NODES::-2}
+    CONSTELLATION_NODES="$CONSTELLATION_NODES$URL"
+    echo "$CONSTELLATION_NODES" > ~/alastria-node/data/constellation-nodes.json
+}
+
+update_nodes_list() {
+    echo "Selected $NODE_TYPE node..."
+    echo "Updating permissioned nodes..."
+
+       ENODE=",
+    \"$1\"
+]"
+    PERMISSIONED_NODES_VALIDATOR=${PERMISSIONED_NODES_VALIDATOR::-2}
+    PERMISSIONED_NODES_VALIDATOR="$PERMISSIONED_NODES_VALIDATOR$ENODE"
+    echo "$PERMISSIONED_NODES_VALIDATOR" > ~/alastria-node/data/permissioned-nodes_validator.json
+
+    if ( [ "validator" == "$NODE_TYPE" ]); then 
+        PERMISSIONED_NODES_GENERAL=${PERMISSIONED_NODES_GENERAL::-2}
+        PERMISSIONED_NODES_GENERAL="$PERMISSIONED_NODES_GENERAL$ENODE"
+        echo "$PERMISSIONED_NODES_GENERAL" > ~/alastria-node/data/permissioned-nodes_general.json
+    fi
+
+    echo "Updating static-nodes..."
+    cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria-node/data/static-nodes.json
+
+}
+
 
 generate_conf() {
    #define parameters which are passed in.
@@ -88,6 +130,9 @@ mkdir -p ~/alastria/data/{keystore,geth,constellation}
 mkdir -p ~/alastria/data/constellation/{data,keystore}
 mkdir -p ~/alastria/logs
 
+echo "$NODE_NAME" > ~/alastria/data/IDENTITY
+echo "$NODE_TYPE" > ~/alastria/data/NODE_TYPE
+
 # Creamos el fichero de passwords con la contraseña de las cuentas
 echo "Passw0rd" > ~/alastria/data/passwords.txt
 
@@ -96,22 +141,35 @@ geth --datadir ~/alastria/data init ~/alastria-node/data/genesis.json
 cd ~/alastria/data/geth
 bootnode -genkey nodekey
 ENODE_KEY=$(bootnode -nodekey nodekey -writeaddress)
-echo "ENODE -> 'enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?raftport=41000'"
+echo "ENODE -> 'enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0'"
+update_nodes_list "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0"
 cd ~
 if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/permissioned-nodes.json
+else 
+    if [[ "$NODE_TYPE" == "general" ]]; then
+        cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria/data/permissioned-nodes.json
+        cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria/data/static-nodes.json
+    else 
+        cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/permissioned-nodes.json
+        cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/static-nodes.json
+    fi
 fi
 
-echo "     Por favor, introduzca como contraseña 'Passw0rd'."
-geth --datadir ~/alastria/data account new
 
-echo "[*] Initializing Constellation node."
-generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
-cd ~/alastria/data/constellation/keystore
-cat ~/alastria/data/passwords.txt | constellation-node --generatekeys=node
-echo "______"
-cd ~
+if ( [ "general" == "$NODE_TYPE" ]); then 
+    echo "     Por favor, introduzca como contraseña 'Passw0rd'."
+    geth --datadir ~/alastria/data account new
+
+    echo "[*] Initializing Constellation node."
+    update_constellation_nodes "${CURRENT_HOST_IP}" "9000"
+    generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
+    cd ~/alastria/data/constellation/keystore
+    cat ~/alastria/data/passwords.txt | constellation-node --generatekeys=node
+    echo "______"
+    cd ~
+fi
 
 if ( [ "backup" == "$1" ]); then 
     echo "Recovering keys from backup ..."
@@ -132,7 +190,7 @@ fi
 echo "[*] Initialization was completed successfully."
 echo " "
 echo "      Update DIRECTORY.md from alastria-node repository and send a Pull Request."
-echo "      The network administrator will send a RAFT_ID file. It will be stored in '~/alastria/data/' directory."
+echo "      Don't forget the .json files in data folder!."
 echo " "
 
 set +u
