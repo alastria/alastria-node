@@ -125,7 +125,8 @@ EOF
 }
 
 echo "[*] Cleaning up temporary data directories."
-rm -rf ~/alastria
+rm -rf ~/alastria/data
+rm -rf ~/alastria/logs
 mkdir -p ~/alastria/data/{keystore,geth,constellation}
 mkdir -p ~/alastria/data/constellation/{data,keystore}
 mkdir -p ~/alastria/logs
@@ -141,6 +142,11 @@ geth --datadir ~/alastria/data init ~/alastria-node/data/genesis.json
 cd ~/alastria/data/geth
 bootnode -genkey nodekey
 ENODE_KEY=$(bootnode -nodekey nodekey -writeaddress)
+
+if ( [ "backup" == "$1" ]); then
+    ENODE_KEY=$(bootnode -nodekey ~/alastria-keysBackup/data/geth/nodekey -writeaddress)
+fi
+
 echo "ENODE -> 'enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0'"
 update_nodes_list "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0"
 cd ~
@@ -189,7 +195,7 @@ fi
 
 echo "[*] Initialization was completed successfully."
 echo " "
-echo "      Update DIRECTORY.md from alastria-node repository and send a Pull Request."
+echo "      Update DIRECTORY_REGULAR.md or DIRECTORY_VALIDATOR.md from alastria-node repository and send a Pull Request."
 echo "      Don't forget the .json files in data folder!."
 echo " "
 
