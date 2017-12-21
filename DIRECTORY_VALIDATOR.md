@@ -12,4 +12,4 @@
 | BBVA | José Antonio Dongil (joseantonio.dongil@bbva.com), Oliver Díaz (oliver.diaz@bbva.com) | Amazon AWS (2C/4Gb/30Gb) |  |
 | Grant Thornton | Jaime Morales Rodríguez de Lope (jaime.morales@es.gt.com) |  |  |  |
 | Councilbox | Alberto Doval Iglesias (alberto.doval@councilbox.com) |  |  |
-| Sefide | Juan Pedro Ortega Liétor (@jpol, juanpedroortega@momopocket.com) | VMware VSphere Virtual Machine (4C/8Gb/50Gb) |  |
+| Sefide | Juan Pedro Ortega Liétor (@jpol, juanpedroortega@momopocket.com) | VMware VSphere Virtual Machine (4C/8Gb/50Gb) | enode://a3394b8aa6d34482337e3af9c035fb20dcdab4a4cb34db2f7a4bb026137c899e5d81c28997eaf463907333561f47a664f3b76923223538653156e2da9fa1cecc@87.253.228.27:21000?discport=0 |
