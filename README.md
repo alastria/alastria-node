@@ -34,28 +34,39 @@ $ sudo -H ./bootstrap.sh
  Es necesario seguir los siguientes pasos para la configuración de los nodos:
 
 1a. **Inicialización de un nuevo nodo**
+
 Para inicializar un nuevo nodo a la red debe ejecutarse el sript init.sh pasando como parámetros la ip del nodo, el tipo de nodo a inicializar (validator o general), y el nombre del nodo que estamos configurando:
+
 	```
 	$ ./init.sh <<PUBLIC_IP_HOST_MACHINE>> <<NODE_TYPE>> <<NODE_NAME>>
 	```
+
 Por comodidad también puede utilizarse el el parámetro **auto** para detectar automáticamente la IP del nodo de la siguiente forma:
+
 	```
 	$ ./init.sh auto <<NODE_TYPE>> <<NODE_NAME>>
 	```
+
 Así si queremos inicializar un nodo **validator** ejecutaremos, por ejemplo: 
+
 	```
 	$ ./init.sh auto validator <<NODE_NAME>>
 	```
+
 Y para ejecutar un nodo **general**:
+
 	```
 	$ ./init.sh auto general <<NODE_NAME>>
 	```
 
 1b. **Reinicialización de un nodo existente**
+
 Si ya disponemos de un nodo Alastria instalado en la máquina, y deseamos realizar una inicialización limpia del nodo manteniendo nuestro **enode**, nuestras claves constellation y nuestras cuentas actuales, podemos ejecutar:
+
     ```
 	$ ./init.sh backup <<NODE_TYPE>> <<NODE_NAME>>
 	```
+
 Este será el procedimiento a seguir por los nodos miembros ante actualizaciones de la infraestructura.
 
 2. **Configuración del fichero de nodos Quorum**
