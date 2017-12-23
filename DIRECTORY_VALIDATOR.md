@@ -12,3 +12,4 @@
 | Grant Thornton | Jaime Morales Rodríguez de Lope (jaime.morales@es.gt.com) |  |  |  |
 | Councilbox | Alberto Doval Iglesias (alberto.doval@councilbox.com) |  |  |
 | Sefide | Juan Pedro Ortega Liétor (@jpol, juanpedroortega@momopocket.com) | VMware VSphere Virtual Machine (4C/8Gb/50Gb) | enode://a3394b8aa6d34482337e3af9c035fb20dcdab4a4cb34db2f7a4bb026137c899e5d81c28997eaf463907333561f47a664f3b76923223538653156e2da9fa1cecc@87.253.228.27:21000?discport=0 |
+| Banc Sabadell | Montserrat Guàrdia (guardia.montserrat@sabis.tech) | Digital Ocean (2C/4Gb/30Gb) | enode://6902e48515e0ae874ff2030af09499f7215223890a6b270274e7a5e5f0feb3b0fc9b23655b85baa1df77eb1d6582024668377e86aae6f49727ceb79e700280b0@82.196.3.83:21000?discport=0 |
