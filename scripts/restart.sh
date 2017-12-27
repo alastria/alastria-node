@@ -82,10 +82,9 @@ else
     cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/permissioned-nodes.json
 fi
 
-echo "  [*] Restoring nodekey."
 mv ~/nodekey ~/alastria/data/geth/
 
-if [[ CURRENT_HOST_IP != "onlyUpdate" ]]; then
+if [[ "$CURRENT_HOST_IP" != "onlyUpdate" ]]; then
     ~/alastria-node/scripts/stop.sh
     sleep 6
     ~/alastria-node/scripts/start.sh
