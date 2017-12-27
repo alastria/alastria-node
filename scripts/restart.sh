@@ -89,5 +89,7 @@ if [[ CURRENT_HOST_IP != "onlyUpdate" ]]; then
     ~/alastria-node/scripts/start.sh
 fi
 
+echo "[*] Restart done succesfully"
+
 set +u
 set +e
