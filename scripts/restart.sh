@@ -73,6 +73,7 @@ verbosity = 2
 EOF
 }
 
+echo "[*] Updating permissioned nodes."
 cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
 if [[ "$NODE_TYPE" == "general" ]]; then
     generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
@@ -83,11 +84,13 @@ fi
 
 mv ~/nodekey ~/alastria/data/geth/
 
-if [[ CURRENT_HOST_IP != "onlyUpdate" ]]; then
+if [[ "$CURRENT_HOST_IP" != "onlyUpdate" ]]; then
     ~/alastria-node/scripts/stop.sh
     sleep 6
     ~/alastria-node/scripts/start.sh
 fi
+
+echo "[*] Restart done succesfully"
 
 set +u
 set +e
