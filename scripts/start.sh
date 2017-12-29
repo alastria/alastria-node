@@ -34,7 +34,7 @@ mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 if [[ "$NODE_TYPE" == "general" ]]; then
     echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
-    sleep 6
+    sleep 15
 fi
 
 if [[ ! -f "permissioned-nodes.json" ]]; then
