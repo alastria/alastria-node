@@ -6,8 +6,8 @@ CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/nul
 
 echo "Optional use for a clean start: start clean"
 
-if ( [ "clean" == "$1" ]); then 
-
+if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then 
+    
     echo "Cleaning your node ..."
     #Backup directory tree
     rm -Rf ~/alastria-backup-$CURRENT_DATE/logs/*
