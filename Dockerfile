@@ -1,6 +1,11 @@
-FROM ubuntu:xenial
+FROM ubuntu:16.04
 
-LABEL maintainer "Jakub Vanak (https://github.com/Koubek)"
+LABEL maintainer "Alfonso de la Rocha (https://github.com/arochaga)"
+
+ARG hostip
+ARG nodetype
+ARG nodename
+ENV HOST_IP $hostip
 
 COPY data /root/alastria-node/data
 RUN chmod -R u+x /root/alastria-node/data
@@ -10,16 +15,16 @@ RUN chmod -R u+x /root/alastria-node/scripts
 
 WORKDIR /root/alastria-node/scripts
 
-RUN sed -i -e 's/\r$//' init.sh && sed -i -e 's/\r$//' bootstrap.sh && sed -i -e 's/\r$//' start.sh
-
 RUN \
   apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -q -y curl \
+  apt-get install -y curl \
   libcurl3 unzip wget git make gcc libsodium-dev build-essential libdb-dev zlib1g-dev libtinfo-dev sysvbanner wrk psmisc sudo
 
-WORKDIR /root/alastria-node/scripts
-RUN ./bootstrap.sh
+RUN sudo -H ./bootstrap.sh
+RUN ./init.sh dockerfile $nodetype $nodename
+RUN ./start.sh
 
 EXPOSE 9000 21000 21000/udp 22000 41000
 
-# CMD ["/run.sh"]
+RUN ./start.sh
+CMD ["./start.sh dockerfile"]

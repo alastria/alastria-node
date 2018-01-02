@@ -143,6 +143,29 @@ Existe un script `./scripts/clean.sh` que limpia el nodo actual y exige una resi
 del mismo al iniciarlo de nuevo. Esto solventa posibles errores de sincronización.
 Su efecto es el mismo que el de ejecutar directamente `./scripts/start.sh clean`
 
+## Crear un nodo con Docker
+Para generar la imagen de Docker ejecutar:
+```
+sudo docker build -t alastria-node . --build-arg hostip=<host-ip> --build-arg nodetype=<node-type> --build-arg nodename=<node-name>
+```
+Indicando la IP del host donde se ejecuta el nodo, el tipo de nodo a generar (validador o general) y el nombre que queremos dar al nodo,
+y ejecutando el comando anterior se genera la imagen para nuestro nodo con el nombre *alastria-node*.
+
+**NOTA**
+Si deseamos generar el nodo utilizando un enode y las claves de un nodo ya existente debemos hacer un backup de las claves
+del antiguo nodo:
+```
+./backup.sh keys
+```
+Esto generará la carpeta ~/alastria-keysBackup-<date> cuyo contenido deberemos moverlo a ~/alastria-node/data/keys.
+La claves de este directorio (que tiene que mantener la estructura de carpetas del backup generado) serán las utilizadas
+en la imagen del nodo que vamos a generar.
+
+
+Una vez finalizada la generación de la imagen, ejecutamos el nodo en segundo plano:
+```
+docker run -d --name alastria -p 9000:9000 -p 21000:21000 -p 22000:22000 -p 41000:41000 alastria-node
+```
 <!-- EN PROCESO DE REVISIÓN
 
 ## Build/Run with Docker

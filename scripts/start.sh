@@ -55,5 +55,13 @@ else
     fi
 fi
 
+if ([ ! $# -ne 1 ] && [ "dockerfile" == "$1" ]); then 
+    
+    echo "Running your node ..."
+    while true; do
+        sleep 1000000
+    done;
+fi
+
 set +u
 set +e

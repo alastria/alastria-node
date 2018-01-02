@@ -15,10 +15,18 @@ fi
 CURRENT_HOST_IP="$1"
 NODE_TYPE="$2"
 NODE_NAME="$3"
+ACCOUNT_PASSWORD='Passw0rd'
+
 
 if ( [ "auto" == "$1" -o "backup" == "$1" ]); then 
     echo "Autodiscovering public host IP ..."
     CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
+    echo "Public host IP found: $CURRENT_HOST_IP"
+fi
+
+if ( [ "dockerfile" == "$1" ]); then 
+    echo "Getting IP from environmental variable ..."
+    CURRENT_HOST_IP=$HOST_IP
     echo "Public host IP found: $CURRENT_HOST_IP"
 fi
 
@@ -147,6 +155,10 @@ if ( [ "backup" == "$1" ]); then
     ENODE_KEY=$(bootnode -nodekey ~/alastria-keysBackup/data/geth/nodekey -writeaddress)
 fi
 
+if ( [ "dockerfile" == "$1" ]); then
+    ENODE_KEY=$(bootnode -nodekey ~/alastria-node/data/keys/data/geth/nodekey -writeaddress)
+fi
+
 echo "ENODE -> 'enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0'"
 update_nodes_list "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0"
 cd ~
@@ -165,8 +177,11 @@ fi
 
 
 if ( [ "general" == "$NODE_TYPE" ]); then 
-    echo "     Por favor, introduzca como contraseña 'Passw0rd'."
-    geth --datadir ~/alastria/data account new
+    # echo "     Por favor, introduzca como contraseña 'Passw0rd'."
+    echo  "     Definida contraseña por defecto para cuenta principal como: $ACCOUNT_PASSWORD."
+    echo $ACCOUNT_PASSWORD > ./account_pass
+    geth --datadir ~/alastria/data --password ./account_pass account new
+    rm ./account_pass
 
     echo "[*] Initializing Constellation node."
     update_constellation_nodes "${CURRENT_HOST_IP}" "9000"
@@ -191,6 +206,21 @@ if ( [ "backup" == "$1" ]); then
     cp ~/alastria-keysBackup/data/geth/nodekey ~/alastria/data/geth/nodekey
     echo "Cleaning backup files ..."
     rm -rf ~/alastria-keysBackup
+fi
+
+if ( [ "dockerfile" == "$1" ]); then 
+    echo "Recovering keys saved in the repository ..."
+    rm -rf ~/alastria/data/constellation/keystore
+    rm -rf ~/alastria/data/keystore
+    rm ~/alastria/data/geth/nodekey
+
+    echo "Recovering constellation keys ..."
+    cp -rf ~/alastria-node/data/keys/data/constellation/keystore ~/alastria/data/constellation/
+    echo "Recovering node keys ..."
+    cp -rf ~/alastria-node/data/keys/data/keystore ~/alastria/data/ 
+    echo "Recovering enode ID ..."
+    cp ~/alastria-node/data/keys/data/geth/nodekey ~/alastria/data/geth/nodekey
+
 fi
 
 echo "[*] Initialization was completed successfully."
