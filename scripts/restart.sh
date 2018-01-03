@@ -22,8 +22,8 @@ fi
 
 echo "Backing up current node keys ..."
     #Backup directory tree
-    echo "Saving enode ID ..."
-    cp ~/alastria/data/geth/nodekey /tmp/nodekey
+    # echo "Saving enode ID ..."
+    # cp ~/alastria/data/geth/nodekey /tmp/nodekey
 
 
 generate_conf() {
@@ -82,7 +82,7 @@ else
     cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/permissioned-nodes.json
 fi
 
-cp /tmp/nodekey ~/alastria/data/geth/
+# cp /tmp/nodekey ~/alastria/data/geth/
 
 if [[ "$CURRENT_HOST_IP" != "onlyUpdate" ]]; then
     ~/alastria-node/scripts/stop.sh
