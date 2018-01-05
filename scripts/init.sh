@@ -160,7 +160,9 @@ if ( [ "dockerfile" == "$1" ]); then
 fi
 
 echo "ENODE -> 'enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0'"
-update_nodes_list "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0"
+if ( [ "backup" != "$1" ]); then
+    update_nodes_list "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0"
+fi
 cd ~
 if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
@@ -184,13 +186,15 @@ if ( [ "general" == "$NODE_TYPE" ]); then
     rm ./account_pass
 
     echo "[*] Initializing Constellation node."
-    update_constellation_nodes "${CURRENT_HOST_IP}" "9000"
-    generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
-    cd ~/alastria/data/constellation/keystore
-    cat ~/alastria/data/passwords.txt | constellation-node --generatekeys=node
+    if ( [ "backup" != "$1" ]); then
+        update_constellation_nodes "${CURRENT_HOST_IP}" "9000"
+        generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
+    fi
+        cd ~/alastria/data/constellation/keystore
+        cat ~/alastria/data/passwords.txt | constellation-node --generatekeys=node
     echo "______"
     cd ~
-fi
+
 
 if ( [ "backup" == "$1" ]); then 
     echo "Recovering keys from backup ..."
