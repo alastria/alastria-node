@@ -194,6 +194,7 @@ if ( [ "general" == "$NODE_TYPE" ]); then
         cat ~/alastria/data/passwords.txt | constellation-node --generatekeys=node
     echo "______"
     cd ~
+fi
 
 
 if ( [ "backup" == "$1" ]); then 
