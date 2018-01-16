@@ -6,6 +6,10 @@ _TIME=$(date +%Y%m%d%H%M%S)
 
 script ~/alastria/logs/monitor__"${_TIME}".log
 
+lsof -i | grep *:21000 | awk '{print $8 $9 $10}'
+lsof -i | grep *:22000 | awk '{print $8 $9 $10}'
+lsof -i | grep *:9000 | awk '{print $8 $9 $10}'
+
 geth -exec 'admin.nodeInfo' attach ~/alastria/data/geth.ipc
 geth -exec 'admin.peers.length' attach ~/alastria/data/geth.ipc
 geth -exec 'admin.peers' attach ~/alastria/data/geth.ipc
