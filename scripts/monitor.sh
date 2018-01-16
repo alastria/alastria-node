@@ -14,6 +14,8 @@ geth -exec 'admin.nodeInfo' attach ~/alastria/data/geth.ipc
 geth -exec 'admin.peers.length' attach ~/alastria/data/geth.ipc
 geth -exec 'admin.peers' attach ~/alastria/data/geth.ipc
 geth -exec 'eth.blockNumber' attach ~/alastria/data/geth.ipc
+geth -exec 'eth.mining' attach ~/alastria/data/geth.ipc
+geth -exec 'eth.syncing' attach ~/alastria/data/geth.ipc
 geth -exec 'eth.pendingTransactions' attach ~/alastria/data/geth.ipc
 geth -exec 'istanbul.candidates' attach ~/alastria/data/geth.ipc
 geth -exec 'istanbul.getValidators()' attach ~/alastria/data/geth.ipc
