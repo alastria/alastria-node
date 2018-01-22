@@ -3,7 +3,7 @@
 set -e
 
 OS=$(cat /etc/os-release | grep "^ID=" | sed 's/ID=//g' | sed 's\"\\g')
-if [ $OS = "centos" ];then
+if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   echo "Installing the environment in $OS"  
 
   GOREL="go1.7.3.linux-amd64.tar.gz"
@@ -13,6 +13,7 @@ if [ $OS = "centos" ];then
     #INSTALACION DE GO
     PATH="$PATH:/usr/local/go/bin"
     echo "Installing GO"
+    sudo yum -y install wget
     wget -q "https://storage.googleapis.com/golang/${GOREL}"
     tar -xvzf "${GOREL}"
     mv go /usr/local/go
@@ -32,14 +33,23 @@ if [ $OS = "centos" ];then
 
   # install build deps
   sudo yum clean all
-  echo "Installing GOLANG"
-  sudo yum -y install golang
   echo "Installing Libraries"
   sudo yum -y update
   sudo yum -y install gmp-devel
   sudo yum -y install gcc gcc-c++ make openssl-devel
   sudo yum -y install libdb-devel
-  sudo yum -y install epel-release
+  
+  # Check EPEL repository availability. It is available by default in Fedora and CentOS, but it requires manuall
+  # installation in RHEL
+  EPEL_AVAILABLE=$(sudo yum search epel | grep release || true)
+  if [[ -z $EPEL_AVAILABLE ]];then
+    echo EPEL Repository is not available via YUM. Downloading
+    wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -O /tmp/epel-release-latest-7.noarch.rpm
+    sudo yum -y install /tmp/epel-release-latest-7.noarch.rpm
+  else 
+    echo EPEL repository is available in YUM via distro packages. Adding it as a source for packages 
+    sudo yum -y install epel-release
+  fi
 
   echo "Installing WRK"
   git clone https://github.com/wg/wrk.git wrk
