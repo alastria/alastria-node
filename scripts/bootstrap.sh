@@ -38,6 +38,7 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   sudo yum -y install gmp-devel
   sudo yum -y install gcc gcc-c++ make openssl-devel
   sudo yum -y install libdb-devel
+  sudo yum -y install ncurses-devel
   
   # Check EPEL repository availability. It is available by default in Fedora and CentOS, but it requires manuall
   # installation in RHEL
@@ -182,10 +183,3 @@ elif [ $OS = "ubuntu" ];then
 fi
 
 set +e
-
-
-
-
-
-
-
