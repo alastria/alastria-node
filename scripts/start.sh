@@ -15,7 +15,7 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     rm -Rf ~/alastria/data/geth/nodes
     # Optional in case you start with process locked
     # rm ~/alastria/data/geth/LOCK
-    rm ~/alastria/data/geth/transactions.rpl
+    rm ~/alastria/data/geth/transactions.rlp
     rm ~/alastria/data/geth.ipc
     rm -Rf ~/alastria/data/quorum-raft-state
     rm -Rf ~/alastria/data/raft-snap
