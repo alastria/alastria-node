@@ -2,23 +2,54 @@
 set -u
 set -e
 
-_TIME=$(date +%Y%m%d%H%M%S)
+MESSAGE='Usage: monitor <mode>
+    mode: build | start '
 
-echo `lsof -i | grep *:21000 | awk '{print $8 $9 $10}'` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `lsof -i | grep *:22000 | awk '{print $8 $9 $10}'` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `lsof -i | grep *:9000 | awk '{print $8 $9 $10}'` >> ~/alastria/logs/monitor__"${_TIME}".log
+if ( [ $# -ne 1 ] ); then
+    echo "$MESSAGE"
+    exit
+fi
 
-echo `geth -exec 'admin.nodeInfo' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `geth -exec 'admin.peers' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `geth -exec 'eth.blockNumber' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `geth -exec 'eth.mining' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `geth -exec 'eth.syncing' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `geth -exec 'eth.pendingTransactions' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `geth -exec 'istanbul.candidates' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `geth -exec 'istanbul.getValidators()' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `geth -exec 'net.peerCount' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `geth -exec 'net.version' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
-echo `geth -exec 'txpool.content' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
+if [ -z "$GOROOT" ]; then
+    echo "Please set your $GOROOT or run ~/alastria"
+    exit 1
+fi
+
+GOPATHOLD="$GOPATH"
+
+
+if ( [ "build" == "$1" ]); then 
+    if hash gdate 2>/dev/null; then
+        echo "[*] Installing glide"
+        curl https://glide.sh/get | sh
+    fi
+
+    echo "[*] Cloning monitor's repository"
+    rm -rf ~/alastria/monitor
+    mkdir ~/alastria/monitor
+    cd ~/alastria/monitor
+    export GOPATH=$(pwd)
+    export PATH=$GOPATH/bin:$PATH
+    go get "github.com/alastria/monitor"
+
+    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    # git checkout dev/arochaga
+        
+   
+    echo "[*] Installing dependencies"
+    glide install
+    echo "[*] Building the monitor"
+    go build
+fi
+
+if ( [ "start" == "$1" ]); then 
+    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    echo "[*] Starting monitor"
+    ~/alastria/monitor/src/github.com/alastria/monitor &
+fi
+
+export GOPATH=$GOPATHOLD
+export PATH=$GOPATH/bin:$PATH
 
 set +u
 set +e
