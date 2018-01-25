@@ -24,17 +24,19 @@ if ( [ "build" == "$1" ]); then
         curl https://glide.sh/get | sh
     fi
 
-    echo "[*] Cloning monitor's repository"
+    echo "[*] Removing previous versions"
     rm -rf ~/alastria/monitor
     mkdir ~/alastria/monitor
+    echo "[*] Cloning monitor's repository"
     cd ~/alastria/monitor
     export GOPATH=$(pwd)
     export PATH=$GOPATH/bin:$PATH
-    go get "github.com/alastria/monitor"
+    go get "github.com/robfig/cron"
+    mkdir ~/alastria/monitor/src/github.com/alastria
+    cd ~/alastria/monitor/src/github.com/alastria
+    git clone "https://github.com/alastria/monitor"
 
-    cd ~/alastria/monitor/src/github.com/alastria/monitor
-    # git checkout dev/arochaga
-        
+    cd ~/alastria/monitor/src/github.com/alastria/monitor        
    
     echo "[*] Installing dependencies"
     glide install
@@ -45,7 +47,7 @@ fi
 if ( [ "start" == "$1" ]); then 
     cd ~/alastria/monitor/src/github.com/alastria/monitor
     echo "[*] Starting monitor"
-    ~/alastria/monitor/src/github.com/alastria/monitor &
+    ~/alastria/monitor/src/github.com/alastria/monitor/monitor &
 fi
 
 export GOPATH=$GOPATHOLD
