@@ -37,7 +37,8 @@ if ( [ "build" == "$1" ]); then
     git clone "https://github.com/alastria/monitor"
 
     cd ~/alastria/monitor/src/github.com/alastria/monitor        
-   
+    git checkout tags/v0.0.1-alpha
+    
     echo "[*] Installing dependencies"
     glide install
     echo "[*] Building the monitor"
