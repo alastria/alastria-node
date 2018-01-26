@@ -19,10 +19,14 @@ GOPATHOLD="$GOPATH"
 
 
 if ( [ "build" == "$1" ]); then 
-    if hash glide 2>/dev/null; then
-        echo "[*] Installing glide"
-        curl https://glide.sh/get | sh
-    fi
+
+    # if hash glide 2>/dev/null; then
+    #     echo "[*] Installing glide"
+    #     curl https://glide.sh/get | sh
+    # fi
+
+    echo "[*] Installing glide"
+    curl https://glide.sh/get | sh
 
     echo "[*] Removing previous versions"
     rm -rf ~/alastria/monitor
