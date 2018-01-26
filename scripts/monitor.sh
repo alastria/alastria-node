@@ -19,7 +19,7 @@ GOPATHOLD="$GOPATH"
 
 
 if ( [ "build" == "$1" ]); then 
-    if hash gdate 2>/dev/null; then
+    if hash glide 2>/dev/null; then
         echo "[*] Installing glide"
         curl https://glide.sh/get | sh
     fi
