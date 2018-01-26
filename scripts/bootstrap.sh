@@ -66,8 +66,6 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   sudo chmod 755 libdb-5.3.so
   sudo cp libdb-5.3.so /usr/lib64/ || true
   cd ..
-  echo "[*] Installing glide"
-  curl https://glide.sh/get | sh
   
   #LEVELDB FIX
   echo "Installing LEVELDB"

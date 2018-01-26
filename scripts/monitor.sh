@@ -25,8 +25,6 @@ if ( [ "build" == "$1" ]); then
     #     curl https://glide.sh/get | sh
     # fi
 
-    echo "[*] Installing glide"
-    curl https://glide.sh/get | sh
 
     echo "[*] Removing previous versions"
     rm -rf ~/alastria/monitor
@@ -36,6 +34,8 @@ if ( [ "build" == "$1" ]); then
     export GOPATH=$(pwd)
     export PATH=$GOPATH/bin:$PATH
     go get "github.com/robfig/cron"
+    echo "[*] Installing glide"
+    curl https://glide.sh/get | sh
     mkdir ~/alastria/monitor/src/github.com/alastria
     cd ~/alastria/monitor/src/github.com/alastria
     git clone "https://github.com/alastria/monitor"
