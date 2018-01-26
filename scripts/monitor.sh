@@ -33,6 +33,7 @@ if ( [ "build" == "$1" ]); then
     cd ~/alastria/monitor
     export GOPATH=$(pwd)
     export PATH=$GOPATH/bin:$PATH
+    mkdir ~/alastria/monitor/bin
     go get "github.com/robfig/cron"
     echo "[*] Installing glide"
     curl https://glide.sh/get | sh
