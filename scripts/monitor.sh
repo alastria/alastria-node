@@ -21,7 +21,10 @@ if [[ -z "$GOROOT" ]]; then
     export GOROOT="/usr/local/go/bin"
   fi
 
-GOPATHOLD="$GOPATH"
+if [[ ! -z "$GOPATH" ]]; then
+    GOPATHCHANGED="true"
+    GOPATHOLD="$GOPATH"
+fi
 
 
 if ( [ "build" == "$1" ]); then 
@@ -62,8 +65,10 @@ if ( [ "start" == "$1" ]); then
     ~/alastria/monitor/src/github.com/alastria/monitor/monitor &
 fi
 
-export GOPATH=$GOPATHOLD
-export PATH=$GOPATH/bin:$PATH
+if [[ ! -z "$GOPATHCHANGED" ]]; then
+    export GOPATH=$GOPATHOLD
+    export PATH=$GOPATH/bin:$PATH
+fi
 
 set +u
 set +e
