@@ -10,10 +10,16 @@ if ( [ $# -ne 1 ] ); then
     exit
 fi
 
-if [ -z "$GOROOT" ]; then
-    echo "Please set your $GOROOT or run ~/alastria"
-    exit 1
-fi
+# Optional way of handling $GOROOT
+# if [ -z "$GOROOT" ]; then
+#     echo "Please set your $GOROOT or run ~/alastria/bootstrap.sh"
+#     exit 1
+# fi
+
+if [[ -z "$GOROOT" ]]; then
+    echo "[*] Trying default $GOROOT. If the script fails please run ~/alastria-node/bootstrap.sh or configure $GOROOT correctly"
+    export GOROOT="/usr/local/go/bin"
+  fi
 
 GOPATHOLD="$GOPATH"
 

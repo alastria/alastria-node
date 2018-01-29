@@ -31,6 +31,10 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
     fi
   fi
 
+  if [[ -z "$GOROOT" ]]; then
+    export GOROOT="/usr/local/go/bin"
+    echo 'export GOROOT="/usr/local/go/bin"' >> ~/.bashrc
+  fi
   # install build deps
   sudo yum clean all
   echo "Installing Libraries"
