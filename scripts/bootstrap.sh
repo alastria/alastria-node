@@ -31,10 +31,6 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
     fi
   fi
 
-  if [[ -z "$GOROOT" ]]; then
-    export GOROOT="/usr/local/go/bin"
-    echo 'export GOROOT="/usr/local/go/bin"' >> ~/.bashrc
-  fi
   # install build deps
   sudo yum clean all
   echo "Installing Libraries"
@@ -184,6 +180,12 @@ elif [ $OS = "ubuntu" ];then
   cd ..
   sudo rm -rf constellation-0.2.0-ubuntu1604.tar.xz constellation-0.2.0-ubuntu1604.tar constellation-0.2.0-ubuntu1604 quorum
 
+fi
+
+# Manage GOROOT variable
+if [[ -z "$GOROOT" ]]; then
+  export GOROOT="/usr/local/go/bin"
+  echo 'export GOROOT="/usr/local/go/bin"' >> ~/.bashrc
 fi
 
 set +e
