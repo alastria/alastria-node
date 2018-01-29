@@ -21,7 +21,7 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     rm -Rf ~/alastria/data/raft-snap
     rm -Rf ~/alastria/data/raft-wal
     rm -Rf ~/alastria/data/constellation/data
-    rm ~/alastria/data/constellation/constellation.ipc
+    rm -Rf ~/alastria/data/constellation/constellation.ipc
 fi
 
 NETID=953474359
