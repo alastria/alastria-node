@@ -190,4 +190,9 @@ if [[ -z "$GOROOT" ]]; then
   echo 'export PATH=$PATH:$GOROOT/bin'  >> ~/.bashrc
 fi
 
+#INSTALACION DEL MONITOR
+~/alastria-node/scripts/monitor.sh build
+~/alastria-node/scripts/monitor.sh start 
+
+
 set +e

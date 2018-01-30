@@ -1,12 +1,14 @@
 #!/bin/bash
 
 MESSAGE='Usage: monitor <mode>
-    mode: build | start '
+    mode: build | start | version | latest'
 
 if ( [ $# -ne 1 ] ); then
     echo "$MESSAGE"
     exit
 fi
+
+_TIME=$(date +%Y%m%d%H%M%S)
 
 # Optional way of handling $GOROOT
 # if [ -z "$GOROOT" ]; then
@@ -62,7 +64,7 @@ fi
 if ( [ "start" == "$1" ]); then 
     cd ~/alastria/monitor/src/github.com/alastria/monitor
     echo "[*] Starting monitor"
-    ~/alastria/monitor/src/github.com/alastria/monitor/monitor &
+    nohup ~/alastria/monitor/src/github.com/alastria/monitor/monitor >> ~/alastria/logs/monitor_"${_TIME}".log &
 fi
 
 if ( [ "latest" == "$1" ]); then 
