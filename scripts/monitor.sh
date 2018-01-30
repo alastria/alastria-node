@@ -16,10 +16,14 @@ fi
 
 if [[ -z "$GOROOT" ]]; then
     echo "[*] Trying default $GOROOT. If the script fails please run ~/alastria-node/bootstrap.sh or configure GOROOT correctly"
-    export GOROOT="/usr/local/go/bin"
-  fi
+    export GOROOT=/usr/local/go
+    export PATH=$PATH:$GOROOT/bin
+fi
 
-GOPATHOLD="$GOPATH"
+if [[ ! -z "$GOPATH" ]]; then
+    GOPATHCHANGED="true"
+    GOPATHOLD="$GOPATH"
+fi
 
 
 if ( [ "build" == "$1" ]); then 
@@ -35,6 +39,8 @@ if ( [ "build" == "$1" ]); then
     echo "[*] Cloning monitor's repository"
     cd ~/alastria/monitor
     export GOPATH=$(pwd)
+    echo "Go PATH: $GOPATH"
+    echo "GOROOT: $GOROOT"
     export PATH=$GOPATH/bin:$PATH
     mkdir ~/alastria/monitor/bin
     go get "github.com/robfig/cron"
@@ -59,5 +65,7 @@ if ( [ "start" == "$1" ]); then
     ~/alastria/monitor/src/github.com/alastria/monitor/monitor &
 fi
 
-export GOPATH=$GOPATHOLD
-export PATH=$GOPATH/bin:$PATH
+if [[ ! -z "$GOPATHCHANGED" ]]; then
+    export GOPATH=$GOPATHOLD
+    export PATH=$GOPATH/bin:$PATH
+fi
