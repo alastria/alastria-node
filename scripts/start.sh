@@ -10,17 +10,18 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     
     echo "Cleaning your node ..."
     #Backup directory tree
-    rm -Rf ~/alastria-backup-$CURRENT_DATE/logs/*
-    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/geth/chainData
-    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/geth/nodes
-    rm ~/alastria-backup-$CURRENT_DATE/data/geth/LOCK
-    rm ~/alastria-backup-$CURRENT_DATE/data/geth/transactions.rpl
-    rm ~/alastria-backup-$CURRENT_DATE/data/geth.ipc
-    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/quorum-raft-state
-    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/raft-snap
-    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/raft-wal
-    rm -Rf ~/alastria-backup-$CURRENT_DATE/data/constellation/data
-    rm ~/alastria-backup-$CURRENT_DATE/data/constellation/constellation.ipc
+    rm -Rf ~/alastria/logs/*
+    rm -Rf ~/alastria/data/geth/chainData
+    rm -Rf ~/alastria/data/geth/nodes
+    # Optional in case you start with process locked
+    # rm ~/alastria/data/geth/LOCK
+    rm -Rf ~/alastria/data/geth/transactions.rlp
+    rm -Rf ~/alastria/data/geth.ipc
+    rm -Rf ~/alastria/data/quorum-raft-state
+    rm -Rf ~/alastria/data/raft-snap
+    rm -Rf ~/alastria/data/raft-wal
+    rm -Rf ~/alastria/data/constellation/data
+    rm -Rf ~/alastria/data/constellation/constellation.ipc
 fi
 
 NETID=953474359
@@ -34,7 +35,7 @@ mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 if [[ "$NODE_TYPE" == "general" ]]; then
     echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
-    sleep 6
+    sleep 20
 fi
 
 if [[ ! -f "permissioned-nodes.json" ]]; then
@@ -44,8 +45,7 @@ fi
 
 echo "[*] Starting quorum node"
 if [[ "$NODE_TYPE" == "general" ]]; then
-    PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf
-    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf nohup geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
 else
     if [[ "$NODE_TYPE" == "validator" ]]; then
         if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
@@ -54,6 +54,14 @@ else
             nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --mine --minerthreads 1 --syncmode "full" 2>> ~/alastria/logs/quorum_"${_TIME}".log &
         fi
     fi
+fi
+
+if ([ ! $# -ne 1 ] && [ "dockerfile" == "$1" ]); then 
+    
+    echo "Running your node ..."
+    while true; do
+        sleep 1000000
+    done;
 fi
 
 set +u
