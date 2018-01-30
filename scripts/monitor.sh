@@ -52,8 +52,10 @@ if ( [ "build" == "$1" ]); then
     cd ~/alastria/monitor/src/github.com/alastria
     git clone "https://github.com/alastria/monitor"
 
-    cd ~/alastria/monitor/src/github.com/alastria/monitor        
-    git checkout tags/v0.0.1-alpha
+    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    LATEST_TAG=`git describe --tags \`git rev-list --tags --max-count=1\``
+    echo "LATESTTAG: $LATEST_TAG"       
+    git checkout tags/$LATEST_TAG
     
     echo "[*] Installing dependencies"
     glide install
