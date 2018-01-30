@@ -65,6 +65,16 @@ if ( [ "start" == "$1" ]); then
     ~/alastria/monitor/src/github.com/alastria/monitor/monitor &
 fi
 
+if ( [ "latest" == "$1" ]); then 
+    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    git describe --tags `git rev-list --tags --max-count=1` # gets tags across all branches, not just the current branch
+fi
+
+if ( [ "version" == "$1" ]); then 
+    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    git tag
+fi
+
 if [[ ! -z "$GOPATHCHANGED" ]]; then
     export GOPATH=$GOPATHOLD
     export PATH=$GOPATH/bin:$PATH
