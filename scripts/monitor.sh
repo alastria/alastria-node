@@ -1,6 +1,4 @@
 #!/bin/bash
-set -u
-set -e
 
 MESSAGE='Usage: monitor <mode>
     mode: build | start '
@@ -17,7 +15,7 @@ fi
 # fi
 
 if [[ -z "$GOROOT" ]]; then
-    echo "[*] Trying default $GOROOT. If the script fails please run ~/alastria-node/bootstrap.sh or configure $GOROOT correctly"
+    echo "[*] Trying default $GOROOT. If the script fails please run ~/alastria-node/bootstrap.sh or configure GOROOT correctly"
     export GOROOT="/usr/local/go/bin"
   fi
 
@@ -30,7 +28,6 @@ if ( [ "build" == "$1" ]); then
     #     echo "[*] Installing glide"
     #     curl https://glide.sh/get | sh
     # fi
-
 
     echo "[*] Removing previous versions"
     rm -rf ~/alastria/monitor
@@ -64,6 +61,3 @@ fi
 
 export GOPATH=$GOPATHOLD
 export PATH=$GOPATH/bin:$PATH
-
-set +u
-set +e
