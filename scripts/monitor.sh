@@ -1,29 +1,85 @@
 #!/bin/bash
-set -u
-set -e
+
+MESSAGE='Usage: monitor <mode>
+    mode: build | start | version | latest'
+
+if ( [ $# -ne 1 ] ); then
+    echo "$MESSAGE"
+    exit
+fi
 
 _TIME=$(date +%Y%m%d%H%M%S)
 
-script ~/alastria/logs/monitor__"${_TIME}".log
+# Optional way of handling $GOROOT
+# if [ -z "$GOROOT" ]; then
+#     echo "Please set your $GOROOT or run ~/alastria/bootstrap.sh"
+#     exit 1
+# fi
 
-lsof -i | grep *:21000 | awk '{print $8 $9 $10}'
-lsof -i | grep *:22000 | awk '{print $8 $9 $10}'
-lsof -i | grep *:9000 | awk '{print $8 $9 $10}'
+if [[ -z "$GOROOT" ]]; then
+    echo "[*] Trying default $GOROOT. If the script fails please run ~/alastria-node/bootstrap.sh or configure GOROOT correctly"
+    export GOROOT=/usr/local/go
+    export PATH=$PATH:$GOROOT/bin
+fi
 
-geth -exec 'admin.nodeInfo' attach ~/alastria/data/geth.ipc
-geth -exec 'admin.peers.length' attach ~/alastria/data/geth.ipc
-geth -exec 'admin.peers' attach ~/alastria/data/geth.ipc
-geth -exec 'eth.blockNumber' attach ~/alastria/data/geth.ipc
-geth -exec 'eth.mining' attach ~/alastria/data/geth.ipc
-geth -exec 'eth.syncing' attach ~/alastria/data/geth.ipc
-geth -exec 'eth.pendingTransactions' attach ~/alastria/data/geth.ipc
-geth -exec 'istanbul.candidates' attach ~/alastria/data/geth.ipc
-geth -exec 'istanbul.getValidators()' attach ~/alastria/data/geth.ipc
-geth -exec 'net.peerCount' attach ~/alastria/data/geth.ipc
-geth -exec 'net.version' attach ~/alastria/data/geth.ipc
-geth -exec 'txpool.content' attach ~/alastria/data/geth.ipc
+if [[ ! -z "$GOPATH" ]]; then
+    GOPATHCHANGED="true"
+    GOPATHOLD="$GOPATH"
+fi
 
-exit
 
-set +u
-set +e
+if ( [ "build" == "$1" ]); then 
+
+    # if hash glide 2>/dev/null; then
+    #     echo "[*] Installing glide"
+    #     curl https://glide.sh/get | sh
+    # fi
+
+    echo "[*] Removing previous versions"
+    rm -rf ~/alastria/monitor
+    mkdir ~/alastria/monitor
+    echo "[*] Cloning monitor's repository"
+    cd ~/alastria/monitor
+    export GOPATH=$(pwd)
+    echo "Go PATH: $GOPATH"
+    echo "GOROOT: $GOROOT"
+    export PATH=$GOPATH/bin:$PATH
+    mkdir ~/alastria/monitor/bin
+    go get "github.com/robfig/cron"
+    echo "[*] Installing glide"
+    curl https://glide.sh/get | sh
+    mkdir ~/alastria/monitor/src/github.com/alastria
+    cd ~/alastria/monitor/src/github.com/alastria
+    git clone "https://github.com/alastria/monitor"
+
+    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    LATEST_TAG=`git describe --tags \`git rev-list --tags --max-count=1\``
+    echo "LATESTTAG: $LATEST_TAG"       
+    git checkout tags/$LATEST_TAG
+    
+    echo "[*] Installing dependencies"
+    glide install
+    echo "[*] Building the monitor"
+    go build
+fi
+
+if ( [ "start" == "$1" ]); then 
+    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    echo "[*] Starting monitor"
+    nohup ~/alastria/monitor/src/github.com/alastria/monitor/monitor >> ~/alastria/logs/monitor_"${_TIME}".log &
+fi
+
+if ( [ "latest" == "$1" ]); then 
+    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    git describe --tags `git rev-list --tags --max-count=1` # gets tags across all branches, not just the current branch
+fi
+
+if ( [ "version" == "$1" ]); then 
+    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    git tag
+fi
+
+if [[ ! -z "$GOPATHCHANGED" ]]; then
+    export GOPATH=$GOPATHOLD
+    export PATH=$GOPATH/bin:$PATH
+fi
