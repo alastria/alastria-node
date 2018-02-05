@@ -168,5 +168,5 @@ en la imagen del nodo que vamos a generar.
 
 Una vez finalizada la generación de la imagen, ejecutamos el nodo en segundo plano:
 ```
-docker run -d --name alastria -p 9000:9000 -p 21000:21000 -p 22000:22000 -p 41000:41000 alastria-node
+docker run -d --name alastria -p 9000:9000 -p 21000:21000 -p 22000:22000 -p 8443:8443 alastria-node
 ```
