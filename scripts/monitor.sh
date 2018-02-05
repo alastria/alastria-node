@@ -18,8 +18,13 @@ _TIME=$(date +%Y%m%d%H%M%S)
 
 if [[ -z "$GOROOT" ]]; then
     echo "[*] Trying default $GOROOT. If the script fails please run ~/alastria-node/bootstrap.sh or configure GOROOT correctly"
-    export GOROOT=/usr/local/go
-    export PATH=$PATH:$GOROOT/bin
+    echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
+    echo 'export GOPATH=$HOME/alastria/workspace' >> ~/.bashrc
+    echo 'export PATH=$GOROOT/bin:$GOPATH/bin:$PATH' >> ~/.bashrc
+    source ~/.bashrc
+
+    mkdir -p $GOPATH/bin
+    mkdir -p $GOPATH/src
 fi
 
 if [[ ! -z "$GOPATH" ]]; then
