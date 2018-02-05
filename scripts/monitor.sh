@@ -64,9 +64,11 @@ if ( [ "build" == "$1" ]); then
     glide install
 
     echo "[*] Building the monitor"
-    bee run -gendoc=true -vendor=true -downdoc=true > /dev/null &
-    sleep 30
-    pkill -f bee
+    bee pack 
+    tar -zxvf monitor.tar.gz monitor
+    rm -Rf monitor.tar.gz
+
+    go build
 fi
 
 if ( [ "start" == "$1" ]); then 
