@@ -12,19 +12,18 @@ _TIME=$(date +%Y%m%d%H%M%S)
 
 # Optional way of handling $GOROOT
 # if [ -z "$GOROOT" ]; then
-#     echo "Please set your $GOROOT or run ~/alastria/bootstrap.sh"
+#     echo "Please set your $GOROOT or run $HOME/alastria/bootstrap.sh"
 #     exit 1
 # fi
 
 if [[ -z "$GOROOT" ]]; then
-    echo "[*] Trying default $GOROOT. If the script fails please run ~/alastria-node/bootstrap.sh or configure GOROOT correctly"
-    echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
-    echo 'export GOPATH=$HOME/alastria/workspace' >> ~/.bashrc
-    echo 'export PATH=$GOROOT/bin:$GOPATH/bin:$PATH' >> ~/.bashrc
-    source ~/.bashrc
+    echo "[*] Trying default $GOROOT. If the script fails please run $HOME/alastria-node/bootstrap.sh or configure GOROOT correctly"
+    export GOROOT=/usr/local/go
+    export GOPATH=$HOME/alastria/workspace
+    export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
-    mkdir -p $GOPATH/bin
-    mkdir -p $GOPATH/src
+    mkdir -p "$GOPATH"/bin
+    mkdir -p "$GOPATH"/src
 fi
 
 if [[ ! -z "$GOPATH" ]]; then
@@ -41,46 +40,48 @@ if ( [ "build" == "$1" ]); then
     # fi
 
     echo "[*] Removing previous versions"
-    rm -rf ~/alastria/monitor
-    mkdir ~/alastria/monitor
+    rm -rf "$GOPATH"
+    mkdir "$GOPATH"
+
     echo "[*] Cloning monitor's repository"
-    cd ~/alastria/monitor
-    export GOPATH=$(pwd)
-    echo "Go PATH: $GOPATH"
-    echo "GOROOT: $GOROOT"
-    export PATH=$GOPATH/bin:$PATH
-    mkdir ~/alastria/monitor/bin
-    go get "github.com/robfig/cron"
+    cd "$GOPATH"
+    mkdir "$GOPATH"/bin
+
     echo "[*] Installing glide"
     curl https://glide.sh/get | sh
-    mkdir ~/alastria/monitor/src/github.com/alastria
-    cd ~/alastria/monitor/src/github.com/alastria
-    git clone "https://github.com/alastria/monitor"
-
-    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    go get github.com/alastria/monitor
+    cd "$GOPATH"/src/github.com/alastria
+    
+    cd "$GOPATH"/src/github.com/alastria/monitor
     LATEST_TAG=`git describe --tags \`git rev-list --tags --max-count=1\``
     echo "LATESTTAG: $LATEST_TAG"       
     git checkout tags/$LATEST_TAG
     
     echo "[*] Installing dependencies"
+    go get -fix -t -u -v github.com/astaxie/beego
+    go get -fix -t -u -v github.com/beego/bee
+
     glide install
+
     echo "[*] Building the monitor"
-    go build
+    bee run -gendoc=true -vendor=true -downdoc=true > /dev/null &
+    sleep 30
+    pkill -f bee
 fi
 
 if ( [ "start" == "$1" ]); then 
-    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    cd $GOPATH/src/github.com/alastria/monitor
     echo "[*] Starting monitor"
-    nohup ~/alastria/monitor/src/github.com/alastria/monitor/monitor >> ~/alastria/logs/monitor_"${_TIME}".log &
+    nohup $GOPATH/src/github.com/alastria/monitor/monitor >> $HOME/alastria/logs/monitor_"${_TIME}".log &
 fi
 
 if ( [ "latest" == "$1" ]); then 
-    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    cd $GOPATH/src/github.com/alastria/monitor
     git describe --tags `git rev-list --tags --max-count=1` # gets tags across all branches, not just the current branch
 fi
 
 if ( [ "version" == "$1" ]); then 
-    cd ~/alastria/monitor/src/github.com/alastria/monitor
+    cd $GOPATH/src/github.com/alastria/monitor
     git tag
 fi
 
