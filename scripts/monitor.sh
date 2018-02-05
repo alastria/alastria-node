@@ -67,8 +67,6 @@ if ( [ "build" == "$1" ]); then
     bee pack 
     tar -zxvf monitor.tar.gz monitor
     rm -Rf monitor.tar.gz
-
-    go build
 fi
 
 if ( [ "start" == "$1" ]); then 
