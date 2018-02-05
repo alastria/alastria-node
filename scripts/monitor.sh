@@ -72,7 +72,8 @@ fi
 if ( [ "start" == "$1" ]); then 
     cd $GOPATH/src/github.com/alastria/monitor
     echo "[*] Starting monitor"
-    nohup $GOPATH/src/github.com/alastria/monitor/monitor >> $HOME/alastria/logs/monitor_"${_TIME}".log &
+    #nohup $GOPATH/src/github.com/alastria/monitor/monitor >> $HOME/alastria/logs/monitor_"${_TIME}".log &
+    nohup bee run -vendor=true -downdoc=true -gendoc=true >> $HOME/alastria/logs/monitor_"${_TIME}".log &
 fi
 
 if ( [ "latest" == "$1" ]); then 
