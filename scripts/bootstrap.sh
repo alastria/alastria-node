@@ -184,10 +184,18 @@ fi
 
 # Manage GOROOT variable
 if [[ -z "$GOROOT" ]]; then
-  export GOROOT="/usr/local/go"
-  echo 'export GOROOT="/usr/local/go"' >> ~/.bashrc
-  export PATH=$PATH:$GOROOT/bin
-  echo 'export PATH=$PATH:$GOROOT/bin'  >> ~/.bashrc
+    echo "[*] Trying default $GOROOT. If the script fails please run $HOME/alastria-node/bootstrap.sh or configure GOROOT correctly"
+    echo 'export GOROOT=/usr/local/go' >> $HOME/.bashrc
+    echo 'export GOPATH=$HOME/alastria/workspace' >> $HOME/.bashrc
+    echo 'export PATH=$GOROOT/bin:$GOPATH/bin:$PATH' >> $HOME/.bashrc
+    export GOROOT=/usr/local/go
+    export GOPATH=$HOME/alastria/workspace
+    export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+
+    echo "[*] GOROOT = $GOROOT, GOPATH = $GOPATH"
+
+    mkdir -p "$GOPATH"/bin
+    mkdir -p "$GOPATH"/src
 fi
 
 #INSTALACION DEL MONITOR
