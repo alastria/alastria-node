@@ -24,7 +24,7 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     rm -Rf ~/alastria/data/constellation/constellation.ipc
 fi
 
-NETID=953474359
+NETID=953575359
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
 GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000 "
 
