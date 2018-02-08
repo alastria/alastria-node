@@ -134,7 +134,7 @@ EOF
 
 echo "[*] Cleaning up temporary data directories."
 rm -rf ~/alastria/data
-rm -rf ~/alastria/logs
+rm -rf ~/alastria/logs/quorum*
 mkdir -p ~/alastria/data/{keystore,geth,constellation}
 mkdir -p ~/alastria/data/constellation/{data,keystore}
 mkdir -p ~/alastria/logs
