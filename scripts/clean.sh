@@ -2,7 +2,7 @@
 # Prepare the node for a clean restart
 
 echo "Preparing the node for a clean restart ..."
-rm -Rf ~/alastria/logs/q*
+rm -Rf ~/alastria/logs/quorum*
 rm -Rf ~/alastria/data/geth/chainData
 rm -Rf ~/alastria/data/geth/nodes
 rm ~/alastria/data/geth/LOCK
