@@ -14,3 +14,6 @@ rm -f ~/alastria/data/geth.ipc
 #rm -f ~/alastria/data/raft-wal
 rm -rf ~/alastria/data/constellation/data
 rm -f ~/alastria/data/constellation/constellation.ipc
+rm -rf ~/alastria/data/geth/lightchaindata
+rm -rf ~/alastria/data/geth/chaindata
+
