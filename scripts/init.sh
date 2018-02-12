@@ -188,10 +188,11 @@ if ( [ "general" == "$NODE_TYPE" ]); then
     echo "[*] Initializing Constellation node."
     if ( [ "backup" != "$1" ]); then
         update_constellation_nodes "${CURRENT_HOST_IP}" "9000"
-        generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
+        #generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
     fi
-        cd ~/alastria/data/constellation/keystore
-        cat ~/alastria/data/passwords.txt | constellation-node --generatekeys=node
+    generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
+    cd ~/alastria/data/constellation/keystore
+    cat ~/alastria/data/passwords.txt | constellation-node --generatekeys=node
     echo "______"
     cd ~
 fi
