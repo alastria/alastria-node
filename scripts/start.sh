@@ -10,21 +10,23 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     
     echo "Cleaning your node ..."
     #Backup directory tree
-    rm -Rf ~/alastria/logs/*
-    rm -Rf ~/alastria/data/geth/chainData
-    rm -Rf ~/alastria/data/geth/nodes
+    rm -rf ~/alastria/logs/*
+    rm -rf ~/alastria/data/geth/chainData
+    rm -rf ~/alastria/data/geth/nodes
     # Optional in case you start with process locked
     # rm ~/alastria/data/geth/LOCK
-    rm -Rf ~/alastria/data/geth/transactions.rlp
-    rm -Rf ~/alastria/data/geth.ipc
-    rm -Rf ~/alastria/data/quorum-raft-state
-    rm -Rf ~/alastria/data/raft-snap
-    rm -Rf ~/alastria/data/raft-wal
-    rm -Rf ~/alastria/data/constellation/data
-    rm -Rf ~/alastria/data/constellation/constellation.ipc
+    rm -f ~/alastria/data/geth/transactions.rlp
+    rm -f ~/alastria/data/geth.ipc
+    #rm -f ~/alastria/data/quorum-raft-state
+    #rm -f ~/alastria/data/raft-snap
+    #rm -f ~/alastria/data/raft-wal
+    rm -rf ~/alastria/data/constellation/data
+    rm -f ~/alastria/data/constellation/constellation.ipc
+    rm -rf ~/alastria/data/geth/lightchaindata
+    rm -rf ~/alastria/data/geth/chaindata
 fi
 
-NETID=953474359
+NETID=953575359
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
 GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000 "
 
