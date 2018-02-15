@@ -1,4 +1,4 @@
-# Directorio de nodos para la testnet - RAFT
+# Directorio de nodos regulares
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
 | ------- | ------------------------------------ | ---------------------------------- | ------------- | ----- |
