@@ -40,8 +40,8 @@ if ( [ "build" == "$1" ]); then
     # fi
 
     echo "[*] Removing previous versions"
-    rm -rf "$GOPATH"
-    mkdir "$GOPATH"
+    rm -rf "$GOPATH"/src/github.com/alastria/monitor
+    mkdir -p "$GOPATH"/src/github.com/alastria/monitor
 
     echo "[*] Cloning monitor's repository"
     cd "$GOPATH"
@@ -84,6 +84,13 @@ fi
 if ( [ "version" == "$1" ]); then 
     cd $GOPATH/src/github.com/alastria/monitor
     git tag
+fi
+
+if ( [ "update" == "$1" ]); then
+    cd $GOPATH/src/github.com/alastria/monitor
+    git pull
+    git checkout "$(git describe --tags `git rev-list --tags --max-count=1`)"
+    glide up
 fi
 
 if [[ ! -z "$GOPATHCHANGED" ]]; then
