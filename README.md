@@ -90,7 +90,7 @@ Nótese que el nombre de los ficheros hace referencia a los nodos por los que so
 
 Además de estos cambios, que ocurren automáticamente al ejecutar el script [`init.sh`](scripts/init.sh), existen otros dos ficheros que deben modificarse manualmente, dependiendo del tipo de nodo creado, para indicar los datos de contacto de administración de los nodos: [DIRECTORY_VALIDATOR.md](DIRECTORY_VALIDATOR.md) o [DIRECTORY_REGULAR.md](DIRECTORY_REGULAR.md)
 
-Una vez que disponemos de todos estos ficheros modificados, si el nodo era regular, solo es necesario arrancarlo usando el script [`start.sh`](scripts/start.sh)
+Una vez que disponemos de todos estos ficheros modificados solo es necesario arrancarlo usando el script [`start.sh`](scripts/start.sh)
 
 En cambio, si el nodo es validador, entonces este debe ejecutar el script `restart.sh` con la opción onlyUpdate:
 ```
