@@ -92,7 +92,7 @@ Además de estos cambios, que ocurren automáticamente al ejecutar el script [`i
 
 Una vez que disponemos de todos estos ficheros modificados solo es necesario arrancarlo usando el script [`start.sh`](scripts/start.sh)
 
-En cambio, si el nodo es validador, entonces este debe ejecutar el script `restart.sh` con la opción onlyUpdate:
+En cambio, si el nodo es validador, el resto de nodos de la red, deben ejecutar el script `restart.sh` con la opción onlyUpdate:
 ```
 $ ./restart.sh onlyUpdate
 ```
