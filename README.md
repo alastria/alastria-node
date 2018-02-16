@@ -132,7 +132,7 @@ $ ./stop.sh
 $ ./start.sh clean
 ```
 
- * También, disponemos de un script de restart para actualizar y reiniciar el nodo (por ejemplo ante actualizaciones del permissioned-nodes*):
+ * También, disponemos de un script de restart para actualizar el nodo sin parar ningún proceso (por ejemplo ante actualizaciones del permissioned-nodes*):
 ```
 $ ./restart.sh onlyUpdate
 ```
