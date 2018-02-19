@@ -49,7 +49,7 @@ if ( [ "build" == "$1" ]); then
 
     echo "[*] Installing glide"
     curl https://glide.sh/get | sh
-    go get github.com/alastria/monitor
+    go get -d github.com/alastria/monitor
     cd "$GOPATH"/src/github.com/alastria
     
     cd "$GOPATH"/src/github.com/alastria/monitor
