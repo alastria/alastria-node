@@ -16,8 +16,8 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
     sudo yum -y install wget
     wget -q "https://storage.googleapis.com/golang/${GOREL}"
     tar -xvzf "${GOREL}"
-    if ! -d /usr/local/go
-    mv go /usr/local/go
+    if [[ ! -d /usr/local/go ]];then
+      mv go /usr/local/go
     fi
     sudo rm "${GOREL}"
   else
