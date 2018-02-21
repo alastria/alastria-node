@@ -10,7 +10,7 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     
     echo "Cleaning your node ..."
     #Backup directory tree
-    rm -rf ~/alastria/logs/*
+    rm -rf ~/alastria/logs/quorum_*
     rm -rf ~/alastria/data/geth/chainData
     rm -rf ~/alastria/data/geth/nodes
     # Optional in case you start with process locked
