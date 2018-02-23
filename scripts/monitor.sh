@@ -41,7 +41,7 @@ if ( [ "build" == "$1" ]); then
 
     echo "[*] Removing previous versions"
     rm -rf "$GOPATH"/src/github.com/alastria/monitor
-    mkdir -p "$GOPATH"/src/github.com/alastria/monitor
+    mkdir -p "$GOPATH"/src/github.com/alastria
 
     echo "[*] Cloning monitor's repository"
     cd "$GOPATH"
