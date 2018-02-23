@@ -200,9 +200,4 @@ if [[ -z "$GOROOT" ]]; then
     mkdir -p "$GOPATH"/src
 fi
 
-#INSTALACION DEL MONITOR
-~/alastria-node/scripts/monitor.sh build
-~/alastria-node/scripts/monitor.sh start 
-
-
 set +e

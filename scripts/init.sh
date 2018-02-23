@@ -132,12 +132,22 @@ verbosity = 2
 EOF
 }
 
+install_monitor() {
+    if [[ -z "$GOPATH"/src/github.com/alastria/monitor  ]]; then 
+        #INSTALACION DEL MONITOR
+        ~/alastria-node/scripts/monitor.sh build
+        ~/alastria-node/scripts/monitor.sh start 
+    fi
+}
+
 echo "[*] Cleaning up temporary data directories."
 rm -rf ~/alastria/data
 rm -rf ~/alastria/logs/quorum*
 mkdir -p ~/alastria/data/{keystore,geth,constellation}
 mkdir -p ~/alastria/data/constellation/{data,keystore}
 mkdir -p ~/alastria/logs
+
+install_monitor
 
 echo "$NODE_NAME" > ~/alastria/data/IDENTITY
 echo "$NODE_TYPE" > ~/alastria/data/NODE_TYPE
