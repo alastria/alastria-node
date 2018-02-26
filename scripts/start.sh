@@ -10,7 +10,7 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     
     echo "Cleaning your node ..."
     #Backup directory tree
-    rm -rf ~/alastria/logs/*
+    rm -rf ~/alastria/logs/quorum_*
     rm -rf ~/alastria/data/geth/chainData
     rm -rf ~/alastria/data/geth/nodes
     # Optional in case you start with process locked
@@ -26,7 +26,7 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     rm -rf ~/alastria/data/geth/chaindata
 fi
 
-NETID=953575359
+NETID=19534643591
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
 GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000 "
 
