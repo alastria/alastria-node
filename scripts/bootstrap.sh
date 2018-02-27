@@ -98,7 +98,7 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   
   # install constellation
   echo "Installing CONSTELLATION"
-  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.2.0/constellation-0.3.1-ubuntu1604.tar.xz 
+  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.1/constellation-0.3.1-ubuntu1604.tar.xz 
   unxz constellation-0.3.1-ubuntu1604.tar.xz 
   tar -xf constellation-0.3.1-ubuntu1604.tar
   sudo cp constellation-0.3.1-ubuntu1604/constellation-node /usr/local/bin 
