@@ -47,7 +47,7 @@ fi
 
 echo "[*] Starting quorum node"
 if [[ "$NODE_TYPE" == "general" ]]; then
-    PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf nohup geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    nohup PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
 else
     if [[ "$NODE_TYPE" == "validator" ]]; then
         if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
