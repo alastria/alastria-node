@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MESSAGE='Usage: monitor <mode>
-    mode: build | start | version | latest'
+    mode: build | start | stop | version | latest | update'
 
 if ( [ $# -ne 1 ] ); then
     echo "$MESSAGE"
@@ -83,7 +83,7 @@ fi
 
 if ( [ "version" == "$1" ]); then 
     cd $GOPATH/src/github.com/alastria/monitor
-    git tag
+    git describe --tags
 fi
 
 if ( [ "update" == "$1" ]); then
@@ -91,6 +91,12 @@ if ( [ "update" == "$1" ]); then
     git pull
     git checkout "$(git describe --tags `git rev-list --tags --max-count=1`)"
     glide up
+fi
+
+if ( [ "stop" == "$1" ]); then
+    cd $GOPATH/src/github.com/alastria/monitor
+    pkill -f bee
+    pkill -f ./monitor
 fi
 
 if [[ ! -z "$GOPATHCHANGED" ]]; then

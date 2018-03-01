@@ -19,6 +19,7 @@ echo `geth -exec 'istanbul.getValidators()' attach ~/alastria/data/geth.ipc` >> 
 echo `geth -exec 'net.peerCount' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
 echo `geth -exec 'net.version' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
 echo `geth -exec 'txpool.content' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
+echo `geth --exec 'eth.coinbase' attach ~/alastria/data/geth.ipc` >> ~/alastria/logs/monitor__"${_TIME}".log
 
 set +u
 set +e
