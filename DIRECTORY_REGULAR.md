@@ -16,5 +16,6 @@
 | Sefide | Juan Pedro Ortega Liétor (@jpol, juanpedroortega@momopocket.com) | VMware VSphere Virtual Machine (4C/8Gb/50Gb) | 0yR+aYCZc+mQ3dtRe3pBd7QbkNaG7KMD7S+MVWTgQ2Y= | enode://fa7a7077b4e1008dede51e0d5bd44c5bb943ce716864a6045df0a219f6112de39b705c0920d1e51c030f144177b17a06bccd2c6e70fe9309eac84fb265110125@87.253.228.23:21000?discport=0 |
 | atSistemas | Jose Angel Corral (jacorral@atsistemas.com) | AWS CentOS7.4 2C/4GB/8GB+20GB | iuTymSPrfS/5NB9HZcqLV1vaT97Z6UxEEady8p+iVwE= | enode://2754d548777d8ab7dd29ccd7c67deaac3de1740f9239b57ebc3d5346f6708f846c07d0a92b0a05db516c74675475761bad3777a615c8a636b6d24cc0a0355a32@52.31.219.254:21000?discport=0 |
 | Mapfre | Isidro Cucó Martín de Jorge (iscucom@mapfre.com) | VirtualBox VM RedHat 64-bit 4C/2GB/64GB | 71m+QPnxDU+pTfMwMxiDHwbq7ZM901oQRRXbaJcwfXk= | enode://933b52d602be73a267b75897306e4668e2be101f9688aa022d3fa1cf93dc1ec1e8b49fd34c674daeeea20eee2c867c907897a3a7b054770a2d999b1a2a755c83@83.56.42.181:21000?discport=0 |
+| IN2 | Alex casaus Carmona (alex.casaus@in2.es) | Self Hosted (2C/2GB/30GB) | o3g8PUwMVKUW4FpTQlJGRs6X9Z6zxZHaxDaa/TZ+zgg= | enode://5a47abb15cc80f9bfe9121a60c3d0691b773cce5b567fbfd14fa548cf28d5232cc05c8dc00f2f178b7925de64364dc2e0fc833f6ddac1a7b0c7eb13e843e54f8@89.140.139.178:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
