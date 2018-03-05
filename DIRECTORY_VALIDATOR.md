@@ -18,3 +18,5 @@
 | Everis | Eduardo Sánchez (@esanchma, eduardo.sanchez.mata@everis.com) | Amazon AWS (2C/4Gb/30Gb) | enode://b7286ff750f8111ea58452f73c39a26715ebe6702adf0369bfa1926e373b25d4f442ceed34d1815aab06aab7673451cc7e0828e1140ad5631d8c05889ecd95e4@52.47.194.145:21000?discport=0 |
 | Telef�nica | Jos� Luis Nu�ez ( joseluis.nunezdiaz@telefonica.com) | Amazon AWS (12C/16Gb/124Gb) | enode://cb5fe9d41f3e5286ff4e4e6fd17d71951a0f0b01b947574b4e89649dfe0692a871a7e8a5436124ad79298864cb236c1726d7e1a12c2d635ecf2adbe3393fd4fb@195.235.92.199:21000?discport=0" |
 | GFT | Josep Maria Brunetti (josep-maria.brunetti@gft.com) | AWS t2.medium | enode://592fe5622277dd9c9645b7a0eea9d00e78b555ddf96ef4526ba0849eecd835a934ee4aeafb4103239851ff3b3c9c78218672d2b2b664b57af1f70cd7d8f0aff1@34.253.179.170:21000?discport=0 |
+| Nodalblock | Ariano Hernandez Huerta (a.hernandez@nodalblock.com), Martin Laplace (martin.laplace@nodalblock.com) | Amazon AWS (2C/8Gb/300Gb) | enode://d0289319f5dd160110aa60267317e2817627cb5107615966388df041030a074c940ba8ae159d2f9aa5b484c3e0728d54c991905e38a85e9755f8741e90da1698@34.244.175.27:21000?discport=0 |
+
