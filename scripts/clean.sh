@@ -2,8 +2,12 @@
 # Prepare the node for a clean restart
 
 if ( [ "transactions" == "$1" ]); then 
+    echo "Stopping node ..."
+    ~/alastria-node/scripts/stop.sh
     echo "Cleaning transaction queue ..."
     rm ~/alastria/data/geth/transactions.rpl
+    echo "Starting node ..."
+    ~/alastria-node/scripts/start.sh
 else
     echo "Preparing the node for a clean restart ..."
     rm -Rf ~/alastria/logs/quorum*
