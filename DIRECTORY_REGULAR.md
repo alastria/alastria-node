@@ -17,5 +17,6 @@
 | atSistemas | Jose Angel Corral (jacorral@atsistemas.com) | AWS CentOS7.4 2C/4GB/8GB+20GB | iuTymSPrfS/5NB9HZcqLV1vaT97Z6UxEEady8p+iVwE= | enode://2754d548777d8ab7dd29ccd7c67deaac3de1740f9239b57ebc3d5346f6708f846c07d0a92b0a05db516c74675475761bad3777a615c8a636b6d24cc0a0355a32@52.31.219.254:21000?discport=0 |
 | Mapfre | Isidro Cucó Martín de Jorge (iscucom@mapfre.com) | VirtualBox VM RedHat 64-bit 4C/2GB/64GB | 71m+QPnxDU+pTfMwMxiDHwbq7ZM901oQRRXbaJcwfXk= | enode://933b52d602be73a267b75897306e4668e2be101f9688aa022d3fa1cf93dc1ec1e8b49fd34c674daeeea20eee2c867c907897a3a7b054770a2d999b1a2a755c83@83.56.42.181:21000?discport=0 |
 | IN2 | Alex casaus Carmona (alex.casaus@in2.es) | Self Hosted (2C/2GB/30GB) | o3g8PUwMVKUW4FpTQlJGRs6X9Z6zxZHaxDaa/TZ+zgg= | enode://5a47abb15cc80f9bfe9121a60c3d0691b773cce5b567fbfd14fa548cf28d5232cc05c8dc00f2f178b7925de64364dc2e0fc833f6ddac1a7b0c7eb13e843e54f8@89.140.139.178:21000?discport=0 |
+| Blocknitive | Guillermo Lapuente (tecnico@blocknitive.com) | IBM Cloud | Kb+luoqJ5CNkb0nbXDYWzoZY6zx9JgGlikrytfnumjo= | enode://326498ed6fbb51b9d1bcfe4fadd394bf92610eab862536f0ff476d93716884d832f703f72fb68786a3061f24c13a38e10d11ef5ee1ff32d59097662e3feee26c@169.60.149.188:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.

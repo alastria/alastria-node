@@ -98,12 +98,12 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   
   # install constellation
   echo "Installing CONSTELLATION"
-  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.1/constellation-0.3.1-ubuntu1604.tar.xz 
-  unxz constellation-0.3.1-ubuntu1604.tar.xz 
-  tar -xf constellation-0.3.1-ubuntu1604.tar
-  sudo cp constellation-0.3.1-ubuntu1604/constellation-node /usr/local/bin 
+  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.1/constellation-0.3.2-ubuntu1604.tar.xz 
+  unxz constellation-0.3.2-ubuntu1604.tar.xz 
+  tar -xf constellation-0.3.2-ubuntu1604.tar
+  sudo cp constellation-0.3.2-ubuntu1604/constellation-node /usr/local/bin 
   sudo chmod 0755 /usr/local/bin/constellation-node
-  sudo rm -rf constellation-0.3.1-ubuntu1604.tar.xz constellation-0.3.1-ubuntu1604.tar constellation-0.3.1-ubuntu1604
+  sudo rm -rf constellation-0.3.2-ubuntu1604.tar.xz constellation-0.3.2-ubuntu1604.tar constellation-0.3.2-ubuntu1604
 
   # make/install quorum
   echo "Installing QUORUM"
@@ -168,11 +168,11 @@ elif [ $OS = "ubuntu" ];then
   sudo add-apt-repository -y ppa:ethereum/ethereum && sudo add-apt-repository -y ppa:ethereum/ethereum-dev && sudo apt-get update && sudo apt-get install -y solc
 
   #INSTALACION CONSTELLATION 0.2.0
-  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.1/constellation-0.3.1-ubuntu1604.tar.xz 
-  unxz constellation-0.3.1-ubuntu1604.tar.xz 
-  tar -xf constellation-0.3.1-ubuntu1604.tar
-  sudo cp constellation-0.3.1-ubuntu1604/constellation-node /usr/local/bin && sudo chmod 0755 /usr/local/bin/constellation-node
-  sudo rm -rf constellation-0.3.1-ubuntu1604.tar.xz constellation-0.3.1-ubuntu1604.tar constellation-0.3.1-ubuntu1604
+  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.1/constellation-0.3.2-ubuntu1604.tar.xz 
+  unxz constellation-0.3.2-ubuntu1604.tar.xz 
+  tar -xf constellation-0.3.2-ubuntu1604.tar
+  sudo cp constellation-0.3.2-ubuntu1604/constellation-node /usr/local/bin && sudo chmod 0755 /usr/local/bin/constellation-node
+  sudo rm -rf constellation-0.3.2-ubuntu1604.tar.xz constellation-0.3.2-ubuntu1604.tar constellation-0.3.2-ubuntu1604
 
   #INSTALACION DE QUORUM
   git clone https://github.com/alastria/quorum.git
@@ -180,7 +180,7 @@ elif [ $OS = "ubuntu" ];then
   cd quorum && git checkout 0915c95705f92ab96f60cb51a7e001174eb694a6 && make all &&  cp build/bin/geth /usr/local/bin && cp build/bin/bootnode /usr/local/bin
 
   cd ..
-  sudo rm -rf constellation-0.3.1-ubuntu1604.tar.xz constellation-0.3.1-ubuntu1604.tar constellation-0.3.1-ubuntu1604 quorum
+  sudo rm -rf constellation-0.3.2-ubuntu1604.tar.xz constellation-0.3.2-ubuntu1604.tar constellation-0.3.2-ubuntu1604 quorum
 
 fi
 
