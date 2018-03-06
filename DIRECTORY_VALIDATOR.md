@@ -20,3 +20,5 @@
 | atSistemas | Jose Angel Corral (jacorral@atsistemas.com), Sergio Lecuona (slecuona@atsistemas.com) | AWS CentOS7.4 2C/4GB/8GB+100GB | enode://c1c3ab1a1dffd1848ad903531bb15597fda7f5702601df7755c1c54eb7939db52519e1b727505af7999d180345ce0dc51462cb0822497fc39968e91888ac25ee@52.212.194.186:21000?discport=0 |
 | Fujitsu | Carlos Cordero Deline (Fujitsu-Alastria@ts.fujitsu.com) | Fujitsu K5 (2C/4Gb/30Gb) | enode://2163517edae3dd184d547e799d41ade695b8ef60b2e5a0429051136efc50c7d1e3df865fc1c14d18f7400ae325064b9d88e9f6c9e2e54f7e4a4d6379343a1ff0@194.140.26.136:21000?discport=0 |
 | GFT | Josep Maria Brunetti (josep-maria.brunetti@gft.com) | AWS t2.medium | enode://592fe5622277dd9c9645b7a0eea9d00e78b555ddf96ef4526ba0849eecd835a934ee4aeafb4103239851ff3b3c9c78218672d2b2b664b57af1f70cd7d8f0aff1@34.253.179.170:21000?discport=0 |
+| Nodalblock | Ariano Hernandez Huerta (a.hernandez@nodalblock.com), Martin Laplace (martin.laplace@nodalblock.com) | Amazon AWS (2C/8Gb/300Gb) | enode://d0289319f5dd160110aa60267317e2817627cb5107615966388df041030a074c940ba8ae159d2f9aa5b484c3e0728d54c991905e38a85e9755f8741e90da1698@34.244.175.27:21000?discport=0 |
+
