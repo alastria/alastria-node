@@ -26,7 +26,7 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     rm -rf ~/alastria/data/geth/chaindata
 fi
 
-NETID=19534643591
+NETID=10534643501
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
 GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000 "
 
@@ -47,7 +47,7 @@ fi
 
 echo "[*] Starting quorum node"
 if [[ "$NODE_TYPE" == "general" ]]; then
-    PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf nohup geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
 else
     if [[ "$NODE_TYPE" == "validator" ]]; then
         if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
