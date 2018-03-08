@@ -149,7 +149,7 @@ elif [ $OS = "ubuntu" ];then
   sudo apt-get install -y software-properties-common unzip wget git make gcc libsodium-dev build-essential libdb-dev zlib1g-dev libtinfo-dev sysvbanner wrk psmisc
 
   echo "Installing WRK"
-  rm -rf 
+  rm -rf wrk
   git clone https://github.com/wg/wrk.git wrk
   cd wrk
   make
