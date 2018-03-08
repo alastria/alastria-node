@@ -54,11 +54,6 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
     sudo yum -y install epel-release
   fi
 
-  echo "Installing WRK"
-  git clone https://github.com/wg/wrk.git wrk
-  cd wrk
-  make
-  sudo cp wrk /usr/local/bin
   echo "Installing LIBSODIUM"
   wget https://github.com/naphaso/jsodium/raw/master/native/linux/libsodium.so.18
   sudo chmod 755 libsodium.so.18
@@ -98,7 +93,7 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   
   # install constellation
   echo "Installing CONSTELLATION"
-  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.1/constellation-0.3.2-ubuntu1604.tar.xz 
+  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.2/constellation-0.3.2-ubuntu1604.tar.xz 
   unxz constellation-0.3.2-ubuntu1604.tar.xz 
   tar -xf constellation-0.3.2-ubuntu1604.tar
   sudo cp constellation-0.3.2-ubuntu1604/constellation-node /usr/local/bin 
@@ -153,6 +148,13 @@ elif [ $OS = "ubuntu" ];then
   #INSTALACION DE LIBRERIAS
   sudo apt-get install -y software-properties-common unzip wget git make gcc libsodium-dev build-essential libdb-dev zlib1g-dev libtinfo-dev sysvbanner wrk psmisc
 
+  echo "Installing WRK"
+  rm -rf 
+  git clone https://github.com/wg/wrk.git wrk
+  cd wrk
+  make
+  sudo cp wrk /usr/local/bin
+  
   #LEVELDB FIX
   git clone https://github.com/google/leveldb.git
   cd leveldb/
@@ -168,7 +170,7 @@ elif [ $OS = "ubuntu" ];then
   sudo add-apt-repository -y ppa:ethereum/ethereum && sudo add-apt-repository -y ppa:ethereum/ethereum-dev && sudo apt-get update && sudo apt-get install -y solc
 
   #INSTALACION CONSTELLATION 0.2.0
-  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.1/constellation-0.3.2-ubuntu1604.tar.xz 
+  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.2/constellation-0.3.2-ubuntu1604.tar.xz 
   unxz constellation-0.3.2-ubuntu1604.tar.xz 
   tar -xf constellation-0.3.2-ubuntu1604.tar
   sudo cp constellation-0.3.2-ubuntu1604/constellation-node /usr/local/bin && sudo chmod 0755 /usr/local/bin/constellation-node
