@@ -147,6 +147,30 @@ y el enode de nuestro nodo y con `./scripts/backup.sh full` realizamos una copia
 
  * Existe un script `./scripts/clean.sh` que limpia el nodo actual y exige una resincronización del mismo al iniciarlo de nuevo. Esto solventa posibles errores de sincronización. Su efecto es el mismo que el de ejecutar directamente `./scripts/start.sh clean`
 
+## Configurando el primer nodo de la red
+
+Si se está inicializando una nueva red, el primer nodo debe tener obligatoriamente los siguientes ficheros en el nodo:
+
+* [~/alastria/data/geth/nodekey](https://github.com/alastria/test-environment/blob/master/threenodes/alastria/validator/geth/nodekey):
+```
+e7889a64e5ec8c28830a1c8fc620810f086342cd511d708ee2c4420231904d18
+```
+
+* [~/alastria/data/keystore/UTC--2017-09-20T08-43-59.003454005Z--58b8527743f89389b754c63489262fdfc9ba9db6](https://github.com/alastria/alastria-node/blob/feature/ibft/data/keystore/UTC--2017-09-20T08-43-59.003454005Z--58b8527743f89389b754c63489262fdfc9ba9db6):
+```
+{"address":"58b8527743f89389b754c63489262fdfc9ba9db6","crypto":{"cipher":"aes-128-ctr","ciphertext":"20f46e1aacd6bf28b66e37b5b6cf9b1cefc42ac8a4461e86893ae4ccd7e671c7","cipherparams":{"iv":"4d455255a895091952f653c4b59c92c7"},"kdf":"scrypt","kdfparams":{"dklen":32,"n":262144,"p":1,"r":8,"salt":"74b089663af7571962992c5a1bb68c1e82e5f8308c646b68cfe576c1c6f38d5c"},"mac":"5ce860f522494ff1322f776d93ee6fb149eb1cddb53722e2e59191c4d0bdd8c9"},"id":"2db34512-2c46-44b7-a8a9-6b73302dde1e","version":3}
+```
+
+Adicionalmente, se puede cambiar el script `start.sh` para con la IP pública del nodo que se está configurando.
+
+```
+        if [[ "$CURRENT_HOST_IP" == "IP_EL_NODO" ]]; then
+            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --mine --minerthreads 1 --syncmode "full" --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+        else
+            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --mine --minerthreads 1 --syncmode "full" 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+        fi
+```
+
 ## Crear un nodo con Docker
 Para generar la imagen de Docker ejecutar:
 ```
