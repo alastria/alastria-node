@@ -47,7 +47,7 @@ if ( [ "build" == "$1" ]); then
     cd "$GOPATH"
     mkdir "$GOPATH"/bin
 
-    echo "[*] Installing glide"
+    echo "[*] Downloading monitor"
     curl https://glide.sh/get | sh
     go get -d github.com/alastria/monitor
     cd "$GOPATH"/src/github.com/alastria
@@ -63,10 +63,10 @@ if ( [ "build" == "$1" ]); then
 
     glide install
 
-    echo "[*] Building the monitor"
-    bee pack 
-    tar -zxvf monitor.tar.gz monitor
-    rm -Rf monitor.tar.gz
+    #echo "[*] Building the monitor"
+    #bee pack 
+    #tar -zxvf monitor.tar.gz monitor
+    #rm -Rf monitor.tar.gz
 fi
 
 if ( [ "start" == "$1" ]); then 
