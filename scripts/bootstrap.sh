@@ -8,6 +8,8 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
 
   GOREL="go1.8.7.linux-amd64.tar.gz"
 
+  # TODO: ALLWAYS DOWNLOAD AND INSTALL GOLANG!!!!
+
   #install Go
   if ! type "go" > /dev/null; then
     #INSTALACION DE GO
@@ -16,9 +18,8 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
     sudo yum -y install wget
     wget -q "https://storage.googleapis.com/golang/${GOREL}"
     tar -xvzf "${GOREL}"
-    if [[ ! -d /usr/local/go ]];then
-      mv go /usr/local/go
-    fi
+    rm -Rf /usr/local/go
+    mv go /usr/local/go
     sudo rm "${GOREL}"
   else
     V1=$(go version | grep -oP '\d+(?:\.\d+)+')
@@ -128,6 +129,7 @@ elif [ $OS = "ubuntu" ];then
     echo "Installing GO"
     wget -q "https://storage.googleapis.com/golang/${GOREL}"
     tar -xvzf "${GOREL}"
+    sudo rm -rf /usr/local/go
     mv go /usr/local/go
     sudo rm "${GOREL}"
   else
