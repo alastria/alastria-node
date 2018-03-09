@@ -2,6 +2,7 @@
 
 set -e
 
+DIR=`echo $PWD | xargs dirname | xargs dirname`
 OS=$(cat /etc/os-release | grep "^ID=" | sed 's/ID=//g' | sed 's\"\\g')
 if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   echo "Installing the environment in $OS"  
@@ -190,7 +191,6 @@ fi
 
 # Manage GOROOT variable
 if [[ -z "$GOROOT" ]]; then
-    DIR=`echo $PWD | xargs dirname | xargs dirname`
     echo "[*] Trying default $GOROOT. If the script fails please run $DIR/alastria-node/bootstrap.sh or configure GOROOT correctly"
     echo 'export GOROOT=/usr/local/go' >> $DIR/.bashrc
     echo 'export GOPATH=$HOME/alastria/workspace' >> $DIR/.bashrc
