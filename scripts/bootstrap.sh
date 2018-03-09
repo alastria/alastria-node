@@ -190,6 +190,7 @@ fi
 
 # Manage GOROOT variable
 if [[ -z "$GOROOT" ]]; then
+    HOME=`echo $PWD | xargs dirname | xargs dirname`
     echo "[*] Trying default $GOROOT. If the script fails please run $HOME/alastria-node/bootstrap.sh or configure GOROOT correctly"
     echo 'export GOROOT=/usr/local/go' >> $HOME/.bashrc
     echo 'export GOPATH=$HOME/alastria/workspace' >> $HOME/.bashrc
