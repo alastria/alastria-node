@@ -33,6 +33,7 @@ Para configurar e instalar Quorum y Constellation, debe clonar este repositorio 
 $ git clone https://github.com/alastria/alastria-node.git
 $ cd alastria-node/scripts/
 $ sudo -H ./bootstrap.sh
+$ source ~/.bashrc
 ```
 
 ## Configuración del nodo
@@ -159,6 +160,16 @@ e7889a64e5ec8c28830a1c8fc620810f086342cd511d708ee2c4420231904d18
 * [~/alastria/data/keystore/UTC--2017-09-20T08-43-59.003454005Z--58b8527743f89389b754c63489262fdfc9ba9db6](https://github.com/alastria/alastria-node/blob/feature/ibft/data/keystore/UTC--2017-09-20T08-43-59.003454005Z--58b8527743f89389b754c63489262fdfc9ba9db6):
 ```
 {"address":"58b8527743f89389b754c63489262fdfc9ba9db6","crypto":{"cipher":"aes-128-ctr","ciphertext":"20f46e1aacd6bf28b66e37b5b6cf9b1cefc42ac8a4461e86893ae4ccd7e671c7","cipherparams":{"iv":"4d455255a895091952f653c4b59c92c7"},"kdf":"scrypt","kdfparams":{"dklen":32,"n":262144,"p":1,"r":8,"salt":"74b089663af7571962992c5a1bb68c1e82e5f8308c646b68cfe576c1c6f38d5c"},"mac":"5ce860f522494ff1322f776d93ee6fb149eb1cddb53722e2e59191c4d0bdd8c9"},"id":"2db34512-2c46-44b7-a8a9-6b73302dde1e","version":3}
+```
+
+La secuencia de acciones sería:
+```
+$ cd ~/alastria/data/geth/
+$ rm -rf nodekey
+$ wget https://raw.githubusercontent.com/alastria/test-environment/master/threenodes/alastria/validator/geth/nodekey
+$ cd ~/alastria/data/keystore/
+$ rm -rf *
+$ wget https://raw.githubusercontent.com/alastria/alastria-node/feature/ibft/data/keystore/UTC--2017-09-20T08-43-59.003454005Z--58b8527743f89389b754c63489262fdfc9ba9db6
 ```
 
 Adicionalmente, se puede cambiar el script `start.sh` para con la IP pública del nodo que se está configurando.
