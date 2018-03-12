@@ -26,7 +26,7 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     rm -rf ~/alastria/data/geth/chaindata
 fi
 
-NETID=90584648509
+NETID=91584648519
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
 GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000 "
 
