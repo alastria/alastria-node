@@ -206,3 +206,4 @@ if [[ -z "$GOROOT" ]]; then
 fi
 
 set +e
+source ~/.bashrc
