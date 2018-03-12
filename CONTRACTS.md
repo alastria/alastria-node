@@ -5,6 +5,7 @@
 | UPORT | IdentityManager | 0xd1420aa0edf6a441dafc3d3940176a965e9c26d9 |
 | UPORT | TxRelay | 0xd1420aa0edf6a441dafc3d3940176a965e9c26d9 |
 | UPORT | MetaIdentityManager | 0x9a56fd524313de5d03f8f7ecb003bff747e406f6 |
+| UPORT | UportRegistry | 0x093826c9c47ad88d79ccd4d00368e0fe6bbc5694 |
 | UPORT | EthPublish | 0x5b1fc7b191f5637fea51dc66ecce5e07d23dfb4d |
 | UPORT | Status | 0x14da36e2ea556d559e3003a7559f6cf60762a735 |
 | ENS | ENS | 0x0aefc5ffd99196a6666133e912e49ff60f27c539 |
