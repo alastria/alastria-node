@@ -19,4 +19,6 @@
 | IN2 | Alex casaus Carmona (alex.casaus@in2.es) | Self Hosted (2C/2GB/30GB) | o3g8PUwMVKUW4FpTQlJGRs6X9Z6zxZHaxDaa/TZ+zgg= | enode://5a47abb15cc80f9bfe9121a60c3d0691b773cce5b567fbfd14fa548cf28d5232cc05c8dc00f2f178b7925de64364dc2e0fc833f6ddac1a7b0c7eb13e843e54f8@89.140.139.178:21000?discport=0 |
 | Blocknitive | Guillermo Lapuente (tecnico@blocknitive.com) | IBM Cloud | Kb+luoqJ5CNkb0nbXDYWzoZY6zx9JgGlikrytfnumjo= | enode://326498ed6fbb51b9d1bcfe4fadd394bf92610eab862536f0ff476d93716884d832f703f72fb68786a3061f24c13a38e10d11ef5ee1ff32d59097662e3feee26c@169.60.149.188:21000?discport=0 |
 | Nodalblock | Ariano Hernandez Huerta (a.hernandez@nodalblock.com), Martin Laplace (martin.laplace@nodalblock.com) | Amazon AWS (2C/8Gb/300Gb) | NpkuvGmydJrdG2+425BmJLOc2NuPMvsKJuS99AZQIH8= | enode://b556317d9503dfeaabb0bd5d7592d5b5c2fe3f37f94bb0b92b3c2d81b2b1844d6ac4583f688e35f5d725017d091676b7c43fc0b920cbf7e6f3a20c3bd9d0ed9c@52.51.36.74:21000?discport=0 |
+| Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | Amazon AWS (2C/4Gb/30Gb) | wsyiYRPs8pWjw1NsTdkmzYordSv8GCCXS7tvk2CM53g= | enode://ed6703915f666df745771f31941840b301486179983dfae05c909813fb3ad200978e43bd6c44f8a3bfcb39ea8628018a41baa825944500b064b4e14911da5476@52.209.188.78:21000?discport=0 |
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
