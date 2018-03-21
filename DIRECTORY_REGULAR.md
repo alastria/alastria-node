@@ -23,5 +23,6 @@
 | SameLAN | Oscar Gonzalez Moreno (oscar.gonzalez@samelan.com) | Amazon AWS (t2.medium, 2C/8Gb/50Gb) | VeCu26jVrVKIqAkidIAPGfMZwqQobhOpTkwBQHPtJGo= | enode://a37863dd51ca9c5861242146557983781075d4a082fa9fb0d3d8e2930d1060c5d02d48741574332db0ba14aa8366a099312454372210674596a333c011dc29d3@34.240.42.125:21000?discport=0 |
 | BME | Juan Hernandez (jhernandez.becarios@grupobme.es) | Amazon AWS | WnDJVTEI+HLqCsQnIWwGNGKpn5PNwxbhxDkkkPYNIhI= | enode://dfc2c420b4e8d77480f30e7fa666dd8ca9bf068065688cf5bc7b099159a35652fc503ecb5064594bc780c020b6e07dcfb27d0d968f279113d0406de17c6fdc3a@52.30.89.179:21000?discport=0 |
 | Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | Amazon AWS (2C/4Gb/30Gb) | wsyiYRPs8pWjw1NsTdkmzYordSv8GCCXS7tvk2CM53g= | enode://ed6703915f666df745771f31941840b301486179983dfae05c909813fb3ad200978e43bd6c44f8a3bfcb39ea8628018a41baa825944500b064b4e14911da5476@52.209.188.78:21000?discport=0 |
+| SAP | Alexander Schaefer (alexander.schaefer01@sap.com), Michael Kunzmann (michael.kunzmann@sap.com) | Amazon AWS (2C/4Gb/30Gb) | KxSUuSZYYZ9J/FobNqOp0vHIDEYm4VchZ61Uci21AxU= | enode://b97b26246f6d1598481ac99da250708186de90c281dd04d33399d32304abae5f5cb5c2e7e317703da7796a25f36e18936e4cfbe54c24a580e70c6d7c62c2c838@54.93.229.117:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
