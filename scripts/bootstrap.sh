@@ -70,6 +70,7 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   echo "Installing LEVELDB"
   git clone https://github.com/google/leveldb.git
   cd leveldb/
+  git checkout 0fa5a4f
   make
   sudo scp -r out-static/lib* out-shared/lib* /usr/local/lib/
   sudo cp /usr/local/lib/libleveldb.* /usr/lib64/
@@ -161,6 +162,7 @@ elif [ $OS = "ubuntu" ];then
   #LEVELDB FIX
   git clone https://github.com/google/leveldb.git
   cd leveldb/
+  git checkout 0fa5a4f
   make
   sudo scp -r out-static/lib* out-shared/lib* /usr/local/lib/
   cd include/
