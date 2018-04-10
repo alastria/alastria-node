@@ -7,7 +7,7 @@ OS=$(cat /etc/os-release | grep "^ID=" | sed 's/ID=//g' | sed 's\"\\g')
 if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   echo "Installing the environment in $OS"  
 
-  GOREL="go1.8.7.linux-amd64.tar.gz"
+  GOREL="go1.9.5.linux-amd64.tar.gz"
 
   # TODO: ALLWAYS DOWNLOAD AND INSTALL GOLANG!!!!
 
@@ -122,7 +122,7 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
 elif [ $OS = "ubuntu" ];then
   echo "Installing the environment in " + $OS 
 
-  GOREL="go1.8.7.linux-amd64.tar.gz"
+  GOREL="go1.9.5.linux-amd64.tar.gz"
 
   #Do not mess with Go instalations
   if ! type "go" > /dev/null; then
