@@ -13,7 +13,7 @@ check_constellation_isStarted(){
         netcat -z -v localhost $CONSTELLATION_PORT
         RETVAL=$?
         [ $RETVAL -eq 0 ] && echo "[*] constellation node at $CONSTELLATION_PORT is now up."
-        [ $RETVAL -ne 0 ] && echo "[*] constellation node at $CONSTELLATION_PORT is still starting. Awaiting 20 seconds." && sleep 20
+        [ $RETVAL -ne 0 ] && echo "[*] constellation node at $CONSTELLATION_PORT is still starting. Awaiting 20 seconds." && sleep 5
         
     done
     echo "[*] resuming start procedure"
@@ -42,9 +42,9 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     rm -rf ~/alastria/data/geth/chaindata
 fi
 
-NETID=91584648519
+NETID=82584648528
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
-GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000 "
+GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@52.56.86.239:3000 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 "
 
 _TIME=$(date +%Y%m%d%H%M%S)
 
@@ -53,7 +53,6 @@ mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 if [[ "$NODE_TYPE" == "general" ]]; then
     echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
-    # sleep 20
     check_constellation_isStarted
 fi
 
