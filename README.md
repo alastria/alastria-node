@@ -77,7 +77,7 @@ Este será el procedimiento a seguir por los nodos miembros ante actualizaciones
 
 ### Configuración del fichero de nodos Quorum ###
 
-Si el nodo se creó desde cero, entonces el paso anterior modificó diversos ficheros, a saber:
+Si el nodo se creó desde cero, entonces el paso _Creación de un nuevo nodo_ modificó diversos ficheros, a saber:
 
 * Si el nodo era validador, se modifican los siguientes ficheros:
 	* [`data/permissioned-nodes_general.json`](data/permissioned-nodes_general.json)
@@ -130,7 +130,7 @@ Así, el nuevo nodo estará levantado y sincronizado con la red.
  * Ante errores en el nodo, podemos optar por realizar un reinicio limpio del nodo, para ello debemos ejecutar los siguientes comados:
 ```
 $ ./stop.sh
-$ ./start.sh clean
+$ ./start.sh
 ```
 
  * También, disponemos de un script de restart para actualizar el nodo sin parar ningún proceso (por ejemplo ante actualizaciones del permissioned-nodes*):
