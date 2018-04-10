@@ -13,7 +13,7 @@ check_constellation_isStarted(){
         netcat -z -v localhost $CONSTELLATION_PORT
         RETVAL=$?
         [ $RETVAL -eq 0 ] && echo "[*] constellation node at $CONSTELLATION_PORT is now up."
-        [ $RETVAL -ne 0 ] && echo "[*] constellation node at $CONSTELLATION_PORT is still starting. Awaiting 20 seconds." && sleep 20
+        [ $RETVAL -ne 0 ] && echo "[*] constellation node at $CONSTELLATION_PORT is still starting. Awaiting 20 seconds." && sleep 5
         
     done
     echo "[*] resuming start procedure"
@@ -53,7 +53,6 @@ mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 if [[ "$NODE_TYPE" == "general" ]]; then
     echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
-    # sleep 20
     check_constellation_isStarted
 fi
 
@@ -82,6 +81,8 @@ if ([ ! $# -ne 1 ] && [ "dockerfile" == "$1" ]); then
         sleep 1000000
     done;
 fi
+
+echo "[*] Verify if you are in develop branch"
 
 set +u
 set +e
