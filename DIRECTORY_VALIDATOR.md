@@ -21,4 +21,4 @@
 | Fujitsu | Carlos Cordero Deline (Fujitsu-Alastria@ts.fujitsu.com) | Fujitsu K5 (2C/4Gb/30Gb) | enode://2163517edae3dd184d547e799d41ade695b8ef60b2e5a0429051136efc50c7d1e3df865fc1c14d18f7400ae325064b9d88e9f6c9e2e54f7e4a4d6379343a1ff0@194.140.26.136:21000?discport=0 |
 | GFT | Josep Maria Brunetti (josep-maria.brunetti@gft.com) | AWS t2.medium | enode://592fe5622277dd9c9645b7a0eea9d00e78b555ddf96ef4526ba0849eecd835a934ee4aeafb4103239851ff3b3c9c78218672d2b2b664b57af1f70cd7d8f0aff1@34.253.179.170:21000?discport=0 |
 | Nodalblock | Ariano Hernandez Huerta (a.hernandez@nodalblock.com), Martin Laplace (martin.laplace@nodalblock.com) | Amazon AWS (2C/8Gb/300Gb) | enode://d0289319f5dd160110aa60267317e2817627cb5107615966388df041030a074c940ba8ae159d2f9aa5b484c3e0728d54c991905e38a85e9755f8741e90da1698@34.244.175.27:21000?discport=0 |
-
+| SAP | Alexander Schaefer (alexander.schaefer01@sap.com), Michael Kunzmann (michael.kunzmann@sap.com) | Amazon AWS (2C/4Gb/30Gb) | enode://b97b26246f6d1598481ac99da250708186de90c281dd04d33399d32304abae5f5cb5c2e7e317703da7796a25f36e18936e4cfbe54c24a580e70c6d7c62c2c838@54.93.229.117:21000?discport=0 |
