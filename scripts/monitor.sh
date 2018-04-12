@@ -56,7 +56,7 @@ if ( [ "build" == "$1" ]); then
     go get -fix -t -u -v github.com/astaxie/beego
     go get -fix -t -u -v github.com/beego/bee
 
-    dep ensure
+    #dep ensure
 
     #echo "[*] Building the monitor"
     #bee pack 
@@ -85,7 +85,7 @@ if ( [ "update" == "$1" ]); then
     cd $GOPATH/src/github.com/alastria/monitor
     git pull
     git checkout "$(git describe --tags `git rev-list --tags --max-count=1`)"
-    dep ensure
+    #dep ensure
 fi
 
 if ( [ "stop" == "$1" ]); then
