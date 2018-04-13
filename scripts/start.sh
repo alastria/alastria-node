@@ -10,10 +10,10 @@ check_constellation_isStarted(){
     RETVAL=""
     while [ "$RETVAL" == "" ]
     do
-        #netcat -z -v localhost $CONSTELLATION_PORT
+    
         RETVAL="$(ss -nutlp | grep $CONSTELLATION_PORT)"
         [ "$RETVAL" != "" ] && echo "[*] constellation node at $CONSTELLATION_PORT is now up."
-        [ "$RETVAL" == "" ] && echo "[*] constellation node at $CONSTELLATION_PORT is still starting. Awaiting 20 seconds." && sleep 5
+        [ "$RETVAL" == "" ] && echo "[*] constellation node at $CONSTELLATION_PORT is still starting. Awaiting 5 seconds." && sleep 5
 
     done
     echo "[*] resuming start procedure"

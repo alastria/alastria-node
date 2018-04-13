@@ -34,11 +34,6 @@ fi
 
 if ( [ "build" == "$1" ]); then 
 
-    # if hash glide 2>/dev/null; then
-    #     echo "[*] Installing glide"
-    #     curl https://glide.sh/get | sh
-    # fi
-
     echo "[*] Removing previous versions"
     rm -rf "$GOPATH"/src/github.com/alastria/monitor
     mkdir -p "$GOPATH"/src/github.com/alastria
@@ -48,7 +43,7 @@ if ( [ "build" == "$1" ]); then
     mkdir "$GOPATH"/bin
 
     echo "[*] Downloading monitor"
-    curl https://glide.sh/get | sh
+    curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
     go get -d github.com/alastria/monitor
     cd "$GOPATH"/src/github.com/alastria
     
@@ -61,7 +56,7 @@ if ( [ "build" == "$1" ]); then
     go get -fix -t -u -v github.com/astaxie/beego
     go get -fix -t -u -v github.com/beego/bee
 
-    glide install
+    #dep ensure
 
     #echo "[*] Building the monitor"
     #bee pack 
@@ -90,7 +85,7 @@ if ( [ "update" == "$1" ]); then
     cd $GOPATH/src/github.com/alastria/monitor
     git pull
     git checkout "$(git describe --tags `git rev-list --tags --max-count=1`)"
-    glide up
+    #dep ensure
 fi
 
 if ( [ "stop" == "$1" ]); then
