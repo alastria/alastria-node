@@ -2,12 +2,17 @@
 
 set -e
 
+function installcmake {
+  wget "https://cmake.org/files/v3.10/cmake-3.10.3-Linux-x86_64.sh" -O /tmp/cmake-3.10.3-Linux-x86_64.sh
+  sudo sh /tmp/cmake-3.10.3-Linux-x86_64.sh --skip-license --prefix=/usr/local
+}
+
 DIR=`echo $PWD | xargs dirname | xargs dirname`
 OS=$(cat /etc/os-release | grep "^ID=" | sed 's/ID=//g' | sed 's\"\\g')
 if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   echo "Installing the environment in $OS"  
 
-  GOREL="go1.8.7.linux-amd64.tar.gz"
+  GOREL="go1.9.5.linux-amd64.tar.gz"
 
   # TODO: ALLWAYS DOWNLOAD AND INSTALL GOLANG!!!!
 
@@ -70,14 +75,12 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   echo "Installing LEVELDB"
   git clone https://github.com/google/leveldb.git
   cd leveldb/
-  git checkout 0fa5a4f
+  installcmake
+  cmake .
   make
-  sudo scp -r out-static/lib* out-shared/lib* /usr/local/lib/
-  sudo cp /usr/local/lib/libleveldb.* /usr/lib64/
-  cd include/
-  sudo scp -r leveldb /usr/local/include/
+  make install
   sudo ldconfig || true
-  cd ../..
+  cd ..
   sudo rm -r leveldb
   cd ..
   echo "Cleaning CACHE RPM"
@@ -122,7 +125,7 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
 elif [ $OS = "ubuntu" ];then
   echo "Installing the environment in " + $OS 
 
-  GOREL="go1.8.7.linux-amd64.tar.gz"
+  GOREL="go1.9.5.linux-amd64.tar.gz"
 
   #Do not mess with Go instalations
   if ! type "go" > /dev/null; then
@@ -162,13 +165,12 @@ elif [ $OS = "ubuntu" ];then
   #LEVELDB FIX
   git clone https://github.com/google/leveldb.git
   cd leveldb/
-  git checkout 0fa5a4f
+  installcmake
+  cmake .
   make
-  sudo scp -r out-static/lib* out-shared/lib* /usr/local/lib/
-  cd include/
-  sudo scp -r leveldb /usr/local/include/
+  make install
   sudo ldconfig
-  cd ../..
+  cd ..
   rm -r leveldb
 
 #INSTALACION ETHEREUM

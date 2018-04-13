@@ -3,6 +3,22 @@ set -u
 set -e
 
 CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
+CONSTELLATION_PORT=9000
+
+check_constellation_isStarted(){
+    set +e
+    RETVAL=""
+    while [ "$RETVAL" == "" ]
+    do
+        #netcat -z -v localhost $CONSTELLATION_PORT
+        RETVAL="$(ss -nutlp | grep $CONSTELLATION_PORT)"
+        [ "$RETVAL" != "" ] && echo "[*] constellation node at $CONSTELLATION_PORT is now up."
+        [ "$RETVAL" == "" ] && echo "[*] constellation node at $CONSTELLATION_PORT is still starting. Awaiting 20 seconds." && sleep 5
+
+    done
+    echo "[*] resuming start procedure"
+    set -e
+}
 
 echo "Optional use for a clean start: start clean"
 
@@ -37,7 +53,7 @@ mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 if [[ "$NODE_TYPE" == "general" ]]; then
     echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
-    sleep 20
+    check_constellation_isStarted
 fi
 
 if [[ ! -f "permissioned-nodes.json" ]]; then
@@ -65,6 +81,8 @@ if ([ ! $# -ne 1 ] && [ "dockerfile" == "$1" ]); then
         sleep 1000000
     done;
 fi
+
+echo "[*] Verify if you are in develop branch"
 
 set +u
 set +e
