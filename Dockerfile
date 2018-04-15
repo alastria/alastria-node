@@ -27,4 +27,4 @@ RUN ./start.sh
 EXPOSE 9000 21000 21000/udp 22000 41000
 
 RUN ./start.sh
-CMD ["./start.sh dockerfile"]
+CMD ["./start.sh" , "dockerfile"]
