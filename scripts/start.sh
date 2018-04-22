@@ -2,6 +2,8 @@
 set -u
 set -e
 
+echo "Optional use for a clean start: start clean"
+
 CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
 CONSTELLATION_PORT=9000
 
@@ -20,7 +22,13 @@ check_constellation_isStarted(){
     set -e
 }
 
-echo "Optional use for a clean start: start clean"
+NETID=82584648528
+mapfile -t IDENTITY <~/alastria/data/IDENTITY
+GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@52.56.86.239:3000 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 "
+
+_TIME=$(date +%Y%m%d%H%M%S)
+
+mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 
 if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then 
     
@@ -40,15 +48,9 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     rm -f ~/alastria/data/constellation/constellation.ipc
     rm -rf ~/alastria/data/geth/lightchaindata
     rm -rf ~/alastria/data/geth/chaindata
+
+    ./init.sh auto $NODE_TYPE $IDENTITY
 fi
-
-NETID=82584648528
-mapfile -t IDENTITY <~/alastria/data/IDENTITY
-GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@52.56.86.239:3000 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 "
-
-_TIME=$(date +%Y%m%d%H%M%S)
-
-mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 
 if [[ "$NODE_TYPE" == "general" ]]; then
     echo "[*] Starting Constellation node"

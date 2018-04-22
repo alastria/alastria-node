@@ -1,4 +1,5 @@
 
+
 # Directorio de nodos regulares
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
@@ -18,7 +19,7 @@
 | atSistemas | Jose Angel Corral (jacorral@atsistemas.com) | AWS CentOS7.4 2C/4GB/8GB+20GB | iuTymSPrfS/5NB9HZcqLV1vaT97Z6UxEEady8p+iVwE= | enode://2754d548777d8ab7dd29ccd7c67deaac3de1740f9239b57ebc3d5346f6708f846c07d0a92b0a05db516c74675475761bad3777a615c8a636b6d24cc0a0355a32@52.31.219.254:21000?discport=0 |
 | Mapfre | Isidro Cucó Martín de Jorge (iscucom@mapfre.com) | VirtualBox VM RedHat 64-bit 4C/2GB/64GB | 71m+QPnxDU+pTfMwMxiDHwbq7ZM901oQRRXbaJcwfXk= | enode://933b52d602be73a267b75897306e4668e2be101f9688aa022d3fa1cf93dc1ec1e8b49fd34c674daeeea20eee2c867c907897a3a7b054770a2d999b1a2a755c83@83.56.42.181:21000?discport=0 |
 | IN2 | Alex Casaus Carmona (alex.casaus@in2.es) | Self Hosted (2C/4GB/30GB) | g6cB/4E4txR2bES42na7XVLgKjFCLWImklQfIRmSyQQ= | enode://d9ea38861f138f2a9be149c064d57a335f07fe171fb1396e4311650c4d18ededebbc786c95944f1ce22279fa7939eda9a989d19bd4a7852dc968ea88f6dfa6f1@89.40.139.180:21000?discport=0 |
-| Blocknitive | Guillermo Lapuente (tecnico@blocknitive.com) | IBM Cloud | vSxzxujSWkVMJoA68R4VgbMEbY2l1RxsRejGzRKf2B0= | enode://0ff899731f7fad4252dedb26d6d68cb7d83647aeb074986a047846dfac789a3a51f3b4c822e5b0b1c848da88d99daf0899fb19b104569042c71fe7fddb083526@169.60.149.188:21000?discport=0 |
+| Blocknitive | Guillermo Lapuente (tecnico@blocknitive.com) | IBM Cloud | vSxzxujSWkVMJoA68R4VgbMEbY2l1RxsRejGzRKf2B0= | enode://236834b519f160a2213e9c5bc9c6b3787fab86e3bfc1e9728b1d855528687399847ca51206edbee21b8fea6c02542f5b369e31061169c138dca364e3987f0006@169.60.149.188:21000?discport=0 |
 | Nodalblock | Ariano Hernandez Huerta (a.hernandez@nodalblock.com), Martin Laplace (martin.laplace@nodalblock.com) | Amazon AWS (2C/8Gb/300Gb) | NpkuvGmydJrdG2+425BmJLOc2NuPMvsKJuS99AZQIH8= | enode://b556317d9503dfeaabb0bd5d7592d5b5c2fe3f37f94bb0b92b3c2d81b2b1844d6ac4583f688e35f5d725017d091676b7c43fc0b920cbf7e6f3a20c3bd9d0ed9c@52.51.36.74:21000?discport=0 |
 | SameLAN | Oscar Gonzalez Moreno (oscar.gonzalez@samelan.com) | Amazon AWS (t2.medium, 2C/8Gb/50Gb) | VeCu26jVrVKIqAkidIAPGfMZwqQobhOpTkwBQHPtJGo= | enode://a37863dd51ca9c5861242146557983781075d4a082fa9fb0d3d8e2930d1060c5d02d48741574332db0ba14aa8366a099312454372210674596a333c011dc29d3@34.240.42.125:21000?discport=0 |
 | BME | Juan Hernandez (jhernandez.becarios@grupobme.es) | Amazon AWS | yzVgpeqc87YmpR82QAvKVq8DOPiZnUoGZDe0B86Xn3o= | enode://e0d77956c697c4ff905a8d898a5d1d4cfd29d9a740b83c6745e2bd8575bf09cd370a8879c9b4c623e87a5949f3745ab32979431abee19f697ffb17b87b53765c@52.30.89.179:21000?discport=0 |
