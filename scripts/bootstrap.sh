@@ -2,10 +2,15 @@
 
 set -e
 
+function installcmake {
+  wget "https://cmake.org/files/v3.10/cmake-3.10.3-Linux-x86_64.sh" -O /tmp/cmake-3.10.3-Linux-x86_64.sh
+  sudo sh /tmp/cmake-3.10.3-Linux-x86_64.sh --skip-license --prefix=/usr/local
+}
+
 DIR=`echo $PWD | xargs dirname | xargs dirname`
 OS=$(cat /etc/os-release | grep "^ID=" | sed 's/ID=//g' | sed 's\"\\g')
 if [ $OS = "centos" ] || [ $OS = "rhel" ];then
-  echo "Installing the environment in $OS"  
+  echo "Installing the environment in $OS"
 
   GOREL="go1.9.5.linux-amd64.tar.gz"
 
@@ -43,7 +48,7 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   sudo yum -y install gcc gcc-c++ make openssl-devel
   sudo yum -y install libdb-devel
   sudo yum -y install ncurses-devel
-  
+
   # Check EPEL repository availability. It is available by default in Fedora and CentOS, but it requires manuall
   # installation in RHEL
   EPEL_AVAILABLE=$(sudo yum search epel | grep release || true)
@@ -51,8 +56,8 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
     echo EPEL Repository is not available via YUM. Downloading
     wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -O /tmp/epel-release-latest-7.noarch.rpm
     sudo yum -y install /tmp/epel-release-latest-7.noarch.rpm
-  else 
-    echo EPEL repository is available in YUM via distro packages. Adding it as a source for packages 
+  else
+    echo EPEL repository is available in YUM via distro packages. Adding it as a source for packages
     sudo yum -y install epel-release
   fi
 
@@ -65,19 +70,17 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   sudo chmod 755 libdb-5.3.so
   sudo cp libdb-5.3.so /usr/lib64/ || true
   cd ..
-  
+
   #LEVELDB FIX
   echo "Installing LEVELDB"
   git clone https://github.com/google/leveldb.git
   cd leveldb/
-  git checkout 0fa5a4f
+  installcmake
+  cmake .
   make
-  sudo scp -r out-static/lib* out-shared/lib* /usr/local/lib/
-  sudo cp /usr/local/lib/libleveldb.* /usr/lib64/
-  cd include/
-  sudo scp -r leveldb /usr/local/include/
+  make install
   sudo ldconfig || true
-  cd ../..
+  cd ..
   sudo rm -r leveldb
   cd ..
   echo "Cleaning CACHE RPM"
@@ -85,7 +88,7 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   rpm --rebuilddb
   echo "Installing NODE"
   sudo yum install -y nodejs
-  
+
   #ETHEREUM
   echo "Installing ETHEREUM"
   git clone https://github.com/ethereum/go-ethereum
@@ -93,13 +96,13 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   make geth
   ls -al  build/bin/geth
   sudo npm install -g solc
-  
+
   # install constellation
   echo "Installing CONSTELLATION"
-  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.2/constellation-0.3.2-ubuntu1604.tar.xz 
-  unxz constellation-0.3.2-ubuntu1604.tar.xz 
+  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.2/constellation-0.3.2-ubuntu1604.tar.xz
+  unxz constellation-0.3.2-ubuntu1604.tar.xz
   tar -xf constellation-0.3.2-ubuntu1604.tar
-  sudo cp constellation-0.3.2-ubuntu1604/constellation-node /usr/local/bin 
+  sudo cp constellation-0.3.2-ubuntu1604/constellation-node /usr/local/bin
   sudo chmod 0755 /usr/local/bin/constellation-node
   sudo rm -rf constellation-0.3.2-ubuntu1604.tar.xz constellation-0.3.2-ubuntu1604.tar constellation-0.3.2-ubuntu1604
 
@@ -120,12 +123,12 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   sudo chmod 0755 /usr/local/bin/porosity
 
 elif [ $OS = "ubuntu" ];then
-  echo "Installing the environment in " + $OS 
+  echo "Installing the environment in " + $OS
 
   GOREL="go1.9.5.linux-amd64.tar.gz"
 
   #Do not mess with Go instalations
-  if ! type "go" > /dev/null; then
+  if ! type "go" &> /dev/null; then
     #INSTALACION DE GO
     PATH="$PATH:/usr/local/go/bin"
     echo "Installing GO"
@@ -150,7 +153,7 @@ elif [ $OS = "ubuntu" ];then
   sudo apt-get update && sudo apt-get install -y
 
   #INSTALACION DE LIBRERIAS
-  sudo apt-get install -y software-properties-common unzip wget git make gcc libsodium-dev build-essential libdb-dev zlib1g-dev libtinfo-dev sysvbanner wrk psmisc
+  sudo apt-get install -y software-properties-common unzip wget git make gcc libsodium-dev build-essential libdb-dev zlib1g-dev libtinfo-dev sysvbanner wrk psmisc libleveldb-dev
 
   echo "Installing WRK"
   rm -rf wrk
@@ -158,25 +161,26 @@ elif [ $OS = "ubuntu" ];then
   cd wrk
   make
   sudo cp wrk /usr/local/bin
-  
+
   #LEVELDB FIX
   git clone https://github.com/google/leveldb.git
   cd leveldb/
-  git checkout 0fa5a4f
+  installcmake
+  cmake .
   make
-  sudo scp -r out-static/lib* out-shared/lib* /usr/local/lib/
-  cd include/
-  sudo scp -r leveldb /usr/local/include/
+  make install
   sudo ldconfig
-  cd ../..
+  cd ..
   rm -r leveldb
+
+
 
 #INSTALACION ETHEREUM
   sudo add-apt-repository -y ppa:ethereum/ethereum && sudo add-apt-repository -y ppa:ethereum/ethereum-dev && sudo apt-get update && sudo apt-get install -y solc
 
   #INSTALACION CONSTELLATION 0.2.0
-  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.2/constellation-0.3.2-ubuntu1604.tar.xz 
-  unxz constellation-0.3.2-ubuntu1604.tar.xz 
+  wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.3.2/constellation-0.3.2-ubuntu1604.tar.xz
+  unxz constellation-0.3.2-ubuntu1604.tar.xz
   tar -xf constellation-0.3.2-ubuntu1604.tar
   sudo cp constellation-0.3.2-ubuntu1604/constellation-node /usr/local/bin && sudo chmod 0755 /usr/local/bin/constellation-node
   sudo rm -rf constellation-0.3.2-ubuntu1604.tar.xz constellation-0.3.2-ubuntu1604.tar constellation-0.3.2-ubuntu1604
