@@ -22,4 +22,3 @@
 | GFT | Josep Maria Brunetti (josep-maria.brunetti@gft.com) | AWS t2.medium | enode://592fe5622277dd9c9645b7a0eea9d00e78b555ddf96ef4526ba0849eecd835a934ee4aeafb4103239851ff3b3c9c78218672d2b2b664b57af1f70cd7d8f0aff1@34.253.179.170:21000?discport=0 |
 | Nodalblock | Ariano Hernandez Huerta (a.hernandez@nodalblock.com), Martin Laplace (martin.laplace@nodalblock.com) | Amazon AWS (2C/8Gb/300Gb) | enode://d0289319f5dd160110aa60267317e2817627cb5107615966388df041030a074c940ba8ae159d2f9aa5b484c3e0728d54c991905e38a85e9755f8741e90da1698@34.244.175.27:21000?discport=0 |
 | CORPME | Miguel Angel Gonzalez Lozano (miguel.gonzalez@corpme.es) | VMWARE Virtual Server (2C/4Gb/30Gb) | enode://fe4906b45d4d5f45d3377d23d97abaae17123a6c7533d91d00e3885fd14eb8f894bad681ee8d9b3173f4ee9700c054a08c50c17ecae7558148b630c0840c0de2@217.114.134.104:21000?discport=0 |
-
