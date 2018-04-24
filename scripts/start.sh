@@ -59,6 +59,8 @@ if [[ "$NODE_TYPE" == "general" ]]; then
 fi
 
 if [[ ! -f "permissioned-nodes.json" ]]; then
+    # Se corrige el arranque del nodo en docker.
+    rm -Rf permissioned-nodes.json
     # Esto es necesario por un bug de Quorum https://github.com/jpmorganchase/quorum/issues/225
     ln -s ~/alastria/data/permissioned-nodes.json permissioned-nodes.json
 fi
