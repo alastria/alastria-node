@@ -29,4 +29,7 @@
 | AOC | Kenneth Capseta (kcapseta@aoc.cat), Manel Rella (mrella@aoc.cat) | Nexica.com  (2C/4Gb/32Gb) | LCj+lYGQGp4iuCyA18NwCs72HA/Ed4Ny3HNwmECEaDo= | enode://ed972fa5c8adce62c773144c270e854fe250753693bda23e92d9a42fded68042fd21e5d411b7757c3fb34ec4470d2c952a08a0d9a2a9fb9aa9f7b844043d84cb@185.86.34.68:21000?discport=0 |
 | IoBuilders | Fernando paris fer@io.builders @ferparishuertas| AWS ECS t2.medium Docker | YHpqeYn1ELzTC6ryM0UEv/XwipbQUa68PE/Hy3DIABc= | enode://0f539feb01fbeb2d0270de82bd0dd31d07a6be05d4e5325326641e9546cc91ad96e693b0e02e2646ba2fae0414ff78c82e099c2e593b3a69426952f3e8ac5687@34.246.45.100:21000?discport=0 |
 
+| Banc Sabadell | Montserrat Guàrdia (guardia.montserrat@sabis.tech), Jacinto Calvo Sintes (calvoja@sabis.tech) | Azure | | enode://08afb83adcff1934f444e03a7ae4a0b8b459127187abff1e01147a5cc55423ea5ea8c56443f6246e542521d478d46b57837c4af7b4cffbc0dd3ac424b76af2d9@13.81.50.107:21000?discport=0 |
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
+
