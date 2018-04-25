@@ -110,7 +110,7 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
   echo "Installing QUORUM"
   git clone https://github.com/alastria/quorum.git
   pushd quorum >/dev/null
-  git checkout af59943283e1abb39b4e4a27ec0062d59f3291ec
+  git checkout 94e1e31eb6a97e08dff4e44a8695dab1252ca3bc
   make all
   sudo cp build/bin/geth /usr/local/bin
   sudo cp build/bin/bootnode /usr/local/bin
