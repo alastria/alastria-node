@@ -32,7 +32,7 @@ Para configurar e instalar Quorum y Constellation, debe clonar este repositorio 
 ```
 $ git clone https://github.com/alastria/alastria-node.git
 $ cd alastria-node/scripts/
-$ sudo -H ./bootstrap.sh
+$ ./bootstrap.sh
 $ source ~/.bashrc
 ```
 
