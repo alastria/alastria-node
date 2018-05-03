@@ -70,7 +70,25 @@ function installconstellation {
     sudo chmod 0755 /usr/local/bin/constellation-node
     sudo rm -rf $constellationrel.tar.xz $constellationrel.tar $constellationrel
     popd
+    fixconstellation
   fi
+}
+
+function fixconstellation {
+  #It turns out that centos ships libsodium-23 which does not provide a link for libsodium 18
+  sodiumrel=$(ldd /usr/local/bin/constellation-node 2>/dev/null | grep libsodium | sed 's/libsodium.so.18 => //' | tr -d '[:space:]')
+  if [ $sodiumrel = "notfound" ]
+  then
+    if [ -f /lib64/libsodium.so ]
+    then
+      echo "The libsodium package version in the distribution mismatches the one linked in constellation. Symlinking"
+      sudo ln -s /lib64/libsodium.so /lib64/libsodium.so.18
+      sudo ldconfig
+    else
+      echo "libsodium requirement in constellation was not satisfied, and a libsodium library was not found to make-do."
+      exit
+    fi
+  fi 
 }
 
 function installquorum {
