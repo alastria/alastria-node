@@ -7,12 +7,12 @@ function installgo {
     PATH="$PATH:/usr/local/go/bin"
     echo "Installing GO"    
     wget "https://storage.googleapis.com/golang/$GOREL" -O /tmp/$GOREL
-	pushd /tmp
+    pushd /tmp
     tar xvzf $GOREL
     sudo rm -rf /usr/local/go
     sudo mv /tmp/go /usr/local/go
-	popd
-	rm -rf /tmp/go
+    popd
+    rm -rf /tmp/go
   else
     V1=$(go version | grep -oP '\d+(?:\.\d+)+')
     V2=$(echo $GOREL | grep -oP '\d+(?:\.\d+)+')
@@ -43,7 +43,7 @@ function rhrequired {
   EPEL_AVAILABLE=$(sudo yum search epel | grep release || true)
   if [[ -z $EPEL_AVAILABLE ]];then
     echo "EPEL Repository is not available via YUM. Downloading"
-	sudo yum -y install wget
+    sudo yum -y install wget
     wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -O /tmp/epel-release-latest-7.noarch.rpm
     sudo yum -y install /tmp/epel-release-latest-7.noarch.rpm
   else 
@@ -63,13 +63,13 @@ function installconstellation {
   then
     echo "Installing Constellation"
     wget https://github.com/jpmorganchase/constellation/releases/download/v0.3.2/$constellationrel.tar.xz -O /tmp/$constellationrel.tar.xz
-	pushd /tmp
+    pushd /tmp
     unxz $constellationrel.tar.xz
     tar -xf $constellationrel.tar
     sudo cp $constellationrel/constellation-node /usr/local/bin 
     sudo chmod 0755 /usr/local/bin/constellation-node
     sudo rm -rf $constellationrel.tar.xz $constellationrel.tar $constellationrel
-	popd
+    popd
   fi
 }
 
@@ -93,8 +93,8 @@ function debrequired {
   sudo apt-get update && sudo apt-get upgrade -y
   sudo apt-get install -y software-properties-common unzip wget git\
        make gcc libsodium-dev build-essential libdb-dev zlib1g-dev \
-	   libtinfo-dev sysvbanner psmisc nodejs npm libleveldb-dev\
-	   libsodium-dev libdb5.3-dev
+       libtinfo-dev sysvbanner psmisc nodejs npm libleveldb-dev\
+       libsodium-dev libdb5.3-dev
 }
 
 function gopath {
@@ -135,7 +135,7 @@ function installalastria {
     debrequired
   else
     echo 'This operating system is not yet supported'
-	exit
+    exit
   fi
   
   installgo
