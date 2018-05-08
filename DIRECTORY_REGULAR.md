@@ -32,5 +32,4 @@
 | Banc Sabadell | Montserrat Guàrdia (guardia.montserrat@sabis.tech), Jacinto Calvo Sintes (calvoja@sabis.tech) | Azure | 33Mdv+bK/28KBHrbx/gIMogMHu8Z8y9wbMaQxK7+6xs= | enode://2bff9f7d89044388e1795140abf4c707714b5eab05919f62043adb0a5371a7b03a6efab293945919c32765ff6fd1866f0a55e9f24400ac3f493b72e7c79f425d@40.118.26.201:21000?discport=0 |
 | Alisys | Nacho de la Vega (joseignacio.delavega@alisys.net), Javier Martin Manzano (javier.martin@alisys.net)| Self Hosted (2C/4Gb/40Gb) | 9uxl4zBmU/nrI5dOfHrUU6N8tU60APwJzVA7uxEPrB8= | enode://4680448741b4e3dbac6d6448bef8c0dd417e2a1fb79d980d59f589424ee26633db99554822277d4b0786244476852b25e1d499fac7a85e06de393d42a802979c@217.130.52.154:21000?discport=0 |
 
-
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
