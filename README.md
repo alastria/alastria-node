@@ -24,7 +24,7 @@ Es necesario habilitar los siguientes puertos de red en la maquina en la que vam
 
 * **22000**: TCP - Puerto para establecer la comunicación RPC. (este puerto se usa para aplicaciones que comunican con Alastria, y puede estar filtrado hacia Internet)
 
-## Tutoriales completos de instalación
+## Tutoriales de instalación
 
 * [Instalación de un nodo regular](https://medium.com/@alastria_es/paso-a-paso-as%C3%AD-se-crea-un-nodo-regular-en-alastria-e9ef9a47b07f)
 * [Instalación de un nodo validador](https://medium.com/@alastria_es) * En construcción
