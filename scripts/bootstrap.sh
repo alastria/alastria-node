@@ -168,7 +168,6 @@ function installalastria {
 if [ "$EUID" == "0" ]
 then
   echo 'Please run this script as a regular user. We will ask for administration credentials only when required'.
-  exit
 fi  
 
 if ( [ "uninstall" == "$1" ] )
