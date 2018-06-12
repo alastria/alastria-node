@@ -111,7 +111,7 @@ function debrequired {
   sudo apt-get update && sudo apt-get upgrade -y
   sudo apt-get install -y software-properties-common unzip wget git\
        make gcc libsodium-dev build-essential libdb-dev zlib1g-dev \
-       libtinfo-dev sysvbanner psmisc nodejs npm libleveldb-dev\
+       libtinfo-dev sysvbanner psmisc nodejs libleveldb-dev\
        libsodium-dev libdb5.3-dev
 }
 
