@@ -33,17 +33,11 @@ mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then 
     
     echo "Cleaning your node ..."
-    #Backup directory tree
     rm -rf ~/alastria/logs/quorum_*
     rm -rf ~/alastria/data/geth/chainData
     rm -rf ~/alastria/data/geth/nodes
-    # Optional in case you start with process locked
-    # rm ~/alastria/data/geth/LOCK
     rm -f ~/alastria/data/geth/transactions.rlp
     rm -f ~/alastria/data/geth.ipc
-    #rm -f ~/alastria/data/quorum-raft-state
-    #rm -f ~/alastria/data/raft-snap
-    #rm -f ~/alastria/data/raft-wal
     rm -rf ~/alastria/data/constellation/data
     rm -f ~/alastria/data/constellation/constellation.ipc
     rm -rf ~/alastria/data/geth/lightchaindata
@@ -78,15 +72,12 @@ else
     fi
 fi
 
-if ([ ! $# -ne 1 ] && [ "dockerfile" == "$1" ]); then 
-    
-    echo "Running your node ..."
-    while true; do
-        sleep 1000000
-    done;
-fi
 
-echo "[*] Verify if you are in develop branch"
+if ( [ ! $# -ne 1 ] && [ "watch" == "$1" ] )
+then
+  ~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
+  tail -100f ~/alastria/logs/quorum_"${_TIME}".log
+fi
 
 set +u
 set +e
