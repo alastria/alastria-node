@@ -15,16 +15,12 @@ RUN chmod -R u+x /root/alastria-node/scripts
 
 WORKDIR /root/alastria-node/scripts
 
-RUN \
-  apt-get update && \
-  apt-get install -y curl \
-  libcurl3 unzip wget git make gcc libsodium-dev build-essential libdb-dev zlib1g-dev libtinfo-dev sysvbanner wrk psmisc sudo
-
-RUN sudo -H ./bootstrap.sh
+RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo curl
+RUN ./bootstrap.sh
 RUN ./init.sh dockerfile $nodetype $nodename
-RUN ./start.sh
+RUN ./monitor.sh build
 
-EXPOSE 9000 21000 21000/udp 22000 41000
+EXPOSE 9000 21000 21000/udp 22000 41000 8443
 
 RUN ./start.sh
-CMD ["./start.sh" , "dockerfile"]
+CMD ["/root/alastria-node/scripts/start.sh","watch"]
