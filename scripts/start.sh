@@ -2,7 +2,9 @@
 set -u
 set -e
 
-echo "Optional use for a clean start: start clean"
+MESSAGE='Usage: init <mode> --monitor
+    mode: clean | watch'
+
 
 CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
 CONSTELLATION_PORT=9000
@@ -30,7 +32,7 @@ _TIME=$(date +%Y%m%d%H%M%S)
 
 mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 
-if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then 
+if ( [ "clean" == "$1" ]); then 
     
     echo "Cleaning your node ..."
     rm -rf ~/alastria/logs/quorum_*
@@ -73,7 +75,12 @@ else
 fi
 
 
-if ( [ ! $# -ne 1 ] && [ "watch" == "$1" ] )
+if ( [ "--monitor" == "$1" ] ||  [ "--monitor" == "$2" ] ); then
+    echo "[*] Monitor enabled. Starting monitor..."
+    #~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
+fi
+
+if ( [ "watch" == "$1" ] )
 then
   ~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
   tail -100f ~/alastria/logs/quorum_"${_TIME}".log
