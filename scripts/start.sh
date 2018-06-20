@@ -46,7 +46,7 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     ./init.sh auto $NODE_TYPE $IDENTITY
 fi
 
-if [[ "$NODE_TYPE" == "general" ] && [ ! -z "$ENABLE_CONSTELLATION" ]]; then
+if [ "$NODE_TYPE" == "general" ] && [ ! -z "$ENABLE_CONSTELLATION" ]; then
     echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
     check_constellation_isStarted
