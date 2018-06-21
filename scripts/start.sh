@@ -31,7 +31,7 @@ _TIME=$(date +%Y%m%d%H%M%S)
 
 mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 
-if (  [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then 
+if (  [ "$#" -gt "1" ] && [ "clean" == "$1" ]); then 
     
     echo "Cleaning your node ..."
     rm -rf ~/alastria/logs/quorum_*
@@ -79,7 +79,7 @@ if ( [ "$#" -gt 0 ] && ( [ "--monitor" == "$1" ] || [ "--monitor" == "$2" ] ) );
     #~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
 fi
 
-if ( [ ! $# -ne 1 ] && [ "watch" == "$1" ] )
+if ( [ "$#" -gt 0 ] && [ "watch" == "$1" ] )
 then
   ~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
   tail -100f ~/alastria/logs/quorum_"${_TIME}".log
