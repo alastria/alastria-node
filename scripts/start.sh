@@ -74,12 +74,7 @@ else
 fi
 
 
-if ( [ ! $# -ne 1 ] && [ "--monitor" == "$1" ] ); then
-    echo "[*] Monitor enabled. Starting monitor..."
-    #~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
-fi
-
-if ( [ ! $# -ne 2 ] && [ "--monitor" == "$2" ] ); then
+if ( [ "$#" -gt 0 ] && ( [ "--monitor" == "$1" ] || [ "--monitor" == "$2" ] ) ); then
     echo "[*] Monitor enabled. Starting monitor..."
     #~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
 fi
