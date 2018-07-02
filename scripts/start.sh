@@ -98,7 +98,6 @@ else
     fi
 fi
 
-
 if ([ $MONITOR -gt 0 ])
 then
     echo "[*] Monitor enabled. Starting monitor..."
