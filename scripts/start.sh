@@ -71,7 +71,9 @@ then
     ./init.sh auto $NODE_TYPE $IDENTITY
 fi
 
-if [[ "$NODE_TYPE" == "general" ]]; then
+CONSTELLATION=${ENABLE_CONSTELLATION:-}
+
+if [ "$NODE_TYPE" == "general" ] && [ ! -z "$CONSTELLATION" ]; then
     echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
     check_constellation_isStarted
@@ -87,7 +89,11 @@ fi
 
 echo "[*] Starting quorum node"
 if [[ "$NODE_TYPE" == "general" ]]; then
-    nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+  if [[ ! -z "$CONSTELLATION" ]]; then
+      nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    else
+      nohup env geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+fi
 else
     if [[ "$NODE_TYPE" == "validator" ]]; then
         if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
