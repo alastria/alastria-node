@@ -2,7 +2,32 @@
 set -u
 set -e
 
-echo "Optional use for a clean start: start clean"
+MESSAGE='Usage: start.sh <--clean> <--monitor> <--watch>'
+
+MONITOR=0
+WATCH=0
+CLEAN=0
+
+while [[ $# -gt 0  ]]
+do
+  key="$1"
+  case "$key" in
+    -m|-M|--monitor)
+    MONITOR=1
+    ;;
+    -w|-W|--watch)
+    WATCH=1
+    ;;
+    -c|-C|--clean)
+    CLEAN=1
+    ;;
+    -h|-H|--help)
+    echo $MESSAGE
+    exit
+    ;;
+  esac
+  shift
+done
 
 CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
 CONSTELLATION_PORT=9000
@@ -24,14 +49,14 @@ check_constellation_isStarted(){
 
 NETID=82584648528
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
-GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@52.56.86.239:3000 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full "
+GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@52.56.86.239:3000 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full "
 
 _TIME=$(date +%Y%m%d%H%M%S)
 
 mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 
-if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then 
-    
+if ([ $CLEAN -gt 0 ])
+then
     echo "Cleaning your node ..."
     rm -rf ~/alastria/logs/quorum_*
     rm -rf ~/alastria/data/geth/chainData
@@ -46,9 +71,7 @@ if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then
     ./init.sh auto $NODE_TYPE $IDENTITY
 fi
 
-CONSTELLATION=${ENABLE_CONSTELLATION:-}
-
-if [ "$NODE_TYPE" == "general" ] && [ ! -z "$CONSTELLATION" ]; then
+if [[ "$NODE_TYPE" == "general" ]]; then
     echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
     check_constellation_isStarted
@@ -59,15 +82,12 @@ if [[ ! -f "permissioned-nodes.json" ]]; then
     rm -Rf permissioned-nodes.json
     # Esto es necesario por un bug de Quorum https://github.com/jpmorganchase/quorum/issues/225
     ln -s ~/alastria/data/permissioned-nodes.json permissioned-nodes.json
+    echo "Relinking permissioning file"
 fi
 
 echo "[*] Starting quorum node"
 if [[ "$NODE_TYPE" == "general" ]]; then
-    if [[ ! -z "$CONSTELLATION" ]]; then
-      nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
-    else
-      nohup env geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
-    fi
+    nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
 else
     if [[ "$NODE_TYPE" == "validator" ]]; then
         if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
@@ -79,9 +99,16 @@ else
 fi
 
 
-if ( [ ! $# -ne 1 ] && [ "watch" == "$1" ] )
+if ([ $MONITOR -gt 0 ])
 then
-  ~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
+    echo "[*] Monitor enabled. Starting monitor..."
+    RP=`readlink -m "$0"`
+    RD=`dirname "$RP"`
+    nohup $RD/monitor.sh start > /dev/null &
+fi
+
+if ([ $WATCH -gt 0 ])
+then
   tail -100f ~/alastria/logs/quorum_"${_TIME}".log
 fi
 
