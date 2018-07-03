@@ -2,7 +2,8 @@
 set -u
 set -e
 
-echo "Optional use for a clean start: start clean"
+MESSAGE='Usage: init <mode> --monitor
+    mode: clean | watch'
 
 CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
 CONSTELLATION_PORT=9000
@@ -24,13 +25,13 @@ check_constellation_isStarted(){
 
 NETID=82584648528
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
-GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 30000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@52.56.86.239:3000 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full "
+GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@52.56.86.239:3000 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full "
 
 _TIME=$(date +%Y%m%d%H%M%S)
 
 mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 
-if ( [ ! $# -ne 1 ] && [ "clean" == "$1" ]); then 
+if (  [ "$#" -gt "1" ] && [ "clean" == "$1" ]); then 
     
     echo "Cleaning your node ..."
     rm -rf ~/alastria/logs/quorum_*
@@ -73,7 +74,12 @@ else
 fi
 
 
-if ( [ ! $# -ne 1 ] && [ "watch" == "$1" ] )
+if ( [ "$#" -gt 0 ] && ( [ "--monitor" == "$1" ] || [ "--monitor" == "$2" ] ) ); then
+    echo "[*] Monitor enabled. Starting monitor..."
+    #~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
+fi
+
+if ( [ "$#" -gt 0 ] && [ "watch" == "$1" ] )
 then
   ~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
   tail -100f ~/alastria/logs/quorum_"${_TIME}".log
