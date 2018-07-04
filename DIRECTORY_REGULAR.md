@@ -1,5 +1,3 @@
-
-
 # Directorio de nodos regulares
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
@@ -41,5 +39,6 @@
 | Vector | Agatha Palencia (apalencia@vectoritcgroup.com) | Vector VirtualBox (4C/8Gb/30Gb)| f3HB2L6cw1cBpcglJo7LKK/mDW0wLMGoMUFHNN3WeBk=| enode://9ae8b194c4a69e23629fcdf3ddbc9f764e29eefc629af56729d64bd0e5792c73f440d41f870f4fa545a5448a0cdf00a3d6d77810eec88a6e2a424c987e56c5e6@83.61.8.118:21000?discport=0 |
 | brunneis | Rodrigo Martínez Castaño (@brunneis, dev@brunneis.com) | Bare metal (2C/4GB/30GB) | LcrijueJ25p7QnMA4qBy52aeQPU6AnDIYcQ6y63KTHQ= | enode://aabf59aa66ded45781652a26dde045127ba618bf9b6c3d13f8651151056fd1d613f75529b2fe3c68a1f575a945466799a5d28576b066ccba4a0063b6941a482c@90.68.122.84:21000?discport=0 |
 | Seres | Pablo Escudero Lampreabe (pablo.escudero@seres.es) | OVH (2C/8Gb/80Gb) | BW/gBBv2HOy03dsC3l89kM9o25nJX001iEU/JMj7dDg= | enode://3c270891ac70c6a89359629b7d52edc2d71c4d7d727543c9b5448c6910ab901039016a2344903d42b40f30b43b1f26e92d0a5c550c31003ed4e6e22946b785a6@51.68.123.73:21000?discport=0 |
+| Councilbox | Rodrigo Martínez Castaño (@brunneis, rodrigo.martinez@councilbox.com) | OVH (2C/4GB/30GB) | DazpUWjgOy7aYpUbhfE/Zr2zGaKHWtF4M9Jup8VjG1g= | enode://c8ecf452708c623c8468054e6096a7dd3d0abab5c353e084cb4d2e9362258c4144295020aa97dd2122c17773e2bcf5de12c4d240dd43f878a3b82e96d874d0ff@51.68.123.147:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
