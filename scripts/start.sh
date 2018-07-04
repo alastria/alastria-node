@@ -2,8 +2,32 @@
 set -u
 set -e
 
-MESSAGE='Usage: init <mode> --monitor
-    mode: clean | watch'
+MESSAGE='Usage: start.sh <--clean> <--monitor> <--watch>'
+
+MONITOR=0
+WATCH=0
+CLEAN=0
+
+while [[ $# -gt 0  ]]
+do
+  key="$1"
+  case "$key" in
+    -m|-M|--monitor)
+    MONITOR=1
+    ;;
+    -w|-W|--watch)
+    WATCH=1
+    ;;
+    -c|-C|--clean)
+    CLEAN=1
+    ;;
+    -h|-H|--help)
+    echo $MESSAGE
+    exit
+    ;;
+  esac
+  shift
+done
 
 CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
 CONSTELLATION_PORT=9000
@@ -31,8 +55,8 @@ _TIME=$(date +%Y%m%d%H%M%S)
 
 mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 
-if (  [ "$#" -gt "1" ] && [ "clean" == "$1" ]); then 
-    
+if ([ $CLEAN -gt 0 ])
+then
     echo "Cleaning your node ..."
     rm -rf ~/alastria/logs/quorum_*
     rm -rf ~/alastria/data/geth/chainData
@@ -47,7 +71,9 @@ if (  [ "$#" -gt "1" ] && [ "clean" == "$1" ]); then
     ./init.sh auto $NODE_TYPE $IDENTITY
 fi
 
-if [[ "$NODE_TYPE" == "general" ]]; then
+CONSTELLATION=${ENABLE_CONSTELLATION:-}
+
+if [ "$NODE_TYPE" == "general" ] && [ ! -z "$CONSTELLATION" ]; then
     echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
     check_constellation_isStarted
@@ -58,11 +84,16 @@ if [[ ! -f "permissioned-nodes.json" ]]; then
     rm -Rf permissioned-nodes.json
     # Esto es necesario por un bug de Quorum https://github.com/jpmorganchase/quorum/issues/225
     ln -s ~/alastria/data/permissioned-nodes.json permissioned-nodes.json
+    echo "Relinking permissioning file"
 fi
 
 echo "[*] Starting quorum node"
 if [[ "$NODE_TYPE" == "general" ]]; then
-    nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+  if [[ ! -z "$CONSTELLATION" ]]; then
+      nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    else
+      nohup env geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+fi
 else
     if [[ "$NODE_TYPE" == "validator" ]]; then
         if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
@@ -73,15 +104,16 @@ else
     fi
 fi
 
-
-if ( [ "$#" -gt 0 ] && ( [ "--monitor" == "$1" ] || [ "--monitor" == "$2" ] ) ); then
+if ([ $MONITOR -gt 0 ])
+then
     echo "[*] Monitor enabled. Starting monitor..."
-    #~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
+    RP=`readlink -m "$0"`
+    RD=`dirname "$RP"`
+    nohup $RD/monitor.sh start > /dev/null &
 fi
 
-if ( [ "$#" -gt 0 ] && [ "watch" == "$1" ] )
+if ([ $WATCH -gt 0 ])
 then
-  ~/alastria-node/scripts/monitor.sh start 2>&1 > /dev/null
   tail -100f ~/alastria/logs/quorum_"${_TIME}".log
 fi
 
