@@ -40,5 +40,6 @@
 | Vector | Agatha Palencia (apalencia@vectoritcgroup.com) | Vector (4C/8Gb/100Gb)| B887N8Ypq31XWqu+XsGtcUscwzj35wGZu5zNVfh7z3c= | enode://433eee03e392c270cd94d315756c2edf64e150f470a4327733fb5516404a89a0187ba00c3d2567f4c6ab8d48d03861461895b0e827b6be2c1662dc5a46795c3e@109.234.66.8:21000?discport=0 |
 | Vector | Agatha Palencia (apalencia@vectoritcgroup.com) | Vector VirtualBox (4C/8Gb/30Gb)| f3HB2L6cw1cBpcglJo7LKK/mDW0wLMGoMUFHNN3WeBk=| enode://9ae8b194c4a69e23629fcdf3ddbc9f764e29eefc629af56729d64bd0e5792c73f440d41f870f4fa545a5448a0cdf00a3d6d77810eec88a6e2a424c987e56c5e6@83.61.8.118:21000?discport=0 |
 | brunneis | Rodrigo Martínez Castaño (@brunneis, dev@brunneis.com) | Bare metal (2C/4GB/30GB) | LcrijueJ25p7QnMA4qBy52aeQPU6AnDIYcQ6y63KTHQ= | enode://aabf59aa66ded45781652a26dde045127ba618bf9b6c3d13f8651151056fd1d613f75529b2fe3c68a1f575a945466799a5d28576b066ccba4a0063b6941a482c@90.68.122.84:21000?discport=0 |
+| Mapfre | Isidro Cucó Martín de Jorge (iscucom@mapfre.com), Iñaki Román (jiroman@mapfre.com) | AWS RedHat 64-bit 4C/2GB/64GB | FGy5s125pkLIs9KPpZCSqHB89DPAmPicNAaiPK1rFmw= | enode://865f59581ec980c3934bdcfba0161c6d469df5e378466d29a3541bd566e41a9045e440c20f919cd5dbcb63b1d8cbcae0af59bd907f64c905374f74b07c9cb67e@34.248.64.28:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
