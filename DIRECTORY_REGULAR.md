@@ -1,5 +1,3 @@
-
-
 # Directorio de nodos regulares
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
@@ -17,7 +15,6 @@
 | Everis | Eduardo Sanchez Mata (@esanchma, eduardo.sanchez.mata@everis.com) | Amazon AWS (2C/4Gb/30Gb) | 2czuLciss8BU/6DLVJsuSpWUdQTxiM1uCGsMJSH323Q= | enode://54ad52574d4d9d8a9b20011705dcd2945fa8a01f7a49ed61c00a33be8c658da37ff1f8ec3e1aa09504e770a168bf6269c94e5ae0072eca97f91570b19c8ccf63@52.47.203.210:21000?discport=0 |
 | Sefide | Juan Pedro Ortega Liétor (@jpol, juanpedroortega@momopocket.com) | VMware VSphere Virtual Machine (4C/8Gb/50Gb) | 0yR+aYCZc+mQ3dtRe3pBd7QbkNaG7KMD7S+MVWTgQ2Y= | enode://fa7a7077b4e1008dede51e0d5bd44c5bb943ce716864a6045df0a219f6112de39b705c0920d1e51c030f144177b17a06bccd2c6e70fe9309eac84fb265110125@87.253.228.23:21000?discport=0 |
 | atSistemas | Jose Angel Corral (jacorral@atsistemas.com) | AWS CentOS7.4 2C/4GB/8GB+20GB | iuTymSPrfS/5NB9HZcqLV1vaT97Z6UxEEady8p+iVwE= | enode://2754d548777d8ab7dd29ccd7c67deaac3de1740f9239b57ebc3d5346f6708f846c07d0a92b0a05db516c74675475761bad3777a615c8a636b6d24cc0a0355a32@52.31.219.254:21000?discport=0 |
-| Mapfre | Isidro Cucó Martín de Jorge (iscucom@mapfre.com), Iñaki Román (jiroman@mapfre.com) | AWS RedHat 64-bit 4C/2GB/64GB | ru0v2wkw7oEmu47NqxAd6WIbIOTrPXZcZx5T9crQFRk= | enode://15bfaa1063896181fe9878d9dd096e1f61ea2a9d1f224dc59981aac8739984aa71656603ca1aead39a27bd3984233f3e1fda13802fbaa40755797c30ff6f866c@54.194.98.174:21000?discport=0 |
 | IN2 | Alex Casaus Carmona (alex.casaus@in2.es) | Self Hosted (2C/4GB/30GB) | g6cB/4E4txR2bES42na7XVLgKjFCLWImklQfIRmSyQQ= | enode://d9ea38861f138f2a9be149c064d57a335f07fe171fb1396e4311650c4d18ededebbc786c95944f1ce22279fa7939eda9a989d19bd4a7852dc968ea88f6dfa6f1@89.40.139.180:21000?discport=0 |
 | Blocknitive | Guillermo Lapuente (tecnico@blocknitive.com) | IBM Cloud | vSxzxujSWkVMJoA68R4VgbMEbY2l1RxsRejGzRKf2B0= | enode://236834b519f160a2213e9c5bc9c6b3787fab86e3bfc1e9728b1d855528687399847ca51206edbee21b8fea6c02542f5b369e31061169c138dca364e3987f0006@169.60.149.188:21000?discport=0 |
 | Nodalblock | Ariano Hernandez Huerta (a.hernandez@nodalblock.com), Martin Laplace (martin.laplace@nodalblock.com) | Amazon AWS (2C/8Gb/300Gb) | NpkuvGmydJrdG2+425BmJLOc2NuPMvsKJuS99AZQIH8= | enode://8251fddfc414ba313fea3a43622ad9e5ee638356fe687e837c5bd3b354d737d5b2e27f3b2597b87e824520ffd823130f5950654532863dc62f4bbb8cc201af71@35.182.149.15:21000?discport=0 |
@@ -41,5 +38,7 @@
 | Vector | Agatha Palencia (apalencia@vectoritcgroup.com) | Vector VirtualBox (4C/8Gb/30Gb)| f3HB2L6cw1cBpcglJo7LKK/mDW0wLMGoMUFHNN3WeBk=| enode://9ae8b194c4a69e23629fcdf3ddbc9f764e29eefc629af56729d64bd0e5792c73f440d41f870f4fa545a5448a0cdf00a3d6d77810eec88a6e2a424c987e56c5e6@83.61.8.118:21000?discport=0 |
 | brunneis | Rodrigo Martínez Castaño (@brunneis, dev@brunneis.com) | Bare metal (2C/4GB/30GB) | LcrijueJ25p7QnMA4qBy52aeQPU6AnDIYcQ6y63KTHQ= | enode://aabf59aa66ded45781652a26dde045127ba618bf9b6c3d13f8651151056fd1d613f75529b2fe3c68a1f575a945466799a5d28576b066ccba4a0063b6941a482c@90.68.122.84:21000?discport=0 |
 | Mapfre | Isidro Cucó Martín de Jorge (iscucom@mapfre.com), Iñaki Román (jiroman@mapfre.com) | AWS RedHat 64-bit 4C/2GB/64GB | FGy5s125pkLIs9KPpZCSqHB89DPAmPicNAaiPK1rFmw= | enode://865f59581ec980c3934bdcfba0161c6d469df5e378466d29a3541bd566e41a9045e440c20f919cd5dbcb63b1d8cbcae0af59bd907f64c905374f74b07c9cb67e@34.248.64.28:21000?discport=0 |
+| Seres | Pablo Escudero Lampreabe (pablo.escudero@seres.es) | OVH (2C/8Gb/80Gb) | BW/gBBv2HOy03dsC3l89kM9o25nJX001iEU/JMj7dDg= | enode://3c270891ac70c6a89359629b7d52edc2d71c4d7d727543c9b5448c6910ab901039016a2344903d42b40f30b43b1f26e92d0a5c550c31003ed4e6e22946b785a6@51.68.123.73:21000?discport=0 |
+| Councilbox | Rodrigo Martínez Castaño (@brunneis, rodrigo.martinez@councilbox.com) | OVH (2C/4GB/30GB) | DazpUWjgOy7aYpUbhfE/Zr2zGaKHWtF4M9Jup8VjG1g= | enode://c8ecf452708c623c8468054e6096a7dd3d0abab5c353e084cb4d2e9362258c4144295020aa97dd2122c17773e2bcf5de12c4d240dd43f878a3b82e96d874d0ff@51.68.123.147:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
