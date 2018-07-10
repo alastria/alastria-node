@@ -40,5 +40,6 @@
 | Mapfre | Isidro Cucó Martín de Jorge (iscucom@mapfre.com), Iñaki Román (jiroman@mapfre.com) | AWS RedHat 64-bit 4C/2GB/64GB | FGy5s125pkLIs9KPpZCSqHB89DPAmPicNAaiPK1rFmw= | enode://865f59581ec980c3934bdcfba0161c6d469df5e378466d29a3541bd566e41a9045e440c20f919cd5dbcb63b1d8cbcae0af59bd907f64c905374f74b07c9cb67e@34.248.64.28:21000?discport=0 |
 | Seres | Pablo Escudero Lampreabe (pablo.escudero@seres.es) | OVH (2C/8Gb/80Gb) | BW/gBBv2HOy03dsC3l89kM9o25nJX001iEU/JMj7dDg= | enode://3c270891ac70c6a89359629b7d52edc2d71c4d7d727543c9b5448c6910ab901039016a2344903d42b40f30b43b1f26e92d0a5c550c31003ed4e6e22946b785a6@51.68.123.73:21000?discport=0 |
 | Councilbox | Rodrigo Martínez Castaño (@brunneis, rodrigo.martinez@councilbox.com) | OVH (2C/4GB/30GB) | DazpUWjgOy7aYpUbhfE/Zr2zGaKHWtF4M9Jup8VjG1g= | enode://c8ecf452708c623c8468054e6096a7dd3d0abab5c353e084cb4d2e9362258c4144295020aa97dd2122c17773e2bcf5de12c4d240dd43f878a3b82e96d874d0ff@51.68.123.147:21000?discport=0 |
+| Altran | Jesús F. Parra Pérez (jesusfernando.parra@altran.com) | Arsys (2C/4Gb/50Gb) | 2mY4kl8+gJmUtoMvF4IAW9B7o1F64sRhlIGcnYR5D1I= | enode://81a2d5c0339df85d4df73248cb9392334821c28870d7bdd89c1868b028124b0c3a178beac4ba01db3b6e118df902086bd7969ceb20db3c6e66492b835cd1e6fc@82.223.73.231:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
