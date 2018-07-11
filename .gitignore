@@ -6,3 +6,4 @@ go-ethereum
 scripts/go
 scripts/wrk
 fabric8-analytics.log
+.idea
