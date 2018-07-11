@@ -1,4 +1,4 @@
-# Directorio de nodos regulares
+﻿# Directorio de nodos regulares
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
 | ------- | ------------------------------------ | ---------------------------------- | ------------- | ----- |
@@ -19,7 +19,7 @@
 | Blocknitive | Guillermo Lapuente (tecnico@blocknitive.com) | IBM Cloud | vSxzxujSWkVMJoA68R4VgbMEbY2l1RxsRejGzRKf2B0= | enode://236834b519f160a2213e9c5bc9c6b3787fab86e3bfc1e9728b1d855528687399847ca51206edbee21b8fea6c02542f5b369e31061169c138dca364e3987f0006@169.60.149.188:21000?discport=0 |
 | Nodalblock | Ariano Hernandez Huerta (a.hernandez@nodalblock.com), Martin Laplace (martin.laplace@nodalblock.com) | Amazon AWS (2C/8Gb/300Gb) | NpkuvGmydJrdG2+425BmJLOc2NuPMvsKJuS99AZQIH8= | enode://8251fddfc414ba313fea3a43622ad9e5ee638356fe687e837c5bd3b354d737d5b2e27f3b2597b87e824520ffd823130f5950654532863dc62f4bbb8cc201af71@35.182.149.15:21000?discport=0 |
 | SameLAN | Oscar Gonzalez Moreno (oscar.gonzalez@samelan.com) | Amazon AWS (t2.medium, 2C/8Gb/50Gb) | VeCu26jVrVKIqAkidIAPGfMZwqQobhOpTkwBQHPtJGo= | enode://a37863dd51ca9c5861242146557983781075d4a082fa9fb0d3d8e2930d1060c5d02d48741574332db0ba14aa8366a099312454372210674596a333c011dc29d3@34.240.42.125:21000?discport=0 |
-| BME | Juan Hernandez (jhernandez.becarios@grupobme.es) | Amazon AWS | yzVgpeqc87YmpR82QAvKVq8DOPiZnUoGZDe0B86Xn3o= | enode://e0d77956c697c4ff905a8d898a5d1d4cfd29d9a740b83c6745e2bd8575bf09cd370a8879c9b4c623e87a5949f3745ab32979431abee19f697ffb17b87b53765c@52.30.89.179:21000?discport=0 |
+| BME | Alvaro Suarez Bravo (asuarez@grupobme.es) | Amazon AWS | yzVgpeqc87YmpR82QAvKVq8DOPiZnUoGZDe0B86Xn3o= | enode://e0d77956c697c4ff905a8d898a5d1d4cfd29d9a740b83c6745e2bd8575bf09cd370a8879c9b4c623e87a5949f3745ab32979431abee19f697ffb17b87b53765c@52.30.89.179:21000?discport=0 |
 | Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | Amazon AWS (2C/4Gb/30Gb) | wsyiYRPs8pWjw1NsTdkmzYordSv8GCCXS7tvk2CM53g= | enode://ed6703915f666df745771f31941840b301486179983dfae05c909813fb3ad200978e43bd6c44f8a3bfcb39ea8628018a41baa825944500b064b4e14911da5476@52.209.188.78:21000?discport=0 |
 | SAP | Alexander Schaefer (alexander.schaefer01@sap.com), Michael Kunzmann (michael.kunzmann@sap.com) | Amazon AWS (2C/4Gb/30Gb) | KxSUuSZYYZ9J/FobNqOp0vHIDEYm4VchZ61Uci21AxU= | enode://b97b26246f6d1598481ac99da250708186de90c281dd04d33399d32304abae5f5cb5c2e7e317703da7796a25f36e18936e4cfbe54c24a580e70c6d7c62c2c838@54.93.229.117:21000?discport=0 |
 | Traity | José Ignacio Fernández (@researcheneur, jose@traity.com), Borja Martín (@dagi3d, borja@traity.com), Toni Prada (@toniprad, toni@traity.com) | Google Cloud (2C/8Gb/40Gb) | M+ECJTDZlkSowiwjphfUKOUEDd1ibLMyyUyNhuMnDxI= | enode://7a66664f0cec9ef2f75df6bec0353c3f4a8c5c2af2621787ec71fb7f8f8f8f8fb75a653c8021277d70418b469aee2246028d663bac827569daea86b6bae13a62@35.192.49.250:21000?discport=0 |
