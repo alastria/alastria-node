@@ -2,7 +2,7 @@
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
 | ------- | ------------------------------------ | ---------------------------------- | ------------- | ----- |
-| Sertec | alastria@sertec.net | Acer Aspire TC-605 (4C/8M/100GB) | VZ33TmVyQgrvn6YVJj8RZ3D6TYAEBtRv+XufMgBLkTI | enode://df41acc6d492262acbd85fca2b5daee2f3a17a2a0f0f6f246a415436420cf75a0acd9251f8c56bf218a776c2b1fcec97fdc8a012b53ccaba4a92a913f01b32ba@212.170.49.75:21000?discport=0 |
+| Sertec | Jose Luis Vega alastria@sertec.net | Acer Aspire TC-605 (4C/8M/100GB) | VZ33TmVyQgrvn6YVJj8RZ3D6TYAEBtRv+XufMgBLkTI | enode://df41acc6d492262acbd85fca2b5daee2f3a17a2a0f0f6f246a415436420cf75a0acd9251f8c56bf218a776c2b1fcec97fdc8a012b53ccaba4a92a913f01b32ba@212.170.49.75:21000?discport=0 |
 | Santander | Marcos Serradilla (@mserradilla, marcos@sanlab.io), Juan Luis García (@Juan Luis, juanluis.garcia@isban.com) | Amazon AWS (2C/4Gb/30Gb) | KDcY5uqieXxbJHblMiGFImUL45u8FrTm5kqa7/USAHc= | enode://40d35f2087662e168b4c0ea56f692061abd2b8a2748f0729c6f8b207c7ea443b2f15394928c9ee6227f452b5c9d4d59da7030032a3342a7ddb870e75908e2bef@35.176.19.89:21000?discport=0 |
 | Indra | Javier Casanova (@Javi, alastria@indra.es) | Azure (2C/4Gb/30Gb) | K7H2ULb9cq648JoGXH12UQ/Dj7Poe2GiDYHE+Glrz04= | enode://d4806ab59d39b8f44c01337eba69cdfd0c2a7a00e83b9c32c9f53c6112239dfa152cad5c2928c435f961346fdf06d98fe05b25bcd86c2f99be4837a8ca08af1b@13.81.61.232:21000?discport=0 |
 | Repsol | Esteban Montenegro (montenegro.garcia.esteban@repsol.com) | Azure | 8AoHk3WQNvIZuRsfi0CuCreGJya3IlHhOKmaQ9T7CVo= | enode://2bf9235d4b420ab7f633da2dce8787b97ea33f77ed13c82f4c746a1aba01140c5b65924f6497cad483ce680f00b2005d16322284aa8e64c032d6255557724b6e@52.164.228.204:21000?discport=0 |
