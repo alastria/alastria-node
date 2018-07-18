@@ -2,6 +2,7 @@
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
 | ------- | ------------------------------------ | ---------------------------------- | ------------- | ----- |
+| Sertec | Jose Luis Vega alastria@sertec.net | Acer Aspire TC-605 (4C/8M/100GB) | VZ33TmVyQgrvn6YVJj8RZ3D6TYAEBtRv+XufMgBLkTI | enode://df41acc6d492262acbd85fca2b5daee2f3a17a2a0f0f6f246a415436420cf75a0acd9251f8c56bf218a776c2b1fcec97fdc8a012b53ccaba4a92a913f01b32ba@212.170.49.75:21000?discport=0 |
 | Santander | Marcos Serradilla (@mserradilla, marcos@sanlab.io), Juan Luis García (@Juan Luis, juanluis.garcia@isban.com) | Amazon AWS (2C/4Gb/30Gb) | KDcY5uqieXxbJHblMiGFImUL45u8FrTm5kqa7/USAHc= | enode://40d35f2087662e168b4c0ea56f692061abd2b8a2748f0729c6f8b207c7ea443b2f15394928c9ee6227f452b5c9d4d59da7030032a3342a7ddb870e75908e2bef@35.176.19.89:21000?discport=0 |
 | Indra | Javier Casanova (@Javi, alastria@indra.es) | Azure (2C/4Gb/30Gb) | K7H2ULb9cq648JoGXH12UQ/Dj7Poe2GiDYHE+Glrz04= | enode://d4806ab59d39b8f44c01337eba69cdfd0c2a7a00e83b9c32c9f53c6112239dfa152cad5c2928c435f961346fdf06d98fe05b25bcd86c2f99be4837a8ca08af1b@13.81.61.232:21000?discport=0 |
 | Repsol | Esteban Montenegro (montenegro.garcia.esteban@repsol.com) | Azure | 8AoHk3WQNvIZuRsfi0CuCreGJya3IlHhOKmaQ9T7CVo= | enode://2bf9235d4b420ab7f633da2dce8787b97ea33f77ed13c82f4c746a1aba01140c5b65924f6497cad483ce680f00b2005d16322284aa8e64c032d6255557724b6e@52.164.228.204:21000?discport=0 |
@@ -43,5 +44,7 @@
 | Councilbox | Rodrigo Martínez Castaño (@brunneis, rodrigo.martinez@councilbox.com) | OVH (2C/4GB/30GB) | DazpUWjgOy7aYpUbhfE/Zr2zGaKHWtF4M9Jup8VjG1g= | enode://c8ecf452708c623c8468054e6096a7dd3d0abab5c353e084cb4d2e9362258c4144295020aa97dd2122c17773e2bcf5de12c4d240dd43f878a3b82e96d874d0ff@51.68.123.147:21000?discport=0 |
 | Altran | Jesús F. Parra Pérez (jesusfernando.parra@altran.com) | Arsys (2C/4Gb/50Gb) | 2mY4kl8+gJmUtoMvF4IAW9B7o1F64sRhlIGcnYR5D1I= | enode://81a2d5c0339df85d4df73248cb9392334821c28870d7bdd89c1868b028124b0c3a178beac4ba01db3b6e118df902086bd7969ceb20db3c6e66492b835cd1e6fc@82.223.73.231:21000?discport=0 |
 | GFT | Ignacio Asin (ignacio.asin@gft.com) | Amazon AWS (2C/4Gb/40Gb) | c7CIePkvOjXC6EIv8iC7Y6KjrzIN2FJ0eULWNMBetlE= | enode://adc6f34e0e411f32956b7871beea33fa7fea3d602e041ed444dfeca3c90eb349ea348671c6e36ece9bfb0c49c90450b0e9799a1a93a280455c7313088a7c18f0@34.254.115.212:21000?discport=0 |
+| Toqio | Daniella Lorenzo (daniella@groupolivo.com) | Amazon AWS (1C/2Gb/8GB) | RvVTwV1e6nr2PWHmFXcS+4rHDbsioyzWT7vINbpzeB4= | enode://190c23c459c2534807a5076d3c5614a322f3c8b674c87540d739e98e000a5a657373ef27670867376c1ba39ea5b5133408aef9308b88e081bc2f7b31dc461343@54.72.78.171:21000?discport=0 |
+| EJIE | Oscar Guadilla (o-guadilla@ejie.eus)| Self Hosted 2C/4Gb/40Gb) | 6ppsufT4ziL45jeBOE5ImLt0NRrbCM3wJ8Z2NbcwWDs= | enode://1f0ea34fe33962da2daaa4568cf5bf0e273140d31ccf126ed092c53ae4fc12018ad8d2fea34286639c2989551bff9011208a6c86767836e6cc5055557e77a284@185.161.117.14:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
