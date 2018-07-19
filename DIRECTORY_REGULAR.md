@@ -45,5 +45,6 @@
 | Altran | Jesús F. Parra Pérez (jesusfernando.parra@altran.com) | Arsys (2C/4Gb/50Gb) | 2mY4kl8+gJmUtoMvF4IAW9B7o1F64sRhlIGcnYR5D1I= | enode://81a2d5c0339df85d4df73248cb9392334821c28870d7bdd89c1868b028124b0c3a178beac4ba01db3b6e118df902086bd7969ceb20db3c6e66492b835cd1e6fc@82.223.73.231:21000?discport=0 |
 | GFT | Ignacio Asin (ignacio.asin@gft.com) | Amazon AWS (2C/4Gb/40Gb) | c7CIePkvOjXC6EIv8iC7Y6KjrzIN2FJ0eULWNMBetlE= | enode://adc6f34e0e411f32956b7871beea33fa7fea3d602e041ed444dfeca3c90eb349ea348671c6e36ece9bfb0c49c90450b0e9799a1a93a280455c7313088a7c18f0@34.254.115.212:21000?discport=0 |
 | Toqio | Daniella Lorenzo (daniella@groupolivo.com) | Amazon AWS (1C/2Gb/8GB) | RvVTwV1e6nr2PWHmFXcS+4rHDbsioyzWT7vINbpzeB4= | enode://190c23c459c2534807a5076d3c5614a322f3c8b674c87540d739e98e000a5a657373ef27670867376c1ba39ea5b5133408aef9308b88e081bc2f7b31dc461343@54.72.78.171:21000?discport=0 |
+| EJIE | Oscar Guadilla (o-guadilla@ejie.eus)| Self Hosted 2C/4Gb/40Gb) | 6ppsufT4ziL45jeBOE5ImLt0NRrbCM3wJ8Z2NbcwWDs= | enode://1f0ea34fe33962da2daaa4568cf5bf0e273140d31ccf126ed092c53ae4fc12018ad8d2fea34286639c2989551bff9011208a6c86767836e6cc5055557e77a284@185.161.117.14:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
