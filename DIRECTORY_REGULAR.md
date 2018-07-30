@@ -48,5 +48,6 @@
 | EJIE | Oscar Guadilla (o-guadilla@ejie.eus)| Self Hosted 2C/4Gb/40Gb) | 6ppsufT4ziL45jeBOE5ImLt0NRrbCM3wJ8Z2NbcwWDs= | enode://1f0ea34fe33962da2daaa4568cf5bf0e273140d31ccf126ed092c53ae4fc12018ad8d2fea34286639c2989551bff9011208a6c86767836e6cc5055557e77a284@185.161.117.14:21000?discport=0 |
 | Cuatrecasas | Xavi Gonzalez (xavi.gonzalez@cuatrecasas.com), German Miralles (german.miralles@cuatrecasas.com) | Azure (2C/4GB/30GB) | NHuUIgJ/GuMFpMisxOgeCdSLaiZbzr3IShqI5gS/KXk= |  enode://e147243349f251056d9dfc94b109428bd4b4c8df9a699b7755a45d3e9d33d31d67b5d6be43b57e3642a97670c21498e2831cdf2875fe1c282f31105d61a15362@40.115.14.40:21000?discport=0 |
 | Tirea | Javier Subías (javier.subias@tirea.es) | Self Hosted (2C/4Gb/32Gb) | nRUvsDkAhQsdsxLYxrtIjLCZ5aQBBlNpzQc/Q67zcQ4= |  enode://711916d22632acfba32d6d3a142059ba2c59b887135e8c6444137445014592ca63bbe4d063e2f3ac5bd71a6558d770166d9a4e3f33c7e99b61e468ccde2dcf64@194.224.248.25:21000?discport=0 |
+| Test Alastria Easy |  David Bruguera (davidbruguera@easyinnova.com) | Self Hosted  (8C/8Gb/1Tb)| C5yy5PP3n71ycDMskTRPMOu6R77MOMEa/LkH3IPdCnQ= | enode://689c20565eb89666fe2f1f4b6515d8dde0653d9dc27b01a08e0eee8606c61233b0d3c117d8d94333e3b28af1b1984adf83d08342c1e173ffa248e8f5cbddc757@84.88.154.96:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
