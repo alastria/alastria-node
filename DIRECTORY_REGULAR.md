@@ -50,5 +50,6 @@
 | Tirea | Javier Subías (javier.subias@tirea.es) | Self Hosted (2C/4Gb/32Gb) | nRUvsDkAhQsdsxLYxrtIjLCZ5aQBBlNpzQc/Q67zcQ4= |  enode://711916d22632acfba32d6d3a142059ba2c59b887135e8c6444137445014592ca63bbe4d063e2f3ac5bd71a6558d770166d9a4e3f33c7e99b61e468ccde2dcf64@194.224.248.25:21000?discport=0 |
 | Test Alastria Easy |  David Bruguera (davidbruguera@easyinnova.com) | Self Hosted  (8C/8Gb/1Tb)| C5yy5PP3n71ycDMskTRPMOu6R77MOMEa/LkH3IPdCnQ= | enode://689c20565eb89666fe2f1f4b6515d8dde0653d9dc27b01a08e0eee8606c61233b0d3c117d8d94333e3b28af1b1984adf83d08342c1e173ffa248e8f5cbddc757@84.88.154.96:21000?discport=0 |
 | Toqio | Daniella Lorenzo (daniella@groupolivo.com) | Amazon AWS (2C/4Gb/30GB) | c5EwrEglRZ24U/+NpCKnYLRe3ee6TtglJJ6w8pSwAj8 | enode://feddfbf5d006986dc3c917b66617d07d8184bc53b8f19c051d3ff2c1bee20b31ea476f40bdf2c79b2f9ce955a48fb25fa15ce376381237883b14cd031754e603@34.252.57.179:21000?discport=0 |
+| Edosoft Factory | Aitor Carrera (aitor.carrera@edosoft.es) | Google Cloud PLatform (2C/4Gb/30GB) | Z6YP5+O+9dGahEIBH8mNwU1mq025rPP2LasSf19Wr1Y= | enode://8b3570673934da115118a4dcaeccc6518e9768ccbb66a5658d38765521391118f53cd52ffa81be56dd9c32ed7e93929e2d2d8013fbe9d345f4838ec6295435f7@35.240.44.152:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
