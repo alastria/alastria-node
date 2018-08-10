@@ -1,6 +1,15 @@
 #!/bin/bash
-NODE_TYPE=$1
-NODE_NAME=$2
+if [ -z "$NODE_TYPE" ]; then
+    echo "NODE_TYPE unset. Exiting..."
+    exit
+elif [ "$NODE_TYPE" != "general" -a "$NODE_TYPE" != "validator" ]; then
+    echo "Invalid NODE_TYPE. Exiting..."
+    exit
+fi
+if [ -z "$NODE_NAME" ]; then
+    echo "NODE_NAME unset. Exiting..."
+    exit
+fi
 
 if [ ! -f ~/alastria/data/IDENTITY ]; then
     ./init.sh auto $NODE_TYPE $NODE_NAME
@@ -13,5 +22,8 @@ elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
     touch ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION
 fi
 
-./monitor.sh start
+if [ $MONITOR_ENABLED -eq 1 ]; then
+    ./monitor.sh start
+fi
+
 exec ./start.sh --watch

@@ -1,32 +1,29 @@
-# Alastria Node
-# Copyright (C) 2018 Rodrigo Martínez <rodrigo.martinez@councilbox.com>
+# Alastria docker
+# Copyright 2018 Councilbox Technology, S.L., Rodrigo Martínez Castaño
 #
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# This product includes software developed at
+# Councilbox Technology, S.L. (https://www.councilbox.com/)
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 FROM ubuntu:16.04
-MAINTAINER "Rodrigo Martínez" <rodrigo.martinez@councilbox.com>
 
 ################################################
-# ALASTRIA NODE
+# ALASTRIA DOCKER
 ################################################
 
-ARG DOCKER_VERSION=latest
 ARG ALASTRIA_BRANCH=develop
-
-ENV \
-    GOROOT=/usr/local/go \
-    GOPATH=/opt/golang \
-    PATH=/usr/local/go/bin:/opt/golang/bin:$PATH \
-    DOCKER_VERSION=$DOCKER_VERSION
+ARG DOCKER_VERSION=latest
 
 RUN \
     apt-get update \
@@ -42,8 +39,19 @@ RUN \
     && sed -i 's@~/alastria-node@/opt/alastria-node@g' init.sh \
     && sed -i 's@~/alastria-node@/opt/alastria-node@g' restart.sh \
     && sed -i 's@~/alastria-node@/opt/alastria-node@g' update.sh \
-    && ./bootstrap.sh \
-    && ./monitor.sh build \
+    && ./bootstrap.sh
+
+ARG MONITOR_ENABLED=0
+ENV \
+    GOROOT=/usr/local/go \
+    GOPATH=/opt/golang \
+    PATH=/usr/local/go/bin:/opt/golang/bin:$PATH \
+    MONITOR_ENABLED=$MONITOR_ENABLED \
+    DOCKER_VERSION=$DOCKER_VERSION
+
+WORKDIR /opt/alastria-node/scripts
+RUN \
+    if [ $MONITOR_ENABLED -eq 1 ]; then ./monitor.sh build; fi \
     && apt-get autoremove \
     && apt-get clean
 
@@ -51,6 +59,4 @@ VOLUME /root/alastria
 EXPOSE 9000 21000 21000/udp 22000 8443
 
 COPY entrypoint.sh /usr/bin/
-WORKDIR /opt/alastria-node/scripts
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["general"]

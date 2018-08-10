@@ -18,4 +18,7 @@ docker run -tid \
 -p 8443:8443 \
 --restart unless-stopped \
 --name $NODE_NAME \
-councilbox/alastria $NODE_TYPE $NODE_NAME
+-e NODE_TYPE=$NODE_TYPE \
+-e NODE_NAME=$NODE_NAME \
+$@ \
+alastria/alastria-node

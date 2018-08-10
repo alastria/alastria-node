@@ -8,7 +8,6 @@ elif [ "$1" == "" ]; then
     echo "[*] Making a backup of the keys... "
 fi
 
-
 DATA_DIR="$(cat DATA_DIR 2> /dev/null)"
 WORK_DIR="$(pwd)"/alastria
 DATA_DIR=${DATA_DIR:-$WORK_DIR}
