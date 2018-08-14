@@ -1,6 +1,17 @@
 # ALASTRIA #
 
-
+1. [Tutoriales de instalación](#Tutoriales-de-instalación)
+2. [Requisitos del sistema](#Requisitos-del-sistema)
+3. [Instalación de un nodo](#Instalación-de-un-nodo)
+	1. [Bootstraping](#Bootstraping)
+	2. [Nombrado](#Nombrado-de-los-nodos)
+	3. [Inicialización](#Inicialización-de-un-nodo)
+	4. [Permisionado](#Permisionado)
+	5. [Arranque](#Arranque-del-nodo)
+	6. [Actualización](#Actualización-del-nodo)
+4. [Proposición de nodos validadores](#Proposición-de-nodos-validadores)
+5. [Configurando el primer nodo](#Configurando-el-primer-nodo-de-la-red)
+6. [Crear un nodo con Docker](#Crear-un-nodo-con-Docker)
 
 ## Tutoriales de instalación
 
@@ -14,25 +25,31 @@ Caracteristicas de la máquina para nodos de la testnet:
 
 * **CPU's**: 2 cores
 
-* **Memoria**: 4 Gb
+* **Memoria**: 8 Gb
 
-* **Disco duro**: 30 Gb SSD
+* **Disco duro**: 100 Gb SSD
 
 * **Sistema operativo**: Ubuntu 16.04, CentOS 7.4 o Red Hat Enterprise Linux 7.4, siempre en 64 bits
 
 Es necesario habilitar los siguientes puertos de red en la maquina en la que vamos a desplegar el nodo:
 
-* **8443**: TCP - Puerto para monitorización
+* **8443**: TCP - Puerto por el que se expone el API REST del monitor del nodo. Para poder acceder a este API, es necesario disponer de un certificado digital.
 
-* **9000**: TCP - Puerto para la comunicación de Constellation.
+* **9000**: TCP - Puerto para la comunicación de Constellation por el que se transmiten las transacciones privadas.
 
-* **21000**: TCP/UDP - Puerto para establecer la comunicación entre procesos geth.
+**NOTA**: Tanto el monitor como constellation son optativos, por lo tanto, la apertura de los puertos también lo es.
+
+* **21000**: TCP/UDP - Puerto para establecer la comunicación entre procesos geth. Este puerto debe estar abierto por ahora a todo el mundo.
 
 * **22000**: TCP - Puerto para establecer la comunicación RPC. (este puerto se usa para aplicaciones que comunican con Alastria, y puede estar filtrado hacia Internet)
 
-## Instalación de nodo Quorum + Constellation
+## Instalación de un nodo
 
-Para configurar e instalar Quorum y Constellation, debe clonar este repositorio git y ejecutar con permisos de administración el script [`scripts/bootstrap.sh`](scripts/bootstrap.sh).
+Se describen los pasos fundamentales para instalar, configurar y verificar que un nodo dentro de la test-net de Alastria.
+
+### Bootstraping
+
+Para comenzar con el proceso de instalación del nodo, debe clonar el repositorio git [alastria-node](https://github.com/alastria/alastria-node) y ejecutar con permisos de administración el script [`scripts/bootstrap.sh`](scripts/bootstrap.sh) como se indica a continuación:
 
 ```
 $ git clone https://github.com/alastria/alastria-node.git
@@ -41,48 +58,44 @@ $ ./bootstrap.sh
 $ source ~/.bashrc
 ```
 
-## Configuración del nodo
-Es necesario seguir los siguientes pasos para la configuración de los nodos: 
+### Nombrado de los nodos
 
-### Creación de un nuevo nodo ###
+Se ha definido una nomenclatura para describir fácilmente a cada uno de los nodos.
+
+El nombre identificativo del nodo debe ser único en la red y cumplir:
+* **TYPE_COMPANY_NET_CORES_RAM_SEQ**
+	* **Type**: VAL | REG.
+	* **NET**: TestNet | DevNet | MainNet.
+	* **SEQ**: Sequencial empezando en 00.
+
+**Ej.** `VAL_Alastria_TestNet_2_8_00` que es el primer validador desplegado en la test-net por alastria con 2 cores y 8 Gb de memoria RAM.
+
+### Inicialización de un nodo 
 
 Para crear un nuevo nodo de la red Alastria, debe ejecutarse el script init.sh pasando como parámetros la ip del nodo, el tipo de nodo (validator o general), y el nombre del nodo que estamos creando:
 
-	```
-	$ ./init.sh <<PUBLIC_IP_HOST_MACHINE>> <<NODE_TYPE>> <<NODE_NAME>>
-	```
+```
+$ ./init.sh
+Usage: init <mode> <node-type> <node-name>
+    mode: CURRENT_HOST_IP | auto | backup
+    node-type: validator | general
+    node-name: NODE_NAME (example: VAL_Alastria_TestNet_2_8_00)
+```
 
-Por comodidad también puede utilizarse el el parámetro **auto** para detectar automáticamente la IP del nodo de la siguiente forma:
+En parámetro **mode** indica:
+* **CURRENT_HOST_IP**: corresponde con la IP en la que va a responder la máquina.
+* **auto**: el script auto-descubre la IP de la máquina y la utiliza.
+* **backup**: el script realizará una copia de seguridad del nodo.
 
-	```
-	$ ./init.sh auto <<NODE_TYPE>> <<NODE_NAME>>
-	```
+**node-type** indica el tipo de nodo que vamos a configurar, que pueden utilizarse los valores:
+* **validator**: configuramos un nodo validador.
+* **general**: configuramos un nodo regular/general.
 
-Así si queremos inicializar un nodo **validator** ejecutaremos, por ejemplo: 
+Por último, tendremos que indicar el nombre del nodo **NODE_NAME**, que debe cumplir con la estructura indicada en el apartado [Nombrado de los nodos](#Nombrado-de-los-nodos)
 
-	```
-	$ ./init.sh auto validator <<NODE_NAME>>
-	```
+### Permisionado
 
-Y para ejecutar un nodo **general**:
-
-	```
-	$ ./init.sh auto general <<NODE_NAME>>
-	```
-
-### Reinicialización de un nodo existente ###
-
-Si ya disponemos de un nodo Alastria instalado en la máquina, y deseamos realizar una inicialización limpia del nodo manteniendo nuestro **enode**, nuestras claves constellation y nuestras cuentas actuales, podemos ejecutar:
-
-    ```
-	$ ./init.sh backup <<NODE_TYPE>> <<NODE_NAME>>
-	```
-
-Este será el procedimiento a seguir por los nodos miembros ante actualizaciones de la infraestructura.
-
-### Configuración del fichero de nodos Quorum ###
-
-Si el nodo se creó desde cero, entonces el paso _Creación de un nuevo nodo_ modificó diversos ficheros, a saber:
+Cuando termina el script de inicialización, en la carpeta alastria-node se modifican un conjunto de ficheros que son:
 
 * Si el nodo era validador, se modifican los siguientes ficheros:
 	* [`data/permissioned-nodes_general.json`](data/permissioned-nodes_general.json)
@@ -96,67 +109,73 @@ Nótese que el nombre de los ficheros hace referencia a los nodos por los que so
 
 Además de estos cambios, que ocurren automáticamente al ejecutar el script [`init.sh`](scripts/init.sh), existen otros dos ficheros que deben modificarse manualmente, dependiendo del tipo de nodo creado, para indicar los datos de contacto de administración de los nodos: [DIRECTORY_VALIDATOR.md](DIRECTORY_VALIDATOR.md) o [DIRECTORY_REGULAR.md](DIRECTORY_REGULAR.md)
 
-Una vez que disponemos de todos estos ficheros modificados solo es necesario arrancarlo usando el script [`start.sh`](scripts/start.sh)
+Una vez identificados los cambios, se debe realizar un fork del repositorio github alastria-node e incorporar los cambios.
 
-En cambio, si el nodo es validador, el resto de nodos de la red, deben ejecutar el script `restart.sh` con la opción onlyUpdate:
+Por último, realizamos un pull request y realizaremos una revisión y, en su caso, aceptación de la pull request.
+
+Una vez realizada esta acción, poco a poco se irá actualizando el permisionado de los nodos de la red, en el caso de los nodos validadores, 
+
+### Arranque del nodo
+
+Por último, iniciaremos el nodo lanzando el script [`start.sh`](scripts/start.sh):
+
 ```
-$ ./restart.sh onlyUpdate
+~/alastria-node/scripts$ ./start.sh
+[*] Starting quorum node
 ```
 
-Entonces, el el fichero `~/alastria/logs/quorum-XXX.log` del nuevo nodo validador aparecerá el siguiente mensaje de error:
-```
-ERROR[12-19|12:25:05] Failed to decode message from payload    address=0x59d9F63451811C2c3C287BE40a2206d201DC3BfF err="unauthorized address"
-```
-Esto es debido a que el resto de validadores de la red no han aceptado todavía al nodo como validador. Para solicitar dicha aceptación debemos anotar la dirección (address) del nodo.
+Este comando inicia un proceso geth, crea un fichero log en `~/alastria/logs/quorum-XXX.log` y utilizará los puertos 21000 y 22000.
 
-### Publicación del nodo ###
+### Actualización del nodo
 
-Con los ficheros modificados, tanto automáticamente como manualmente, se debe crear un pull request contra este repositorio. Si el nodo era validador y tiene un address que aún no está autorizado, entonces debe indicarse dicha dirección en el pull request.
+Al menos una vez al día es necesario actualizar los ficheros de permisionado de los nodos, para ello, desde la consola del nodo:
+
+```
+~/alastria-node/scripts$ ./update.sh
+[*] Updating base code
+Already up-to-date.
+[*] Updating static-nodes
+[*] Updating permissioned-nodes
+[*] Restarting node
+[*] Starting quorum node
+```
+
+Esto descargará los ficheros de permisionado del nodo, los actualizará, parará el nodo y lo volverá a arrancar.
+
+## Proposición de nodos validadores
+
+Cuando se configura un nodo como validador y se permisiona, no significa que puede generar bloques. Para que pueda realizar esta acción, se debe proponer ese nodo como validador.
+
+Esta operación es coordinada entre todos los nodos que forman parte del conjunto de validadores propuestos y aceptados a través de una votación en cada nodo con el api `istanbul`.
+
+Para conocer el address del nodo, nos conectaremos a la consola del mismo y nos quedaremos con el `coinbase`.
+
+```
+~$ geth attach ~/alastria/data/geth.ipc
+Welcome to the Geth JavaScript console!
+
+instance: Geth/VAL_Alastria_TestNet_2_8_00/v1.7.2-stable-94e1e31e/linux-amd64/go1.9.5
+coinbase: 0xc063ae03fab22352d6cf99bc85ef521582988a2c
+at block: 8209869 (Tue, 14 Aug 2018 18:00:05 CEST)
+ datadir: /home/ubuntu/alastria/data
+ modules: admin:1.0 debug:1.0 eth:1.0 istanbul:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0
+```
 
 Para la inclusión en la red de nuevos nodos validadores, los administradores del resto de miembros validadores deben usar el RPC API para añadir su dirección:
 
-
 ```
-> istanbul.propose("0x59d9F63451811C2c3C287BE40a2206d201DC3BfF", true);
+> istanbul.propose("0xc063ae03fab22352d6cf99bc85ef521582988a2c", true);
 ```
-
-Así, el nuevo nodo estará levantado y sincronizado con la red.
 
 > **NUNCA DEBE REALIZARSE EL PROPOSE SIN HABER ACTUALIZADO ANTES LOS FICHEROS DE PERMISIONADO (restart.sh onlyUpdate).**
 
 > **NUNCA SE DEBE ELIMINAR UN NODO DE LA RED SIN REALIZAR LA SOLICITUD DE ELIMINACIÓN PRIMERO A TRAVÉS DE UN PULL REQUEST PARA QUE EL RESTO DE MIEMBROS VALIDADORES LOS ELIMINEN DE SUS LISTAS PRIMERO Y REALICEN UNA RONDA DE VOTACIÓN:**
 
-```
-> istanbul.propose("0x59d9F63451811C2c3C287BE40a2206d201DC3BfF", false);
-```
+En el caso de querer extraer un nodo del conjunto de validadores, se debe ejecutar en el resto de nodos:
 
-### Operación del nodo ###
-
- * Ante errores en el nodo, podemos optar por realizar un reinicio limpio del nodo, para ello debemos ejecutar los siguientes comados:
 ```
-$ ./stop.sh
-$ ./start.sh
+> istanbul.propose("0xc063ae03fab22352d6cf99bc85ef521582988a2c", false);
 ```
-
- * Todos los nodos incluyen un monitor que permiten al equipo técnico de Alastria realizar labores de mantenimiento y gestión. La ejecución
-del monitor es opcional y puede ejecutarse lanzando el script de start con el flag `--monitor`:
-```
-$ ./start.sh --monitor
-```
- * También, disponemos de un script de restart para actualizar el nodo sin parar ningún proceso (por ejemplo ante actualizaciones del permissioned-nodes*):
-```
-$ ./restart.sh onlyUpdate
-```
-O para reiniciar completamente
-el nodo:
-```
-$ ./restart.sh auto || <<CURRENT_HOST_IP>>
-```
-
- * El script `./scripts/backup.sh` permite realizar copias de seguridad del estado del nodo. Ejecutando `./scripts/backup.sh keys` se hace una copia de seguridad de las claves
-y el enode de nuestro nodo y con `./scripts/backup.sh full` realizamos una copia de seguridad de todo el estado del nodo y de la blockchain. Todas las copias de seguridad se almacenan en el directorio home como `~/alastria-keysBackup-<date>/` y `~/alastria-backup-<date>/`, respectivamente.
-
- * Existe un script `./scripts/clean.sh` que limpia el nodo actual y exige una resincronización del mismo al iniciarlo de nuevo. Esto solventa posibles errores de sincronización. Su efecto es el mismo que el de ejecutar directamente `./scripts/start.sh clean`
 
 ## Configurando el primer nodo de la red
 
@@ -184,15 +203,10 @@ $ wget https://raw.githubusercontent.com/alastria/alastria-node/feature/ibft/dat
 
 Adicionalmente, se puede cambiar el script `start.sh` para con la IP pública del nodo que se está configurando.
 
-```
-        if [[ "$CURRENT_HOST_IP" == "IP_EL_NODO" ]]; then
-            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --mine --minerthreads 1 --syncmode "full" --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
-        else
-            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --mine --minerthreads 1 --syncmode "full" 2>> ~/alastria/logs/quorum_"${_TIME}".log &
-        fi
-```
-
 ## Crear un nodo con Docker
+
+**TODO: HABLAR CON COUNCILBOX**
+
 Para generar la imagen de Docker ejecutar:
 ```
 sudo docker build -t alastria-node . --build-arg hostip=<host-ip> --build-arg nodetype=<node-type> --build-arg nodename=<node-name>
