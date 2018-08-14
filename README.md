@@ -1,17 +1,17 @@
 # ALASTRIA #
 
-1. [Tutoriales de instalación](#Tutoriales-de-instalación)
-2. [Requisitos del sistema](#Requisitos-del-sistema)
-3. [Instalación de un nodo](#Instalación-de-un-nodo)
-	1. [Bootstraping](#Bootstraping)
-	2. [Nombrado](#Nombrado-de-los-nodos)
-	3. [Inicialización](#Inicialización-de-un-nodo)
-	4. [Permisionado](#Permisionado)
-	5. [Arranque](#Arranque-del-nodo)
-	6. [Actualización](#Actualización-del-nodo)
-4. [Proposición de nodos validadores](#Proposición-de-nodos-validadores)
-5. [Configurando el primer nodo](#Configurando-el-primer-nodo-de-la-red)
-6. [Crear un nodo con Docker](#Crear-un-nodo-con-Docker)
+1. [Tutoriales de instalación](#tutoriales-de-instalación)
+2. [Requisitos del sistema](#requisitos-del-sistema)
+3. [Instalación de un nodo](#instalación-de-un-nodo)
+	1. [Bootstraping](#bootstraping)
+	2. [Nombrado](#nombrado-de-los-nodos)
+	3. [Inicialización](#inicialización-de-un-nodo)
+	4. [Permisionado](#permisionado)
+	5. [Arranque](#arranque-del-nodo)
+	6. [Actualización](#actualización-del-nodo)
+4. [Proposición de nodos validadores](#proposición-de-nodos-validadores)
+5. [Configurando el primer nodo](#configurando-el-primer-nodo-de-la-red)
+6. [Crear un nodo con Docker](#crear-un-nodo-con-docker)
 
 ## Tutoriales de instalación
 
