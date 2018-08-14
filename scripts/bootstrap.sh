@@ -27,13 +27,6 @@ function installgo {
   fi
 }
 
-function installsolc {
-  if ( ! type "solc" > /dev/null 2>&1 )
-  then
-    sudo npm install -g solc
-  fi
-}
-
 function rhrequired {
   sudo yum clean all
   sudo yum -y update
@@ -54,7 +47,7 @@ function rhrequired {
   sudo yum -y update
   echo "Installing Libraries"
   sudo yum -y install gmp-devel gcc gcc-c++ make openssl-devel libdb-devel\
-                      ncurses-devel wget nodejs nmap-ncat libsodium-devel libdb-devel leveldb-devel
+                      ncurses-devel wget nmap-ncat libsodium-devel libdb-devel leveldb-devel
 }
 
 function installconstellation {
@@ -111,7 +104,7 @@ function debrequired {
   sudo apt-get update && sudo apt-get upgrade -y
   sudo apt-get install -y software-properties-common unzip wget git\
        make gcc libsodium-dev build-essential libdb-dev zlib1g-dev \
-       libtinfo-dev sysvbanner psmisc nodejs npm libleveldb-dev\
+       libtinfo-dev sysvbanner psmisc libleveldb-dev\
        libsodium-dev libdb5.3-dev
 }
 
@@ -137,7 +130,6 @@ function gopath {
 
 function uninstallalastria {
   sudo rm -rf /usr/local/go
-  sudo npm uninstall -g solc
   sudo rm /usr/local/bin/constellation-node
   sudo rm /usr/local/bin/geth
   rm -rf /tmp/* 2>/dev/null
@@ -157,7 +149,6 @@ function installalastria {
   fi
   
   installgo
-  installsolc
   installconstellation
   installquorum
   gopath

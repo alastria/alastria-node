@@ -138,6 +138,11 @@ $ ./stop.sh
 $ ./start.sh
 ```
 
+ * Todos los nodos incluyen un monitor que permiten al equipo técnico de Alastria realizar labores de mantenimiento y gestión. La ejecución
+del monitor es opcional y puede ejecutarse lanzando el script de start con el flag `--monitor`:
+```
+$ ./start.sh --monitor
+```
  * También, disponemos de un script de restart para actualizar el nodo sin parar ningún proceso (por ejemplo ante actualizaciones del permissioned-nodes*):
 ```
 $ ./restart.sh onlyUpdate
