@@ -54,5 +54,7 @@
 | Edosoft Factory | Aitor Carrera (aitor.carrera@edosoft.es) | Google Cloud PLatform (2C/4Gb/30GB) | Z6YP5+O+9dGahEIBH8mNwU1mq025rPP2LasSf19Wr1Y= | enode://8b3570673934da115118a4dcaeccc6518e9768ccbb66a5658d38765521391118f53cd52ffa81be56dd9c32ed7e93929e2d2d8013fbe9d345f4838ec6295435f7@35.240.44.152:21000?discport=0 |
 | AC1Plus | Mario Granero Burillo (marioburi@gmail.com) | Amazon AWS (T2/4Gb/10GB) | VSBUNQONyoY63ECxuzlPSR6A0SgEJZDGfuIhy+2wCyw= | enode://3e68a83af5afa24111785a22758ec7bb23ded0cfe42973d1fbd7f231676efafa0dc8d42f8eceebc6fd942f1ce4d80d600af01234ddd94e33ae3b318704aa83f6@34.245.3.156:21000?discport=0 |
 | Validated ID | Santi Casas (santi.casas@validatedid.com) | Microsoft Azure (2C/16Gb/64GB) | 6xGiu6MQW3ZdrLM2u8sDmMb/3MpFF/l4CszIS2cbBwE= | enode://aa733ea320ccc289b05819bff768bbe1771e28b6a2f5a7a3cfb6321a7ebac6fd0c954bf5db9cde1dd6d319e3337bcbd1a3f8fb8f000f41a32ac7bedb3a5bd1a0@13.80.243.31:21000?discport=0 |
+| Worldline  | Jordi Escudero (jordi.escudero@worldline.com) | Amazon AWS (T2/4Gb/60GB) | nGUB1ATwD0VU4wpple7/iR/KoVVksC4aZn39Acft6D8= | enode://9a39aa6955da273dceeb0e3ec2e02ae867c7995bfb7241a6a1bcf3a7a6d05d405cadd7877bcbb0f7d8a0a2ebc25e26bb6e62710a8c674010fc03f570a597d2a0@34.240.81.85:21000?discport=0 |
+
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
