@@ -2,9 +2,9 @@
 set -u
 set -e
 
-MESSAGE='Usage: start.sh <--clean> <--monitor> <--watch>'
+MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch>'
 
-MONITOR=0
+MONITOR=1
 WATCH=0
 CLEAN=0
 
@@ -12,8 +12,8 @@ while [[ $# -gt 0  ]]
 do
   key="$1"
   case "$key" in
-    -m|-M|--monitor)
-    MONITOR=1
+    -m|-M|--no-monitor)
+    MONITOR=0
     ;;
     -w|-W|--watch)
     WATCH=1
@@ -110,6 +110,8 @@ then
     RP=`readlink -m "$0"`
     RD=`dirname "$RP"`
     nohup $RD/monitor.sh start > /dev/null &
+else
+    echo "Monitor disabled."
 fi
 
 if ([ $WATCH -gt 0 ])
