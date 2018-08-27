@@ -124,7 +124,7 @@ function gopath {
     mkdir -p "$GOPATH"/{bin,src}
   fi
 
-  source $HOME/.bashrc
+  exec "$BASH"
 
 }
 
