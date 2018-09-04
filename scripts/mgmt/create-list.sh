@@ -35,7 +35,7 @@ function tojson {
 function sliced {
   index=$(expr $1 + 1)
   rawvalidatorlist
-  rawregularlist | tojson | jq "_nwise($2)" | jq -s . | jq ".[0:$index]|flatten" | sed 's/\[//g;s/\]//g;s/[[:blank:]]//g;s/\"//g;/^\s*$/d;s/\,//g'
+  rawregularlist | tojson | jq "_nwise($2)" | jq -s . | jq ".[0:$index]|flatten" | sed 's/\[//g;s/\]//g;s/[[:blank:]]//g;s/\"//g;/^\s*$/d;s/\,//g;s/'\''//g'
   
 }
 
