@@ -9,7 +9,7 @@ function rawregularlist {
      if (arr[1] != "")  { \
         print "\n"$6""; \
      } \
-  }' | sed 's/[[:blank:]]//g;s/\"//g;/^\s*$/d'
+  }' | sed 's/[[:blank:]]//g;s/\"//g;/^\s*$/d;s/'\''//g'
 }
 
 function rawvalidatorlist {
@@ -21,7 +21,7 @@ function rawvalidatorlist {
        if (arr[1] != "")  { \
             print "\n"$5""; \
        } \
-  }' | sed 's/[[:blank:]]//g;s/\"//g;/^\s*$/d'
+  }' | sed 's/[[:blank:]]//g;s/\"//g;/^\s*$/d;s/'\''//g'
 }
 
 function rawcombinedlist {
