@@ -1,5 +1,15 @@
 #!/bin/bash
 
+
+function superuser {
+  if ( type "sudo"  > /dev/null 2>&1 )
+  then
+    sudo $@
+  else
+    eval $@
+  fi
+}
+
 function installgo {
   GOREL="go1.9.5.linux-amd64.tar.gz"
   if ( ! type "go" > /dev/null 2>&1 )
@@ -9,8 +19,8 @@ function installgo {
     wget "https://storage.googleapis.com/golang/$GOREL" -O /tmp/$GOREL
     pushd /tmp
     tar xvzf $GOREL
-    sudo rm -rf /usr/local/go
-    sudo mv /tmp/go /usr/local/go
+    superuser rm -rf /usr/local/go
+    superuser mv /tmp/go /usr/local/go
     popd
     rm -rf /tmp/go
   else
@@ -28,25 +38,25 @@ function installgo {
 }
 
 function rhrequired {
-  sudo yum clean all
-  sudo yum -y update
+  superuser yum clean all
+  superuser yum -y update
   
   # Check EPEL repository availability. It is available by default in Fedora and CentOS, but it requires manual
   # installation in RHEL
-  EPEL_AVAILABLE=$(sudo yum search epel | grep release || true)
+  EPEL_AVAILABLE=$(superuser yum search epel | grep release || true)
   if [[ -z $EPEL_AVAILABLE ]];then
     echo "EPEL Repository is not available via YUM. Downloading"
-    sudo yum -y install wget
+    superuser yum -y install wget
     wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -O /tmp/epel-release-latest-7.noarch.rpm
-    sudo yum -y install /tmp/epel-release-latest-7.noarch.rpm
+    superuser yum -y install /tmp/epel-release-latest-7.noarch.rpm
   else 
     echo "EPEL repository is available in YUM via distro packages. Adding it as a source for packages"
-    sudo yum -y install epel-release
+    superuser yum -y install epel-release
   fi
   
-  sudo yum -y update
+  superuser yum -y update
   echo "Installing Libraries"
-  sudo yum -y install gmp-devel gcc gcc-c++ make openssl-devel libdb-devel\
+  superuser yum -y install gmp-devel gcc gcc-c++ make openssl-devel libdb-devel\
                       ncurses-devel wget nmap-ncat libsodium-devel libdb-devel leveldb-devel
 }
 
@@ -59,9 +69,9 @@ function installconstellation {
     pushd /tmp
     unxz $constellationrel.tar.xz
     tar -xf $constellationrel.tar
-    sudo cp $constellationrel/constellation-node /usr/local/bin 
-    sudo chmod 0755 /usr/local/bin/constellation-node
-    sudo rm -rf $constellationrel.tar.xz $constellationrel.tar $constellationrel
+    superuser cp $constellationrel/constellation-node /usr/local/bin 
+    superuser chmod 0755 /usr/local/bin/constellation-node
+    superuser rm -rf $constellationrel.tar.xz $constellationrel.tar $constellationrel
     popd
     fixconstellation
   fi
@@ -75,8 +85,8 @@ function fixconstellation {
     if [ -f /lib64/libsodium.so ]
     then
       echo "The libsodium package version in the distribution mismatches the one linked in constellation. Symlinking"
-      sudo ln -s /lib64/libsodium.so /lib64/libsodium.so.18
-      sudo ldconfig
+      superuser ln -s /lib64/libsodium.so /lib64/libsodium.so.18
+      superuser ldconfig
     else
       echo "libsodium requirement in constellation was not satisfied, and a libsodium library was not found to make-do."
       exit
@@ -93,16 +103,16 @@ function installquorum {
     cd quorum
     git checkout 94e1e31eb6a97e08dff4e44a8695dab1252ca3bc
     make all
-    sudo cp build/bin/geth /usr/local/bin
-    sudo cp build/bin/bootnode /usr/local/bin
+    superuser cp build/bin/geth /usr/local/bin
+    superuser cp build/bin/bootnode /usr/local/bin
     popd
     rm -rf /tmp/quorum
   fi
 }
 
 function debrequired {
-  sudo apt-get update && sudo apt-get upgrade -y
-  sudo apt-get install -y software-properties-common unzip wget git\
+  superuser apt-get update && superuser apt-get upgrade -y
+  superuser apt-get install -y software-properties-common unzip wget git\
        make gcc libsodium-dev build-essential libdb-dev zlib1g-dev \
        libtinfo-dev sysvbanner psmisc libleveldb-dev\
        libsodium-dev libdb5.3-dev
@@ -129,9 +139,9 @@ function gopath {
 }
 
 function uninstallalastria {
-  sudo rm -rf /usr/local/go
-  sudo rm /usr/local/bin/constellation-node
-  sudo rm /usr/local/bin/geth
+  superuser rm -rf /usr/local/go 2>/dev/null
+  superuser rm /usr/local/bin/constellation-node 2>/dev/null
+  superuser rm /usr/local/bin/geth 2>/dev/null
   rm -rf /tmp/* 2>/dev/null
 }
 
@@ -155,11 +165,6 @@ function installalastria {
   
   set +e
 }
-
-if [ "$EUID" == "0" ]
-then
-  echo 'Please run this script as a regular user. We will ask for administration credentials only when required'.
-fi  
 
 if ( [ "uninstall" == "$1" ] )
 then
