@@ -56,5 +56,6 @@
 | Validated ID | Santi Casas (santi.casas@validatedid.com) | Microsoft Azure (2C/16Gb/64GB) | 6xGiu6MQW3ZdrLM2u8sDmMb/3MpFF/l4CszIS2cbBwE= | enode://aa733ea320ccc289b05819bff768bbe1771e28b6a2f5a7a3cfb6321a7ebac6fd0c954bf5db9cde1dd6d319e3337bcbd1a3f8fb8f000f41a32ac7bedb3a5bd1a0@13.80.243.31:21000?discport=0 |
 | Worldline  | Jordi Escudero (jordi.escudero@worldline.com) | Amazon AWS (T2/4Gb/60GB) | nGUB1ATwD0VU4wpple7/iR/KoVVksC4aZn39Acft6D8= | enode://9a39aa6955da273dceeb0e3ec2e02ae867c7995bfb7241a6a1bcf3a7a6d05d405cadd7877bcbb0f7d8a0a2ebc25e26bb6e62710a8c674010fc03f570a597d2a0@34.240.81.85:21000?discport=0 |
 | hippo | Alex Lopez (alex.lopez@hippo.tech) | Amazon AWS (T2/2GB/10GB) | lxp5xHoh+/wOWTZKa4Moq05ZyiTiq+Y7DzjPq9Nb+HQ= | enode://4ac5e1a3a5ce4c61ed7544dbb94233d69ae2430e102427cfdce23bf8138b0c3c1bc9a210eec2d5647a44858027545dfa1a22d1e356a823d1648b429cd6a3e968@52.3.68.57:21000?discport=0 |
+| Iberpay | Salva Alarcón (salarcon@iberpay.es) | Oracle VM (T2/4GB/30GB) | z4w9ui7SOzqC0OtRnVlQ1jJ8mUlBcX2MAwyloAV04lQ= |  enode://ee6f11d047859e410bcde6814e4e63b8915d45a2498e08c33999f2a76bd4f7e5045c1824caeb6626bd2a61b81d51c3beeed200fa95ea2bc2e8e81d47d60c2a41@213.99.45.240:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
