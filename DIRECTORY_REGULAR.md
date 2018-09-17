@@ -57,5 +57,6 @@
 | Worldline  | Jordi Escudero (jordi.escudero@worldline.com) | Amazon AWS (T2/4Gb/60GB) | nGUB1ATwD0VU4wpple7/iR/KoVVksC4aZn39Acft6D8= | enode://9a39aa6955da273dceeb0e3ec2e02ae867c7995bfb7241a6a1bcf3a7a6d05d405cadd7877bcbb0f7d8a0a2ebc25e26bb6e62710a8c674010fc03f570a597d2a0@34.240.81.85:21000?discport=0 |
 | hippo | Alex Lopez (alex.lopez@hippo.tech) | Amazon AWS (T2/2GB/10GB) | lxp5xHoh+/wOWTZKa4Moq05ZyiTiq+Y7DzjPq9Nb+HQ= | enode://4ac5e1a3a5ce4c61ed7544dbb94233d69ae2430e102427cfdce23bf8138b0c3c1bc9a210eec2d5647a44858027545dfa1a22d1e356a823d1648b429cd6a3e968@52.3.68.57:21000?discport=0 |
 | Iberpay | Salva Alarcón (salarcon@iberpay.es) | Oracle VM (T2/4GB/30GB) | z4w9ui7SOzqC0OtRnVlQ1jJ8mUlBcX2MAwyloAV04lQ= |  enode://ee6f11d047859e410bcde6814e4e63b8915d45a2498e08c33999f2a76bd4f7e5045c1824caeb6626bd2a61b81d51c3beeed200fa95ea2bc2e8e81d47d60c2a41@213.99.45.240:21000?discport=0 |
+| Ubiquat | Ruben Fitó (r.fito@ubiquat.com) | Amazon AWS (T3/4GB/10GB) | KLbYnG9JjeTbAJ4dj0lpYjdMg/nyPFImZ9rTJCNP+wY= |  enode://4964fc7a6dde8a77537373fdfc4ff2a823d5eafed04315495bb71a572f4a2d7f991f492b1162d7b24a98200d7e8bbef40a9eac4001daf58be64a1220ce277932@34.249.36.218:21000?discport=0|
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
