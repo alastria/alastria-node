@@ -59,6 +59,6 @@
 | Iberpay | Salva Alarcón (salarcon@iberpay.es) | Oracle VM (T2/4GB/30GB) | z4w9ui7SOzqC0OtRnVlQ1jJ8mUlBcX2MAwyloAV04lQ= |  enode://ee6f11d047859e410bcde6814e4e63b8915d45a2498e08c33999f2a76bd4f7e5045c1824caeb6626bd2a61b81d51c3beeed200fa95ea2bc2e8e81d47d60c2a41@213.99.45.240:21000?discport=0 |
 | Ubiquat | Ruben Fitó (r.fito@ubiquat.com) | Amazon AWS (T3/4GB/10GB) | KLbYnG9JjeTbAJ4dj0lpYjdMg/nyPFImZ9rTJCNP+wY= |  enode://4964fc7a6dde8a77537373fdfc4ff2a823d5eafed04315495bb71a572f4a2d7f991f492b1162d7b24a98200d7e8bbef40a9eac4001daf58be64a1220ce277932@34.249.36.218:21000?discport=0|
 | ITAINNOVA | David Escuin (descuin@itainnova.es) | Bifi (2/4G/50GB) | OpEhDxogb7jMILtsRo9fiIk3yPlnoSEaPx78vyPTHhI= | enode://e186a2e81b20a3ee6358d0181f364d26675d14d4dd611e2f3528c2df13f4109ec7c386307e330a8d2e2905e0918fd6aeca80d25c95027cb487cfe4ab0a3327b4@193.146.117.229:21000?discport=0|
-
+| Espublico Tecnología | David Castañon (dcastannon@espublico.tech) | Amazon AWS (2C/8Gb/30Gb) | kCbcuwhMOv6hsEVzYglHokB4GXuePYYlUXV9hbcU+Wk= | enode://e65dd02189062aac0c7e5d6aca2424b87fb6ed91c475df9fd5451c49d886c57d54d4a02fac47a0f532de0c1fa896bc8d5f81f4374d9da57e8499609acb0984e9@54.216.31.234:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
