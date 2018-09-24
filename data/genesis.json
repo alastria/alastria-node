@@ -6,11 +6,12 @@
   },
   "coinbase": "0x0000000000000000000000000000000000000000",
   "config": {
-    "homesteadBlock": 1,
-    "eip150Block": 2,
+    "byzantiumBlock": 1,
+    "homesteadBlock": 2,
+    "eip150Block": 3,
     "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "eip155Block": 3,
-    "eip158Block": 3,
+    "eip155Block": 0,
+    "eip158Block": 4,
     "istanbul": {
       "epoch": 30000,
       "policy": 0
