@@ -60,5 +60,6 @@
 | ITAINNOVA | David Escuin (descuin@itainnova.es) | Bifi (2/4G/50GB) | OpEhDxogb7jMILtsRo9fiIk3yPlnoSEaPx78vyPTHhI= | enode://e186a2e81b20a3ee6358d0181f364d26675d14d4dd611e2f3528c2df13f4109ec7c386307e330a8d2e2905e0918fd6aeca80d25c95027cb487cfe4ab0a3327b4@193.146.117.229:21000?discport=0|
 | Espublico Tecnología | David Castañon (dcastannon@espublico.tech) | Amazon AWS (2C/8Gb/30Gb) | kCbcuwhMOv6hsEVzYglHokB4GXuePYYlUXV9hbcU+Wk= | enode://e65dd02189062aac0c7e5d6aca2424b87fb6ed91c475df9fd5451c49d886c57d54d4a02fac47a0f532de0c1fa896bc8d5f81f4374d9da57e8499609acb0984e9@54.216.31.234:21000?discport=0 |
 | Altran | Fernando Suero Narváez (fernando.sueronarvaez@altran.com) | Arsys (2C/4Gb/50Gb) | rQYZJil5vwT2ouLDxirtV5RCLc4cabQ3mX9wKNX74X0= | enode://841520e7da1899f8630b2b3696b9af4f394195c6a5da18b41ec31f0496aad41a546d8b0d806c19ffb062ba27d30e306bd9024f942c4c1e232d9ac84283a10de7@82.223.73.231:21000?discport=0 |
+| SmartDegrees | Jorge Fuster (j.fuster@pitagorinesgroup.com) | DigitalOcean (2C/4Gb/80Gb) | LdIDHX2DBDyZktUUVm6NQhC5jddd3mwv7iSgAwhQOgo= | enode://75d2d7c933836e9413f0ac8ee712aa5faee135e9685183cf86bb8dacfef6baf455d8b662b8de545f90173af2808f23439d2b0a9aac380827258882860c6b6e5b@146.185.138.185:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
