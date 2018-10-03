@@ -15,12 +15,11 @@ RUN chmod -R u+x /root/alastria-node/scripts
 
 WORKDIR /root/alastria-node/scripts
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo curl
+RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo curl cron nano
 RUN ./bootstrap.sh
 RUN ./init.sh dockerfile $nodetype $nodename
 RUN ./monitor.sh build
 
 EXPOSE 9000 21000 21000/udp 22000 41000 8443
 
-RUN ./start.sh
 CMD ["/root/alastria-node/scripts/start.sh","--watch"]
