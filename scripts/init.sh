@@ -220,6 +220,7 @@ if ( [ "general" == "$NODE_TYPE" ]); then
     cd ~
 fi
 
+
 if ( [ "backup" == "$1" ]); then
     echo "Recovering keys from backup ..."
     rm -rf ~/alastria/data/constellation/keystore
