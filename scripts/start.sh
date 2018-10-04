@@ -105,7 +105,7 @@ else
 fi
 
 if ( [ ! -e /etc/cron.d/restart-node-cron ]); then
-    echo -e "*/3 * * * * root cd ~/alastria-node/scripts/;sudo ./restart.sh auto \n"  > /etc/cron.d/restart-node-cron
+    echo -e "* * */2 * * root cd ~/alastria-node/scripts/;sudo ./restart.sh auto \n"  > /etc/cron.d/restart-node-cron
 	chmod 0644 /etc/cron.d/restart-node-cron
 	/etc/init.d/cron start
 fi
