@@ -2,9 +2,9 @@
 set -u
 set -e
 
-MESSAGE='Usage: start.sh <--clean> <--monitor> <--watch>'
+MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch>'
 
-MONITOR=0
+MONITOR=1
 WATCH=0
 CLEAN=0
 
@@ -12,8 +12,8 @@ while [[ $# -gt 0  ]]
 do
   key="$1"
   case "$key" in
-    -m|-M|--monitor)
-    MONITOR=1
+    -m|-M|--no-monitor)
+    MONITOR=0
     ;;
     -w|-W|--watch)
     WATCH=1
@@ -97,9 +97,9 @@ fi
 else
     if [[ "$NODE_TYPE" == "validator" ]]; then
         if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
-            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 100 --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
         else
-            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 100 --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) 2>> ~/alastria/logs/quorum_"${_TIME}".log &
         fi
     fi
 fi
@@ -110,6 +110,8 @@ then
     RP=`readlink -m "$0"`
     RD=`dirname "$RP"`
     nohup $RD/monitor.sh start > /dev/null &
+else
+    echo "Monitor disabled."
 fi
 
 if ([ $WATCH -gt 0 ])
