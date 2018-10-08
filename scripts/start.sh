@@ -7,6 +7,13 @@ MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch>'
 MONITOR=1
 WATCH=0
 CLEAN=0
+SUPERU=""
+USER=$( id -un )
+
+if ( type "sudo"  > /dev/null 2>&1 )
+then
+  SUPERU="sudo"
+fi
 
 while [[ $# -gt 0  ]]
 do
@@ -105,7 +112,7 @@ else
 fi
 
 if ( [ ! -e /etc/cron.d/restart-node-cron ]); then
-    echo -e "0 23 */2 * * root cd ~/alastria-node/scripts/;sudo ./restart.sh auto \n"  > /etc/cron.d/restart-node-cron
+    echo -e "0 23 */2 * * $USER cd ~/alastria-node/scripts/;$SUPERU ./restart.sh auto; \n"  > /etc/cron.d/restart-node-cron
 	chmod 0644 /etc/cron.d/restart-node-cron
 	/etc/init.d/cron start
 fi
