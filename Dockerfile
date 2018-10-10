@@ -15,7 +15,7 @@ RUN chmod -R u+x /root/alastria-node/scripts
 
 WORKDIR /root/alastria-node/scripts
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo curl cron nano
+RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo curl cron
 RUN ./bootstrap.sh
 RUN ./init.sh dockerfile $nodetype $nodename
 RUN ./monitor.sh build
