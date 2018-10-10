@@ -32,9 +32,6 @@ do
     -c|-C|--clean)
     CLEAN=1
     ;;
-    -r|-R|reinicio)
-    source $HOME/.profile
-    ;;
     -h|-H|--help)
     echo $MESSAGE
     exit
