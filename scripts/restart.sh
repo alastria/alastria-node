@@ -86,7 +86,7 @@ fi
 cp /tmp/nodekey ~/alastria/data/geth/
 
 if [[ "$CURRENT_HOST_IP" != "onlyUpdate" ]]; then
-    ~/alastria-node/scripts/stop.sh
+    ~/alastria-node/scripts/stop.sh reinicio
     sleep 6
     ~/alastria-node/scripts/start.sh
 fi
