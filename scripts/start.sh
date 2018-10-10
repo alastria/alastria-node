@@ -4,16 +4,20 @@ set -e
 
 MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch>'
 
+function superuser {
+  if ( type "sudo"  > /dev/null 2>&1 )
+  then
+    sudo $@
+  else
+    eval $@
+  fi
+}
+
 MONITOR=1
 WATCH=0
 CLEAN=0
-SUPERU=""
 USER=$( id -un )
-
-if ( type "sudo"  > /dev/null 2>&1 )
-then
-  SUPERU="sudo"
-fi
+NPATH=$(printenv | grep -w PATH)
 
 while [[ $# -gt 0  ]]
 do
@@ -27,6 +31,9 @@ do
     ;;
     -c|-C|--clean)
     CLEAN=1
+    ;;
+    -r|-R|reinicio)
+    source $HOME/.profile
     ;;
     -h|-H|--help)
     echo $MESSAGE
@@ -111,10 +118,15 @@ else
     fi
 fi
 
-if ( [ ! -e /etc/cron.d/restart-node-cron ]); then
-    echo -e "0 23 */2 * * $USER cd ~/alastria-node/scripts/;$SUPERU ./restart.sh auto; \n"  > /etc/cron.d/restart-node-cron
-	chmod 0644 /etc/cron.d/restart-node-cron
-	/etc/init.d/cron start
+if ( [ ! -e /etc/cron.d/restart-node-cron ] ); then
+    if [ ! -z "$CONSTELLATION" ]; then
+	CONSTELL=$(printenv | grep -w ENABLE_CONSTELLATION)
+	echo -e "*/2 * * * * $USER cd ~/alastria-node/scripts/;export $NPATH;export $CONSTELL;./restart.sh auto; \n" | superuser tee -a /etc/cron.d/restart-node-cron
+    else
+	echo -e "*/2 * * * * $USER cd ~/alastria-node/scripts/;env $NPATH ./restart.sh auto; \n" | superuser tee -a /etc/cron.d/restart-node-cron
+    fi
+	superuser chmod 0644 /etc/cron.d/restart-node-cron
+	superuser /etc/init.d/cron start
 fi
 
 if ([ $MONITOR -gt 0 ])
