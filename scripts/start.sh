@@ -118,12 +118,15 @@ fi
 if ( [ ! -e /etc/cron.d/restart-node-cron ] ); then
     if [ ! -z "$CONSTELLATION" ]; then
 	CONSTELL=$(printenv | grep -w ENABLE_CONSTELLATION)
-	echo -e "0 23 */2 * * $USER cd ~/alastria-node/scripts/;export $NPATH;export $CONSTELL;./restart.sh auto; \n" | superuser tee -a /etc/cron.d/restart-node-cron
+	echo -e "0 23 */2 * * $USER cd ~/alastria-node/scripts/;export $NPATH;export $CONSTELL;./restart.sh auto; \n" | superuser tee -a /etc/cron.d/restart-node-cron > /dev/null
     else
-	echo -e "0 23 */2 * * $USER cd ~/alastria-node/scripts/;env $NPATH ./restart.sh auto; \n" | superuser tee -a /etc/cron.d/restart-node-cron
+	echo -e "0 23 */2 * * $USER cd ~/alastria-node/scripts/;env $NPATH ./restart.sh auto; \n" | superuser tee -a /etc/cron.d/restart-node-cron > /dev/null
     fi
 	superuser chmod 0644 /etc/cron.d/restart-node-cron
-	superuser /etc/init.d/cron start
+fi
+
+if (ps -e | grep cron >/dev/null ); then
+    superuser /etc/init.d/cron start
 fi
 
 if ([ $MONITOR -gt 0 ])
