@@ -125,7 +125,7 @@ if ( [ ! -e /etc/cron.d/restart-node-cron ] ); then
 	superuser chmod 0644 /etc/cron.d/restart-node-cron
 fi
 
-if (ps -e | grep cron >/dev/null ); then
+if !(ps -e | grep cron >/dev/null ); then
     superuser /etc/init.d/cron start
 fi
 
