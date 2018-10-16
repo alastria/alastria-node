@@ -181,7 +181,7 @@ fi
 cd ~
 # IP for the inicital validator on network
 if [[ "$CURRENT_HOST_IP" == "$VALIDATOR0_HOST_IP" ]]; then
-    cp ~/alastria-node/data/geth/nodekey ~/alastria/data/nodekey
+    cp ~/alastria-node/data/keys/data/geth/nodekey ~/alastria/data/nodekey
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/permissioned-nodes.json
 else
