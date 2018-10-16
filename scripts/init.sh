@@ -132,11 +132,9 @@ EOF
 }
 
 install_monitor() {
-    if [[ -z "$GOPATH"/src/github.com/alastria/monitor  ]]; then
-        #INSTALACION DEL MONITOR
+    if [[ ! -z "$GOPATH"/src/github.com/alastria/monitor  ]]; then
+        echo "Installing monitor"
         ~/alastria-node/scripts/monitor.sh build
-        # The monitor is now started optionally through a flag through ./start.sh --monitor
-        # ~/alastria-node/scripts/monitor.sh start
     fi
 }
 
