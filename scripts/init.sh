@@ -225,7 +225,6 @@ if ( [ "general" == "$NODE_TYPE" ]); then
     cd ~
 fi
 
-
 if ( [ "backup" == "$1" ]); then
     echo "Recovering keys from backup ..."
     rm -rf ~/alastria/data/constellation/keystore
@@ -255,6 +254,10 @@ if ( [ "dockerfile" == "$1" ]); then
     echo "Recovering enode ID ..."
     cp ~/alastria-node/data/keys/data/geth/nodekey ~/alastria/data/geth/nodekey
 
+fi
+
+if ( [ "validator" == "$NODE_TYPE" ]); then
+    rm -rf ~/alastria/data/keystore
 fi
 
 echo "[*] Initialization was completed successfully."
