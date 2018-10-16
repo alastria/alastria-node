@@ -1,6 +1,6 @@
-# ALASTRIA #
+# ALASTRIA Telsius #
 
-
+Testnet v2, alias [Telsius] (http://memory-alpha.wikia.com/wiki/Telsius_Prime_mining_colony)
 
 ## Tutoriales de instalación
 
