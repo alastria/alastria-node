@@ -141,7 +141,7 @@ install_monitor() {
 echo "[*] Cleaning up temporary data directories."
 rm -rf ~/alastria/data
 rm -rf ~/alastria/logs/quorum*
-mkdir -p ~/alastria/data/{keystore,geth,constellation}
+mkdir -p ~/alastria/data/{geth,constellation}
 mkdir -p ~/alastria/data/constellation/{data,keystore}
 mkdir -p ~/alastria/logs
 
@@ -178,6 +178,7 @@ if ( [ "backup" != "$1" ]); then
     update_nodes_list "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0"
 fi
 cd ~
+# IP for the inicital validator on network
 if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/permissioned-nodes.json
@@ -196,6 +197,8 @@ if ( [ "general" == "$NODE_TYPE" ]); then
     # echo "     Por favor, introduzca como contraseña 'Passw0rd'."
     echo  "     Definida contraseña por defecto para cuenta principal como: $ACCOUNT_PASSWORD."
     echo $ACCOUNT_PASSWORD > ./account_pass
+    # Only create keystore folder on general node.
+    mkdir -p ~/alastria/data/keystore
     geth --datadir ~/alastria/data --password ./account_pass account new
     rm ./account_pass
 
