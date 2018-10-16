@@ -11,6 +11,7 @@ if ( [ $# -ne 3 ] ); then
     exit
 fi
 
+VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
 CURRENT_HOST_IP="$1"
 NODE_TYPE="$2"
 NODE_NAME="$3"
@@ -179,7 +180,8 @@ if ( [ "backup" != "$1" ]); then
 fi
 cd ~
 # IP for the inicital validator on network
-if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
+if [[ "$CURRENT_HOST_IP" == "$VALIDATOR0_HOST_IP" ]]; then
+    cp ~/alastria-node/data/geth/nodekey ~/alastria/data/nodekey
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/permissioned-nodes.json
 else
