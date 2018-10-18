@@ -11,6 +11,7 @@ if ( [ $# -ne 3 ] ); then
     exit
 fi
 
+VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
 CURRENT_HOST_IP="$1"
 NODE_TYPE="$2"
 NODE_NAME="$3"
@@ -141,7 +142,7 @@ install_monitor() {
 echo "[*] Cleaning up temporary data directories."
 rm -rf ~/alastria/data
 rm -rf ~/alastria/logs/quorum*
-mkdir -p ~/alastria/data/{keystore,geth,constellation}
+mkdir -p ~/alastria/data/{geth,constellation}
 mkdir -p ~/alastria/data/constellation/{data,keystore}
 mkdir -p ~/alastria/logs
 
@@ -178,7 +179,9 @@ if ( [ "backup" != "$1" ]); then
     update_nodes_list "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0"
 fi
 cd ~
-if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
+# IP for the inicital validator on network
+if [[ "$CURRENT_HOST_IP" == "$VALIDATOR0_HOST_IP" ]]; then
+    echo "e7889a64e5ec8c28830a1c8fc620810f086342cd511d708ee2c4420231904d18" > ~/alastria/data/nodekey
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
     cp ~/alastria-node/data/static-nodes.json ~/alastria/data/permissioned-nodes.json
 else
@@ -196,6 +199,8 @@ if ( [ "general" == "$NODE_TYPE" ]); then
     # echo "     Por favor, introduzca como contraseña 'Passw0rd'."
     echo  "     Definida contraseña por defecto para cuenta principal como: $ACCOUNT_PASSWORD."
     echo $ACCOUNT_PASSWORD > ./account_pass
+    # Only create keystore folder on general node.
+    mkdir -p ~/alastria/data/keystore
     geth --datadir ~/alastria/data --password ./account_pass account new
     rm ./account_pass
 
@@ -219,7 +224,6 @@ if ( [ "general" == "$NODE_TYPE" ]); then
     echo "______"
     cd ~
 fi
-
 
 if ( [ "backup" == "$1" ]); then
     echo "Recovering keys from backup ..."
@@ -250,6 +254,10 @@ if ( [ "dockerfile" == "$1" ]); then
     echo "Recovering enode ID ..."
     cp ~/alastria-node/data/keys/data/geth/nodekey ~/alastria/data/geth/nodekey
 
+fi
+
+if ( [ "validator" == "$NODE_TYPE" ]); then
+    rm -rf ~/alastria/data/keystore
 fi
 
 echo "[*] Initialization was completed successfully."
