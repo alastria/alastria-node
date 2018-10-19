@@ -48,7 +48,7 @@ check_constellation_isStarted(){
     set -e
 }
 
-NETID=82584648528
+NETID=83584648538
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
 GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full --vmodule consensus/istanbul/core/core.go=5 "
 
