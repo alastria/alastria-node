@@ -65,5 +65,6 @@
 | Worldline  | Jordi Escudero (jordi.escudero@worldline.com) | Amazon AWS (T2/4Gb/60GB) | 9XsGB7AFG+giNQreYwpnQsGJNv1LDEdHntYv++ZTCUU= | enode://6fbab5c79df0b945923c7e813b9d98ed44e7be15cb9d95d31b8454b15d8622b825e23a329a64afe9a313dc3a4cd470b7ad404ff1c73f34bc1c73215f2e9121dd@52.208.133.80:21000?discport=0 |
 | Worldline  | Jordi Escudero (jordi.escudero@worldline.com) | Amazon AWS (T2/4Gb/60GB) | dJa33RhkiSFIiYpx9Sw/DrOzHKJXXvPtFcOPcV5GSAA= | enode://1c2d11dcb8d6c44c4983f5b4d4dfb476df4b87196fd9ab55558622484a9bfa68cd32803669ef3ba3b2b9a81c576cfb86c8a4fa99895d79226c23305ff2489485@52.50.150.237:21000?discport=0 |
 | NVIA  | Jose Maria López-Terradas (jmlopez@nvia.com) | OVH (1C/1Gb/20GB) | Jcafecun2ux/4sc6jnSXJAkzhQTxZAWrRwoDCVZdqk4= | enode://2851e1da83a47a798a9ea2dad96ee43c58c4d6405abd26027527ab7fd328695f54804cbdc85bded4273ff2b45821a9ff5841bdc5dc44d0732757c1a3f39a22c0@51.75.125.252:21000?discport=0 |
+| Vestigia Blockchain Solutions | Javier Caro (jcaro@vestigia.io)| Self Hosted (2C/4Gb/100Gb) | zj50low7aHylK86hCbAwbACH+OaGaFRFknMP575kwhw= | enode://ce7b31412fdd9211cb31904cf83dd06a877c93b03d03a54e14d178bd82603830f2e380ae4b4e65c1c5e696c05c46b59433d240f2ad7f6d759e01d735f0db4d30@37.134.39.163:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
