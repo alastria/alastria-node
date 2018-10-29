@@ -2,6 +2,6 @@
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
 | ------- | ------------------------------------ | ---------------------------------- | ------------- | ----- |
-| IoBuilders | Fer Paris @Fer Parisd | AWS | ch7SvTO/DusfSJ9M/i/mF9BQ0IqfWW4ApZQPi5S4UWs= | enode://b50182aaad9715584e40d2cb01d04bb58a54b39b7cf336649c231e66f9dd31bbce6570d71c72e01799f267bd0b08cacd4a24086869339fa7b54d287bceb7f93c@34.241.169.145:21000 |
+| IoBuilders | Fer Paris @Fer Parisd | AWS | Xt8uWCb0YiBoB8EHfNGDFGYgOHza2HQpR6kvHxeZFS0= | enode://6dcccbad7a4e75701fef6fd0f578c7d3873a853c905a911c416c896914b7cbd46320c363659c46ea32abedd397cb592c001c274dd282c46ed0c63e95c242453c@34.241.169.145:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.

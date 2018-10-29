@@ -94,15 +94,9 @@ if [[ "$NODE_TYPE" == "general" ]]; then
       nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
     else
       nohup env geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
-fi
+  fi
 else
-    if [[ "$NODE_TYPE" == "validator" ]]; then
-        if [[ "$CURRENT_HOST_IP" == "$VALIDATOR0_HOST_IP" ]]; then
-            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 100 --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
-        else
-            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 100 --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) 2>> ~/alastria/logs/quorum_"${_TIME}".log &
-        fi
-    fi
+    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 100 --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) 2>> ~/alastria/logs/quorum_"${_TIME}".log &
 fi
 
 if ([ $MONITOR -gt 0 ])

@@ -95,7 +95,7 @@ generate_conf() {
    #define the template.
    cat  << EOF
 # Externally accessible URL for this node (this is what's advertised)
-url = "http://$NODE_IP:$CONSTELLATION_PORT/"
+url = "https://$NODE_IP:$CONSTELLATION_PORT/"
 
 # Port to listen on for the public API
 port = $CONSTELLATION_PORT
