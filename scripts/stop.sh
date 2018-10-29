@@ -12,4 +12,7 @@ fi
 
 pkill -f geth
 
+# If monitor is enabled, never stops.
+./monitor.sh stop
+
 set +e
