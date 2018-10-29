@@ -1,4 +1,4 @@
-# ALASTRIA Telsius #
+# ALASTRIA Arrakis #
 
 * Visit [What is alastria](https://alastria.io/sobre_alastria) page to know more about us.
 
