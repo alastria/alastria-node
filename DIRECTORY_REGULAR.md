@@ -68,5 +68,6 @@
 | Babel  | Alberto Salamanca Rico (go2chain@babel.es) | Self Hosted (2C/4Gb/60GB) | 5FXJBPxOVay29ugnOyjit86mqbSJjSXKnduDBFQZBnM= | enode://cc4b24f4d30d8f0081a04dfe117256bcd925c6da32fbb3a375d17305fec9404a6e34a68bd8ced469e84737976a44c1c90d64dac50879f86b2328d10a818c823a@213.27.216.170:21000?discport=0 |
 | Vestigia Blockchain Solutions | Javier Caro (jcaro@vestigia.io)| Self Hosted (2C/4Gb/100Gb) | zj50low7aHylK86hCbAwbACH+OaGaFRFknMP575kwhw= | enode://ce7b31412fdd9211cb31904cf83dd06a877c93b03d03a54e14d178bd82603830f2e380ae4b4e65c1c5e696c05c46b59433d240f2ad7f6d759e01d735f0db4d30@37.134.39.163:21000?discport=0 |
 | Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | Gigas.com (4C/4Gb/100Gb) | V8GGE77L+rA64l5gFhe6SLSI2RehTk4zyhmbVxE3NAw= | enode://b1ae487aabb7b9fc01451d2a226a397376b1f6211765524f6cc818e98deec7df86be4d4a928663b949951cd53828d7ad67a2b0302a382fa7ab6bcaea595b2648@5.56.62.209:21000?discport=0 |
+| DigitelTS | Alejandro Martínez (alejandro.martineza@madisonmk.com) | Amazon AWS (2C/4Gb/10Gb) | hD4eIreY9f0rFbMGuxV2zRwU5hcvNYYzhZHA+AoVQBM= | enode://d2375eddc01668bf9284043376a672c57ae969e9e5a58f330b3a7cbb122748e1a7ec17336bf7d1e37de66d82607040d675750c7ec62ed26fbf92c7a6ad5a9f88@35.180.31.191:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
