@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -u
+set -e
+
 echo "[*] Updating base code"
 cd ~/alastria-node && git pull
 
@@ -12,3 +15,6 @@ cp ~/alastria-node/data/permissioned-nodes_$NODE_TYPE.json ~/alastria/data/permi
 echo "[*] Restarting node" 
 ~/alastria-node/scripts/stop.sh
 ~/alastria-node/scripts/start.sh
+
+set +u
+set +e
