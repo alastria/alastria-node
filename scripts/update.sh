@@ -8,7 +8,7 @@ cd ~/alastria-node && git pull
 
 mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 echo "[*] Updating static-nodes" 
-cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
+cp ~/alastria-node/data/permissioned-nodes_$NODE_TYPE.json ~/alastria/data/static-nodes.json
 echo "[*] Updating permissioned-nodes" 
 cp ~/alastria-node/data/permissioned-nodes_$NODE_TYPE.json ~/alastria/data/permissioned-nodes.json
 
