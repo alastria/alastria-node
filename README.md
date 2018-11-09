@@ -11,6 +11,7 @@ You'll need at least a host/node to interact with the network, please read the t
 ## System requirements
 
 **Operating System**: Ubuntu 16.04 64 bits
+
 **Hardware**:
 
 | Hardware | minimum | desired |
