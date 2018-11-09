@@ -67,5 +67,6 @@
 | NVIA  | Jose Maria López-Terradas (jmlopez@nvia.com) | OVH (1C/1Gb/20GB) | Jcafecun2ux/4sc6jnSXJAkzhQTxZAWrRwoDCVZdqk4= | enode://2851e1da83a47a798a9ea2dad96ee43c58c4d6405abd26027527ab7fd328695f54804cbdc85bded4273ff2b45821a9ff5841bdc5dc44d0732757c1a3f39a22c0@51.75.125.252:21000?discport=0 |
 | Vestigia Blockchain Solutions | Javier Caro (jcaro@vestigia.io)| Self Hosted (2C/4Gb/100Gb) | zj50low7aHylK86hCbAwbACH+OaGaFRFknMP575kwhw= | enode://ce7b31412fdd9211cb31904cf83dd06a877c93b03d03a54e14d178bd82603830f2e380ae4b4e65c1c5e696c05c46b59433d240f2ad7f6d759e01d735f0db4d30@37.134.39.163:21000?discport=0 |
 | Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | Gigas.com (4C/4Gb/100Gb) | V8GGE77L+rA64l5gFhe6SLSI2RehTk4zyhmbVxE3NAw= | enode://b1ae487aabb7b9fc01451d2a226a397376b1f6211765524f6cc818e98deec7df86be4d4a928663b949951cd53828d7ad67a2b0302a382fa7ab6bcaea595b2648@5.56.62.209:21000?discport=0 |
+| Vestigia Blockchain Solutions | Javier Caro (jcaro@vestigia.io)| Amazon AWS (2C/4Gb/100Gb) | D0dCxnAckG27BDbQIRjA5VutiUGBvs5EtcrWV2y80F0= | enode://497961b61543ba17b3017cd8df63e3901721322e5ed588db67affd840d012625af24c5c09c651809015a53e21cd19d7fc1639a1ff0538e7302157c9b1a062d42@35.180.189.196:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
