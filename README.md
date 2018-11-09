@@ -36,7 +36,7 @@ You'll need to open the following ports in both ways to deploy de node:
 
 ### Quorum node + Constellation (regular)
 
-* [Alastria regular node](https://medium.com/@alastria_es/paso-a-paso-as%C3%AD-se-crea-un-nodo-regular-en-alastria-e9ef9a47b07f)
+* [Alastria regular node](https://medium.com/@daniellalorenzo/creating-and-interacting-with-a-regular-node-in-alastria-9546ba38d263)
 
 ### Quorum node + monitor (validator)
 
