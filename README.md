@@ -43,7 +43,7 @@ You'll need to open the following ports in both ways to deploy de node:
 * [Alastria validator node](https://medium.com/@marcos_26856/2e3185659a6) **- En construcción**
 
 	
-## Alastria netwowk resources
+## Alastria metwork resources
 
 [//]: # ( Aquí encontrarás una lista con enlaces a diferentes servicios de la red alastria, netstats, blockexplorers, etc. )
 
