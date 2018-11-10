@@ -70,5 +70,6 @@
 | Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | Gigas.com (4C/4Gb/100Gb) | V8GGE77L+rA64l5gFhe6SLSI2RehTk4zyhmbVxE3NAw= | enode://b1ae487aabb7b9fc01451d2a226a397376b1f6211765524f6cc818e98deec7df86be4d4a928663b949951cd53828d7ad67a2b0302a382fa7ab6bcaea595b2648@5.56.62.209:21000?discport=0 |
 | PayThunder  | Juan José Rider (jjrider@paythunder.com) | Azure (2C/8Gb/30GB) | ww8uNyqgNuLV7Her/IahYFUK3nrzydX9Nv66/rXZcyI= | enode://829982b756bd4f5a6230206a68f7e83742c64e28ebac0f5781858ff57301efddc0cd2c84a162b89c8079c6aa2b0ef4da619c77223d44ed8e9537acf8b69c2e2c@104.41.219.39:21000?discport=0 |
 | DigitelTS | Alejandro Martínez (alejandro.martineza@madisonmk.com) | Amazon AWS (2C/4Gb/10Gb) | hD4eIreY9f0rFbMGuxV2zRwU5hcvNYYzhZHA+AoVQBM= | enode://d2375eddc01668bf9284043376a672c57ae969e9e5a58f330b3a7cbb122748e1a7ec17336bf7d1e37de66d82607040d675750c7ec62ed26fbf92c7a6ad5a9f88@35.180.31.191:21000?discport=0 |
+| ECOCastillaYLeon |  Urko Larrañaga Piedra (biharrerako@gmail.com) | Amazon AWS (2C/4Gb/10Gb)| 5KmiBuXHnWMIhOUGA1UurFO8XRAXzU3jCN5AsZjBRgU= | enode://a5e7bd3e42e9eca12ab14a566cba5111f8b06d259b22c1ba27c827862fb5f9da5a4e6078a2942a7e620da6a07b1d884a815f02786db8219a329c9f8ff4a886d7@35.159.52.70:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
