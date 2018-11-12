@@ -71,5 +71,6 @@
 | PayThunder  | Juan José Rider (jjrider@paythunder.com) | Azure (2C/8Gb/30GB) | ww8uNyqgNuLV7Her/IahYFUK3nrzydX9Nv66/rXZcyI= | enode://829982b756bd4f5a6230206a68f7e83742c64e28ebac0f5781858ff57301efddc0cd2c84a162b89c8079c6aa2b0ef4da619c77223d44ed8e9537acf8b69c2e2c@104.41.219.39:21000?discport=0 |
 | DigitelTS | Alejandro Martínez (alejandro.martineza@madisonmk.com) | Amazon AWS (2C/4Gb/10Gb) | hD4eIreY9f0rFbMGuxV2zRwU5hcvNYYzhZHA+AoVQBM= | enode://d2375eddc01668bf9284043376a672c57ae969e9e5a58f330b3a7cbb122748e1a7ec17336bf7d1e37de66d82607040d675750c7ec62ed26fbf92c7a6ad5a9f88@35.180.31.191:21000?discport=0 |
 | Vestigia Blockchain Solutions | Javier Caro (jcaro@vestigia.io)| Amazon AWS (2C/4Gb/100Gb) | D0dCxnAckG27BDbQIRjA5VutiUGBvs5EtcrWV2y80F0= | enode://497961b61543ba17b3017cd8df63e3901721322e5ed588db67affd840d012625af24c5c09c651809015a53e21cd19d7fc1639a1ff0538e7302157c9b1a062d42@35.180.189.196:21000?discport=0 |
+| ECOCastillaYLeon |  Urko Larrañaga Piedra (biharrerako@gmail.com) | Amazon AWS (2C/4Gb/10Gb)| 5KmiBuXHnWMIhOUGA1UurFO8XRAXzU3jCN5AsZjBRgU= | enode://a5e7bd3e42e9eca12ab14a566cba5111f8b06d259b22c1ba27c827862fb5f9da5a4e6078a2942a7e620da6a07b1d884a815f02786db8219a329c9f8ff4a886d7@35.159.52.70:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
