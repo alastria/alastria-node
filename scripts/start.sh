@@ -96,11 +96,7 @@ if [[ "$NODE_TYPE" == "general" ]]; then
 fi
 else
     if [[ "$NODE_TYPE" == "validator" ]]; then
-        if [[ "$CURRENT_HOST_IP" == "52.56.69.220" ]]; then
-            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) --unlock 0 --password ~/alastria/data/passwords.txt 2>> ~/alastria/logs/quorum_"${_TIME}".log &
-        else
-            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) 2>> ~/alastria/logs/quorum_"${_TIME}".log &
-        fi
+        nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 100 --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) 2>> ~/alastria/logs/quorum_"${_TIME}".log &
     fi
 fi
 
