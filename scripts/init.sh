@@ -54,7 +54,7 @@ update_constellation_nodes() {
     NODE_IP="$1"
     CONSTELLATION_PORT="$2"
     URL=",
-    \"http://$NODE_IP:$CONSTELLATION_PORT/\"
+    \"https://$NODE_IP:$CONSTELLATION_PORT/\"
 ]"
     CONSTELLATION_NODES=${CONSTELLATION_NODES::-2}
     CONSTELLATION_NODES="$CONSTELLATION_NODES$URL"
@@ -94,7 +94,7 @@ generate_conf() {
    #define the template.
    cat  << EOF
 # Externally accessible URL for this node (this is what's advertised)
-url = "http://$NODE_IP:$CONSTELLATION_PORT/"
+url = "https://$NODE_IP:$CONSTELLATION_PORT/"
 
 # Port to listen on for the public API
 port = $CONSTELLATION_PORT
