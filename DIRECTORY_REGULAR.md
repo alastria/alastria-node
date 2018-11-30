@@ -66,6 +66,5 @@
 | Worldline  | Jordi Escudero (jordi.escudero@worldline.com) | Amazon AWS (T2/4Gb/60GB) | dJa33RhkiSFIiYpx9Sw/DrOzHKJXXvPtFcOPcV5GSAA= | enode://1c2d11dcb8d6c44c4983f5b4d4dfb476df4b87196fd9ab55558622484a9bfa68cd32803669ef3ba3b2b9a81c576cfb86c8a4fa99895d79226c23305ff2489485@52.50.150.237:21000?discport=0 |
 | NVIA  | Jose Maria López-Terradas (jmlopez@nvia.com) | OVH (1C/1Gb/20GB) | Jcafecun2ux/4sc6jnSXJAkzhQTxZAWrRwoDCVZdqk4= | enode://2851e1da83a47a798a9ea2dad96ee43c58c4d6405abd26027527ab7fd328695f54804cbdc85bded4273ff2b45821a9ff5841bdc5dc44d0732757c1a3f39a22c0@51.75.125.252:21000?discport=0 |
 | Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | Gigas.com (4C/4Gb/100Gb) | V8GGE77L+rA64l5gFhe6SLSI2RehTk4zyhmbVxE3NAw= | enode://b1ae487aabb7b9fc01451d2a226a397376b1f6211765524f6cc818e98deec7df86be4d4a928663b949951cd53828d7ad67a2b0302a382fa7ab6bcaea595b2648@5.56.62.209:21000?discport=0 |
-| Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | AWS (2C/4Gb/30Gb) | rgr408pu9fIsc1yf8aDSskq4sxA1NI5KTa4adLtv6Hw= | enode://05081914818d8c6ff69e042b752250ad05e8dcc77cfef83a61eebb6a9d395022f541d230ea63aed11595e223735fbe25d5f95031cad4e918805d4cb340a4649d@52.209.188.78:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
