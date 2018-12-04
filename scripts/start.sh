@@ -33,7 +33,7 @@ do
   shift
 done
 
-CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
+#CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
 CONSTELLATION_PORT=9000
 
 check_constellation_isStarted(){
