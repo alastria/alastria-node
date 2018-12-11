@@ -66,21 +66,7 @@ update_nodes_list() {
     echo "Selected $NODE_TYPE node..."
     echo "Updating permissioned nodes..."
 
-       ENODE=",
-    \"$1\"
-]"
-    PERMISSIONED_NODES_VALIDATOR=${PERMISSIONED_NODES_VALIDATOR::-2}
-    PERMISSIONED_NODES_VALIDATOR="$PERMISSIONED_NODES_VALIDATOR$ENODE"
-    echo "$PERMISSIONED_NODES_VALIDATOR" > ~/alastria-node/data/permissioned-nodes_validator.json
-
-    if ( [ "validator" == "$NODE_TYPE" ]); then
-        PERMISSIONED_NODES_GENERAL=${PERMISSIONED_NODES_GENERAL::-2}
-        PERMISSIONED_NODES_GENERAL="$PERMISSIONED_NODES_GENERAL$ENODE"
-        echo "$PERMISSIONED_NODES_GENERAL" > ~/alastria-node/data/permissioned-nodes_general.json
-    fi
-
-    echo "Updating static-nodes..."
-    cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria-node/data/static-nodes.json
+    ./updatePerm.sh "$NODE_TYPE"
 
 }
 
