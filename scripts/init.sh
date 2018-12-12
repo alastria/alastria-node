@@ -179,7 +179,6 @@ if ( [ "backup" != "$1" ]); then
     update_nodes_list "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0"
 fi
 cd ~
-./updatePerm.sh "$NODE_TYPE"
 # IP for the inicital validator on network
 ~/alastria-node/data/updatePerm.sh "$NODE_TYPE"
 if [[ "$CURRENT_HOST_IP" == "$VALIDATOR0_HOST_IP" ]]; then
