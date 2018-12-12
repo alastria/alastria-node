@@ -53,7 +53,8 @@ PERMISSIONED_NODES_GENERAL=$(cat ../data/permissioned-nodes_general.json)
 
 update_constellation_nodes() {
     NODE_IP="$1"
-    CONSTELLATION_PORT="$2"
+    CONSTELLATION_PORT="$2")
+
     URL=",
     \"https://$NODE_IP:$CONSTELLATION_PORT/\"
 ]"
@@ -66,7 +67,20 @@ update_nodes_list() {
     echo "Selected $NODE_TYPE node..."
     echo "Updating permissioned nodes..."
 
-    ./updatePerm.sh "$NODE_TYPE"
+    BOOT_NODES=$(cat ../data/boot-nodes.json)
+    REGULAR_NODES=$(cat ../data/regular-nodes.json)
+    VALIDATOR_NODES=$(cat ../data/validator-nodes.json
+
+    ENODE=",
+    \"$1\""
+
+    if ( [ "validator" == "$NODE_TYPE" ]); then
+        VALIDATOR_NODES="$VALIDATOR_NODES$ENODE"
+        echo "$VALIDATOR_NODES" > ~/alastria-node/data/validator-nodes.json
+    fi
+
+    echo "Updating static-nodes..."
+    cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria-node/data/static-nodes.json
 
 }
 
@@ -165,19 +179,11 @@ if ( [ "backup" != "$1" ]); then
     update_nodes_list "enode://${ENODE_KEY}@${CURRENT_HOST_IP}:21000?discport=0"
 fi
 cd ~
+./updatePerm.sh "$NODE_TYPE"
 # IP for the inicital validator on network
+~/alastria-node/data/updatePerm.sh "$NODE_TYPE"
 if [[ "$CURRENT_HOST_IP" == "$VALIDATOR0_HOST_IP" ]]; then
     echo "e7889a64e5ec8c28830a1c8fc620810f086342cd511d708ee2c4420231904d18" > ~/alastria/data/nodekey
-    cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
-    cp ~/alastria-node/data/static-nodes.json ~/alastria/data/permissioned-nodes.json
-else
-    if [[ "$NODE_TYPE" == "general" ]]; then
-        cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria/data/permissioned-nodes.json
-        cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria/data/static-nodes.json
-    else
-        cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/permissioned-nodes.json
-        cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/static-nodes.json
-    fi
 fi
 
 
