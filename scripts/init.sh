@@ -71,10 +71,10 @@ update_nodes_list() {
     REGULAR_NODES=$(cat ~/alastria-node/data/regular-nodes.json)
     VALIDATOR_NODES=$(cat ~/alastria-node/data/validator-nodes.json)
 
-    ENODE=",
-    \"$1\""
-
-    if ( [ "validator" == "$NODE_TYPE" ]); then
+    ENODE="
+ \"$1\","
+ 
+   if ( [ "validator" == "$NODE_TYPE" ]); then
         VALIDATOR_NODES="$VALIDATOR_NODES$ENODE"
         echo "$VALIDATOR_NODES" > ~/alastria-node/data/validator-nodes.json
     else
