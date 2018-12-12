@@ -4,7 +4,7 @@ set -e
 TMPFILE="/tmp/$(basename $0).$$.tmp"
 tmpfile=$(mktemp /tmp/updatePerm.XXXXXX)
 NODE_TYPE="$1"
-DESTDIR="$HOME/tmp/data/"
+DESTDIR="$HOME/alastria/data/"
 DATADIR="$HOME/alastria-node/data/"
 
 echo "[" > $TMPFILE
@@ -15,7 +15,7 @@ if [ "$NODE_TYPE" == "bootnode" ]; then
    if [ "$NODE_TYPE" == "validator" ]; then
      cat $DATADIR/boot-nodes.json $DATADIR/validator-nodes.json >> $TMPFILE
  else
-   if [ "$NODE_TYPE" == "regular" ]; then
+   if [ "$NODE_TYPE" == "general" ]; then
      cat $DATADIR/boot-nodes.json >> $TMPFILE
   fi
   fi

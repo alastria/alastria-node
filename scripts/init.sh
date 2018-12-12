@@ -3,7 +3,7 @@ set -e
 
 MESSAGE='Usage: init <mode> <node-type> <node-name>
     mode: CURRENT_HOST_IP | auto | backup
-    node-type: validator | general
+    node-type: validator | general | bootnode
     node-name: NODE_NAME (example: Alastria)'
 
 if ( [ $# -ne 3 ] ); then
@@ -53,7 +53,7 @@ PERMISSIONED_NODES_GENERAL=$(cat ../data/permissioned-nodes_general.json)
 
 update_constellation_nodes() {
     NODE_IP="$1"
-    CONSTELLATION_PORT="$2")
+    CONSTELLATION_PORT="$2"
 
     URL=",
     \"https://$NODE_IP:$CONSTELLATION_PORT/\"
@@ -67,9 +67,9 @@ update_nodes_list() {
     echo "Selected $NODE_TYPE node..."
     echo "Updating permissioned nodes..."
 
-    BOOT_NODES=$(cat ../data/boot-nodes.json)
-    REGULAR_NODES=$(cat ../data/regular-nodes.json)
-    VALIDATOR_NODES=$(cat ../data/validator-nodes.json
+    BOOT_NODES=$(cat ~/alastria-node/data/boot-nodes.json)
+    REGULAR_NODES=$(cat ~/alastria-node/data/regular-nodes.json)
+    VALIDATOR_NODES=$(cat ~/alastria-node/data/validator-nodes.json)
 
     ENODE=",
     \"$1\""
@@ -77,10 +77,19 @@ update_nodes_list() {
     if ( [ "validator" == "$NODE_TYPE" ]); then
         VALIDATOR_NODES="$VALIDATOR_NODES$ENODE"
         echo "$VALIDATOR_NODES" > ~/alastria-node/data/validator-nodes.json
+    else
+      if ( [ "general" == "$NODE_TYPE" ]); then
+          REGULAR_NODES="$REGULAR_NODES$ENODE"
+          echo "$REGULAR_NODES" > ~/alastria-node/data/regular-nodes.json
+        else
+          if ( [ "bootnode" == "$NODE_TYPE" ]); then
+              BOOT_NODES="$BOOT_NODES$ENODE"
+              echo "$BOOT_NODES" > ~/alastria-node/data/boot-nodes.json
+         fi 
+       fi
     fi
-
     echo "Updating static-nodes..."
-    cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria-node/data/static-nodes.json
+    # cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria-node/data/static-nodes.json
 
 }
 
@@ -180,7 +189,8 @@ if ( [ "backup" != "$1" ]); then
 fi
 cd ~
 # IP for the inicital validator on network
-~/alastria-node/data/updatePerm.sh "$NODE_TYPE"
+~/alastria-node/scripts/updatePerm.sh "$NODE_TYPE"
+
 if [[ "$CURRENT_HOST_IP" == "$VALIDATOR0_HOST_IP" ]]; then
     echo "e7889a64e5ec8c28830a1c8fc620810f086342cd511d708ee2c4420231904d18" > ~/alastria/data/nodekey
 fi
