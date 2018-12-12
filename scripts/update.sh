@@ -5,7 +5,7 @@ cd ~/alastria-node && git pull
 
 mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 echo "[*] Updating permissioned-nodes" 
-./updatePerm.sh "$NODE_TYPE"
+~/alastria-node/scripts/updatePerm.sh "$NODE_TYPE"
 
 echo "[*] Restarting node" 
 ~/alastria-node/scripts/stop.sh
