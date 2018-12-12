@@ -47,9 +47,6 @@ fi
 
 PWD="$(pwd)"
 CONSTELLATION_NODES=$(cat ../data/constellation-nodes.json)
-STATIC_NODES=$(cat ../data/static-nodes.json)
-PERMISSIONED_NODES_VALIDATOR=$(cat ../data/permissioned-nodes_validator.json)
-PERMISSIONED_NODES_GENERAL=$(cat ../data/permissioned-nodes_general.json)
 
 update_constellation_nodes() {
     NODE_IP="$1"
