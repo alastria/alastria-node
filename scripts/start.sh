@@ -107,7 +107,7 @@ else
             nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 200 2>> ~/alastria/logs/quorum_"${_TIME}".log &
         else
             echo "[ ] ERROR: $NODE_TYPE is not a correct node type."
-        if
+        fi
     fi
 fi
 
