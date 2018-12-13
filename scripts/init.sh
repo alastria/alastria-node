@@ -85,8 +85,6 @@ update_nodes_list() {
          fi 
        fi
     fi
-    echo "Updating static-nodes..."
-    # cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria-node/data/static-nodes.json
 
 }
 
