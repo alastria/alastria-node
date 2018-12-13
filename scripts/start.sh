@@ -100,7 +100,15 @@ if [[ "$NODE_TYPE" == "general" ]]; then
       nohup env geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
   fi
 else
-    nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 100 --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    if [[ "$NODE_TYPE" == "validator" ]]; then
+        nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 100 --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+    else
+        if [[ "$NODE_TYPE" == "bootnode" ]]; then
+            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 200 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+        else
+            echo "[ ] ERROR: $NODE_TYPE is not a correct node type."
+        if
+    fi
 fi
 
 if ([ $MONITOR -gt 0 ])
