@@ -2,12 +2,13 @@
 set -u
 set -e
 
-MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch> <--local-rpc>'
+MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch> <--local-rpc> <--logrotate>'
 
 MONITOR=1
 WATCH=0
 CLEAN=0
 RPCADDR=0.0.0.0
+LOGROTATE=0
 
 while [[ $# -gt 0  ]]
 do
@@ -24,6 +25,9 @@ do
     ;;
     -l|-L|--local-rpc)
     RPCADDR=127.0.0.1
+    ;;
+    -r|-R|--logrotate)
+    LOGROTATE=1
     ;;
     -h|-H|--help)
     echo $MESSAGE
@@ -62,7 +66,7 @@ if [ "$NODE_TYPE" == "bootnode" ]; then
    GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full --vmodule consensus/istanbul/core/core.go=5 --nodiscover "
 fi
 
-_TIME=$(date +%Y%m%d%H%M%S)
+_TIME="_$(date +%Y%m%d%H%M%S)"
 
 if ([ $CLEAN -gt 0 ])
 then
@@ -80,11 +84,18 @@ then
     ./init.sh auto $NODE_TYPE $IDENTITY
 fi
 
+if ([ $LOGROTATE -gt 0 ])
+then
+   echo "Configuring logrotate ..."
+   _TIME=""
+    
+fi
+
 CONSTELLATION=${ENABLE_CONSTELLATION:-}
 
 if [ "$NODE_TYPE" == "general" ] && [ ! -z "$CONSTELLATION" ]; then
     echo "[*] Starting Constellation node"
-    nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation_"${_TIME}".log &
+    nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation"${_TIME}".log &
     check_constellation_isStarted
 fi
 
@@ -99,16 +110,16 @@ fi
 echo "[*] Starting quorum node"
 if [[ "$NODE_TYPE" == "general" ]]; then
   if [[ ! -z "$CONSTELLATION" ]]; then
-      nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+      nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum"${_TIME}".log &
     else
-      nohup env geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+      nohup env geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum"${_TIME}".log &
   fi
 else
     if [[ "$NODE_TYPE" == "validator" ]]; then
-        nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 100 --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+        nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 100 --mine --minerthreads $(grep -c "processor" /proc/cpuinfo) 2>> ~/alastria/logs/quorum"${_TIME}".log &
     else
         if [[ "$NODE_TYPE" == "bootnode" ]]; then
-            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 200 2>> ~/alastria/logs/quorum_"${_TIME}".log &
+            nohup geth --datadir ~/alastria/data $GLOBAL_ARGS --maxpeers 200 2>> ~/alastria/logs/quorum"${_TIME}".log &
         else
             echo "[ ] ERROR: $NODE_TYPE is not a correct node type."
         fi
@@ -127,7 +138,7 @@ fi
 
 if ([ $WATCH -gt 0 ])
 then
-  tail -100f ~/alastria/logs/quorum_"${_TIME}".log
+  tail -100f ~/alastria/logs/quorum"${_TIME}".log
 fi
 
 set +u
