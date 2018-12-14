@@ -88,7 +88,7 @@ if ([ $LOGROTATE -gt 0 ])
 then
    echo "Configuring logrotate ..."
    _TIME=""
-   ./logrotate.sh
+   nohup ./logrotate.sh > /dev/null &
 fi
 
 CONSTELLATION=${ENABLE_CONSTELLATION:-}
