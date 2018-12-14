@@ -89,4 +89,6 @@
 | Bankia | Alberto G. Toribio (@gotoalberto, @gotoalberto, agomez@bankia.com) | Amazon AWS (t2.medium 30GB) | WITHOUT_CONSTELLATION | enode://da851e046dc967e9655778e8e3b338ddef7aea2ce9e0ff1809dacf541d7cec6a07330a4ae7a9db0069fe674ace95ad33dbfd5ad39c7555e5aad503abaac184fc@3.122.17.48:21000?discport=0 |
 | Bankia | Alberto G. Toribio (@gotoalberto, @gotoalberto, agomez@bankia.com) | Amazon AWS (t2.medium 30GB) | WITHOUT_CONSTELLATION | enode://e9b9db27a418992b589e2f40ca4a2b37631394174583d17b2fd3468f2aaa0b0503c7ac5dbb486596c64850ec3a7f15d9edd7aeb06d6f94629ab321b6b615b914@3.122.5.113:21000?discport=0 |
 | Liberbank | Roberto Martín Rodríguez (rmartinr@liberbankit.es) | Amazon AWS (2C/4Gb/50Gb) | t5TorAweHhntOdBAMT06rVdfau3wEEboVo6ZK/YPKl8= | enode://b8ca606b3bdff45dcc833968e165d15fdad8a6ef55716fa2a872c6e9bcb81382ee7178a340210e864b69694de3977166a36c2f1247c33c3589196c1576893371@63.32.204.24:21000?discport=0 |
+| ClarkeModet | Eusebio Yribarren (Eyribarren@clarkemodet.com) | Azure (2C/8Gb/100Gb) | ZLODnqFTwt98IS7j/pPG9bT5NI9sTZy6FhM2A14+M2M= | enode://a001c9fa280c2a6904d8d85bbefd459ed6a77aa47ac87cdcff236d70b85b0506a58d3a391f75e41206914f39a8d1124433f21be6a85e817b4fadc7d6ffc75114@168.63.46.251:21000?discport=0 |
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
