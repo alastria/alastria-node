@@ -88,7 +88,8 @@ if ([ $LOGROTATE -gt 0 ])
 then
    echo "Configuring logrotate ..."
    _TIME=""
-   nohup ./logrotate.sh > /dev/null &
+   else
+   _TIME="_$(date +%Y%m%d%H%M%S)"
 fi
 
 CONSTELLATION=${ENABLE_CONSTELLATION:-}
@@ -140,6 +141,9 @@ if ([ $WATCH -gt 0 ])
 then
   tail -100f ~/alastria/logs/quorum"${_TIME}".log
 fi
-
+if ([ $LOGROTATE -gt 0 ])
+then
+   nohup ./logrotate.sh > /dev/null &
+fi
 set +u
 set +e
