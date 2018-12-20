@@ -26,7 +26,7 @@ while true
   # echo "rotating logs"
   /usr/sbin/logrotate ~/alastria/data/alastria-logrotate.conf --state ~/alastria/logs/alastria_logrotate.state --verbose --force
   # echo "done."
-sleep 8640
+sleep 86400
 done
 
 set +u
