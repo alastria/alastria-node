@@ -23,10 +23,11 @@ echo "
 # Setting logrotate every 24h
 while true
  do
+sleep 86400
   # echo "rotating logs"
   /usr/sbin/logrotate ~/alastria/data/alastria-logrotate.conf --state ~/alastria/logs/alastria_logrotate.state --verbose --force
+  # echo "" >> /home/$USER/alastria/logs/quroum.log
   # echo "done."
-sleep 86400
 done
 
 set +u

@@ -141,9 +141,15 @@ if ([ $WATCH -gt 0 ])
 then
   tail -100f ~/alastria/logs/quorum"${_TIME}".log
 fi
-if ([ $LOGROTATE -gt 0 ])
-then
-   nohup ./logrotate.sh > /dev/null &
+
+if ([ $LOGROTATE -gt 0 ]) 
+then 
+    RP=`readlink -m "$0"`
+    RD=`dirname "$RP"`
+    nohup $RD/logrotate.sh > /dev/null &
+else
+   echo "Logrotate Disabled"
 fi
+  
 set +u
 set +e
