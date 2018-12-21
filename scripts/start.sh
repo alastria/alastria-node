@@ -148,7 +148,7 @@ then
     RD=`dirname "$RP"`
     nohup $RD/logrotate.sh > /dev/null &
 else
-   echo "Logrotate Disabled"
+   echo "Logrotate disabled."
 fi
   
 set +u

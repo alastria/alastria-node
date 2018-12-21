@@ -14,20 +14,26 @@ echo "
     delaycompress
     missingok
     notifempty
-    postrotate
-        find /home/$USER/alastria/logs/ -type f -empty -exec rm -rf {} \;
-    endscript
+    # postrotate
+    #     find /home/$USER/alastria/logs/ -type f -empty -exec rm -rf {} \;
+    # endscript
 }" > /home/$USER/alastria/data/alastria-logrotate.conf
 
 
 # Setting logrotate every 24h
+# we could add a new variable to let set logrotate date moment.
+# if DATE == SETDATE then logrotate.
+# logrotate is set to 01:01 AM
+
 while true
  do
-sleep 86400
-  # echo "rotating logs"
+    DATE=$(date +%H%M)
+  if [ $DATE == "0101" ]
+  then
   /usr/sbin/logrotate ~/alastria/data/alastria-logrotate.conf --state ~/alastria/logs/alastria_logrotate.state --verbose --force
-  # echo "" >> /home/$USER/alastria/logs/quroum.log
-  # echo "done."
+  fi
+
+sleep 59
 done
 
 set +u
