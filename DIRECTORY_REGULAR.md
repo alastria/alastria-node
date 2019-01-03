@@ -92,5 +92,6 @@
 | Liberbank | Roberto Martín Rodríguez (rmartinr@liberbankit.es) | Amazon AWS (2C/4Gb/50Gb) | t5TorAweHhntOdBAMT06rVdfau3wEEboVo6ZK/YPKl8= | enode://b8ca606b3bdff45dcc833968e165d15fdad8a6ef55716fa2a872c6e9bcb81382ee7178a340210e864b69694de3977166a36c2f1247c33c3589196c1576893371@63.32.204.24:21000?discport=0 |
 | ClarkeModet | Eusebio Yribarren (Eyribarren@clarkemodet.com) | Azure (2C/8Gb/100Gb) | ZLODnqFTwt98IS7j/pPG9bT5NI9sTZy6FhM2A14+M2M= | enode://a001c9fa280c2a6904d8d85bbefd459ed6a77aa47ac87cdcff236d70b85b0506a58d3a391f75e41206914f39a8d1124433f21be6a85e817b4fadc7d6ffc75114@168.63.46.251:21000?discport=0 |
 | Acciona |  Jorge Artieda (jartieda@acciona.com) | Azure (2C/8Gb/1024Gb) | HS//ZiDdY501ifca6HaqiYuY/cLvyd6rhrppayQo8Fc= | enode://7154c3ff12cee0876396611433fdc5ec63565fa57e7dcfcd57cf45ee21b62f8732536fba3c81f93082dc98a8367c0333351fb855f7593e3ab02bdf6cdb30e223@40.115.23.89:21000?discport=0 |
+| Enxendra |  Diego González (diego.gonzalez@docuten.com) | 2C/4Gb/100Gb | lrvYPFROseDEMEPKvUXtOH3hhS4UTmqEDhM8m/UuEm0= | enode://fdc915e989321d39d5ecc74f67040f8f558e6644b56915b9ed242225861a67dbbaec1957f2f8a6765fb7861952a9ab5f25214354fb28dab89446663cbf16ffaa@88.12.40.19:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
