@@ -1,4 +1,4 @@
-﻿# Directorio de nodos regulares
+# Directorio de nodos regulares
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
 | ------- | ------------------------------------ | ---------------------------------- | ------------- | ----- |
@@ -92,7 +92,7 @@
 | Liberbank | Roberto Martín Rodríguez (rmartinr@liberbankit.es) | Amazon AWS (2C/4Gb/50Gb) | t5TorAweHhntOdBAMT06rVdfau3wEEboVo6ZK/YPKl8= | enode://b8ca606b3bdff45dcc833968e165d15fdad8a6ef55716fa2a872c6e9bcb81382ee7178a340210e864b69694de3977166a36c2f1247c33c3589196c1576893371@63.32.204.24:21000?discport=0 |
 | ClarkeModet | Eusebio Yribarren (Eyribarren@clarkemodet.com) | Azure (2C/8Gb/100Gb) | ZLODnqFTwt98IS7j/pPG9bT5NI9sTZy6FhM2A14+M2M= | enode://a001c9fa280c2a6904d8d85bbefd459ed6a77aa47ac87cdcff236d70b85b0506a58d3a391f75e41206914f39a8d1124433f21be6a85e817b4fadc7d6ffc75114@168.63.46.251:21000?discport=0 |
 | Acciona |  Jorge Artieda (jartieda@acciona.com) | Azure (2C/8Gb/1024Gb) | HS//ZiDdY501ifca6HaqiYuY/cLvyd6rhrppayQo8Fc= | enode://7154c3ff12cee0876396611433fdc5ec63565fa57e7dcfcd57cf45ee21b62f8732536fba3c81f93082dc98a8367c0333351fb855f7593e3ab02bdf6cdb30e223@40.115.23.89:21000?discport=0 |
-| Enxendra |  Diego González (diego.gonzalez@docuten.com) | 2C/4Gb/100Gb | lrvYPFROseDEMEPKvUXtOH3hhS4UTmqEDhM8m/UuEm0= | enode://fdc915e989321d39d5ecc74f67040f8f558e6644b56915b9ed242225861a67dbbaec1957f2f8a6765fb7861952a9ab5f25214354fb28dab89446663cbf16ffaa@88.12.40.19:21000?discport=0 |
+| Docuten |  Diego González (diego.gonzalez@docuten.com) | Stackscale (4C/8Gb/100Gb) | w/brReef7MrP1bQceWmsXaX2VIEZaOlLrbHScmoByTg= | enode://26a4e2ad46bb633c915c09a5e18ae69b494b3fef9205246dec2edcfdd3eaee8e3ed2d575dfa12b55a58166f97525c62f098edb03ac55be131cb4dbbe690b4aa6@5.57.225.79:21000?discport=0 |
 | Signaturit |  Alexander Flores (alex.flores@signaturit.com) | 2C/4Gb/100Gb | 7XmVjOxfu3V7/Cm9ot3HbDsPXg+wfeJSp+jQsnSmUSk= | enode://9a248bfe54682c72cefd15bac30a3ce5533d810a22280efe0110c141d2d341da2c26bfc73be08aa8157e9812232e6acf53514be1a0f9cbe48780ba8f344dd049@18.203.85.75:21000?discport=0 |
 | FundacionVodafone |  Tomas De Andres (tomas.deandres@vodafone.com) | 2C/4Gb/100Gb | cnf4JWkUSl1Z8kNN9SmIPEqCRzkW1gSyu7N7HUF0V20= | enode://8f3248df866f95b5fa209a171ad258118e7ef0e1d517660d0cd98cae73c04bd7594925c5cba3fac0c1b9c15f3a699c81c206fe118f564f2d34aa6c221db8a4ce@212.145.137.52:21000?discport=0 |
 | Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | AWS (2C/4Gb/100Gb) | /aqCEQjvmYYaL7A14im3b2xTYTAH5FoavsxIV+QJI0E= | enode://81061e345da0c8240e8a3aa38712295fb1db5ed8842207f90d7fc2c2aaf463f3b8f9690c97bfaadc0013441e37f7fb6172c66e66a8a56a83814d14fd45ee3acf@52.16.105.158:21000?discport=0 |
