@@ -6,6 +6,7 @@
   },
   "coinbase": "0x0000000000000000000000000000000000000000",
   "config": {
+    "chainId": 83584648538,
     "byzantiumBlock": 1,
     "homesteadBlock": 2,
     "eip150Block": 3,
