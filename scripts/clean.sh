@@ -3,14 +3,14 @@
 
 if ( [ "transactions" == "$1" ]); then 
     echo "Cleaning transaction queue ..."
-    rm ~/alastria/data/geth/transactions.rpl
+    rm ~/alastria/data/geth/transactions.rlp
 else
     echo "Preparing the node for a clean restart ..."
     rm -Rf ~/alastria/logs/quorum*
     rm -Rf ~/alastria/data/geth/chainData
     rm -Rf ~/alastria/data/geth/nodes
     rm ~/alastria/data/geth/LOCK
-    rm ~/alastria/data/geth/transactions.rpl
+    rm ~/alastria/data/geth/transactions.rlp
     rm ~/alastria/data/geth.ipc
     rm -Rf ~/alastria/data/quorum-raft-state
     rm -Rf ~/alastria/data/raft-snap
