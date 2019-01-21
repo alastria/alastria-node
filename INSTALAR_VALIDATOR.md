@@ -1,9 +1,8 @@
 
 ## Cómo poner en marcha un nodo validador Alastria
 
-En nuestro artículo anterior, configurabamos un nodo “Regular”, pero en este caso, vamos a configurar un nodo “Validator”.
 
-Como la testnet-0 actual está utilizando el protocolo de consensio Istanbul BFT, la forma de generar nuevos bloques en la test-net es teniendo disponibles nodos validadores en la red e integrarlos en el conjuto de nodos que forman parte de la ronda de validación.
+Como la red Telsius está utilizando el protocolo de consensio Istanbul BFT, la forma de generar nuevos bloques en la test-net es teniendo disponibles nodos validadores en la red e integrarlos en el conjuto de nodos que forman parte de la ronda de validación.
 
 Cada ronda la inicia un nodo distinto que “propone” un conjunto de transacciones en un bloque y los distribuye al resto de nodos.
 
@@ -11,9 +10,8 @@ El nodo validador no debería utilizarse en ningún caso para operar directament
 
 Los nodos validadores deben centrarse en operar el protocolo de consenso, integrando las transacciones en la cadena de bloques y distribuirlas al resto de nodos.
 
-Como parte de las políticas de gobernanza de la red, se está trabajando en poder rotar entre todos los nodos validadores, ya sea por mal funcionamiento del nodo o periódicamente, aunque en el estado actual de la red en la que los nodos validadores todavía necesitan mucho soporte, todos los validadores están directamente gestionados por el equipo core de plataforma.
+Como parte de las políticas de gobernanza de la red, se está trabajando en poder rotar entre todos los nodos validadores, ya sea por mal funcionamiento del nodo o periódicamente.
 
-Durante el próximo 2019, una vez definidas las políticas OLA/SLA, se irán integrando nuevos validadores gestionados por terceros, introduciendo la automatización de dichas políticas en la medida de lo posible.
 
 ### Requerimientos del nodo“Validador”
 
@@ -54,7 +52,7 @@ Para asegurarnos que las dependencias de los scripts de configuración de los no
 
 Lo primero que tenemos que hacer es descargar el repositorio alastria-node en nuestro nodo.
 
-    $ git clone [https://github.com/alastria/alastria-node](https://github.com/alastria/alastria-node)
+    $ git clone [https://github.com/alastria/alastria-node](https://github.com/alastria/alastria-node) branch testnet2
     Cloning into 'alastria-node'...
     remote: Counting objects: 1972, done.
     remote: Compressing objects: 100% (10/10), done.
@@ -90,11 +88,11 @@ Y ahora sí, configuramos el nodo general llamando al script init.sh con los par
 
 * Type: VAL | REG.
 
-* NET: TestNet | Telsius(coming soon) | DevNet | MainNet.
+* NET: Telsius 
 
 * SEQ: Sequencial empezando en 00.
 
-        $ ./init.sh auto validator VAL_Alastria_TestNet_2_4_01
+        $ ./init.sh auto validator VAL_Alastria_Telsius_2_4_01
         Autodiscovering public host IP ...
         Public host IP found: 138.4.124.4
         [*] Cleaning up temporary data directories.
@@ -228,10 +226,10 @@ Por último, para iniciar el nodo:
 Para verificar que todo se ha inicializado correctamente:
 
     $  ps awx | grep alastria
-    10088 ?        Sl     0:04 geth --datadir /root/alastria/data --networkid 82584648528 --identity VAL_Alastria_TestNet_2_4_01 --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000 --ethstats VAL_Alastria_TestNet_2_4_01:[bb98a0b6442386d0cdf8a31b267892c1@netstats.testnet.alastria.io](mailto:bb98a0b6442386d0cdf8a31b267892c1@netstats.testnet.alastria.io).builders:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full --vmodule consensus/istanbul/core/core.go=5 --maxpeers 100 --mine --minerthreads 8
+    10088 ?        Sl     0:04 geth --datadir /root/alastria/data --networkid 82584648528 --identity VAL_Alastria_Telsius_2_4_01 --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000 --ethstats VAL_Alastria_TestNet_2_4_01:[bb98a0b6442386d0cdf8a31b267892c1@netstats.testnet.alastria.io](mailto:bb98a0b6442386d0cdf8a31b267892c1@http://netstats.telsius.alastria.io/).builders:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full --vmodule consensus/istanbul/core/core.go=5 --maxpeers 100 --mine --minerthreads 8
     11411 ?        S+     0:00 grep --color=auto alastria
 
-Además, en el [monitor de la red](http://netstats.testnet.alastria.io.builders/) aparecerá su nodo recién configurado.
+Además, en el [monitor de la red](http://netstats.telsius.alastria.io/) aparecerá su nodo recién configurado.
 
 ![](https://cdn-images-1.medium.com/max/3816/1*wlIkSVnoPW9H3y-Yovz4JQ.png)
 
@@ -283,8 +281,8 @@ En primer lugar, para identificar los ficheros cambiados en el nodo recién conf
 
     $ cd ~/alastria-node
     $ git status
-    On branch develop
-    Your branch is up-to-date with 'origin/develop'.
+    On branch testnet2
+    Your branch is up-to-date with 'origin/testnet2'.
     Changes not staged for commit:
       (use "git add <file>..." to update what will be committed)
       (use "git checkout -- <file>..." to discard changes in working directory)
@@ -301,7 +299,7 @@ Para identificar lo que ha cambiado en un fichero, podemos realizar:
 
     $ git diff data/static-nodes.json
 
-Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “develop”.
+Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “testnet2”.
 
 Si tiene dudas para realizar esta operación, sigua este tutorial (Enlace al F.A.Q. de la WIKI).
 
@@ -313,7 +311,7 @@ El equipo core de plataforma, procederá entonces a la aceptación del pull requ
 
 Con estos cambios aceptados, todos los nodos validadores deben actualizar sus ficheros de permisionado, que se realiza con el monitor a través de una llamada a su API.
 
-Para verificar que se ha realizado, se debe consultar el [monitor de la red](http://netstats.testnet.alastria.io.builders/) y comprobar que aumenta la columna de Peers y que la columna Last blockaumenta hasta sincronizarse con el resto de nodos.
+Para verificar que se ha realizado, se debe consultar el [monitor de la red](http://netstats.telsius.alastria.io/) y comprobar que aumenta la columna de Peers y que la columna Last blockaumenta hasta sincronizarse con el resto de nodos.
 
 ### Actualización del permisionado
 
