@@ -62,7 +62,7 @@ Para asegurarnos que las dependencias de los scripts de configuración de los no
 
 Lo primero que tenemos que hacer es descargar el repositorio alastria-node en nuestro nodo.
 
-    $ git clone [https://github.com/alastria/alastria-node](https://github.com/alastria/alastria-node)
+    $ git clone https://github.com/alastria/alastria-node branch testnet2
     Cloning into 'alastria-node'...
     remote: Counting objects: 1972, done.
     remote: Compressing objects: 100% (10/10), done.
@@ -260,60 +260,6 @@ Además, en el [monitor de la red](http://netstats.telsius.alastria.io/) aparece
 
 ![](https://cdn-images-1.medium.com/max/3816/1*wlIkSVnoPW9H3y-Yovz4JQ.png)
 
-## Configurando el monitor (* opcional)
-
-El monitor es una herramienta que permite que la plataforma pueda auto-gestionarse en las operaciones de mantenimiento más habituales y recopilar información sobre los nodos.
-
-En el estado del arte actual de la red, sirve para realizar actualizaciones del permisionado de los nodos y verificar que el permisionado de los nodos es correcto.
-
-Su mantenimiento y evolución lo realiza el equipo core de plataforma en el repositorio [https://github.com/alastria/monitor](https://github.com/alastria/monitor) y **su utilización en el nodo es opcional**.
-
-Y ejecutar el monitor.
-
-    $ cd ~/alastria-node/scripts
-    $ ENABLE_CONSTELLATION=true ./start.sh
-    [*] Starting Constellation node
-    [*] constellation node at 9000 is still starting. Awaiting 5 seconds.
-    [*] constellation node at 9000 is still starting. Awaiting 5 seconds.
-    [*] constellation node at 9000 is now up.
-    [*] resuming start procedure
-    [*] Starting quorum node
-    [*] Monitor enabled. Starting monitor...
-    nohup: redirecting stderr to stdout
-
-Si se habilita el monitor, es necesario exponer el puerto **8443/TCP**, que corresponde con el puerto por el que se expone el API REST del monitor del nodo.
-
-Para poder acceder a este API, es necesario disponer de un certificado digital instalado en el navegador.
-
-### Verificación
-
-Para verificar que el monitor está correctamente inicializado, hay que verificar que los procesos están arrancados y que el puerto 8443 está disponible.
-
-    $ ps
-      PID TTY          TIME CMD
-     1431 pts/0    00:00:00 bash
-    23639 pts/0    00:00:23 constellation-n
-    23819 pts/0    00:06:27 geth
-    31104 pts/0    00:00:00 bee
-    32212 pts/0    00:00:00 monitor
-    32218 pts/0    00:00:00 ps
-    $ lsof -i :8443
-    COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
-    monitor 32212 ubuntu    3u  IPv6 326649      0t0  TCP *:8443 (LISTEN)
-
-Para verificar que se puede acceder al monitor, se debe intentar acceder desde el navegador a la url, o con la utilidad curl (teniendo en cuenta que va a provocar un error por falta del certificado de cliente) y :
-
-    $ curl -I [https://35.176.34.215:8443](https://35.176.34.215:8443)
-    curl: (60) SSL certificate problem: unable to get local issuer certificate
-    More details here: [https://curl.haxx.se/docs/sslcerts.html](https://curl.haxx.se/docs/sslcerts.html)
-
-    curl failed to verify the legitimacy of the server and therefore could not
-    establish a secure connection to it. To learn more about this situation and
-    how to fix it, please visit the web page mentioned above.
-
-En el fichero de log monitor_XXX.log reportará un mensaje como este:
-
-    Server.go:2846] [HTTP] http: TLS handshake error from 83.53.37.206:63154: remote error: tls: unknown certificate authority
 
 ### Notificando el permisionado del nodo
 
