@@ -226,7 +226,7 @@ Por último, para iniciar el nodo:
 Para verificar que todo se ha inicializado correctamente:
 
     $  ps awx | grep alastria
-    10088 ?        Sl     0:04 geth --datadir /root/alastria/data --networkid 82584648528 --identity VAL_Alastria_Telsius_2_4_01 --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000 --ethstats VAL_Alastria_TestNet_2_4_01:[bb98a0b6442386d0cdf8a31b267892c1@netstats.testnet.alastria.io](mailto:bb98a0b6442386d0cdf8a31b267892c1@http://netstats.telsius.alastria.io/).builders:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full --vmodule consensus/istanbul/core/core.go=5 --maxpeers 100 --mine --minerthreads 8
+    10088 ?        Sl     0:04 geth --datadir /root/alastria/data --networkid 82584648528 --identity VAL_Alastria_Telsius_2_4_01 --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000 --ethstats VAL_Alastria_Telsius_2_4_01:[bb98a0b6442386d0cdf8a31b267892c1@http://netstats.telsius.alastria.io/](mailto:bb98a0b6442386d0cdf8a31b267892c1@http://netstats.telsius.alastria.io/).builders:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full --vmodule consensus/istanbul/core/core.go=5 --maxpeers 100 --mine --minerthreads 8
     11411 ?        S+     0:00 grep --color=auto alastria
 
 Además, en el [monitor de la red](http://netstats.telsius.alastria.io/) aparecerá su nodo recién configurado.
