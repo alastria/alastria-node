@@ -97,7 +97,6 @@
 | Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | AWS (2C/4Gb/100Gb) | /aqCEQjvmYYaL7A14im3b2xTYTAH5FoavsxIV+QJI0E= | enode://81061e345da0c8240e8a3aa38712295fb1db5ed8842207f90d7fc2c2aaf463f3b8f9690c97bfaadc0013441e37f7fb6172c66e66a8a56a83814d14fd45ee3acf@52.16.105.158:21000?discport=0 |
 | CYSAE |  Dirk Hornung (dirkhornung91@gmail.com) | Amazon AWS (2C/4Gb/100Gb)| dn9gUWtz0IfghepV5TTQn8ffjZH1phcqHSFrMXHSeU0= | enode://9f8782d2eda05117bd5cd872d9ae3bcfbba41ea74ed1bdcc564da407e2aa9f02943570f3f3418b381fb3631ec7c9078de9a4a0dfe1626c99e93abc2b22f552da@18.203.238.47:21000?discport=0 |
 | CajaRural | Juan P Barbancho (juan_barbancho_rsi@cajarural.com) |  Self Hosted (4C/16Gb/100Gb) | TYbm3eGLO2sPGFwSpFT+Khoi0pWW1Xy96/MgwDjIjCA= | enode://c7368245473e593c0f724acac8f451bc8e902dbd93a68f81aa86e849837142c91ea656515c53700e91ceaaeaa323f4ae60e6fcdcf37d58b1b1279d3f4ececf4f@195.235.162.163:21000?discport=0|
-| CEPSA | Daniel Garrote (daniel.garrote@cepsa.com) | Amazon AWS (4C/8G/500Gb) | gTLoWAPmqtH0nADODDM0RpguISGUcAVsdvkHEb/5+BI= |
-enode://95f2e409fbd82911bd6109d322ce5a2fc98a02f035fe6ceb937e099ebd47a5356537620474fdcf97435774e39d1868ae5a571cc322e78fef455a49d0dc1c4eb6@18.202.167.238:21000?discport=0 |
+| CEPSA | Daniel Garrote (daniel.garrote@cepsa.com) | Amazon AWS (4C/8G/500Gb) | gTLoWAPmqtH0nADODDM0RpguISGUcAVsdvkHEb/5+BI= | enode://95f2e409fbd82911bd6109d322ce5a2fc98a02f035fe6ceb937e099ebd47a5356537620474fdcf97435774e39d1868ae5a571cc322e78fef455a49d0dc1c4eb6@18.202.167.238:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
