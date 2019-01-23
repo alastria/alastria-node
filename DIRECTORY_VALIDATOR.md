@@ -35,3 +35,5 @@
 | Accenture | Valentín Encinas Rojas (v.encinas.rojas@accenture.com), Bogdan Stirbu (bogdan.stirbu@accenture.com) | Amazon AWS (2C/8Gb/100Gb)| "enode://a9185468255104bc2c00e91a51c35b815987fe2a6fe05463c3fce822fac976a921df0dbce2df57a6ce4955053486e1021c58d86e87e1f10777223f504e0d9ace@52.48.168.191:21000?discport=0" |
 | Redsys | Miguel Baizan (miguel.baizani@redsys.es) | Self Hosted (2C/4Gb/30Gb)| "enode://a2f44ef3f3ae5b162282613b4cb036a83a4c1c315ba063c75c4702e6164165395158c456e180c65a686416850f018a5486fc7e02404dd39091011945ef0e1954@193.16.243.206:21000?discport=0" |
 | Alisys | Nacho de la Vega (joseignacio.delavega@alisys.net) | Self Hosted (1C/4Gb/70Gb)| "enode://fea96941ddd405e586993a44b416a1bc6b2db73c311c361ccb1ea49e29f651251939e30dbd951accdc15c11cb62757c26afd43883b17dc2f9f95fa7761d088ae@154.62.228.7:21000?discport=0" |
+| CajaRural | Juan P Barbancho (juan_barbancho_rsi@cajarural.com) |  Self Hosted (4C/16Gb/100Gb) | "enode://2ecac154c2cabaa4ae7feec34914a3d3022617b8c92d457f2fa79561967477fd94fa9b6249998864d0a9086b0aa55eddad6d061924e98d3f47544d4b11f40e08@195.235.162.158:21000?discport=0"|
+
