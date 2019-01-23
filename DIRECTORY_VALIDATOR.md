@@ -2,4 +2,4 @@
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | enode |
 | ------- | ------------------------------------ | ---------------------------------- | ----- |
-
+| Alisys | José Ignacio de la Vega (joseignacio.delavega@alisys.net) | Self hosted (1C/4GB/70GB) | enode://3a86994e7aaf6dda41aa1c92c457a083ebf291b10fb36f891b13e2a84a45f6d4efde8e5b7d1b2d5485a2678526a564c77891e7ffb68295f5b4611473406f9476@154.62.228.6:21000?discport=0 |
