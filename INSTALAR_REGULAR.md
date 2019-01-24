@@ -62,7 +62,7 @@ Para asegurarnos que las dependencias de los scripts de configuración de los no
 
 Lo primero que tenemos que hacer es descargar el repositorio alastria-node en nuestro nodo.
 
-    $ git clone https://github.com/alastria/alastria-node branch testnet2
+    $ git clone https://github.com/alastria/alastria-node -b testnet2
     Cloning into 'alastria-node'...
     remote: Counting objects: 1972, done.
     remote: Compressing objects: 100% (10/10), done.
