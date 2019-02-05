@@ -36,6 +36,9 @@ En cualquiera de los dos casos, posteriormente hacemos
 $ cd ~/alastria-node/
 $ git checkout testnet2
 $ git pull
+$ wget https://github.com/alastria/quorum/releases/download/v2.2.0-0.Alastria_EthNetstats_IBFT/geth
+$ chmod +x geth
+$ mv geth /usr/local/bin/
 ```
 
 ### Migración de un nodo Regular

@@ -101,7 +101,7 @@ function installquorum {
     pushd /tmp
     git clone https://github.com/alastria/quorum.git
     cd quorum
-    git checkout 94e1e31eb6a97e08dff4e44a8695dab1252ca3bc
+    git checkout fd97ae99e65034ad10b4e05c01add8b828b984dd
     make all
     superuser cp build/bin/geth /usr/local/bin
     superuser cp build/bin/bootnode /usr/local/bin
