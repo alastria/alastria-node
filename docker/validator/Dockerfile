@@ -32,8 +32,8 @@ RUN \
     apt-get update \
     && apt-get -y upgrade \
     && apt-get -y install \
-        git \
-        curl \
+    git \
+    curl \
     && cd /opt \
     && git clone -b $ALASTRIA_BRANCH https://github.com/alastria/alastria-node \
     && cd alastria-node/scripts \
@@ -53,4 +53,4 @@ EXPOSE 9000 21000 21000/udp 22000 8443
 COPY entrypoint.sh /usr/bin/
 WORKDIR /opt/alastria-node/scripts
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["general"]
+CMD ["validator"]

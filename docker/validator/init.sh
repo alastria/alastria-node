@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NODE_NAME,COMPANY_NAME,CPU,RAM,SEQ
-NODE_TYPE="general"
+NODE_TYPE="validator"
 
 function setcompanyname {
   echo "Write company name: "
@@ -32,7 +32,7 @@ setcpunumber
 setramnumber
 setsequential
 
-NODE_NAME=$(printf "%s%s%s%s%s%s%s%s" "REG_" "$COMPANY_NAME" "_Telsius_" "$CPU" "_" "$RAM" "_" "$SEQ")
+NODE_NAME=$(printf "%s%s%s%s%s%s%s%s" "VAL_" "$COMPANY_NAME" "_Telsius_" "$CPU" "_" "$RAM" "_" "$SEQ")
 function checkname {
   PS3="Are you sure that these data are correct $NODE_NAME :"
   options=("Yes" "No")
@@ -42,8 +42,8 @@ function checkname {
     case $opt in
       "Yes")
         echo "Starting regular node"
-        docker build -t alastria-node .
-        docker run alastria-node $NODE_TYPE $NODE_NAME
+        docker build -t alastria-node-validator .
+        docker run alastria-node-validator $NODE_TYPE $NODE_NAME
         ;;
       "No")
         echo "Please launch the script again"
