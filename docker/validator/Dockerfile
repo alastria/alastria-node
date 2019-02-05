@@ -20,7 +20,7 @@ MAINTAINER "Guillermo Araujo Riestra" <guillermo.araujo@babel.es>
 ################################################
 
 ARG DOCKER_VERSION=latest
-ARG ALASTRIA_BRANCH=testnet2
+ARG ALASTRIA_BRANCH=feature/testnet2-docker
 
 ENV \
     GOROOT=/usr/local/go \
@@ -35,7 +35,7 @@ RUN \
     git \
     curl \
     && cd /opt \
-    && git clone -b $ALASTRIA_BRANCH https://github.com/alastria/alastria-node \
+    && git clone -b $ALASTRIA_BRANCH https://github.com/go2chain/alastria-node \
     && cd alastria-node/scripts \
     && sed -i 's/sudo//g' bootstrap.sh \
     && sed -i 's/gopath$//' bootstrap.sh \
