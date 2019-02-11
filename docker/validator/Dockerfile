@@ -42,6 +42,7 @@ RUN \
     && sed -i 's@~/alastria-node@/opt/alastria-node@g' init.sh \
     && sed -i 's@~/alastria-node@/opt/alastria-node@g' restart.sh \
     && sed -i 's@~/alastria-node@/opt/alastria-node@g' update.sh \
+    && sed -i 's@~/alastria-node@/opt/alastria-node@g' updatePerm.sh \
     && ./bootstrap.sh \
     && ./monitor.sh build \
     && apt-get autoremove \

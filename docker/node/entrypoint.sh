@@ -1,6 +1,5 @@
 #!/bin/bash
 NODE_TYPE=$1
-echo "$NODE_TYPE"
 NODE_NAME=$2
 
 if [ ! -f ~/alastria/data/IDENTITY ]; then

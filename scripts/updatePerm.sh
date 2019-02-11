@@ -5,8 +5,8 @@ TMPFILE="/tmp/$(basename $0).$$.tmp"
 tmpfile=$(mktemp /tmp/updatePerm.XXXXXX)
 NODE_TYPE="$1"
 echo "El node Type es $NODE_TYPE"
-DESTDIR="$HOME/alastria/data/"
-DATADIR="$HOME/alastria-node/data/"
+DESTDIR="~/alastria/data/"
+DATADIR="~/alastria-node/data/"
 
 echo "[" > $TMPFILE
 
