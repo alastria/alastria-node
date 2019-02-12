@@ -2,11 +2,12 @@
 set -u
 set -e
 
-MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch>'
+MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch> <--local-rpc>'
 
 MONITOR=1
 WATCH=0
 CLEAN=0
+RPCADDR=0.0.0.0
 
 while [[ $# -gt 0  ]]
 do
@@ -20,6 +21,9 @@ do
     ;;
     -c|-C|--clean)
     CLEAN=1
+    ;;
+    -l|-L|--local-rpc)
+    RPCADDR=127.0.0.1
     ;;
     -h|-H|--help)
     echo $MESSAGE
@@ -49,7 +53,7 @@ check_constellation_isStarted(){
 
 NETID=82584648528
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
-GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.testnet.alastria.io.builders:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full --vmodule consensus/istanbul/core/core.go=5 "
+GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.testnet.alastria.io.builders:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full --vmodule consensus/istanbul/core/core.go=5 "
 
 _TIME=$(date +%Y%m%d%H%M%S)
 
