@@ -99,7 +99,8 @@
 | CEPSA | Daniel Garrote (daniel.garrote@cepsa.com) | Amazon AWS (4C/8G/500Gb) | gTLoWAPmqtH0nADODDM0RpguISGUcAVsdvkHEb/5+BI= | enode://95f2e409fbd82911bd6109d322ce5a2fc98a02f035fe6ceb937e099ebd47a5356537620474fdcf97435774e39d1868ae5a571cc322e78fef455a49d0dc1c4eb6@18.202.167.238:21000?discport=0 |
 | CustomerComms | Jose Angel Corral (jacorral@atsistemas.com) | Cloud (4C/16GB/30GB) | tIgWpUYI89V0fErFOfip9SIKX+pQEm8vcOinvR47yzA= | enode://c59fd412be276d1b90b44c6b8276edc41cdb9196f4b367765849433b415bf0bae5f4c6eae0c56f9f16ef8b9bc74070748f44380ea62c31bc1fb4fe80fafa85aa@63.32.41.38:21000?discport=0 |
 | Cuatrecasas | Xavi Gonzalez (xavi.gonzalez@cuatrecasas.com), German Miralles (german.miralles@cuatrecasas.com) | Azure (2C/4GB/30GB) | 8frd8c4U8F79bHrInqBEhVuDIzndjhuMU+uxTdV8dG8= |  enode://0147ae6d49f2dab73db4b169cf36e3c4b2971c1cbbe767d8af8f9565d259f80da75887e825fefeb98b9e5ceb6cbc305ffbe369eb67774bcc5027225c5e9fe9d2@40.115.14.40:21000?discport=0 |
-| XBRL Spain |  Javier Mora (javier.mora@xbrl.es) | Amazon AWS (2C/4Gb/30Gb) | 0jpC5OnO1opmXCnahxCWbs4rhjduqRRDfkeUkcYljzA= | enode://eb81dea73d5ddcd9df99387904620d3cb4624eaa25488a02a9a777516f68fd90b90559ece0c9dcac10f517c1b5406a2eac2c4c95d6b3eea6b1b6aba05593f55d@34.248.146.211:21000?discport=0 |
 | atSistemas01 | Jose Angel Corral (jacorral@atsistemas.com) | AWS (4C/16GB/80GB) | x+cKBMh8dvCNhg53chTwR21d6V/U3TD2AelpH2uU0Rg= | enode://56426f200a78d8a048f2d0a1f8ca40172296ad892f3adc7f7b16b4826c5c09c2740d1af0024b8cf8b0877a83090b26bd307c6f6eddae179280e0c20fd389527d@63.34.164.98:21000?discport=0 | 
+| Asociación XBRL España |  Javier Mora (javier.mora@xbrl.es) | Amazon AWS (2C/4Gb/100Gb) | w8diveYZhgs9U9lCMdpE0fXBnz+hiBwoXA5ZM07XTXE= | enode://f00a2cabfdef3c48815d21b5d470bf374b1346c0b138e365dde9bb1e169c2131229e09390356a4bc98318088266bff4f845fc2b53316c81a7140b58774885485@52.50.3.104:21000?discport=0 |
+
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
