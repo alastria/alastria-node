@@ -101,5 +101,6 @@
 | Cuatrecasas | Xavi Gonzalez (xavi.gonzalez@cuatrecasas.com), German Miralles (german.miralles@cuatrecasas.com) | Azure (2C/4GB/30GB) | 8frd8c4U8F79bHrInqBEhVuDIzndjhuMU+uxTdV8dG8= |  enode://0147ae6d49f2dab73db4b169cf36e3c4b2971c1cbbe767d8af8f9565d259f80da75887e825fefeb98b9e5ceb6cbc305ffbe369eb67774bcc5027225c5e9fe9d2@40.115.14.40:21000?discport=0 |
 | XBRL Spain |  Javier Mora (javier.mora@xbrl.es) | Amazon AWS (2C/4Gb/30Gb) | 0jpC5OnO1opmXCnahxCWbs4rhjduqRRDfkeUkcYljzA= | enode://eb81dea73d5ddcd9df99387904620d3cb4624eaa25488a02a9a777516f68fd90b90559ece0c9dcac10f517c1b5406a2eac2c4c95d6b3eea6b1b6aba05593f55d@34.248.146.211:21000?discport=0 |
 | atSistemas01 | Jose Angel Corral (jacorral@atsistemas.com) | AWS (4C/16GB/80GB) | x+cKBMh8dvCNhg53chTwR21d6V/U3TD2AelpH2uU0Rg= | enode://56426f200a78d8a048f2d0a1f8ca40172296ad892f3adc7f7b16b4826c5c09c2740d1af0024b8cf8b0877a83090b26bd307c6f6eddae179280e0c20fd389527d@63.34.164.98:21000?discport=0 | 
+| MYMOID |  Antonio Javier Sánchez (asanchez@mymoid.com) | Amazon AWS (2C/4Gb/30Gb)| CyMTxEMGiU130OKT4nkgRaTtdJ239073e75B44z/OBo= | enode://225bd1bffa9cd5004eb85ec7f7696f14dc21983f354e112d9f04f1fe3e8ed43b695e4c671c61e2f0530c63e3355e2bce4bd0fe5f8cc255f0b86ac98940678ffb@34.244.49.177:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
