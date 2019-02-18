@@ -8,5 +8,6 @@
 | DiplomE | Pietro Marchionni (pietro.marchionni@agid.gov.it) | Virtion (4C/8GB/256GB) | hCzwYkHamL2HMmzAUjg13pXFN2pEEvYLF/wYf5VCcEQ= | enode://3efb067df8150ae2473b57ca418200b90b91bc7740c79642346f36fe68bc34f5639f7e4c04cf6947f1a39dd5c25e699e2742a37cc7673d4890ac945d36a950de@5.28.41.68:21000?discport=0 |
 | Hippo Technologies | Buzon 7Row (7row@7row.eu) | Amazon (2C/8GB/100GB) | | enode://42a00600c4c090edfda6a8797204dbb0362459468db953f89f9c507f8e544af7260fbd0e5af976cc5c2b21aa31e1964529a45aa1fc77b01044636c0f1574864f@18.213.143.8:21000?discport=0 |
 | Seres |  Fco. Javier Martínez Conesa (@fjmacon, francisco-javier.martinez@seres.es) | OVH (2C/8Gb/80Gb)| u4lUvrr0LJ3kvIgIJpWekTtZpSwIO3FNt8orAQ0yfT8= | enode://ae788883d36194c6d514f8a8212b5e3118e74b8c76486211799f9d037a0933f002a68064d1f22284af3a0df48f47b1497daeaef9050a0008dfa3ac01d9c56a55@51.68.123.73:21000?discport=0 |
+| REPSOL | Raúl Hernández Cura (rhernandezc@repsol.com) | Azure (2C/8GB/200GB) | j4XSHzzh89L821qRr8++qYgR2ucJh67Ynmha+p0UoHo= | enode://6150966576eb7711db5719107e7eff4cd2d60e399fdf6f4cd16b9a7c8afe7128cb635804caf9a81276c90213b2dfe1155152ee3d0e33eb0b3dcc275998aeaea3@65.52.227.151:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
