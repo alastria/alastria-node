@@ -9,9 +9,9 @@ if [ ! -f ~/alastria/data/IDENTITY ]; then
     fi
 elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
     echo "[*] Updating static-nodes"
-    cp $HOME/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
+    cp /opt/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
     echo "[*] Updating permissioned-nodes"
-    cp $HOME/alastria-node/data/permissioned-nodes_$NODE_TYPE.json ~/alastria/data/permissioned-nodes.json
+    cp /opt/alastria-node/data/permissioned-nodes_$NODE_TYPE.json ~/alastria/data/permissioned-nodes.json
     rm -f ~/alastria/data/DOCKER_VERSION_* 2> /dev/null
     touch ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION
 fi

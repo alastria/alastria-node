@@ -13,14 +13,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 FROM ubuntu:16.04
-MAINTAINER "Guillermo Araujo Riestra" <guillermo.araujo@babel.es>
-
 ################################################
 # ALASTRIA NODE
 ################################################
 
 ARG DOCKER_VERSION=latest
-ARG ALASTRIA_BRANCH=feature/testnet2-docker
+ARG ALASTRIA_BRANCH=testnet2
 
 ENV \
     GOROOT=/usr/local/go \
@@ -34,24 +32,24 @@ RUN \
     && apt-get -y install \
     git \
     curl \
-    && cd /opt \
+    && cd /root \
     && git clone -b $ALASTRIA_BRANCH https://github.com/go2chain/alastria-node \
     && cd alastria-node/scripts \
     && sed -i 's/sudo//g' bootstrap.sh \
     && sed -i 's/gopath$//' bootstrap.sh \
-    && sed -i 's@~/alastria-node@/opt/alastria-node@g' init.sh \
-    && sed -i 's@~/alastria-node@/opt/alastria-node@g' restart.sh \
-    && sed -i 's@~/alastria-node@/opt/alastria-node@g' update.sh \
-    && sed -i 's@~/alastria-node@/opt/alastria-node@g' updatePerm.sh \
+    # && sed -i 's@~/alastria-node@/opt/alastria-node@g' init.sh \
+    # && sed -i 's@~/alastria-node@/opt/alastria-node@g' restart.sh \
+    # && sed -i 's@~/alastria-node@/opt/alastria-node@g' update.sh \
+    # && sed -i 's@~/alastria-node@/opt/alastria-node@g' updatePerm.sh \
     && ./bootstrap.sh \
     && ./monitor.sh build \
     && apt-get autoremove \
     && apt-get clean
 
 VOLUME /root/alastria
-EXPOSE 9000 21000 21000/udp 22000 8443
+EXPOSE 21000 21000/udp 8443
 
 COPY entrypoint.sh /usr/bin/
-WORKDIR /opt/alastria-node/scripts
+WORKDIR /root/alastria-node/scripts
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["validator"]
+CMD ["validator", "Unknown"]
