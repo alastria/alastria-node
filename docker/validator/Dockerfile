@@ -18,7 +18,7 @@ FROM ubuntu:16.04
 ################################################
 
 ARG DOCKER_VERSION=latest
-ARG ALASTRIA_BRANCH=feature/testnet2-docker
+ARG ALASTRIA_BRANCH=feature/testnet2
 
 ENV \
     GOROOT=/usr/local/go \
@@ -32,15 +32,12 @@ RUN \
     && apt-get -y install \
     git \
     curl \
+    dnsutils \
     && cd /root \
     && git clone -b $ALASTRIA_BRANCH https://github.com/go2chain/alastria-node \
     && cd alastria-node/scripts \
     && sed -i 's/sudo//g' bootstrap.sh \
     && sed -i 's/gopath$//' bootstrap.sh \
-    # && sed -i 's@~/alastria-node@/opt/alastria-node@g' init.sh \
-    # && sed -i 's@~/alastria-node@/opt/alastria-node@g' restart.sh \
-    # && sed -i 's@~/alastria-node@/opt/alastria-node@g' update.sh \
-    # && sed -i 's@~/alastria-node@/opt/alastria-node@g' updatePerm.sh \
     && ./bootstrap.sh \
     && ./monitor.sh build \
     && apt-get autoremove \
