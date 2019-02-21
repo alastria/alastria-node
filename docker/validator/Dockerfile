@@ -18,7 +18,7 @@ FROM ubuntu:16.04
 ################################################
 
 ARG DOCKER_VERSION=latest
-ARG ALASTRIA_BRANCH=testnet2
+ARG ALASTRIA_BRANCH=feature/testnet2-docker
 
 ENV \
     GOROOT=/usr/local/go \
