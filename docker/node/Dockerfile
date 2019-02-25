@@ -19,11 +19,10 @@ FROM ubuntu:16.04
 
 ARG DOCKER_VERSION=latest
 ARG ALASTRIA_BRANCH=testnet2
+ARG MONITOR_ENABLED=0
 
 ENV \
-    GOROOT=/usr/local/go \
-    GOPATH=/opt/golang \
-    PATH=/usr/local/go/bin:/opt/golang/bin:$PATH \
+    MONITOR_ENABLED=$MONITOR_ENABLED \
     DOCKER_VERSION=$DOCKER_VERSION
 
 RUN \
@@ -32,16 +31,13 @@ RUN \
     && apt-get -y install \
         git \
         curl \
-    && cd /opt \
+        dnsutils \
+    && cd \
     && git clone -b $ALASTRIA_BRANCH https://github.com/alastria/alastria-node \
     && cd alastria-node/scripts \
     && sed -i 's/sudo//g' bootstrap.sh \
-    && sed -i 's/gopath$//' bootstrap.sh \
-    && sed -i 's@~/alastria-node@/opt/alastria-node@g' init.sh \
-    && sed -i 's@~/alastria-node@/opt/alastria-node@g' restart.sh \
-    && sed -i 's@~/alastria-node@/opt/alastria-node@g' update.sh \
-    && sed -i 's@~/alastria-node@/opt/alastria-node@g' updatePerm.sh \
     && ./bootstrap.sh \
+    && ./monitor.sh build \
     && apt-get autoremove \
     && apt-get clean
 
@@ -49,6 +45,6 @@ VOLUME /root/alastria
 EXPOSE 9000 21000 21000/udp 22000
 
 COPY entrypoint.sh /usr/bin/
-WORKDIR /opt/alastria-node/scripts
+WORKDIR /root/alastria-node/scripts
 ENTRYPOINT ["entrypoint.sh"]
 CMD ["general", "Unknown"]
