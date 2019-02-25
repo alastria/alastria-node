@@ -11,5 +11,6 @@
 | REPSOL | Raúl Hernández Cura (rhernandezc@repsol.com) | Azure (2C/8GB/200GB) | j4XSHzzh89L821qRr8++qYgR2ucJh67Ynmha+p0UoHo= | enode://6150966576eb7711db5719107e7eff4cd2d60e399fdf6f4cd16b9a7c8afe7128cb635804caf9a81276c90213b2dfe1155152ee3d0e33eb0b3dcc275998aeaea3@65.52.227.151:21000?discport=0 |
 | Worldline | Jordi Escudero Subirana (jordi.escudero@worldline.com) | Amazon (2C/8GB/100GB) | XgbyAhz9wiPWHgegFBSQuysR61rrJRhGz2kwXQqrqgw= | enode://88d101570ac3a9d4ef327619ac403fbd1c5ba56d00865242677a71b3074cabe0c0510f27ae507972460115ecea1eff0a84528717b31c401a797df12920412eec@63.35.131.164:21000?discport=0 |
 | SIGNATURIT | Alexander Flores (alex.flores@signaturit.com) | Amazon (2C/4GB/500GB) | Kja+np5wycVeHFF3hLonwS52kV+vr6dBvpa3DhL6pjM= | enode://49d8b134341941b9fb47da29ddaff341ddacd6ee1917d3c14c00deddef57c25a3d73fcc18ae54566db061b59c1770c62f7612d709b7795f71958904d01102f93@63.35.73.86:21000?discport=0 |
+|AST - Gobierno de Aragón | Oscar Torrero (otorrero@aragon.es) Seft-Hosted (2C/8Gb/40Gb) | 4OC03OJM7OssTnzgGYhbleDcfxMDGo48AQo2T1Mx7QE= |  enode://92ad13e3588b8cdddc9bfdc176b2c8ef06b0978cde050e67a36c13b6dae09c258a4f12c56e96bf8d576ad21e2da11a0e7d6684972c903303eae473c512ee6478@188.244.90.1:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
