@@ -94,6 +94,5 @@
 | Enxendra |  Diego González (diego.gonzalez@docuten.com) | 2C/4Gb/100Gb | lrvYPFROseDEMEPKvUXtOH3hhS4UTmqEDhM8m/UuEm0= | enode://fdc915e989321d39d5ecc74f67040f8f558e6644b56915b9ed242225861a67dbbaec1957f2f8a6765fb7861952a9ab5f25214354fb28dab89446663cbf16ffaa@88.12.40.19:21000?discport=0 |
 | Signaturit |  Alexander Flores (alex.flores@signaturit.com) | 2C/4Gb/100Gb | 7XmVjOxfu3V7/Cm9ot3HbDsPXg+wfeJSp+jQsnSmUSk= | enode://9a248bfe54682c72cefd15bac30a3ce5533d810a22280efe0110c141d2d341da2c26bfc73be08aa8157e9812232e6acf53514be1a0f9cbe48780ba8f344dd049@18.203.85.75:21000?discport=0 |
 | FundacionVodafone |  Tomas De Andres (tomas.deandres@vodafone.com) | 2C/4Gb/100Gb | cnf4JWkUSl1Z8kNN9SmIPEqCRzkW1gSyu7N7HUF0V20= | enode://8f3248df866f95b5fa209a171ad258118e7ef0e1d517660d0cd98cae73c04bd7594925c5cba3fac0c1b9c15f3a699c81c206fe118f564f2d34aa6c221db8a4ce@212.145.137.52:21000?discport=0 |
-| Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | AWS (2C/4Gb/100Gb) | /aqCEQjvmYYaL7A14im3b2xTYTAH5FoavsxIV+QJI0E= | enode://81061e345da0c8240e8a3aa38712295fb1db5ed8842207f90d7fc2c2aaf463f3b8f9690c97bfaadc0013441e37f7fb6172c66e66a8a56a83814d14fd45ee3acf@52.16.105.158:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
