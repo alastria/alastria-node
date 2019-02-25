@@ -18,12 +18,12 @@ FROM ubuntu:16.04
 ################################################
 
 ARG DOCKER_VERSION=latest
-ARG ALASTRIA_BRANCH=feature/testnet2
+ARG ALASTRIA_BRANCH=testnet2
 
 ENV \
-    GOROOT=/usr/local/go \
-    GOPATH=/opt/golang \
-    PATH=/usr/local/go/bin:/opt/golang/bin:$PATH \
+    # GOROOT=/usr/local/go \
+    # GOPATH=/opt/golang \
+    # PATH=/usr/local/go/bin:/opt/golang/bin:$PATH \
     DOCKER_VERSION=$DOCKER_VERSION
 
 RUN \
@@ -33,11 +33,11 @@ RUN \
     git \
     curl \
     dnsutils \
-    && cd /root \
+    && cd \
     && git clone -b $ALASTRIA_BRANCH https://github.com/go2chain/alastria-node \
     && cd alastria-node/scripts \
     && sed -i 's/sudo//g' bootstrap.sh \
-    && sed -i 's/gopath$//' bootstrap.sh \
+    # && sed -i 's/gopath$//' bootstrap.sh \
     && ./bootstrap.sh \
     && ./monitor.sh build \
     && apt-get autoremove \
