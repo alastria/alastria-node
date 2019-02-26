@@ -73,10 +73,11 @@ setsequential
 setMonitor
 
 function launchnodetype {
+  echo $NODE_NAME > NODE_NAME
   if [ "validator" == "$NODE_TYPE" ]; then
     docker run alastria-node-validator $NODE_TYPE $NODE_NAME -p 21000:21000 -p 21000:21000/udp -p 8443:8443
   elif [ "general" == "$NODE_TYPE" ]; then
-    docker run -v alastria-7:/root/alastria -p 22000:22000 -p 21000:21000 -p 21000:21000/udp -p 9000:9000 -e MONITOR_ENABLED=$MONITOR alastria-node-general $NODE_TYPE $NODE_NAME --restart unless-stopped
+    docker run --name $NODE_NAME -v alastria-7:/root/alastria -p 22000:22000 -p 21000:21000 -p 21000:21000/udp -p 9000:9000 -e MONITOR_ENABLED=$MONITOR alastria-node-general $NODE_TYPE $NODE_NAME --restart unless-stopped
   elif [ "bootnode" == "$NODE_TYPE" ]; then
     docker run alastria-node-bootnode $NODE_TYPE $NODE_NAME -p 21000:21000 -p 21000:21000/udp
   fi
