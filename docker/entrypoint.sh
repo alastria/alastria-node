@@ -1,12 +1,7 @@
 #!/bin/bash
-NODE_TYPE=$1
-NODE_NAME=$2
 
 if [ ! -f ~/alastria/data/IDENTITY ]; then
     ./init.sh auto $NODE_TYPE $NODE_NAME
-    if [ $MONITOR_ENABLED -eq 1 -a "$NODE_TYPE" == "general" ]; then
-        ./monitor.sh start
-    fi
 # elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
 #     echo "[*] Updating static-nodes"
 #     cp $HOME/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
@@ -17,5 +12,9 @@ if [ ! -f ~/alastria/data/IDENTITY ]; then
 fi
 
 
+if [ $MONITOR_ENABLED -eq 1 ]; then
+    exec ./start.sh --watch
+elif
+    exec ./start.sh --watch --no-monitor
+fi
 
-exec ./start.sh --watch
