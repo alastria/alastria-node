@@ -53,7 +53,7 @@ function checkName {
     case $opt in
       "Yes")
         echo "Starting node"
-        # launchNodeType
+        launchNodeType
         ;;
       "No")
         echo "Please launch the script again"
