@@ -12,5 +12,5 @@ if [ ! -f ~/alastria/data/IDENTITY ]; then
 fi
 
 
-exec ./start.sh --no-monitor
+exec ./start.sh --watch
 

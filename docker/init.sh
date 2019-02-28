@@ -80,7 +80,7 @@ function launchnodetype {
   if [ "validator" == "$NODE_TYPE" ]; then
     docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 127.0.0.1:22000:22000 --restart unless-stopped alastria-node
   elif [ "general" == "$NODE_TYPE" ]; then
-    docker run --name $NODE_NAME -v alastria:/root/alastria -p 22000:22000 -p 21000:21000 -p 21000:21000/udp -p 9000:9000 -p 8443:8443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria-node
+    docker run --name $NODE_NAME -v alastria:/root/alastria -p 22000:22000 -p 21000:21000 -p 21000:21000/udp -p 9000:9000 -p 8443:8443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED alastria-node
   elif [ "bootnode" == "$NODE_TYPE" ]; then
     docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -p 21000:21000 -p 21000:21000/udp -p 8443:8443 --restart unless-stopped alastria-node
   fi
