@@ -64,6 +64,13 @@ function setMonitor {
   done
 }
 
+function setVolume {
+  echo "Set the absolute path of the data directory (default: $(pwd))"
+  read DATA_DIR
+  echo ""
+  WORK_DIR="$(pwd)"/alastria
+  DATA_DIR=${DATA_DIR:-$WORK_DIR}
+}
 
 setnodetype
 setcompanyname
@@ -71,6 +78,7 @@ setcpunumber
 setramnumber
 setsequential
 setMonitor
+setVolume
 
 function launchnodetype {
   echo $NODE_NAME > NODE_NAME
