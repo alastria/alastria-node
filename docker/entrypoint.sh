@@ -12,9 +12,5 @@ if [ ! -f ~/alastria/data/IDENTITY ]; then
 fi
 
 
-if [ $MONITOR_ENABLED -eq 1 ]; then
-    exec ./start.sh --watch
-elif
-    exec ./start.sh --watch --no-monitor
-fi
+exec ./start.sh --no-monitor
 
