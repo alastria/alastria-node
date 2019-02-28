@@ -34,7 +34,7 @@ function setVolume {
   DATA_DIR=${DATA_DIR:-$WORK_DIR}
 }
 
-function launchNodeType {
+function launchNode {
   echo $NODE_NAME > NODE_NAME
   echo $NODE_TYPE > NODE_TYPE
   echo $MONITOR_ENABLED > MONITOR_ENABLED
@@ -53,7 +53,7 @@ function checkName {
     case $opt in
       "Yes")
         echo "Starting node"
-        launchNodeType
+        launchNode
         ;;
       "No")
         echo "Please launch the script again"
@@ -63,7 +63,7 @@ function checkName {
   done
 }
 
-setcompanyName
+setCompanyName
 setCPUNumber
 setRAMNumber
 setSequential
