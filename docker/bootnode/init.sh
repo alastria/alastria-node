@@ -27,14 +27,14 @@ function setSequential {
 }
 
 function setVolume {
-  echo "Set the absolute path of the data directory (default: $(pwd))"
+  echo "Set the absolute path of the data directory (ENTER default: pwd): "
   read DATA_DIR
   echo ""
   WORK_DIR="$(pwd)"/alastria
   DATA_DIR=${DATA_DIR:-$WORK_DIR}
 }
 
-function launchNodeType {
+function launchNode {
   echo $NODE_NAME > NODE_NAME
   echo $NODE_TYPE > NODE_TYPE
   echo $MONITOR_ENABLED > MONITOR_ENABLED
@@ -45,7 +45,7 @@ function launchNodeType {
 }
 
 function checkName {
-  PS3="Are you sure that these data are correct?"$'\n'"Node Type => $NODE_TYPE"$'\n'"Node Name => $NODE_NAME"$'\n'"Press 1 (Yes) or 2 (No) => "
+  PS3="Are you sure that these data are correct?"$'\n'"Node Type => $NODE_TYPE"$'\n'"Node Name => $NODE_NAME"$'\n'"Data path: => $DATA_DIR"$'\n'"Press 1 (Yes) or 2 (No) => "
   options=("Yes" "No")
 
   select opt in "${options[@]}"
@@ -53,7 +53,7 @@ function checkName {
     case $opt in
       "Yes")
         echo "Starting bootnode"
-        launchNodeType
+        launchNode
         ;;
       "No")
         echo "Please launch the script again"
