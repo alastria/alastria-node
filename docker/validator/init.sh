@@ -1,101 +1,51 @@
 #!/bin/bash
 
-function setnodetype {
-  PS3="Choose the node type: 1)general, 2)validator, 3)bootnode => "
-  options=("general" "validator" "bootnode")
+NODE_TYPE="validator"
+NODE_NAME="VAL_"
+MONITOR_ENABLED=1
+ENABLE_CONSTELLATION=
 
-  select opt in "${options[@]}"
-  do
-    case $opt in
-      "general")
-        NODE_TYPE="general";
-        NODE_NAME="REG_";
-        break;;
-      "validator")
-        NODE_TYPE="validator";
-        NODE_NAME="VAL_";
-        break;;
-      "bootnode")
-        NODE_TYPE="bootnode";
-        NODE_NAME="BOT_";
-        break;;
-      *)
-        echo "Invalid choice '${REPLY}', please pick one of the above"
-    esac
-  done
-}
-function setcompanyname {
+function setCompanyName {
   echo "Write company name: "
   read COMPANY_NAME
   echo ""
 }
-function setcpunumber {
+function setCPUNumber {
   echo "Number of CPUs: "
   read CPU
   echo ""
 }
-function setramnumber {
+function setRAMNumber {
   echo "Number of RAM: "
   read RAM
   echo ""
 }
-function setsequential {
+function setSequential {
   echo "Sequential starting at 00: "
   read SEQ
   echo ""
 }
 
-function setMonitor {
-  PS3="Do you want to install the monitor?"$'\n'"Press 1 (Yes) or 2 (No) => "
-  options=("Yes" "No")
-
-  select opt in "${options[@]}"
-  do
-    case $opt in
-      "Yes")
-        MONITOR_ENABLED=1
-        break
-        ;;
-      "No")
-        MONITOR_ENABLED=0
-        break
-        ;;
-    esac
-  done
-}
-
 function setVolume {
-  echo "Set the absolute path of the data directory (default: $(pwd))"
+  echo "Set the absolute path of the data directory (ENTER to default: pwd): "
   read DATA_DIR
   echo ""
   WORK_DIR="$(pwd)"/alastria
   DATA_DIR=${DATA_DIR:-$WORK_DIR}
 }
 
-setnodetype
-setcompanyname
-setcpunumber
-setramnumber
-setsequential
-setMonitor
-setVolume
-
-function launchnodetype {
+function launchNodeType {
   echo $NODE_NAME > NODE_NAME
   echo $NODE_TYPE > NODE_TYPE
   echo $MONITOR_ENABLED > MONITOR_ENABLED
   echo $DATA_DIR > DATA_DIR
-  if [ "validator" == "$NODE_TYPE" ]; then
-    docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 127.0.0.1:22000:22000 --restart unless-stopped alastria-node
-  elif [ "general" == "$NODE_TYPE" ]; then
-    docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 22000:22000 -p 21000:21000 -p 21000:21000/udp -p 9000:9000 -p 8443:8443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria-node
-  elif [ "bootnode" == "$NODE_TYPE" ]; then
-    docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -p 21000:21000 -p 21000:21000/udp -p 8443:8443 --restart unless-stopped alastria-node
-  fi
+  echo $ENABLE_CONSTELLATION > ENABLE_CONSTELLATION
+
+  docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 127.0.0.1:22000:22000 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED -e ENABLE_CONSTELLATION=$ENABLE_CONSTELLATION --restart unless-stopped alastria-node-validator
 }
 
-function checkname {
-  PS3="Are you sure that these data are correct?"$'\n'"Node Type => $NODE_TYPE"$'\n'"Node Name => $NODE_NAME"$'\n'"Press 1 (Yes) or 2 (No) => "
+function checkName {
+  PS3="Are you sure that these data are correct?"$'\n'"Node Type => $NODE_TYPE"$'\n'"Node Name => $NODE_NAME"$'\n'"Data path: => $DATA_DIR"$'\n'"Press 1 (Yes) or 2 (No) => "
   options=("Yes" "No")
 
   select opt in "${options[@]}"
@@ -103,8 +53,7 @@ function checkname {
     case $opt in
       "Yes")
         echo "Starting node"
-        launchnodetype
-        # docker run alastria-node $NODE_TYPE $NODE_NAME -p 22000:22000
+        # launchNodeType
         ;;
       "No")
         echo "Please launch the script again"
@@ -114,5 +63,11 @@ function checkname {
   done
 }
 
+setcompanyName
+setCPUNumber
+setRAMNumber
+setSequential
+setVolume
+
 NODE_NAME=$(printf "%s%s%s%s%s%s%s%s" "$NODE_NAME" "$COMPANY_NAME" "_Telsius_" "$CPU" "_" "$RAM" "_" "$SEQ")
-checkname
+checkName
