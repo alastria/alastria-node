@@ -1,5 +1,13 @@
 #!/bin/bash
 
+_term() {
+    echo "Cerramos geth antes de parar el container"
+    pkill -f geth
+    wait
+}
+
+trap _term SIGTERM
+
 if [ ! -f ~/alastria/data/IDENTITY ]; then
     ./init.sh auto $NODE_TYPE $NODE_NAME
 # elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
@@ -12,5 +20,8 @@ if [ ! -f ~/alastria/data/IDENTITY ]; then
 fi
 
 
-exec ./start.sh --watch
+exec ./start.sh --watch &
+
+child=$!
+wait "$child"
 
