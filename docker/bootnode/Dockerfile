@@ -40,7 +40,7 @@ RUN \
     && apt-get clean
 
 VOLUME /root/alastria
-EXPOSE 9000 21000 21000/udp 22000 8443
+EXPOSE 21000 21000/udp 8443
 
 COPY entrypoint.sh /usr/bin/
 WORKDIR /root/alastria-node/scripts
