@@ -18,7 +18,7 @@ FROM ubuntu:16.04
 ################################################
 
 ARG DOCKER_VERSION=latest
-ARG ALASTRIA_BRANCH=testnet2-track-docker
+ARG ALASTRIA_BRANCH=feature/testnet2-track-docker
 
 ENV \
     DOCKER_VERSION=$DOCKER_VERSION
