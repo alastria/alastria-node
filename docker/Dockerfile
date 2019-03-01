@@ -18,7 +18,7 @@ FROM ubuntu:16.04
 ################################################
 
 ARG DOCKER_VERSION=latest
-ARG ALASTRIA_BRANCH=testnet2
+ARG ALASTRIA_BRANCH=feature/testnet2-track-docker
 
 ENV \
     DOCKER_VERSION=$DOCKER_VERSION
@@ -31,7 +31,7 @@ RUN \
         curl \
         dnsutils \
     && cd \
-    && git clone -b $ALASTRIA_BRANCH https://github.com/alastria/alastria-node \
+    && git clone -b $ALASTRIA_BRANCH https://github.com/go2chain/alastria-node \
     && cd alastria-node/scripts \
     && sed -i 's/sudo//g' bootstrap.sh \
     && ./bootstrap.sh \
