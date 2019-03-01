@@ -1,5 +1,6 @@
 #!/bin/bash
-NODE_NAME=$(head -n 1 NODE_NAME 2> /dev/null)
+DIRECTORY="../config"
+NODE_NAME=$(head -n 1 $DIRECTORY/NODE_NAME 2> /dev/null)
 
 if ( [ -z "$NODE_NAME" ] )
 then

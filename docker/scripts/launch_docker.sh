@@ -1,9 +1,10 @@
 #!/bin/bash
-DATA_DIR=$(head -n 1 DATA_DIR 2> /dev/null)
+DIRECTORY="../config"
+DATA_DIR=$(head -n 1 $DIRECTORY/DATA_DIR 2> /dev/null)
 WORK_DIR="$(pwd)"/alastria
 DATA_DIR=${DATA_DIR:-$WORK_DIR}
 
-NODE_NAME=$(head -n 1 NODE_NAME 2> /dev/null)
+NODE_NAME=$(head -n 1 $DIRECTORY/NODE_NAME 2> /dev/null)
 
 if ( [ -z "$NODE_NAME" ] )
 then
@@ -11,7 +12,7 @@ then
   exit
 fi
 
-NODE_TYPE=$(head -n 1 NODE_TYPE 2> /dev/null)
+NODE_TYPE=$(head -n 1 $DIRECTORY/NODE_TYPE 2> /dev/null)
 
 if ( [ -z "$NODE_TYPE" ] )
 then
@@ -19,7 +20,7 @@ then
   exit
 fi
 
-MONITOR_ENABLED=$(head -n 1 MONITOR_ENABLED 2> /dev/null)
+MONITOR_ENABLED=$(head -n 1 $DIRECTORY/MONITOR_ENABLED 2> /dev/null)
 
 if ( [ -z "$MONITOR_ENABLED" ] )
 then
@@ -27,17 +28,18 @@ then
   exit
 fi
 
-docker run -tid \
--v $DATA_DIR:/root/alastria \
--p 21000:21000 \
--p 21000:21000/udp \
--p 22000:22000 \
--p 9000:9000 \
--p 8443:8443 \
---restart unless-stopped \
---name $NODE_NAME \
--e NODE_TYPE=$NODE_TYPE \
--e NODE_NAME=$NODE_NAME \
--e MONITOR_ENABLED=$MONITOR_ENABLED \
-$@ \
-alastria-node
+if [ "$NODE_TYPE" == "bootnode" ]; then
+   docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 21000:21000 -p 21000:21000/udp -p 8443:8443  -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria-node-bootnode
+ else
+   if [ "$NODE_TYPE" == "validator" ]; then
+    docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 127.0.0.1:22000:22000 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria-node-validator
+ else
+   if [ "$NODE_TYPE" == "general" ]; then
+    if [ $MONITOR_ENABLED -eq 1 ]; then
+      docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 22000:22000 -p 21000:21000 -p 21000:21000/udp -p 9000:9000 -p 8443:8443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED -e ENABLE_CONSTELLATION=$ENABLE_CONSTELLATION --restart unless-stopped alastria-node-general
+    elif
+      docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 22000:22000 -p 21000:21000 -p 21000:21000/udp -p 9000:9000 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED -e ENABLE_CONSTELLATION=$ENABLE_CONSTELLATION --restart unless-stopped alastria-node-general
+    fi
+  fi
+  fi
+fi

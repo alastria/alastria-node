@@ -30,6 +30,7 @@ RUN \
         git \
         curl \
         dnsutils \
+        nano \
     && cd \
     && git clone -b $ALASTRIA_BRANCH https://github.com/alastria/alastria-node \
     && cd alastria-node/scripts \

@@ -3,7 +3,6 @@
 NODE_TYPE="validator"
 NODE_NAME="VAL_"
 MONITOR_ENABLED=1
-ENABLE_CONSTELLATION=
 
 function setCompanyName {
   echo "Write company name: "
@@ -35,13 +34,16 @@ function setVolume {
 }
 
 function launchNode {
-  echo $NODE_NAME > NODE_NAME
-  echo $NODE_TYPE > NODE_TYPE
-  echo $MONITOR_ENABLED > MONITOR_ENABLED
-  echo $DATA_DIR > DATA_DIR
-  echo $ENABLE_CONSTELLATION > ENABLE_CONSTELLATION
+  DIRECTORY=config
+  if [ ! -d "$DIRECTORY" ]; then
+    mkdir $DIRECTORY
+  fi
+  echo $NODE_NAME > $DIRECTORY/NODE_NAME
+  echo $NODE_TYPE > $DIRECTORY/NODE_TYPE
+  echo $MONITOR_ENABLED > $DIRECTORY/MONITOR_ENABLED
+  echo $DATA_DIR > $DIRECTORY/DATA_DIR
 
-  docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 127.0.0.1:22000:22000 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED -e ENABLE_CONSTELLATION=$ENABLE_CONSTELLATION --restart unless-stopped alastria-node-validator
+  docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 127.0.0.1:22000:22000 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria-node-validator
 }
 
 function checkName {
