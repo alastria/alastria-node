@@ -105,5 +105,5 @@
 | DXC Technology | Javier Hernandez (jhernandezs2@dxc.com), Miguel Briales (mbrialesroma@dxc.com) | AWS (2C/4Gb/30Gb) | hw2gcGEqGCwD5C9kCZMGU/lBTVQuAejNCll/zRo24hc= | enode://cdc4e2bc73c7039b06c7945d30a679ed63819a0d5be494b86a6ff08a5e51c48a67542b1e576327d8900335d5ad0db78af4f7055f96a380ef2831e94766d91691@63.35.40.6:21000?discport=0 |
 | SM CLOUD |  Carlos Marcano (clmg1010@gmail.com) | IBM Cloud (1C/2Gb/10Gb)| J5Cv0/XiIavBbq4t09X3hFDxDnxCg7yBtBB7uO03bSU= |  "enode://8197257cd5ca4f06eca3fa09b4da1351e19974f3a782b4201a807214c27484dc25e69645be612b05751b8350e32268a6da701aaa7ccd793a27d6d18b16e36868@159.122.23.130:21000?discport=0" |
 | Toqio |  Daniella Lorenzo (daniella@groupolivo.com) | Amazon AWS (2C/4Gb/30Gb)| xLbtweSOge644hsb5YuTqNQUmwCGV3y25sIsfZlFT1s= | enode://9977c9f1a0e5c89ed8cfba7e8dbf6d13644d3690d27266e26d3307b4983d990cedf18f695c66b0eaea8637469a19ecf6bcbb3299a9851ab1acada958d9862e29@54.171.57.127:21000?discport=0 |
-
+| Siemens |  Jason Perez (jason.perez_hornung.ext@siemens.com) | Amazon AWS (2C/4Gb/100Gb)| OEt/qx5PFJiCOqCZi750SdMg05CtxalEN1Il0vYH6FQ= |"enode://98ac59549b4c20e0d98433708eb09ed5b9fa2e2df2206ea40bcb4eebab0ed9c859a7730fddfdaa52edf1985b122f38627905be9bc360f56ee7799b6da9705cfe@34.243.107.77:21000?discport=0" |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
