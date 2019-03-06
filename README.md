@@ -1,4 +1,6 @@
-# ALASTRIA Arrakis #
+# ALASTRIA Arrakis (Testnet) #
+
+* In the next days, we will announce Requirements for the new Alastria Net (Telsius) that will become the LiveNet
 
 * Visit [What is alastria](https://alastria.io/sobre_alastria) page to know more about us.
 
