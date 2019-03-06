@@ -45,9 +45,9 @@ RUN \
     && apt-get autoremove \
     && apt-get clean
     
-COPY ../access-point/nginx/access-point.conf /etc/nginx/conf.d/access-point.conf
-COPY ../access-point/nginx/blacklist /etc/nginx/blacklist
-COPY ../access-point/nginx/whitelist /etc/nginx/whitelist
+COPY ./access-point/nginx/access-point.conf /etc/nginx/conf.d/access-point.conf
+COPY ./access-point/nginx/blacklist /etc/nginx/blacklist
+COPY ./access-point/nginx/whitelist /etc/nginx/whitelist
 
 VOLUME /root/alastria
 EXPOSE 9000 21000 21000/udp 22000 8443 80 443
