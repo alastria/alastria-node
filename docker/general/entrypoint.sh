@@ -20,7 +20,7 @@ ARGS="--watch"
 if [ ! $MONITOR_ENABLED -eq 1 ]; then
     AGRS="--watch --no-monitor"
 fi
-exec ENABLE_CONSTELLATION=$ENABLE_CONSTELLATION ./start.sh $ARGS
+exec ./start.sh $ARGS &
 
 child=$!
 wait "$child"

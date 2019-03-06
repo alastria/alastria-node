@@ -16,7 +16,7 @@ elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
     touch ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION
 fi
 ARGS="--watch"
-exec ./start.sh $ARGS
+exec ./start.sh $ARGS &
 
 
 child=$!

@@ -25,13 +25,13 @@ echo "[*] Stopping container... "
 mkdir -p backups; cd backups
 
 if [ "$OPT" == "keys" ]; then
-    sudo tar -cvzf $ARCHIVE \
+    tar -cvzf $ARCHIVE \
         $DATA_DIR/data/passwords.txt \
         $DATA_DIR/data/keystore \
         $DATA_DIR/data/constellation/keystore \
         $DATA_DIR/data/geth/nodekey
 else
-    sudo tar -cvzf $ARCHIVE $DATA_DIR
+    tar -cvzf $ARCHIVE $DATA_DIR
 fi
 echo "[*] Starting container... "
 sudo chown $CUID:$CUID $ARCHIVE \

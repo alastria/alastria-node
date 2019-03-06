@@ -71,7 +71,7 @@ function setVolume {
 }
 
 function launchNode {
-  DIRECTORY=config
+  DIRECTORY=../config
   if [ ! -d "$DIRECTORY" ]; then
     mkdir $DIRECTORY
   fi
@@ -83,7 +83,7 @@ function launchNode {
 
   if [ $MONITOR_ENABLED -eq 1 ]; then
     docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 22000:22000 -p 21000:21000 -p 21000:21000/udp -p 9000:9000 -p 8443:8443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED -e ENABLE_CONSTELLATION=$ENABLE_CONSTELLATION --restart unless-stopped alastria-node-general
-  elif
+  else
     docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 22000:22000 -p 21000:21000 -p 21000:21000/udp -p 9000:9000 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED -e ENABLE_CONSTELLATION=$ENABLE_CONSTELLATION --restart unless-stopped alastria-node-general
   fi
 }
@@ -113,6 +113,7 @@ setRAMNumber
 setSequential
 setMonitor
 setVolume
+setConstellation
 
 NODE_NAME=$(printf "%s%s%s%s%s%s%s%s" "$NODE_NAME" "$COMPANY_NAME" "_Telsius_" "$CPU" "_" "$RAM" "_" "$SEQ")
 checkName
