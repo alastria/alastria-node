@@ -15,9 +15,9 @@ elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
     rm -f ~/alastria/data/DOCKER_VERSION_* 2> /dev/null
     touch ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION
 fi
+
 ARGS="--watch"
 exec ./start.sh $ARGS &
-
 
 child=$!
 wait "$child"
