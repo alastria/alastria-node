@@ -21,9 +21,10 @@ if ( [ "auto" == "$1" ]); then
 fi
 
 echo "Backing up current node keys ..."
-    #Backup directory tree
-    echo "Saving enode ID ..."
-    cp ~/alastria/data/geth/nodekey ~/nodekey
+
+#Backup directory tree
+echo "Saving enode ID ..."
+cp ~/alastria/data/geth/nodekey /tmp/nodekey
 
 
 generate_conf() {
@@ -36,7 +37,7 @@ generate_conf() {
    #define the template.
    cat  << EOF
 # Externally accessible URL for this node (this is what's advertised)
-url = "http://$NODE_IP:$CONSTELLATION_PORT/"
+url = "https://$NODE_IP:$CONSTELLATION_PORT/"
 
 # Port to listen on for the public API
 port = $CONSTELLATION_PORT
@@ -73,6 +74,7 @@ verbosity = 2
 EOF
 }
 
+echo "[*] Updating permissioned nodes."
 cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
 if [[ "$NODE_TYPE" == "general" ]]; then
     generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
@@ -81,13 +83,15 @@ else
     cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/permissioned-nodes.json
 fi
 
-mv ~/nodekey ~/alastria/data/geth/
+cp /tmp/nodekey ~/alastria/data/geth/
 
-if [[ CURRENT_HOST_IP != "onlyUpdate" ]]; then
+if [[ "$CURRENT_HOST_IP" != "onlyUpdate" ]]; then
     ~/alastria-node/scripts/stop.sh
     sleep 6
     ~/alastria-node/scripts/start.sh
 fi
+
+echo "[*] Restart done succesfully"
 
 set +u
 set +e

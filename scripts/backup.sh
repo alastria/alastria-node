@@ -23,7 +23,7 @@ if ( [ "keys" == "$1" ]); then
     echo "Saving node keys ..."
     cp -r ~/alastria/data/keystore ~/alastria-keysBackup-$CURRENT_DATE/data
     echo "Saving enode ID ..."
-    cp ~/alastria/data/geth/nodekey ~/alastria-keysBackup-$CURRENT_DATE/data/nodekey
+    cp ~/alastria/data/geth/nodekey ~/alastria-keysBackup-$CURRENT_DATE/data/geth/nodekey
 fi
 
 if ( [ "full" == "$1" ]); then

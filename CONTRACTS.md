@@ -2,12 +2,12 @@
 
 | Family | Contract | Address |
 | ------ | -------- | ------- |
-| UPORT | IdentityManager | 0xd1420aa0edf6a441dafc3d3940176a965e9c26d9 |
-| UPORT | TxRelay | 0xd1420aa0edf6a441dafc3d3940176a965e9c26d9 |
-| UPORT | MetaIdentityManager | 0x9a56fd524313de5d03f8f7ecb003bff747e406f6 |
-| UPORT | EthPublish | 0x5b1fc7b191f5637fea51dc66ecce5e07d23dfb4d |
-| UPORT | Status | 0x14da36e2ea556d559e3003a7559f6cf60762a735 |
-| ENS | ENS | 0x0aefc5ffd99196a6666133e912e49ff60f27c539 |
-| ENS | FIFSRegistrar | 0x6cbdf675d51e102ce4994e7c499b02bd917f4ad0 |
-| ENS | PublicResolver | 0xe13ebea628d5de08f2ebf5cc0628c5f7c816c48f |
+| UPORT | IdentityManager | 0xb08c53b75030eb406f4c856a524f57a35410f474 |
+| UPORT | TxRelay | 0x815af292ba858a3256fc0d03e40b75b07fcdf317 |
+| UPORT | MetaIdentityManager | 0x28d38d5cfe3c721506665fe2c1ca165ea3c81ea6 |
+| UPORT | UportRegistry | 0x4dedc4b2e4122158d0df02c3cfdd5f07326497c0 |
+| UPORT | proxy | 0xfc5940d3180fd294aad65d2fcc6b8c7664828cf8 |
+| ENS | ENSRegistry | 0xce41fceda82ec01af1a2797459d6a539de9d3b89 |
+| ENS | FIFSRegistrar | 0xf1a2039aca145ad0bf2a489fda65fccbeb547db6 |
+| ENS | PublicResolver | 0x0 |
 | Test | SimpleContract | 0xf3bcc2182baa0bec27ae347ec3ce9034c61fc0b6 |

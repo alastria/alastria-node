@@ -1,3 +1,10 @@
 scripts/nohup.out
 scripts/permissioned-nodes.json
 go1*
+data/keys
+go-ethereum
+scripts/go
+scripts/wrk
+scripts/tls-*
+fabric8-analytics.log
+.idea
