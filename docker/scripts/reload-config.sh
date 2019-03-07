@@ -9,6 +9,7 @@ if [ -z "$1" ]; then
 fi
 
 if [ $1 = "nginx" ]; then
-        DOCKER_ID=$(docker ps -aqf "name=Telsius")
-        docker exec "$DOCKER_ID" nginx -s reload
+        DIRECTORY="../config"
+        NODE_NAME=$(head -n 1 "$DIRECTORY"/NODE_NAME 2> /dev/null)
+        docker exec "$NODE_NAME" nginx -s reload
 fi
