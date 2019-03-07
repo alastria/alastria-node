@@ -64,6 +64,9 @@ update_nodes_list() {
     echo "Selected $NODE_TYPE node..."
     echo "Updating permissioned nodes..."
 
+    # Deleting obsolete records of the same node
+    sed -i "/$CURRENT_HOST_IP/d" ~/alastria-node/data/*-nodes.json
+    
     BOOT_NODES=$(cat ~/alastria-node/data/boot-nodes.json)
     REGULAR_NODES=$(cat ~/alastria-node/data/regular-nodes.json)
     VALIDATOR_NODES=$(cat ~/alastria-node/data/validator-nodes.json)
