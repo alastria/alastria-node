@@ -16,9 +16,11 @@ elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
     touch ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION
 fi
 
-ARGS="--watch"
+/etc/init.d/nginx start
+nginx -g "daemon off;"
+ARGS="--watch --local-rpc"
 if [ ! $MONITOR_ENABLED -eq 1 ]; then
-    AGRS="--watch --no-monitor"
+    AGRS="--watch --local-rpc --no-monitor"
 fi
 exec ./start.sh $ARGS &
 
