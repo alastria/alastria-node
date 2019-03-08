@@ -9,13 +9,13 @@ then
 fi
 
 if [ "$NODE_TYPE" == "bootnode" ]; then
-   docker pull alastria-node-bootnode
+   docker pull alastria/alastria-node-bootnode
  else
    if [ "$NODE_TYPE" == "validator" ]; then
-    docker pull alastria-node-validator
+    docker pull alastria/alastria-node-validator
  else
    if [ "$NODE_TYPE" == "general" ]; then
-    docker pull alastria-node-general
+    docker pull alastria/alastria-node-general
   fi
   fi
 fi

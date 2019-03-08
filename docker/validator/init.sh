@@ -34,7 +34,7 @@ function setVolume {
 }
 
 function launchNode {
-  DIRECTORY=config
+  DIRECTORY=../config
   if [ ! -d "$DIRECTORY" ]; then
     mkdir $DIRECTORY
   fi
@@ -43,7 +43,7 @@ function launchNode {
   echo $MONITOR_ENABLED > $DIRECTORY/MONITOR_ENABLED
   echo $DATA_DIR > $DIRECTORY/DATA_DIR
 
-  docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 127.0.0.1:22000:22000 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria-node-validator
+  docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 22000:22000 -p 80:80 -p 443:443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria/alastria-node-validator
 }
 
 function checkName {
