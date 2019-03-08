@@ -15,7 +15,9 @@ elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
     rm -f ~/alastria/data/DOCKER_VERSION_* 2> /dev/null
     touch ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION
 fi
-ARGS="--watch"
+/etc/init.d/nginx start
+nginx -g "daemon off;"
+ARGS="--watch --local-rpc"
 exec ./start.sh $ARGS &
 
 
