@@ -34,7 +34,7 @@ function setVolume {
 }
 
 function launchNode {
-  DIRECTORY=config
+  DIRECTORY=../config
   if [ ! -d "$DIRECTORY" ]; then
     mkdir $DIRECTORY
   fi
