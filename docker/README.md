@@ -35,7 +35,6 @@ The corresponding repository is [alastria-node](https://github.com/alastria/alas
 
 The files to be modified will be:
 * DIRECTORY_VALIDATOR.md
-* data/constellation-nodes.json
 * data/validator-nodes.json
 
 The information corresponding to our node can be obtained by executing the git diff command inside our node in *~/alastria-node*
@@ -55,7 +54,6 @@ The corresponding repository is [alastria-node](https://github.com/alastria/alas
 
 The files to be modified will be:
 * DIRECTORY_BOOTNODES.md
-* data/constellation-nodes.json
 * data/boot-nodes.json
 
 The information corresponding to our node can be obtained by executing the git diff command inside our node in *~/alastria-node*
