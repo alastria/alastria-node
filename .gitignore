@@ -9,3 +9,6 @@ scripts/tls*
 fabric8-analytics.log
 .idea
 docker/config
+docker/general/alastria
+docker/bootnode/alastria
+docker/validator/alastria
