@@ -16,4 +16,5 @@
 |Vestigia| Javier Caro (jcaro@vestigia.io) | Amazon (2C/4Gb/100GB) |  dgmYTskTQCeFtSF19nNoSFkupDVZgC2J9KHTJY0p7g8= | enode://95393eb154556a1adb05f18d378480fec36be2c23883f5738dfbff0c60e50313ef98deeb496de6dfb30107287d4df4917a8739972591588abcd44ac5f5903f49@35.180.189.196:21000?discport=0 |
 | SAP | José Prados (jose.prados@sap.com) | AWS | sN+ssDLd650I8IEKj1QElXswg1z6fiFQ8ehu07/Iq3c= | enode://5c914c8f8917dc6955041b1f5b3b2db53921d4b6bbbb548172b13e0be6d5fc93b6a01a88d017967ce627540630ea1e53b886ac36b125a59b04a13069848c70de@54.93.229.117:21000?discport=0 |
 | TOQIO | Daniella Lorenzo (daniella@groupolivo.com) | AWS | wNv9Il6+hZjDSR8AruvANNn2TXaDnCiR/ZkfwhSvW0A= | 8eb892836f2234a421a21d62597312d3972566761a2545c296664f4adeb45d7ac1fbb426e932f99aa622466901d3ed34b36f6c11aaa8bc947152c733c67cf2f6@54.171.57.127 |
+| ioBuilders | Julio Faura (julio@adhara.io) | My mac (ubuntu on Parallels) | (NA) | 752073b399b89124b1c096e0c6890240105095984c26dc8b75793118e371735be521270bb061f8d25b66d2c677039901a2e183f01e71fe2f149531be63978e60 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
