@@ -15,11 +15,14 @@ elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
     rm -f ~/alastria/data/DOCKER_VERSION_* 2> /dev/null
     touch ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION
 fi
+
 /etc/init.d/nginx start
 nginx -g "daemon off;"
 ARGS="--watch --local-rpc"
+if [ ! $MONITOR_ENABLED -eq 1 ]; then
+    AGRS="--watch --local-rpc --no-monitor"
+fi
 exec ./start.sh $ARGS &
-
 
 child=$!
 wait "$child"
