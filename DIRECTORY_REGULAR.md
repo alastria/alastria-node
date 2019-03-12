@@ -17,4 +17,5 @@
 | SAP | José Prados (jose.prados@sap.com) | AWS | sN+ssDLd650I8IEKj1QElXswg1z6fiFQ8ehu07/Iq3c= | enode://5c914c8f8917dc6955041b1f5b3b2db53921d4b6bbbb548172b13e0be6d5fc93b6a01a88d017967ce627540630ea1e53b886ac36b125a59b04a13069848c70de@54.93.229.117:21000?discport=0 |
 | TOQIO | Daniella Lorenzo (daniella@groupolivo.com) | AWS | wNv9Il6+hZjDSR8AruvANNn2TXaDnCiR/ZkfwhSvW0A= | 8eb892836f2234a421a21d62597312d3972566761a2545c296664f4adeb45d7ac1fbb426e932f99aa622466901d3ed34b36f6c11aaa8bc947152c733c67cf2f6@54.171.57.127 |
 | FGULL | Iradiel Garcia (iradiel90@gmail.com) | Google Cloud (2C/8GB/40GB) | gb1DjI8o265opzWNRbNoDzXDpGKiqmJZamhXmpDYVEk= | enode://68dd23c5e3067c4d50e9cb76428eb0792c6932be6836be0c7f71c2c3fa058412d19a7c392a8bf677ae3b1df2790658850d8d4b4e085be2dfca2b85d5493a6a8d@35.241.151.245:21000?discport=0 |
+| IoBuilders | Julio Faura (julio@adhara.io) | My mac (ubuntu on Parallels) | (NA) | enode://752073b399b89124b1c096e0c6890240105095984c26dc8b75793118e371735be521270bb061f8d25b66d2c677039901a2e183f01e71fe2f149531be63978e60@52.157.234.255:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
