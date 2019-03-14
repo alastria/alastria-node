@@ -102,6 +102,5 @@
 | SM CLOUD |  Carlos Marcano (clmg1010@gmail.com) | IBM Cloud (1C/2Gb/10Gb)| J5Cv0/XiIavBbq4t09X3hFDxDnxCg7yBtBB7uO03bSU= |  "enode://8197257cd5ca4f06eca3fa09b4da1351e19974f3a782b4201a807214c27484dc25e69645be612b05751b8350e32268a6da701aaa7ccd793a27d6d18b16e36868@159.122.23.130:21000?discport=0" |
 | Toqio |  Daniella Lorenzo (daniella@groupolivo.com) | Amazon AWS (2C/4Gb/30Gb)| xLbtweSOge644hsb5YuTqNQUmwCGV3y25sIsfZlFT1s= | enode://9977c9f1a0e5c89ed8cfba7e8dbf6d13644d3690d27266e26d3307b4983d990cedf18f695c66b0eaea8637469a19ecf6bcbb3299a9851ab1acada958d9862e29@54.171.57.127:21000?discport=0 |
 | AYESA |  José María Del Molino (jmmolino@ayesa.com), Juan Manuel Moreno (j.moreno@ayesa.com) | Amazon AWS (2C/4Gb/30Gb)| Kg5liiTGuVDktffvlhVp3WgItTafaxlXMu2FQG5z/0E= | enode://919ce723f2c938e7e8ca8d8b3c279013e19386ef6e0a340607d83f91a385e9bf080decef334343f418a9c8196e16a46615105ccf8afb47d57b43a8734e0efd74@52.49.247.196:21000?discport=0 |
-| DigitelTS | Alejandro Martinez Andres (alejandro.martineza@madisonmk.com) | AWS (2C/4GB/100GB) | SHtydyI3kn/CZmPf/g07GXIChNvVN6BqfA5lUwNKxn8= | enode://07238a991cffeb5bb135de0be6446e770595eb57a5c4ff071ef8288c61d1007fa2801f3c041fa2c3b6203dd2170e9d8da1e25d84ea7412a58b963015b07d9e6b@18.202.47.216:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
