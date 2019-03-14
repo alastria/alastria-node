@@ -25,29 +25,25 @@ function setSequential {
   echo ""
 }
 
-function setVolume {
-  echo "Set the absolute path of the data directory (ENTER to default: pwd): "
-  read DATA_DIR
-  echo ""
-  WORK_DIR="$(pwd)"/alastria
-  DATA_DIR=${DATA_DIR:-$WORK_DIR}
-}
 
 function launchNode {
   DIRECTORY=../config
   if [ ! -d "$DIRECTORY" ]; then
     mkdir $DIRECTORY
   fi
+  DATA_DIR="$(pwd)"/alastria
+  ACCESS_POINT_DIR="$(pwd)"/alastria-access-point/nginx
   echo $NODE_NAME > $DIRECTORY/NODE_NAME
   echo $NODE_TYPE > $DIRECTORY/NODE_TYPE
   echo $MONITOR_ENABLED > $DIRECTORY/MONITOR_ENABLED
   echo $DATA_DIR > $DIRECTORY/DATA_DIR
+  echo $ACCESS_POINT_DIR > $DIRECTORY/ACCESS_POINT_DIR
 
-  docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 22000:22000 -p 80:80 -p 443:443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria/alastria-node-validator
+  docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -v $ACCESS_POINT_DIR:/etc/nginx -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 22000:22000 -p 80:80 -p 443:443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria/alastria-node-validator
 }
 
 function checkName {
-  PS3="Are you sure that these data are correct?"$'\n'"Node Type => $NODE_TYPE"$'\n'"Node Name => $NODE_NAME"$'\n'"Data path: => $DATA_DIR"$'\n'"Press 1 (Yes) or 2 (No) => "
+  PS3="Are you sure that these data are correct?"$'\n'"Node Type => $NODE_TYPE"$'\n'"Node Name => $NODE_NAME"$'\n'"Data path: => $DATA_DIR"$'\n'"Access point path: => $ACCESS_POINT_DIR"$'\n'"Press 1 (Yes) or 2 (No) => "
   options=("Yes" "No")
 
   select opt in "${options[@]}"
@@ -69,7 +65,6 @@ setCompanyName
 setCPUNumber
 setRAMNumber
 setSequential
-setVolume
 
 NODE_NAME=$(printf "%s%s%s%s%s%s%s%s" "$NODE_NAME" "$COMPANY_NAME" "_Telsius_" "$CPU" "_" "$RAM" "_" "$SEQ")
 checkName
