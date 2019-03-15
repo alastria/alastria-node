@@ -46,7 +46,7 @@ RUN \
     && apt-get clean
 
 VOLUME /root/alastria
-VOLUME /etc/nginx
+VOLUME /etc/nginx/conf.d
 EXPOSE 9000 21000 21000/udp 22000 8443 80 443
 
 COPY entrypoint.sh /usr/bin/
