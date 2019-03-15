@@ -39,7 +39,7 @@ function launchNode {
   echo $DATA_DIR > $DIRECTORY/DATA_DIR
   echo $ACCESS_POINT_DIR > $DIRECTORY/ACCESS_POINT_DIR
 
-  docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -v $ACCESS_POINT_DIR:/etc/nginx -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 22000:22000 -p 80:80 -p 443:443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria/alastria-node-validator
+  docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -v $ACCESS_POINT_DIR:/etc/nginx/conf.d -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 22000:22000 -p 80:80 -p 443:443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria/alastria-node-validator
 }
 
 function checkName {
