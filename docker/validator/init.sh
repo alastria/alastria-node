@@ -32,7 +32,7 @@ function launchNode {
     mkdir $DIRECTORY
   fi
   DATA_DIR="$(pwd)"/alastria
-  ACCESS_POINT_DIR="$(pwd)"/alastria-access-point/nginx
+  ACCESS_POINT_DIR="$(pwd)"/nginx/conf.d/:/etc/nginx/conf.d
   echo $NODE_NAME > $DIRECTORY/NODE_NAME
   echo $NODE_TYPE > $DIRECTORY/NODE_TYPE
   echo $MONITOR_ENABLED > $DIRECTORY/MONITOR_ENABLED
