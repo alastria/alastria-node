@@ -31,6 +31,8 @@ function launchNode {
   if [ ! -d "$DIRECTORY" ]; then
     mkdir $DIRECTORY
   fi
+  git clone https://github.com/alastria/alastria-access-point.git
+
   DATA_DIR="$(pwd)"/alastria
   ACCESS_POINT_DIR="$(pwd)"/alastria-access-point/nginx/conf.d
   echo $NODE_NAME > $DIRECTORY/NODE_NAME

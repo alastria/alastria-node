@@ -23,16 +23,18 @@ CUID=$UID
 echo "[*] Stopping container... "
 ./stop.sh 2> /dev/null; sleep 10
 mkdir -p backups; cd backups
-
+BACKUPS="$(pwd)"
+cd $DATA_DIR
 if [ "$OPT" == "keys" ]; then
-    tar -cvzf $ARCHIVE \
-        $DATA_DIR/data/passwords.txt \
-        $DATA_DIR/data/keystore \
-        $DATA_DIR/data/constellation/keystore \
-        $DATA_DIR/data/geth/nodekey
+    tar -cvzf $BACKUPS/$ARCHIVE \
+        data/passwords.txt \
+        data/keystore \
+        data/constellation/keystore \
+        data/geth/nodekey
 else
-    tar -cvzf $ARCHIVE $DATA_DIR
+    tar -cvzf $BACKUPS/$ARCHIVE .
 fi
+cd $BACKUPS
 echo "[*] Starting container... "
 sudo chown $CUID:$CUID $ARCHIVE \
 && cd .. && ./start.sh 2> /dev/null
