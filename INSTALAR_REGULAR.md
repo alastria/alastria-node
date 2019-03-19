@@ -3,27 +3,13 @@
 
 Nuestra primera aproximación a esta red, es la generación de una red en pruebas con [Quorum](https://www.jpmorgan.com/global/Quorum) (derivado de [Ethereum](https://www.ethereum.org/)) que permite disponer de una red permisionada (necesitaremos solicitar el acceso a la misma) y con la posibilidad de generar transacciones privadas.
 
-En esta red, al utilizar el protocolo de consenso [Istanbul BFT](https://github.com/ethereum/EIPs/issues/650), podemos elegir desplegar dos tipos de nodos:
-
-* **Validator**: Que son los responsables de generar neutralidad y confiabilidad al generar los bloques con las tranacciones.
-
-* **Regular**: Que son los responsables de aceptar las transacciones, verificarlas y entregarlas a los “validator”.
-
-La elección de un tipo de nodo depende de si desea únicamente desplegar aplicaciones y realizar pruebas de concepto sobre la test-net, para lo cual, sólo necesita un nodo Regular.
-
-Por otro lado, el añadir un nodo “validator”, contribuiría a la neutralidad de la red, generando mayor confianza en que la “verdad” introducida en la cadena de bloques esté verificada por el mayor número de validadores.
-
 El software que se incluye en el nodo es el siguiente:
 
 * **geth**: Es el nodo Quorum con el que se opera en la red blockchain.
 
 * **constellation**: Es la pieza de software que nos permite realizar transacciones privadas entre socios. Su utilización es opcional.
 
-* **monitor:** Es un servicio REST desarrollado adHoc por el core de desarrolladores de Alastria, que permitirá recabar información y asegurar el correcto funcionamiento de la infraestructura. **Su utilización es opcional para los nodos regulares.**
-
-Como parte de los trabajos de evolución de la infraestructura de red, se va a introducir el concepto de **Bootnode**.
-
-Estos nodos, servirán para permitir comunicar los nodos entre sí mediante el protocolo **Gossip**, evitando tener que actualizar los ficheros de permisionado con tanta frecuencia como ocurre ahora.
+* **monitor:** Es un servicio REST desarrollado adHoc por el core de desarrolladores de Alastria, que permitirá recabar información y asegurar el correcto funcionamiento de la infraestructura.
 
 ### Requerimientos del nodo“Regular”
 
@@ -92,15 +78,21 @@ Y ahora sí, configuramos el nodo general llamando al script init.sh con los par
 
 **auto**: obtiene la ip pública del nodo.
 
-* **general**: indica que se está configurando un nodo regular.
+**general**: indica que se está configurando un nodo regular.
 
-* **nomenclatura**: TYPE_COMPANY_NET_CORES_RAM_SEQ.
+**TYPE_Company_Net_CORES_RAM_SEQ**: formato para la nomenclatura del nombre identificativo del nodo.
 
-* Type: VAL | REG.
+* Type: REG.
+
+* Company: Nombre de la compañia.
 
 * NET: Telsius.
 
-* SEQ: Sequencial empezando en 00. 
+* CORES: El número de cores de la máquina.
+
+* RAM: Memoria RAM de la máquina.
+
+* SEQ: Sequencial empezando en 00.
 
 Ejemplo de ejecución
 
@@ -271,8 +263,8 @@ En primer lugar, para identificar los ficheros cambiados en el nodo recién conf
 
     $ cd ~/alastria-node
     $ git status
-    On branch develop
-    Your branch is up-to-date with 'origin/develop'.
+    On branch testnet2
+    Your branch is up-to-date with 'origin/testnet2'.
     Changes not staged for commit:
       (use "git add <file>..." to update what will be committed)
       (use "git checkout -- <file>..." to discard changes in working directory)
@@ -306,7 +298,7 @@ Así mismo, para obtener la clave pública del nodo para realizar transacciones 
     $ cat ~/alastria/data/constellation/keystore/node.pub
     BAKMjJL7xeRjUt1za/Ax8pKIb9T66tSJWxW3QfTmOSY=
 
-Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “develop”.
+Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “testnet2”.
 
 Si tiene dudas para realizar esta operación, sigua este tutorial (Enlace al F.A.Q. de la WIKI).
 
@@ -316,7 +308,7 @@ El equipo core de plataforma, procederá entonces a la aceptación del pull requ
 
 Con estos cambios aceptados, todos los nodos validadores deben actualizar sus ficheros de permisionado, que se realiza con el monitor a través de una llamada a su API.
 
-Para verificar que se ha realizado, se debe consultar el [monitor de la red](http://netstats.telsius.alastria.io/) y comprobar que aumenta la columna de Peers y que la columna Last blockaumenta hasta sincronizarse con el resto de nodos.
+Para verificar que se ha realizado, se debe consultar el [monitor de la red](http://netstats.telsius.alastria.io/) y comprobar que aumenta la columna de Peers y que la columna Last block aumenta hasta sincronizarse con el resto de nodos.
 
 ### Actualización del permisionado
 
