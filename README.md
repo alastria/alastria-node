@@ -1,7 +1,6 @@
 # ALASTRIA Arrakis (Testnet) #
 
-* In the next days, we will announce Requirements for the new Alastria Net (Telsius) that will become the LiveNet
-
+* If you want to use Telsius, please visit [Telsius](https://github.com/alastria/alastria-node/blob/testnet2/docker/README.md) for information
 * Visit [What is alastria](https://alastria.io/sobre_alastria) page to know more about us.
 
 This page contains technical information needed to work in the Alastria ecosystem on the possible different ways.
