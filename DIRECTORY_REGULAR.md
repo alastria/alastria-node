@@ -17,4 +17,6 @@
 | SAP | José Prados (jose.prados@sap.com) | AWS | sN+ssDLd650I8IEKj1QElXswg1z6fiFQ8ehu07/Iq3c= | enode://5c914c8f8917dc6955041b1f5b3b2db53921d4b6bbbb548172b13e0be6d5fc93b6a01a88d017967ce627540630ea1e53b886ac36b125a59b04a13069848c70de@54.93.229.117:21000?discport=0 |
 | TOQIO | Daniella Lorenzo (daniella@groupolivo.com) | AWS | wNv9Il6+hZjDSR8AruvANNn2TXaDnCiR/ZkfwhSvW0A= | 8eb892836f2234a421a21d62597312d3972566761a2545c296664f4adeb45d7ac1fbb426e932f99aa622466901d3ed34b36f6c11aaa8bc947152c733c67cf2f6@54.171.57.127 |
 | FGULL | Iradiel Garcia (iradiel90@gmail.com) | Google Cloud (2C/8GB/40GB) | gb1DjI8o265opzWNRbNoDzXDpGKiqmJZamhXmpDYVEk= | enode://68dd23c5e3067c4d50e9cb76428eb0792c6932be6836be0c7f71c2c3fa058412d19a7c392a8bf677ae3b1df2790658850d8d4b4e085be2dfca2b85d5493a6a8d@35.241.151.245:21000?discport=0 |
+| AYESA | Juan Manuel Moreno (j.mmoreno@ayesa.com) Jose M. del Molino (jmmolino@ayesa.com) | AWS (2C/4GB/60GB) | +UOBZPl299mAg00nfDB9PU1c2QvAYBKEcbDUkwc4SwY= | enode://49dbfaaa0e4d4afee2b095c6ca293d7edf9bc22f4c5419518189931422022bd8703fbc317cbeda516a56b03268339e815ccc64e69e96570c220e24bcdc026152@99.80.181.35:21000?discport=0 |
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
