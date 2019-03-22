@@ -263,8 +263,8 @@ En primer lugar, para identificar los ficheros cambiados en el nodo recién conf
 
     $ cd ~/alastria-node
     $ git status
-    On branch develop
-    Your branch is up-to-date with 'origin/develop'.
+    On branch testnet2
+    Your branch is up-to-date with 'origin/testnet2'.
     Changes not staged for commit:
       (use "git add <file>..." to update what will be committed)
       (use "git checkout -- <file>..." to discard changes in working directory)
@@ -298,7 +298,7 @@ Así mismo, para obtener la clave pública del nodo para realizar transacciones 
     $ cat ~/alastria/data/constellation/keystore/node.pub
     BAKMjJL7xeRjUt1za/Ax8pKIb9T66tSJWxW3QfTmOSY=
 
-Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “develop”.
+Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “testnet2”.
 
 Si tiene dudas para realizar esta operación, sigua este tutorial (Enlace al F.A.Q. de la WIKI).
 
