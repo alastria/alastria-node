@@ -7,6 +7,12 @@ _term() {
 
 trap _term SIGTERM
 
+git pull
+cd ./scripts
+sed -i 's/sudo//g' bootstrap.sh
+./bootstrap.sh
+./monitor.sh build
+
 if [ ! -f ~/alastria/data/IDENTITY ]; then
     ./init.sh auto $NODE_TYPE $NODE_NAME
 elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
