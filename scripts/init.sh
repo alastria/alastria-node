@@ -30,21 +30,6 @@ if ( [ "dockerfile" == "$1" ]); then
     echo "Public host IP found: $CURRENT_HOST_IP"
 fi
 
-if ( [ "backup" == "$1" ]); then
-    echo "Backing up current node keys ..."
-    #Backup directory tree
-    mkdir ~/alastria-keysBackup
-    mkdir ~/alastria-keysBackup/data
-    mkdir ~/alastria-keysBackup/data/geth
-    mkdir ~/alastria-keysBackup/data/constellation
-    echo "Saving constellation keys ..."
-    cp -r ~/alastria/data/constellation/keystore ~/alastria-keysBackup/data/constellation/
-    echo "Saving node keys ..."
-    cp -r ~/alastria/data/keystore ~/alastria-keysBackup/data
-    echo "Saving enode ID ..."
-    cp ~/alastria/data/geth/nodekey ~/alastria-keysBackup/data/geth/nodekey
-fi
-
 PWD="$(pwd)"
 CONSTELLATION_NODES=$(cat ../data/constellation-nodes.json)
 
@@ -192,10 +177,21 @@ if [[ "$CURRENT_HOST_IP" == "$VALIDATOR0_HOST_IP" ]]; then
     echo "e7889a64e5ec8c28830a1c8fc620810f086342cd511d708ee2c4420231904d18" > ~/alastria/data/nodekey
 fi
 
-
 if ( [ "general" == "$NODE_TYPE" ]); then
-    # echo "     Por favor, introduzca como contraseña 'Passw0rd'."
-    echo  "     Definida contraseña por defecto para cuenta principal como: $ACCOUNT_PASSWORD."
+    while [ -z "$ACCOUNT_PASSWORD" ]
+    do
+        echo "Enter a password:" >&2
+        read -s PASSWORD1
+        echo "Confirm password:" >&2
+        read -s PASSWORD2
+        if [ "$PASSWORD1" = "$PASSWORD2" ]; then
+            ACCOUNT_PASSWORD=$PASSWORD1
+        else
+            red='\033[0;31m'
+            NC='\033[0m'
+            echo -e "\n${red}Passwords did not match!${NC}" >&2
+        fi
+    done
     echo $ACCOUNT_PASSWORD > ./account_pass
     # Only create keystore folder on general node.
     mkdir -p ~/alastria/data/keystore
