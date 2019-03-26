@@ -33,10 +33,6 @@ RUN \
         nano \
     && cd \
     && git clone -b $ALASTRIA_BRANCH https://github.com/alastria/alastria-node \
-    && cd alastria-node/scripts \
-    && sed -i 's/sudo//g' bootstrap.sh \
-    && ./bootstrap.sh \
-    && ./monitor.sh build \
     && apt-get autoremove \
     && apt-get clean
 
@@ -44,6 +40,6 @@ VOLUME /root/alastria
 EXPOSE 21000 21000/udp 8443
 
 COPY entrypoint.sh /usr/bin/
-WORKDIR /root/alastria-node/scripts
+WORKDIR /root/alastria-node
 ENTRYPOINT ["entrypoint.sh"]
 CMD
