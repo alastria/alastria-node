@@ -23,4 +23,5 @@
 | IZERTIS |  Unai Urkiaga Etxabe (uurquiaga@izertis.com) | Amazon AWS (2C/4Gb/100Gb)| 6gkurbjPkzuyBWda7G/Zy8uwhFw/kgId/xZ9/RZOY1Q= | enode://c2ae4bbff74a50c02272b0ea7d3b33a0758f2d04dc6bf83ce5f56e376da0fd5c0645d3c60877e50b067314f752224f779bd749ebed152048b0ec5a93acf4d0a5@34.249.142.75:21000?discport=0 |
 | AYESA | Juan Manuel Moreno (j.mmoreno@ayesa.com) Jose M. del Molino (jmmolino@ayesa.com) | AWS (2C/4GB/60GB) | +UOBZPl299mAg00nfDB9PU1c2QvAYBKEcbDUkwc4SwY= | enode://49dbfaaa0e4d4afee2b095c6ca293d7edf9bc22f4c5419518189931422022bd8703fbc317cbeda516a56b03268339e815ccc64e69e96570c220e24bcdc026152@99.80.181.35:21000?discport=0 |
 | COUNCILBOX | Rodrigo Martínez Castaño (rodrigo.martinez@councilbox.com) | Azure (2C/4Gb/512GiB) | UFyvlt/Mg7DeJpf91C3Y0/TgOyFpg9OwY6vXpCeIwVU= | enode://fb5de76b14c81cac3180598bf96a57e7b62246fc628fd6a8ca0ed7424596a8bfec829fb36ae35e0a67f6e2ae31f63ed05337f06f410251464d32d76c805181e0@reg0.telsius.alastria.councilbox.com:21002?discport=0 |
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
