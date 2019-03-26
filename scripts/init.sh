@@ -15,7 +15,7 @@ VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opend
 CURRENT_HOST_IP="$1"
 NODE_TYPE="$2"
 NODE_NAME="$3"
-ACCOUNT_PASSWORD='Passw0rd'
+ACCOUNT_PASSWORD=''
 
 
 if ( [ "auto" == "$1" -o "backup" == "$1" ]); then
