@@ -3,7 +3,7 @@ set -e
 
 MESSAGE='Usage: init <mode> <node-type> <node-name>
     mode: CURRENT_HOST_IP | auto | backup
-    node-type: validator | general
+    node-type: validator | general | bootnode
     node-name: NODE_NAME (example: Alastria)'
 
 if ( [ $# -ne 3 ] ); then
@@ -47,13 +47,11 @@ fi
 
 PWD="$(pwd)"
 CONSTELLATION_NODES=$(cat ../data/constellation-nodes.json)
-STATIC_NODES=$(cat ../data/static-nodes.json)
-PERMISSIONED_NODES_VALIDATOR=$(cat ../data/permissioned-nodes_validator.json)
-PERMISSIONED_NODES_GENERAL=$(cat ../data/permissioned-nodes_general.json)
 
 update_constellation_nodes() {
     NODE_IP="$1"
     CONSTELLATION_PORT="$2"
+
     URL=",
     \"https://$NODE_IP:$CONSTELLATION_PORT/\"
 ]"
@@ -66,21 +64,27 @@ update_nodes_list() {
     echo "Selected $NODE_TYPE node..."
     echo "Updating permissioned nodes..."
 
-       ENODE=",
-    \"$1\"
-]"
-    PERMISSIONED_NODES_VALIDATOR=${PERMISSIONED_NODES_VALIDATOR::-2}
-    PERMISSIONED_NODES_VALIDATOR="$PERMISSIONED_NODES_VALIDATOR$ENODE"
-    echo "$PERMISSIONED_NODES_VALIDATOR" > ~/alastria-node/data/permissioned-nodes_validator.json
+    BOOT_NODES=$(cat ~/alastria-node/data/boot-nodes.json)
+    REGULAR_NODES=$(cat ~/alastria-node/data/regular-nodes.json)
+    VALIDATOR_NODES=$(cat ~/alastria-node/data/validator-nodes.json)
 
-    if ( [ "validator" == "$NODE_TYPE" ]); then
-        PERMISSIONED_NODES_GENERAL=${PERMISSIONED_NODES_GENERAL::-2}
-        PERMISSIONED_NODES_GENERAL="$PERMISSIONED_NODES_GENERAL$ENODE"
-        echo "$PERMISSIONED_NODES_GENERAL" > ~/alastria-node/data/permissioned-nodes_general.json
+    ENODE="
+ \"$1\","
+ 
+   if ( [ "validator" == "$NODE_TYPE" ]); then
+        VALIDATOR_NODES="$VALIDATOR_NODES$ENODE"
+        echo "$VALIDATOR_NODES" > ~/alastria-node/data/validator-nodes.json
+    else
+      if ( [ "general" == "$NODE_TYPE" ]); then
+          REGULAR_NODES="$REGULAR_NODES$ENODE"
+          echo "$REGULAR_NODES" > ~/alastria-node/data/regular-nodes.json
+        else
+          if ( [ "bootnode" == "$NODE_TYPE" ]); then
+              BOOT_NODES="$BOOT_NODES$ENODE"
+              echo "$BOOT_NODES" > ~/alastria-node/data/boot-nodes.json
+         fi 
+       fi
     fi
-
-    echo "Updating static-nodes..."
-    cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria-node/data/static-nodes.json
 
 }
 
@@ -180,18 +184,12 @@ if ( [ "backup" != "$1" ]); then
 fi
 cd ~
 # IP for the inicital validator on network
+~/alastria-node/scripts/updatePerm.sh "$NODE_TYPE"
+
+echo "$CURRENT_HOST_IP" > ~/alastria/data/CURRENT_HOST
+echo "$VALIDATOR0_HOST_IP" > ~/alastria/data/VALIDATOR_HOST
 if [[ "$CURRENT_HOST_IP" == "$VALIDATOR0_HOST_IP" ]]; then
     echo "e7889a64e5ec8c28830a1c8fc620810f086342cd511d708ee2c4420231904d18" > ~/alastria/data/nodekey
-    cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
-    cp ~/alastria-node/data/static-nodes.json ~/alastria/data/permissioned-nodes.json
-else
-    if [[ "$NODE_TYPE" == "general" ]]; then
-        cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria/data/permissioned-nodes.json
-        cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria/data/static-nodes.json
-    else
-        cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/permissioned-nodes.json
-        cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/static-nodes.json
-    fi
 fi
 
 
@@ -262,7 +260,7 @@ fi
 
 echo "[*] Initialization was completed successfully."
 echo " "
-echo "      Update DIRECTORY_REGULAR.md or DIRECTORY_VALIDATOR.md from alastria-node repository and send a Pull Request."
+echo "      Update DIRECTORY_REGULAR.md, DIRECTORY_VALIDATOR.md or DIRECTORY_BOOTNODES.md from alastria-node repository and send a Pull Request."
 echo "      Don't forget the .json files in data folder!."
 echo " "
 

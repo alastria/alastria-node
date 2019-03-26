@@ -75,12 +75,10 @@ EOF
 }
 
 echo "[*] Updating permissioned nodes."
-cp ~/alastria-node/data/static-nodes.json ~/alastria/data/static-nodes.json
+
+./updatePerm.sh "$NODE_TYPE"
 if [[ "$NODE_TYPE" == "general" ]]; then
     generate_conf "${CURRENT_HOST_IP}" "9000" "$CONSTELLATION_NODES" "${PWD}" > ~/alastria/data/constellation/constellation.conf
-    cp ~/alastria-node/data/permissioned-nodes_general.json ~/alastria/data/permissioned-nodes.json
-else
-    cp ~/alastria-node/data/permissioned-nodes_validator.json ~/alastria/data/permissioned-nodes.json
 fi
 
 cp /tmp/nodekey ~/alastria/data/geth/
