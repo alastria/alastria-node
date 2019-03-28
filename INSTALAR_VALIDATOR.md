@@ -292,8 +292,7 @@ En primer lugar, para identificar los ficheros cambiados en el nodo recién conf
       (use "git add <file>..." to update what will be committed)
       (use "git checkout -- <file>..." to discard changes in working directory)
 
-     modified:   ../data/permissioned-nodes_general.json
-     modified:   ../data/permissioned-nodes_validator.json
+     modified:   ../data/validator-nodes.json
      modified:   ../data/static-nodes.json
 
     no changes added to commit (use "git add" and/or "git commit -a")
@@ -327,8 +326,7 @@ Una vez que el nodo está listo para operar con la red, tenemos que asegurarnos 
 Desde la consola del nodo:
 
     $ cd ~/alastria-node/data
-    $ git checkout -- constellation-nodes.json
-    $ git checkout -- permissioned-nodes_validator.json
+    $ git checkout -- validator-nodes.json
     $ git checkout -- static-nodes.json
 
 Si algún miembro del APCT solicita que se actualicen manualmente los ficheros de permisionado y una vez asegurado que el repositorio local alastria-node está limpio de cambios, procedemos a actualizar los ficheros utilizando la siguiente secuencia de comandos:
