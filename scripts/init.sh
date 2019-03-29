@@ -30,20 +30,6 @@ if ( [ "dockerfile" == "$1" ]); then
     echo "Public host IP found: $CURRENT_HOST_IP"
 fi
 
-if ( [ "backup" == "$1" ]); then
-    echo "Backing up current node keys ..."
-    #Backup directory tree
-    mkdir ~/alastria-keysBackup
-    mkdir ~/alastria-keysBackup/data
-    mkdir ~/alastria-keysBackup/data/geth
-    mkdir ~/alastria-keysBackup/data/constellation
-    echo "Saving constellation keys ..."
-    cp -r ~/alastria/data/constellation/keystore ~/alastria-keysBackup/data/constellation/
-    echo "Saving node keys ..."
-    cp -r ~/alastria/data/keystore ~/alastria-keysBackup/data
-    echo "Saving enode ID ..."
-    cp ~/alastria/data/geth/nodekey ~/alastria-keysBackup/data/geth/nodekey
-fi
 
 PWD="$(pwd)"
 CONSTELLATION_NODES=$(cat ../data/constellation-nodes.json)

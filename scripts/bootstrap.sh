@@ -69,7 +69,7 @@ function installconstellation {
     pushd /tmp
     unxz $constellationrel.tar.xz
     tar -xf $constellationrel.tar
-    superuser cp $constellationrel/constellation-node /usr/local/bin 
+    superuser cp $constellationrel/constellation-node /usr/local/bin/ 
     superuser chmod 0755 /usr/local/bin/constellation-node
     superuser rm -rf $constellationrel.tar.xz $constellationrel.tar $constellationrel
     popd
@@ -103,8 +103,8 @@ function installquorum {
     cd quorum
     git checkout fd97ae99e65034ad10b4e05c01add8b828b984dd
     make all
-    superuser cp build/bin/geth /usr/local/bin
-    superuser cp build/bin/bootnode /usr/local/bin
+    superuser cp build/bin/geth /usr/local/bin/
+    superuser cp build/bin/bootnode /usr/local/bin/
     popd
     rm -rf /tmp/quorum
   fi
@@ -162,7 +162,8 @@ function installalastria {
   installconstellation
   installquorum
   gopath
-  
+  export CASA=$HOME
+  superuser ln -s $CASA/alastria-node/scripts/updateSinRestart.sh /etc/cron.daily/updateSinRestart.sh
   set +e
 }
 
