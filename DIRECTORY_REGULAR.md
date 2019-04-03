@@ -26,5 +26,6 @@
 | COUNCILBOX | Rodrigo Martínez Castaño (rodrigo.martinez@councilbox.com) | Azure (2C/4Gb/512GiB) | UFyvlt/Mg7DeJpf91C3Y0/TgOyFpg9OwY6vXpCeIwVU= | enode://fb5de76b14c81cac3180598bf96a57e7b62246fc628fd6a8ca0ed7424596a8bfec829fb36ae35e0a67f6e2ae31f63ed05337f06f410251464d32d76c805181e0@reg0.telsius.alastria.councilbox.com:21002?discport=0 |
 | SIEMENS | Jason Perez Hornung (jason.perez_hornung.ext@siemens.com) | AWS (2C/4Gb/512GiB) | uUbGfWAb0SFoJope1xzLL6NNEeG9ybMok3d6OI5z3B0= | enode://94d4fc2a80c0c3c261ea9a4cf00ad869c03988932bbadecdfa1fd96ee6319d192b6bc6a073fad96bdf2b9a0d83e6ef86a0a013d0dfe6f4fc712bdb6136077eef@34.241.126.77:21000?discport=0 |
 | Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | Gigas (4C/4Gb/100Gb) | bjc3A1F47IpeTq+wcVHya1ohTFjNuVEnjbKGMqH4J1U= | enode://f5ebf3dad81a4e15299a2a87014037f43984e44669cbc4d26a9b7897fe810a0bbca25135ac8f461ae6e130ea8356542b02be54a4658533f28bfbbd7662a542d6@5.56.60.217:21000?discport=0 |
+| SigneBlock |  Sergio Torres (sergio.torres@signeblock.com) | Amazon AWS (2C/4Gb/200Gb)| LULWoraVkqDrzBHBXhrzIb6Q7PeuEl5o106a8UBeAE= | enode://f562782f4855ceda6ed077720ba5f4d6f9cbdc7e89a866c06048c40d04fd2f94d0b110c8b9a05d85653de7114ba791dc7cb30a4a27d3d64609bd945e4ab9002e@35.180.206.10:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
