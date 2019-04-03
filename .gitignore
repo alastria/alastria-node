@@ -12,4 +12,7 @@ docker/config
 docker/general/alastria
 docker/bootnode/alastria
 docker/validator/alastria
+docker/scripts/backups
+docker/general/alastria-access-point
+docker/validator/alastria-access-point
 .DS_Store

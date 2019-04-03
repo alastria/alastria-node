@@ -263,14 +263,14 @@ En primer lugar, para identificar los ficheros cambiados en el nodo recién conf
 
     $ cd ~/alastria-node
     $ git status
-    On branch develop
-    Your branch is up-to-date with 'origin/develop'.
+    On branch testnet2
+    Your branch is up-to-date with 'origin/testnet2'.
     Changes not staged for commit:
       (use "git add <file>..." to update what will be committed)
       (use "git checkout -- <file>..." to discard changes in working directory)
 
     modified:   data/constellation-nodes.json
-            modified:   data/permissioned-nodes_validator.json
+            modified:   data/regular-nodes.json
 
     Untracked files:
       (use "git add <file>..." to include in what will be committed)
@@ -298,7 +298,7 @@ Así mismo, para obtener la clave pública del nodo para realizar transacciones 
     $ cat ~/alastria/data/constellation/keystore/node.pub
     BAKMjJL7xeRjUt1za/Ax8pKIb9T66tSJWxW3QfTmOSY=
 
-Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “develop”.
+Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “testnet2”.
 
 Si tiene dudas para realizar esta operación, sigua este tutorial (Enlace al F.A.Q. de la WIKI).
 
@@ -318,7 +318,7 @@ Desde la consola del nodo:
 
     $ cd ~/alastria-node/data
     $ git checkout -- constellation-nodes.json
-    $ git checkout -- permissioned-nodes_validator.json
+    $ git checkout -- regular-nodes.json
     $ git checkout -- static-nodes.json
 
 Si algún miembro del APCT solicita que se actualicen manualmente los ficheros de permisionado y una vez asegurado que el repositorio local alastria-node está limpio de cambios, procedemos a actualizar los ficheros utilizando la siguiente secuencia de comandos:
