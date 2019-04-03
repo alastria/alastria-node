@@ -28,5 +28,6 @@
 | Tribalyte Technologies | Rafael Barriuso (rbarriuso@tribalyte.com) | Gigas (4C/4Gb/100Gb) | bjc3A1F47IpeTq+wcVHya1ohTFjNuVEnjbKGMqH4J1U= | enode://f5ebf3dad81a4e15299a2a87014037f43984e44669cbc4d26a9b7897fe810a0bbca25135ac8f461ae6e130ea8356542b02be54a4658533f28bfbbd7662a542d6@5.56.60.217:21000?discport=0 |
 | SigneBlock |  Sergio Torres (sergio.torres@signeblock.com) | Amazon AWS (2C/4Gb/200Gb)| LULWoraVkqDrzBHBXhrzIb6Q7PeuEl5o106a8UBeAE= | enode://f562782f4855ceda6ed077720ba5f4d6f9cbdc7e89a866c06048c40d04fd2f94d0b110c8b9a05d85653de7114ba791dc7cb30a4a27d3d64609bd945e4ab9002e@35.180.206.10:21000?discport=0 |
 | Reciclos |  David Bruguera (davidbruguera@easyinnova.com) | Amazon AWS (1C/2Gb/8Gb)| q60Y/6uOZPHaSVk3d1MealICjsZdK9F1tdjffcdhA2k= | enode://acbf979350a944c8c1f6b50902763e7163d0f93cda3095cb2f6975f412a16648593f2153534495807a0ffb7dfe4e8d873d4fa45914e927f4625b1ecf6591f9a9@35.180.72.98:21000?discport=0 |
+| Reciclos01 |  David Bruguera (davidbruguera@easyinnova.com) | Amazon AWS (1C/2Gb/8Gb)| gtfck+pMDa82zHGzyKvdb/+F8uNGugnO4NzZbx8YdWs= | enode://fae878563777f6dc4e79661f5f921babcdb3c3678fbf190e61fcca62ef26bc6bb180e5e7fb40c3e39e377834f2d16adfa52b92693a96651b967f821ea7394fe2@35.181.42.186:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
