@@ -12,3 +12,4 @@ docker/config
 docker/general/alastria
 docker/bootnode/alastria
 docker/validator/alastria
+.DS_Store
