@@ -77,9 +77,6 @@ function launchNode {
   echo $DATA_DIR > $DIRECTORY/DATA_DIR
   echo $ACCESS_POINT_DIR > $DIRECTORY/ACCESS_POINT_DIR
   echo $ENABLE_CONSTELLATION > $DIRECTORY/ENABLE_CONSTELLATION
-  
-  git clone https://github.com/alastria/alastria-access-point.git
-
 
   if [ $MONITOR_ENABLED -eq 1 ]; then
     docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -v $ACCESS_POINT_DIR:/etc/nginx/conf.d -p 22000:22000 -p 21000:21000 -p 21000:21000/udp -p 9000:9000 -p 8443:8443 -p 80:80 -p 443:443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED -e ENABLE_CONSTELLATION=$ENABLE_CONSTELLATION --restart unless-stopped alastria/alastria-node-general
