@@ -2,6 +2,12 @@
 set -u
 set -e
 
+kill_geth() {
+    echo "He entrado en kill_geth" > KILL_GETH
+    pkill -f geth
+}
+trap kill_geth SIGTERM
+
 MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch> <--local-rpc> <--logrotate>'
 
 MONITOR=1

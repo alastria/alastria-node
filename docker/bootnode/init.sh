@@ -1,7 +1,7 @@
 #!/bin/bash
 
-NODE_TYPE="validator"
-NODE_NAME="VAL_"
+NODE_TYPE="bootnode"
+NODE_NAME="BOT_"
 MONITOR_ENABLED=1
 
 function setCompanyName {
@@ -25,23 +25,18 @@ function setSequential {
   echo ""
 }
 
-
 function launchNode {
   DIRECTORY=../config
   if [ ! -d "$DIRECTORY" ]; then
     mkdir $DIRECTORY
   fi
-  git clone https://github.com/alastria/alastria-access-point.git
-
   DATA_DIR="$(pwd)"/alastria
-  ACCESS_POINT_DIR="$(pwd)"/alastria-access-point/nginx/conf.d
   echo $NODE_NAME > $DIRECTORY/NODE_NAME
   echo $NODE_TYPE > $DIRECTORY/NODE_TYPE
   echo $MONITOR_ENABLED > $DIRECTORY/MONITOR_ENABLED
   echo $DATA_DIR > $DIRECTORY/DATA_DIR
-  echo $ACCESS_POINT_DIR > $DIRECTORY/ACCESS_POINT_DIR
 
-  docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -v $ACCESS_POINT_DIR:/etc/nginx/conf.d -p 21000:21000 -p 21000:21000/udp -p 8443:8443 -p 80:80 -p 443:443 -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria/alastria-node-validator
+  docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria -p 21000:21000 -p 21000:21000/udp -p 8443:8443  -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME -e MONITOR_ENABLED=$MONITOR_ENABLED --restart unless-stopped alastria/alastria-node-bootnode
 }
 
 function checkName {
@@ -52,7 +47,7 @@ function checkName {
   do
     case $opt in
       "Yes")
-        echo "Starting node"
+        echo "Starting bootnode"
         launchNode
         ;;
       "No")
