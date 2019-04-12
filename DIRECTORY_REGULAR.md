@@ -32,5 +32,6 @@
 | Reciclos2 | David Bruguera (davidbruguera@easyinnova.com) | Amazon AWS (2C/4Gb/60Gb) | X0uB9vOdScQOrne/oTD8/v7XOLmEdy3y3K9leAUXDgM= | enode://0420bf91caeaef6e478844b55e13f93bd926d6f5492d549437bdf4691a86f2e167bd014ffe83d1fcdd15ae66827c0411606d6de5074dcf1912428aa6753cabc3@35.181.42.186:21000?discport=0 |
 | UnivLleida | Roberto García (roberto.garcia@udl.cat) | Seft-Hosted (16C/16Gb/500Gb) |  | enode://27de34a02f319d22f0fd3c5c99e485de0eca1b97f7b200c601dbdcf4b95a90eb1b607339f6e4d4a5e029a69f6b4f4a34ae15e5c0d0a6b1f606338be5556f73e2@193.144.12.52:21000?discport=0 |
 | SIEMENS | Jason Perez Hornung (jason.perez_hornung.ext@siemens.com) | AWS (2C/4Gb/512GiB) | 71VEFpNN8qJOXpidQA/JfWCWUoh+078Pq3E5elKJCSI= | enode://b784aeb62629bb7b1acdab5ca3aaac74505c70d66b5e5a4a44224c93c51e2929046d6ca242c443973caddf59173c7db37707608b3788235cf51ab4d086b80115@18.196.97.221:21000?discport=0 |
+| SM_SERVICES |  Alexander Herranz(alexander.herranz@sm-services.es) | IBM Cloud (2C/2Gb/50Gb)| J5Cv0/XiIavBbq4t09X3hFDxDnxCg7yBtBB7uO03bSU= | enode://c9394766eb2816be19a8a5c06f6c251b55b273a54f9b1cf3440c7984506d801910216beb8772eca15496005c4eea7d7344645778d18fb7b17c05077046785bdc@159.122.23.130:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
