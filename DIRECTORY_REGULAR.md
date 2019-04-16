@@ -35,4 +35,6 @@
 | SM_SERVICES |  Alexander Herranz(alexander.herranz@sm-services.es) | IBM Cloud (2C/2Gb/50Gb)| J5Cv0/XiIavBbq4t09X3hFDxDnxCg7yBtBB7uO03bSU= | enode://c9394766eb2816be19a8a5c06f6c251b55b273a54f9b1cf3440c7984506d801910216beb8772eca15496005c4eea7d7344645778d18fb7b17c05077046785bdc@159.122.23.130:21000?discport=0 |
 | IECISA | Maria Salgado Iturrino (m.salgado@iecisa.com) | KIO (2C/4Gb/100Gb) | sfbk8BqQnsz+eztwhoL7cYwBGSAwg+8WRrLCjXOP+Fk= | enode://97cf63eb56893df0e5626833e20a490dd88e451ee6d541ff8aa8629d6377ffa800b6067d5777ac29c7bac6ee0863eec40df05b65f6c9469d3e1f42c694cfe717@188.210.217.181:21000?discport=0 |
 | Licens3D | David Bruguera (davidbruguera@easyinnova.com) | Seft-Hosted (8C/8Gb/1Tb) | X0uB9vOdScQOrne/oTD8/v7XOLmEdy3y3K9leAUXDgM= | enode://f5fb5f6e74fd9e1d3aa5139184d8a878d219982e26fe63610fd3b53ded0f7279590e81389de2b4fd4b3267373e5c44e24aff74633830078ce9f90f993c2474c2@84.88.144.253:21000?discport=0 |
+| Everis | Eduardo Sanchez (eduardo.sanchez.mata@everis.com) | AWS (8C/32GB/1TB) | lpFUzlI+I4C3s/fo0bnzvKG7wO1LOj0hOZ+bYmogNl8= | 
+enode://edd64ffe454da15ff5f8e5bef518ff303bb78e3a7d3100905ffa2ce6f6c3fca9d37629cd917f967c1687f0a1eab0f85050d245f0871e97f120cae68c2a2d4e4a@35.181.51.144:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
