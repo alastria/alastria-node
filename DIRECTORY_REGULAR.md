@@ -37,4 +37,5 @@
 | Licens3D | David Bruguera (davidbruguera@easyinnova.com) | Seft-Hosted (8C/8Gb/1Tb) | X0uB9vOdScQOrne/oTD8/v7XOLmEdy3y3K9leAUXDgM= | enode://f5fb5f6e74fd9e1d3aa5139184d8a878d219982e26fe63610fd3b53ded0f7279590e81389de2b4fd4b3267373e5c44e24aff74633830078ce9f90f993c2474c2@84.88.144.253:21000?discport=0 |
 | Everis | Eduardo Sanchez (eduardo.sanchez.mata@everis.com) | AWS (8C/32GB/1TB) | lpFUzlI+I4C3s/fo0bnzvKG7wO1LOj0hOZ+bYmogNl8= | 
 enode://edd64ffe454da15ff5f8e5bef518ff303bb78e3a7d3100905ffa2ce6f6c3fca9d37629cd917f967c1687f0a1eab0f85050d245f0871e97f120cae68c2a2d4e4a@35.181.51.144:21000?discport=0 |
+| atSistemas | Jose Angel Corral (jacorral@atsistemas.com) | AWS (2C/4GB/100GB) | IqrPPbPWXjtpWFSlMpNrlT7gZsRxcwmipmk+/w8hSVA= | enode://4e5c6ebfb0214e57a83632513b325b7714355faae7f8278b43e52820f655657f09afb7d014e6fda009c8f8eef0104bfcc26ca1635a9e79e6ccae30ca3177fc92@63.33.165.183:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
