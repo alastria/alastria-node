@@ -2,11 +2,18 @@
 set -u
 set -e
 
+kill_geth() {
+    echo "He entrado en kill_geth" > KILL_GETH
+    pkill -f geth
+}
+trap kill_geth SIGTERM
+
 MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch> <--local-rpc> <--logrotate>'
 
 MONITOR=1
 WATCH=0
 CLEAN=0
+GCMODE="full"
 RPCADDR=0.0.0.0
 LOGROTATE=0
 
@@ -22,6 +29,9 @@ do
     ;;
     -c|-C|--clean)
     CLEAN=1
+    ;;
+    -a|-A|--archive)
+    GCMODE="archive"
     ;;
     -l|-L|--local-rpc)
     RPCADDR=127.0.0.1
@@ -63,7 +73,7 @@ mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 if [ "$NODE_TYPE" == "bootnode" ]; then
    GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --port 21000 --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --targetgaslimit 18446744073709551615 --syncmode fast --nodiscover "
  else
-   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full --vmodule consensus/istanbul/core/core.go=5 --nodiscover "
+   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 18446744073709551615 --syncmode full --gcmode $GCMODE --vmodule consensus/istanbul/core/core.go=5 --nodiscover "
 fi
 
 _TIME="_$(date +%Y%m%d%H%M%S)"

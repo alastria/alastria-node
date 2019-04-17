@@ -52,7 +52,7 @@ Para asegurarnos que las dependencias de los scripts de configuración de los no
 
 Lo primero que tenemos que hacer es descargar el repositorio alastria-node en nuestro nodo.
 
-    $ git clone [https://github.com/alastria/alastria-node](https://github.com/alastria/alastria-node) branch testnet2
+    $ git clone https://github.com/alastria/alastria-node --branch testnet2
     Cloning into 'alastria-node'...
     remote: Counting objects: 1972, done.
     remote: Compressing objects: 100% (10/10), done.
@@ -78,17 +78,23 @@ Para asegurarnos que están activas:
     $ echo $GOPATH
     /home/ubuntu/alastria/workspace
 
-Y ahora sí, configuramos el nodo general llamando al script init.sh con los parámetros:
+Y ahora sí, configuramos el nodo validador llamando al script init.sh con los parámetros:
 
-* **auto**: obtiene la ip pública del nodo.
+**auto**: obtiene la ip pública del nodo.
 
-* **general**: indica que se está configurando un nodo regular.
+**validator**: indica que se está configurando un nodo validador.
 
-* **nomenclatura**: TYPE_COMPANY_NET_CORES_RAM_SEQ.
+**TYPE_COMPANY_NET_CORES_RAM_SEQ**: formato para la nomenclatura del nombre identificativo del nodo.
 
-* Type: VAL | REG.
+* Type: VAL.
 
-* NET: Telsius 
+* Company: Nombre de la compañia.
+
+* NET: Telsius.
+
+* CORES: El número de cores de la máquina.
+
+* RAM: Memoria RAM de la máquina.
 
 * SEQ: Sequencial empezando en 00.
 
@@ -206,9 +212,8 @@ Y ahora sí, configuramos el nodo general llamando al script init.sh con los par
         Updating permissioned nodes...
         Updating static-nodes...
         [*] Initialization was completed successfully.
-         
-    Update DIRECTORY_REGULAR.md or DIRECTORY_VALIDATOR.md from alastria-node repository and send a Pull Request.
-    Don't forget the .json files in data folder!.
+        Update DIRECTORY_REGULAR.md or DIRECTORY_VALIDATOR.md from alastria-node repository and send a Pull Request.
+        Don't forget the .json files in data folder!.
 
 **NOTA**: El script se encarga de rellenar todo lo necesario para que funcione el nodo validador.
 
@@ -287,8 +292,7 @@ En primer lugar, para identificar los ficheros cambiados en el nodo recién conf
       (use "git add <file>..." to update what will be committed)
       (use "git checkout -- <file>..." to discard changes in working directory)
 
-     modified:   ../data/permissioned-nodes_general.json
-     modified:   ../data/permissioned-nodes_validator.json
+     modified:   ../data/validator-nodes.json
      modified:   ../data/static-nodes.json
 
     no changes added to commit (use "git add" and/or "git commit -a")
@@ -301,7 +305,7 @@ Para identificar lo que ha cambiado en un fichero, podemos realizar:
 
 Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “testnet2”.
 
-Si tiene dudas para realizar esta operación, sigua este tutorial (Enlace al F.A.Q. de la WIKI).
+Si tiene dudas para realizar esta operación, sigua este [tutorial](https://github.com/alastria/alastria-node/wiki/FAQ_EN#howto-pull-request-to-alastria-node).
 
 ### Aceptación del pull request
 
@@ -311,7 +315,7 @@ El equipo core de plataforma, procederá entonces a la aceptación del pull requ
 
 Con estos cambios aceptados, todos los nodos validadores deben actualizar sus ficheros de permisionado, que se realiza con el monitor a través de una llamada a su API.
 
-Para verificar que se ha realizado, se debe consultar el [monitor de la red](http://netstats.telsius.alastria.io/) y comprobar que aumenta la columna de Peers y que la columna Last blockaumenta hasta sincronizarse con el resto de nodos.
+Para verificar que se ha realizado, se debe consultar el [monitor de la red](http://netstats.telsius.alastria.io/) y comprobar que aumenta la columna de Peers y que la columna Last block aumenta hasta sincronizarse con el resto de nodos.
 
 ### Actualización del permisionado
 
@@ -322,8 +326,7 @@ Una vez que el nodo está listo para operar con la red, tenemos que asegurarnos 
 Desde la consola del nodo:
 
     $ cd ~/alastria-node/data
-    $ git checkout -- constellation-nodes.json
-    $ git checkout -- permissioned-nodes_validator.json
+    $ git checkout -- validator-nodes.json
     $ git checkout -- static-nodes.json
 
 Si algún miembro del APCT solicita que se actualicen manualmente los ficheros de permisionado y una vez asegurado que el repositorio local alastria-node está limpio de cambios, procedemos a actualizar los ficheros utilizando la siguiente secuencia de comandos:
@@ -342,10 +345,7 @@ Si algún miembro del APCT solicita que se actualicen manualmente los ficheros d
 ### Integrando el nodo validador en el pool de validadores
 
 
-
-En este momento, en la test-net 1 se está minando con 7 nodos validadores controlados por el core de plataforma con el objetivo de estabilizar la infraestructura y para establecer una estrategia por la que poder cambiar el conjunto de validadores de forma dinámica sin afectar a la red.
-
-Como parte del protocolo de consenso, a través del puerto RPC del nodo se puede alternar mediante votación de todos los nodos activos en la ronde de validación para añadir o eliminar nodos.
+Como parte del protocolo de consenso, a través del puerto RPC del nodo se puede alternar mediante votación de todos los nodos activos en la ronda de validación para añadir o eliminar nodos.
 
 Para ello, cada nodo validador está identificado con respecto al resto de nodos validadores por el coinbase del nodo. 
 
