@@ -39,4 +39,6 @@
 | atSistemas | Jose Angel Corral (jacorral@atsistemas.com) | AWS (2C/4GB/100GB) | laelEd5oQggHlL8+R3v5VhHAtn+VEEcJMXfw9MCRLls= | enode://500b4e72219f657a64de9056f91b3af4f572a167a077fc689e45bd7d6c0ffbdc9db33da9fb47de8e0ab746dadada08ae35b0406c539f12672ecd9ecc9fef8577@99.80.129.27:21000?discport=0 |
 | NeoCheck | Hector Insausti (hector.insausti@neocheck.com) | AWS (2C/4Gb/300Gb) | A1Wej/Uu5tU83eJGFlvk/K+AIBowU7+0PdLDEbVwfSI= | enode://d042490eda2dfa8b191e06fcd216153146f6623834f09caede90e1ee886f6a928e8a27ae0a063bae65ad2376145bcaebc56ed3c04ac36584b1677f66d028cabc@34.240.52.54:21000?discport=0 |
 | Flash Telecom | Ricardo Monge (ricardo@fmeuropa.com) | Self-hosted (2C/4Gb/300Gb)| sqadQSQMmi798WWj65aPCC5EuACWHhequfQTYLrpFyM= | enode:61c37a0b6ef27d84a1a3a821b53dae211bc7599cff88edb8f17950ce2658980f9fedcd9c7d8caf318e15cdbe627c19fd51b4ab6fcc41ce0f9701f487ff8190e6@167.99.241.220:21000?discport=0 |
+| Nodalblock | Martin Laplace (martin.laplace@nodalblock.com) | AWS (2C/8Gb/1000Gb) | QrnJF9cWOZlDKnJdlq0BfHJWJKKkWpIlvd/5DxbkiHo= | enode://c91386114c71428666b125bcb349f17763681e759114267e4920904d8ad995a8f630074bf4846ebd974f5f264abec7b178873a304f0e0efeccc9601fe9120be4@52.56.76.66:21000?discport=0 |
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
