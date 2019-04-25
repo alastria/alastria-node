@@ -40,5 +40,6 @@
 | NeoCheck | Hector Insausti (hector.insausti@neocheck.com) | AWS (2C/4Gb/300Gb) | A1Wej/Uu5tU83eJGFlvk/K+AIBowU7+0PdLDEbVwfSI= | enode://d042490eda2dfa8b191e06fcd216153146f6623834f09caede90e1ee886f6a928e8a27ae0a063bae65ad2376145bcaebc56ed3c04ac36584b1677f66d028cabc@34.240.52.54:21000?discport=0 |
 | DXC Technology | Miguel Briales (mbrialesroma@dxc.com) | AWS (2C/4Gb/100Gb) | 4BFdzsyGDnpQVwoig7Q7INGUPbdUyp3A6Cwn668pfC0= | enode://1f22762b6349a27aba874edf58753284136ae314b64ddc1734d6625e047295aece3a068ae36e018c219d28b19772e0b24c7febb6f8d3598dcebe01ba8d9c3da5@63.35.40.6:21000?discport=0 |
 | Nodalblock | Martin Laplace (martin.laplace@nodalblock.com) | AWS (2C/8Gb/1000Gb) | QrnJF9cWOZlDKnJdlq0BfHJWJKKkWpIlvd/5DxbkiHo= | enode://c91386114c71428666b125bcb349f17763681e759114267e4920904d8ad995a8f630074bf4846ebd974f5f264abec7b178873a304f0e0efeccc9601fe9120be4@52.56.76.66:21000?discport=0 |
+| Liberbank | Roberto Martín Rodríguez (rmartinr@liberbankit.es) , Lorena Fernández (lfernandezg@liberbankit.es) | Amazon AWS (2C/4Gb/100Gb) | IekDA5CIQkajBLZQmb11T8SBUvBYi96yP1OXWqQuxzg= | enode://c5b2a60d76e2f973237f2cd3b1847606869644135d1390f84f935b162c524677addcec820097a2808a86656927d73ee7d7b491e191a9aaafe389a42b0ffaa9da@63.32.204.24:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
