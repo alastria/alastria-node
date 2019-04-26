@@ -44,6 +44,7 @@ List of links with resources for the Alastria Network
 * **Resources**
 	* [Network Monitors (ethnetstats)](https://github.com/alastria/alastria-node/wiki/Links)
 	* [Blockexplorers](https://github.com/alastria/alastria-node/wiki/Links)
+	* [Access-point](https://github.com/alastria/alastria-access-point)
 
 * **¿Need Help?**
 	* [Slack](https://github.com/alastria/alastria-node/wiki/HELP)
