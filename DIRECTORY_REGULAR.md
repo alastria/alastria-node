@@ -43,5 +43,6 @@
 | Liberbank | Roberto Martín Rodríguez (rmartinr@liberbankit.es) , Lorena Fernández (lfernandezg@liberbankit.es) | Amazon AWS (2C/4Gb/100Gb) | IekDA5CIQkajBLZQmb11T8SBUvBYi96yP1OXWqQuxzg= | enode://c5b2a60d76e2f973237f2cd3b1847606869644135d1390f84f935b162c524677addcec820097a2808a86656927d73ee7d7b491e191a9aaafe389a42b0ffaa9da@63.32.204.24:21000?discport=0 |
 | Flash Telecom | Ricardo Monge (ricardo@fmeuropa.com) | Self-hosted (2C/4Gb/300Gb)| 2H/Nz1Kjx8EJwyf4RDKAf/L44vHN2wIdRHIFvNJj0HU= | enode://e188b57ca6f0e0f129acdf7b3621436a38c4a7645395ce8d3781e96f9b03491de1f0e4951a24d29ecbc6dc9ffcdd5a015fbd5813c76dcb60b376b41f0ef9cbbd@167.99.241.220:21000?discport=0" |
 | atSistemas01 | Jose Angel Corral (jacorral@atsistemas.com) | AWS (2C/4GB/100GB) | O4xG3TLgG2dDZvb9JX8ipPskLZ2l9IhnvN/B9phLg2I= | enode://c85f05d9f77336fe6a4b22e4a880fb40a083dda3f86818fc6cec625a5173b848a5f69247afea256672c5949a1b326ec683fe770f7f83716ab456b1b0c7982c2f@99.81.119.139:21000?discport=0 |
+| S&M Services | Alexander Herranz (alexander.herranz@sm-services.es) | Azure (2C/4Gb/500Gb) | mSdWNE7q/RewTFg4UBpu0NZqnRR/ho/ABvd6GQzBxVM= | enode://68655541401b178ff2dc53e2f8585542af89be27053e17def9d896206483613f1641b93dae7f1ed321ab02d556059083cc10f105f50b8947b6519bdd09f2ad03@23.97.226.231:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
