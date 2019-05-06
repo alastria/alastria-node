@@ -47,5 +47,6 @@
 | EY | Jordi Juan Guillem, Guillermo del Pino (eyblockchainsp@gmail.com) | Azure (2C/4Gb/100Gb) | A0RjBKA1vQz03MCBjkCd+v109EON56rLKchlvovYOXI= | enode://e2267fdb81fd4e600f1e2992179f8131980df45850f54917c9c13cb0765b4ad762a9b33b3c8c4bcc672d56a0d1d0b604dd7307c25ab014bedea2dbaff5d0a876@137.117.210.236:21000?discport=0 |
 | Indra | Javier Casanova (jcasanova@minsait.com) | Azure (2C/8Gb/100Gb) | tUfpT/WciNK/SB7CkxhQipqjEQjSGS+lcKQ8Z0I4j38= | enode://10a85e1407572d8c1d38135850f1105474686a0827a422b57ee02d2de39486d5b689757c946aa2200fd9d967202f5a7c808332a16764f9cc9f578b10b00ba539@23.102.47.3:21000?discport=0 |
 | Last Mile Team | Angel Batalla (abatalla@lastmile.team) | AWS (2C/4GB/100GB) | FeCMRZk5tFzb/sha/ShjJNW1cVM++/2Y3NClPFa5jTQ | enode://322a41b91c49a55011a2e5cbd90010d796d6db1ba3d4171af313abd12f09f98dba72d6fd5b45683e5c2db7435eac576c4f2bc2e6323052747269b24f71cfee5a@52.47.160.193:21000?discport=0 |
+| ATValor | Ángeles Aguilar Viyuela (aaguilar@atvalor.com) Guillermo Araujo (guillermo.araujo@babel.es) | Self-hosted (8C/8GB/200GB) | nQ/xEY2BHo4igFMGe55m/oJTSt4iaqg1okd7pb3AYQ8= | "enode://415d704d48535697fd4fafc035efda5ffa43485475f076ccccfc2d28aab4e5fdb502a59ceeef85ea0b53e39f1058b44736d5ac3519b1140f37bc7aa5c75c4d9a@164.132.237.201:21000?discport=0" |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
