@@ -48,5 +48,6 @@
 | Indra | Javier Casanova (jcasanova@minsait.com) | Azure (2C/8Gb/100Gb) | tUfpT/WciNK/SB7CkxhQipqjEQjSGS+lcKQ8Z0I4j38= | enode://10a85e1407572d8c1d38135850f1105474686a0827a422b57ee02d2de39486d5b689757c946aa2200fd9d967202f5a7c808332a16764f9cc9f578b10b00ba539@23.102.47.3:21000?discport=0 |
 | Last Mile Team | Angel Batalla (abatalla@lastmile.team) | AWS (2C/4GB/100GB) | FeCMRZk5tFzb/sha/ShjJNW1cVM++/2Y3NClPFa5jTQ | enode://322a41b91c49a55011a2e5cbd90010d796d6db1ba3d4171af313abd12f09f98dba72d6fd5b45683e5c2db7435eac576c4f2bc2e6323052747269b24f71cfee5a@52.47.160.193:21000?discport=0 |
 | ATValor | Ángeles Aguilar Viyuela (aaguilar@atvalor.com) Guillermo Araujo (guillermo.araujo@babel.es) | Self-hosted (8C/8GB/200GB) | nQ/xEY2BHo4igFMGe55m/oJTSt4iaqg1okd7pb3AYQ8= | "enode://415d704d48535697fd4fafc035efda5ffa43485475f076ccccfc2d28aab4e5fdb502a59ceeef85ea0b53e39f1058b44736d5ac3519b1140f37bc7aa5c75c4d9a@164.132.237.201:21000?discport=0" |
+| ClarkeModet | Eusebio Yribarren (Eyribarren@clarkemodet.com) | Azure (2C/8Gb/100Gb) | 34JfWP/atxSiTlmFizCBlkMyRI1dzqmplTC38nHTEA4= | enode://ac3f0e8030bc792efc4d53d81ab78d6995a81ba5dfc58c163bca1ec7ee8e75cd1e70b06ab3ef6fa689f67d45b6b7045299b19dbbd0401d2711cbb07126a2ceaf@168.63.46.251:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
