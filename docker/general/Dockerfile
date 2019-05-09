@@ -23,7 +23,8 @@ ARG ALASTRIA_BRANCH=testnet2
 ENV \
     DOCKER_VERSION=$DOCKER_VERSION
 
-RUN apt-get update \
+RUN \
+    apt-get update \
     && apt-get -y upgrade \
     && apt-get -y install \
         git \
