@@ -1,6 +1,6 @@
 # ALASTRIA Telsius #
 
-Testnet2, alias [Telsius] (http://memory-alpha.wikia.com/wiki/Telsius_Prime_mining_colony)
+Do you want to know where the name "Telsius" is comming from? (http://memory-alpha.wikia.com/wiki/Telsius_Prime_mining_colony)
 
 
 
