@@ -12,6 +12,33 @@ You'll need at least a host/node to interact with the network, please read the t
 
 [//]: # ( Para ello, necesitarás como mínimo un nodo para poder intercatuar, ese nodo ha de tener por lo menos las siguientes especificaciones: )
 
+## System requirements
+
+**Operating System**: Ubuntu 16.04 64 bits
+
+**Hardware**:
+
+| Hardware | minimum | desired |
+|:------- |:-------- |:---------|
+| **CPU's**: | 2 |  4 |
+| **Memory**: | 4 Gb |  8 Gb |
+| **Hard Disk**: | 100 Gb |  1000 Gb |
+
+
+#### TCP/UDP PORTS
+
+You'll need to open the following ports in both ways to deploy a node:
+
+[//]: # (También es necesario habilitar los siguientes puertos de E/S en la maquina en la que vamos a desplegar el nodo:)
+
+| Port | Type | Definition |
+|:------:|:-----:|:---------- |
+|21000| TCP/UDP | Geth process application port |
+|9000| TCP | Constellation port (private transactions)|
+|22000| TCP | RPC Port (this can be internal only) |
+|80| TCP | RPC Port if using the automatic installation with Alastria Open Access Component|
+
+
 ## Installation & configuration of 
 
 ### [Regular node] Quorum node + Constellation + Access point + Monitor
