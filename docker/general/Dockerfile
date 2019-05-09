@@ -23,11 +23,18 @@ ARG ALASTRIA_BRANCH=testnet2
 ENV \
     DOCKER_VERSION=$DOCKER_VERSION
 
-RUN apt-get update \
+RUN \
+    apt-get update \
     && apt-get -y upgrade \
-    && apt-get -y install git curl dnsutils net-tools vim
-
-RUN rm -Rf /etc/nginx/sites-enabled/default \
+    && apt-get -y install \
+    git \
+    curl \
+    dnsutils \
+    net-tools \
+    nginx \
+    nginx-extras \
+    namo \
+    && rm -Rf /etc/nginx/sites-enabled/default \
     && rm -Rf /etc/nginx/sites-available/default \
     && cd \
     && git clone -b $ALASTRIA_BRANCH https://github.com/alastria/alastria-node \
@@ -45,3 +52,4 @@ EXPOSE 9000 21000 21000/udp 22000 8443 80 443
 COPY entrypoint.sh /usr/bin/
 WORKDIR /root/alastria-node/scripts
 ENTRYPOINT ["entrypoint.sh"]
+CMD
