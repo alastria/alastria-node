@@ -7,6 +7,12 @@ _term() {
 
 trap _term SIGTERM
 
+git pull
+cd ./scripts
+sed -i 's/sudo//g' bootstrap.sh
+./bootstrap.sh
+./monitor.sh build
+
 if [ ! -f ~/alastria/data/IDENTITY ]; then
     ./init.sh auto $NODE_TYPE $NODE_NAME
 elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
@@ -16,9 +22,11 @@ elif [ ! -f ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION ]; then
     touch ~/alastria/data/DOCKER_VERSION_$DOCKER_VERSION
 fi
 
-ARGS="--watch"
+/etc/init.d/nginx start
+nginx -g "daemon off;"
+ARGS="--watch --local-rpc"
 if [ ! $MONITOR_ENABLED -eq 1 ]; then
-    ARGS="$ARGS --no-monitor"
+    AGRS="--watch --local-rpc --no-monitor"
 fi
 exec ./start.sh $ARGS &
 
