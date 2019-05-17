@@ -30,20 +30,14 @@ RUN \
         git \
         curl \
         dnsutils \
-        net-tools \
-        nginx \
-        nginx-extras \
         nano \
-    && rm -Rf /etc/nginx/sites-enabled/default \
-    && rm -Rf /etc/nginx/sites-available/default \
     && cd \
     && git clone -b $ALASTRIA_BRANCH https://github.com/alastria/alastria-node \
     && apt-get autoremove \
     && apt-get clean
 
 VOLUME /root/alastria
-VOLUME /etc/nginx/conf.d
-EXPOSE 9000 21000 21000/udp 22000 8443 80 443
+EXPOSE 21000 21000/udp 8443
 
 COPY entrypoint.sh /usr/bin/
 WORKDIR /root/alastria-node
