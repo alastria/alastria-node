@@ -53,5 +53,6 @@
 | CENER | Javier Suescun (jsuescun@cener.com) | Self-hosted (2C/8GB/100GB) | | enode://c6123619076aae061ced19788f30b7b2c1ba81e5f2ad9df968a7e26bfa1a8e4601bc8bca2d4ddde29ec83716a6fafb68259d2c3d09336f2a9b24efb8490e8a6f@195.76.179.121:21000?discport=0"|
 | Eurogestion | Carlos la Fuente (clafuente@eurogestion.eu) Néstor Castanedo (ncastanedo@eurogestion.eu) | Self-hosted (4C/4GB/500GB) | | enode://b87d3f0d863632b1bc04655bf08a9245db8a039406462f4c6e6645819f8653a9110dd8f0efbdc885e6fc91fe20bc3b269c019261bd40ab1e03c9fbd4b1fc4b96@83.48.85.136:21000?discport=0 |
 | Vodafone Group Services | Jaime Abril (jaime.abril@vodafone.com) | AWS (2C/4GB/100GB) | n97im1XA3HP+73hhDE3esNw8gyYzKe/KE3aai7G4Ak4= | enode://7ec06907daeed292d7aca12fbdcfd392db65f83e88bd071a79687f3d8d2356bef93b24a37fd9b09e138335938b39ed1c360ba114e725834ac4aa2fefcc3c6aef@35.158.45.193:21000?discport=0 |
+| Vodafone Group Services | Jaime Abril (jaime.abril@vodafone.com) | AWS (2C/15GB/100GB) | cd/mz+7VE32uEo+7yaHCQBYyJJEDb0fiSGo/GKq/czg= |  enode://d7681286ab9bc89684697ed5994a6dbfd1e799a98b68fc804a95b75cc40aa883be99bef0243f65891bf3a2aee817833b903b72132aae3bcc0e6957d5a408861e@63.34.212.56:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
