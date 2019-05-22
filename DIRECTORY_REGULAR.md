@@ -55,5 +55,7 @@
 | Vodafone Group Services | Jaime Abril (jaime.abril@vodafone.com) | AWS (2C/4GB/100GB) | n97im1XA3HP+73hhDE3esNw8gyYzKe/KE3aai7G4Ak4= | enode://7ec06907daeed292d7aca12fbdcfd392db65f83e88bd071a79687f3d8d2356bef93b24a37fd9b09e138335938b39ed1c360ba114e725834ac4aa2fefcc3c6aef@35.158.45.193:21000?discport=0 |
 |Blocknitive| Jorge Lopez (jorge.lopez@blocknitive.com) | IBM (4C/32GB/100GB)| | enode://3dedceb91b969225ab861d1941f26a4a4dc92e55fc5ee32d4109d6b1656d22c750e5ed87763f01a7e33a128bf7f1ea2cd82d301089ba457deeb4545ed09982af@169.60.149.189:21000?discport=0|
 | UPM | Santiago Pavon (santiago.pavon@upm.es) | Self hosted (2C/4GB/1000GB) | HnrO8dJO1iuSU6QltlOUOnNXLTTYcKVHkQVqosPp8xk= | enode://96702fd4212e8a9c68d57ff9b52ae05e0e5002c62ef0590d1c4024f539de7591466dc71fa0ba630370ede15a84d1bbf4e7a18f0facbe00e529e155016fcd7b21@138.4.4.185:21000?discport=0 |
+| Vodafone Group Services | Jaime Abril (jaime.abril@vodafone.com) | AWS (2C/15GB/100GB) | cd/mz+7VE32uEo+7yaHCQBYyJJEDb0fiSGo/GKq/czg= |  enode://d7681286ab9bc89684697ed5994a6dbfd1e799a98b68fc804a95b75cc40aa883be99bef0243f65891bf3a2aee817833b903b72132aae3bcc0e6957d5a408861e@63.34.212.56:21000?discport=0 |
+| Vodafone Group Services | Jaime Abril (jaime.abril@vodafone.com) | AWS (2C/15GB/100GB) | 9NkKxIO0aZ7NwiFg4ubaNq4f0GavbjbHV+hJW4ACsGc= |  enode://fde441f8f71a7119333a2c43417c030044465e278c813120491a6ab6b876bcdca83f523f10e574eb1d78d73a56d6678db36bdeed337408843e8439c65a1e2fe9@52.209.73.131:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
