@@ -56,5 +56,7 @@
 | UPM | Santiago Pavon (santiago.pavon@upm.es) | Self hosted (2C/4GB/1000GB) | HnrO8dJO1iuSU6QltlOUOnNXLTTYcKVHkQVqosPp8xk= | enode://96702fd4212e8a9c68d57ff9b52ae05e0e5002c62ef0590d1c4024f539de7591466dc71fa0ba630370ede15a84d1bbf4e7a18f0facbe00e529e155016fcd7b21@138.4.4.185:21000?discport=0 |
 | Vodafone Group Services | Jaime Abril (jaime.abril@vodafone.com) | AWS (2C/15GB/100GB) | cd/mz+7VE32uEo+7yaHCQBYyJJEDb0fiSGo/GKq/czg= |  enode://d7681286ab9bc89684697ed5994a6dbfd1e799a98b68fc804a95b75cc40aa883be99bef0243f65891bf3a2aee817833b903b72132aae3bcc0e6957d5a408861e@63.34.212.56:21000?discport=0 |
 | Vodafone Group Services | Jaime Abril (jaime.abril@vodafone.com) | AWS (2C/15GB/100GB) | 9NkKxIO0aZ7NwiFg4ubaNq4f0GavbjbHV+hJW4ACsGc= |  enode://fde441f8f71a7119333a2c43417c030044465e278c813120491a6ab6b876bcdca83f523f10e574eb1d78d73a56d6678db36bdeed337408843e8439c65a1e2fe9@52.209.73.131:21000?discport=0 |
+| Universidad de Deusto | Alvaro Hermida (alvaro.hermida@deusto.es) | Self-hosted (4C/8Gb/300Gb)| Na6qGkmFeKyEZ5AxjCD5hxIujj9V2tLwLIUPidmE2RU= | enode://cf580cc52bfa8fe3932a4ec935b7a52bda30efbaafbad0f4b5fc77dd68a9d52120d122374bc4a27107e30a6e25a4527e29d39fdb71c11aa4321145ada0ce38db@130.206.138.65:21000?discport=0 |
+
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
