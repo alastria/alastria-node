@@ -57,6 +57,7 @@
 | Vodafone Group Services | Jaime Abril (jaime.abril@vodafone.com) | AWS (2C/15GB/100GB) | cd/mz+7VE32uEo+7yaHCQBYyJJEDb0fiSGo/GKq/czg= |  enode://d7681286ab9bc89684697ed5994a6dbfd1e799a98b68fc804a95b75cc40aa883be99bef0243f65891bf3a2aee817833b903b72132aae3bcc0e6957d5a408861e@63.34.212.56:21000?discport=0 |
 | Vodafone Group Services | Jaime Abril (jaime.abril@vodafone.com) | AWS (2C/15GB/100GB) | 9NkKxIO0aZ7NwiFg4ubaNq4f0GavbjbHV+hJW4ACsGc= |  enode://fde441f8f71a7119333a2c43417c030044465e278c813120491a6ab6b876bcdca83f523f10e574eb1d78d73a56d6678db36bdeed337408843e8439c65a1e2fe9@52.209.73.131:21000?discport=0 |
 | Universidad de Deusto | Alvaro Hermida (alvaro.hermida@deusto.es) | Self-hosted (4C/8Gb/300Gb)| Na6qGkmFeKyEZ5AxjCD5hxIujj9V2tLwLIUPidmE2RU= | enode://9846a8b00ff6379f3e5ba77f7b278139a50415b2051fb6db7628ed419cfdcad6f24129b216d8d63f5be890b950b04bd625aadf812c951cf78174f11e5847bfd1@130.206.138.65:21000?discport=0 |
+| Firmaprofesional | Richard Rojas (rrojas@firmaprofesional.com) | Self Hosted (2C/2Gb/1000Gb) | Dg3aIEsln26n9XspFLIaZofurzPgPJCS3sJ28HmeEAg= | enode://0edba03f7d5f27ec508f903d53651cd2c71bacf9af773d62fb80950f9b1338bf96852fac161a0a56bd90e148829b1aaec06d92f26ef94952054727496a38c537@91.121.201.39:21000?discport=0 |
 
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
