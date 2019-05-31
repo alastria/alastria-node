@@ -1,8 +1,4 @@
-# ALASTRIA Telsius #
-
-Do you want to know where the name "Telsius" is comming from? (http://memory-alpha.wikia.com/wiki/Telsius_Prime_mining_colony)
-
-
+# ALASTRIA Red T #
 
 * Visit [What is alastria](https://alastria.io/sobre_alastria) page to know more about us.
 
