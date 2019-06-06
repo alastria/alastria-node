@@ -60,5 +60,6 @@
 | Firmaprofesional | Richard Rojas (rrojas@firmaprofesional.com) | Self Hosted (2C/2Gb/1000Gb) | Dg3aIEsln26n9XspFLIaZofurzPgPJCS3sJ28HmeEAg= | enode://0edba03f7d5f27ec508f903d53651cd2c71bacf9af773d62fb80950f9b1338bf96852fac161a0a56bd90e148829b1aaec06d92f26ef94952054727496a38c537@91.121.201.39:21000?discport=0 |
 | Bankia | Alberto Gómez Toribio (agomez@bankia.com) | Amazon AWS (2C/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://e4f87b0b6bb5eabced43b4640b7ec1b556b91a1e89067159d8269266c1810e0d213eb8d4cc9612ade2e5d6522ec11138dc77b466aa7ad8b3c66fe17be70d6ecb@52.28.245.66:21000?discport=0 |
 | Banco Sabadell | Jacinto Calvo (calvoja@sabis.tech) | Azure (2C/4Gb/100Gb) | X2Mue4xeF82szcshd3lG9pOJDxSdNUUsO1cn+Sl1imE= | enode://b5685aa2ce1688adeade417ac723d93279d16a37de39eead8030c4346a3c6ff0159d0b402886e3712e5719f73cdef9c710896fae8ff4a5a9f8842eb52905344d@52.232.4.223:21000?discport=0 |
+| Flash Telecom | Ricardo Monge (ricardo@fmeuropa.com) | Self-hosted (2C/4Gb/300Gb) | JkHiP4M4121HWUux/PJEJ4H+JIDNyYSKWSUXegIcRTg= | "enode://f4b257ceca2c13d6c24185e1df922451afdb5ae032f05b1548ab26aacb4d08f9d86cc5cb82535df7b986e0e2263d440274ae7f7367c3086454bf0c62b14bccb5@167.99.241.220:21000?discport=0" |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
