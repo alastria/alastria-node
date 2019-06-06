@@ -32,7 +32,7 @@ You'll need to open the following ports in both ways to deploy a node:
 |21000| TCP/UDP | Geth process application port |
 |9000| TCP | Constellation port (private transactions)|
 |22000| TCP | RPC Port (this can be internal only) |
-|80| TCP | RPC Port if using the automatic installation with Alastria Open Access Component|
+|80 y 443| TCP | RPC Port if using the automatic installation with Alastria Open Access Component|
 
 
 ## Installation & configuration of 
