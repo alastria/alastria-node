@@ -61,4 +61,6 @@
 | Banco Sabadell | Jacinto Calvo (calvoja@sabis.tech) | Azure (2C/4Gb/100Gb) | X2Mue4xeF82szcshd3lG9pOJDxSdNUUsO1cn+Sl1imE= | enode://b5685aa2ce1688adeade417ac723d93279d16a37de39eead8030c4346a3c6ff0159d0b402886e3712e5719f73cdef9c710896fae8ff4a5a9f8842eb52905344d@52.232.4.223:21000?discport=0 |
 | Iberpay | Salvador Alarcón (salarcon@iberpay.es) | Self Hosted (2C/4Gb/100Gb) | nUImLDPfsYIo1BZliZAlhwmB0BJJQBTCQRjZRdYT8nQ= | enode://eb71a84c9ecf3ecd3a7c6932b8ec8fa5a8d5dd327b3533e367426ba5336b2cd390e408a4fba2d558faf31684bec76241696cd3d3a4be47b0222907b8d2424498@195.57.92.94:21000?discport=0 |
 | Flash Telecom | Ricardo Monge (ricardo@fmeuropa.com) | Self-hosted (2C/4Gb/300Gb) | JkHiP4M4121HWUux/PJEJ4H+JIDNyYSKWSUXegIcRTg= | "enode://f4b257ceca2c13d6c24185e1df922451afdb5ae032f05b1548ab26aacb4d08f9d86cc5cb82535df7b986e0e2263d440274ae7f7367c3086454bf0c62b14bccb5@167.99.241.220:21000?discport=0" |
+| Santander | Juan Luis García Sánchez (juan.garciasanchez@gruposantander.com) | Azure (2C/8GB/100GB) | ib+b5UrVccrxZns7bAqkwP82j4/QCI1U/D8ceIvO328= | enode://62351d4032ed7c5666b06f402fd91393a7e3378a13f9a4689e777212af180c966e6bece9b213be8ab59b6c8b5f9543ce7bcaa4d8a27805b6989413c822fc3892@40.89.164.253:21000?discport=0 |
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
