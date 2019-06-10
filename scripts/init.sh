@@ -186,8 +186,6 @@ cd ~
 # IP for the inicital validator on network
 ~/alastria-node/scripts/updatePerm.sh "$NODE_TYPE"
 
-echo "$CURRENT_HOST_IP" > ~/alastria/data/CURRENT_HOST
-echo "$VALIDATOR0_HOST_IP" > ~/alastria/data/VALIDATOR_HOST
 if [[ "$CURRENT_HOST_IP" == "$VALIDATOR0_HOST_IP" ]]; then
     echo "e7889a64e5ec8c28830a1c8fc620810f086342cd511d708ee2c4420231904d18" > ~/alastria/data/nodekey
 fi
