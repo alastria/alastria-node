@@ -1,8 +1,4 @@
-# ALASTRIA Telsius #
-
-Testnet2, alias [Telsius] (http://memory-alpha.wikia.com/wiki/Telsius_Prime_mining_colony)
-
-
+# ALASTRIA Red T #
 
 * Visit [What is alastria](https://alastria.io/sobre_alastria) page to know more about us.
 
@@ -11,6 +7,33 @@ This page contains technical information needed to work in the Alastria ecosyste
 You'll need at least a host/node to interact with the network, please read the technical requirements for it.
 
 [//]: # ( Para ello, necesitarás como mínimo un nodo para poder intercatuar, ese nodo ha de tener por lo menos las siguientes especificaciones: )
+
+## System requirements
+
+**Operating System**: Ubuntu 16.04 64 bits
+
+**Hardware**:
+
+| Hardware | minimum | desired |
+|:------- |:-------- |:---------|
+| **CPU's**: | 2 |  4 |
+| **Memory**: | 4 Gb |  8 Gb |
+| **Hard Disk**: | 100 Gb |  1000 Gb |
+
+
+#### TCP/UDP PORTS
+
+You'll need to open the following ports in both ways to deploy a node:
+
+[//]: # (También es necesario habilitar los siguientes puertos de E/S en la maquina en la que vamos a desplegar el nodo:)
+
+| Port | Type | Definition |
+|:------:|:-----:|:---------- |
+|21000| TCP/UDP | Geth process application port |
+|9000| TCP | Constellation port (private transactions)|
+|22000| TCP | RPC Port (this can be internal only) |
+|80 y 443| TCP | RPC Port if using the automatic installation with Alastria Open Access Component|
+
 
 ## Installation & configuration of 
 
