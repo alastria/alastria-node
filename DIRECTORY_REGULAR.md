@@ -64,5 +64,6 @@
 | Blocknitive | Jorge Lopez García (jorge.lopez@blocknitive.com) | IBM (4C/32GB/100GB) | | enode://0f57a030730b0118e4e40a54d737b68d5daea96017b17ab6f8f8f9f52c288528603a27905a6707de42f2a9af8f0f0da65ad906cf76d59eebd6deaef0377d9223@159.8.108.8:21000?discport=0 |
 | IoBuilders | Alejandro Gascon (alex@io.builders) | Amazon (2C/4GB/100GB) | aWtREp3+lXcbzDx2f8mA9Pb/S4kYDqAvbQh0WnvTwgw= | enode://c56352df8606ab551dbbdeca9c7ecdd338dbb22dc527c80e562faafdb86a318da66e7a7fa89949f6456a8078c4db668a8938eaac70a27b9786b2b93207794230@18.200.4.214:21000?discport=0 |
 | BlockchainWorkLabs | Sergio Velasco Ballestín (sergio.velasco@blockchainworklabs.com) | DO (4C/8GB/100GB)  | wFzs8bAm7rqXExndooFNWNwAiBH8CcLo2IOR/XlKok4= | enode://c0267b8f5e0730b4cd32df69afb2f43ad4bb10a6e5cf350e894524c5b287df81140f3d6c8206b4c828c0a1c99d2e954b535b904ae8f66cbbfcd3e93b8b4132f2@139.59.132.158:21000?discport=0 |
+| Atmira | Román Fernández roman.fernandez@atmira.com | Google Cloud (2C/4Gb/100Gb) | ZRbupFwRp10BTdLuticEnJeV52HrbmFcVR4Lh/vvslY= | enode://3726250bb97c62176bfbf90589e17d1daf9ea1c6a2ca35e935721d4bbb5821ab1adfb6e47ce47d69ed8a8c5c449b58c7b8cb273b89863ad3d0929a9172a69c4b@35.195.122.131:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
