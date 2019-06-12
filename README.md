@@ -53,6 +53,9 @@ You'll need to open the following ports in both ways to deploy a node:
 * [(English) Installation Guide](https://medium.com/babel-go2chain/setting-in-motion-a-bootnode-in-the-telsius-network-of-alastria-8e13915cb85d)
 * [(Spanish) Installation Guide](https://medium.com/babel-go2chain/c%C3%B3mo-poner-en-marcha-un-bootnode-en-la-red-telsius-de-alastria-18eacb20b224)
 
+## Deployment of Smart Contracts on Alastria Network
+To know more about the use of Alastria Network, you can visit the Smart Contract Deployment Guide made by one of our associates, Roberto García, from Lleida University:
+* [Deploying to Alastria's network Telsius (Quorum)](https://github.com/rogargon/copyrightly.io/blob/master/docs/Telsius.md)
 
 ## Alastria network resources
 
