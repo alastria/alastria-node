@@ -66,5 +66,6 @@
 | BlockchainWorkLabs | Sergio Velasco Ballestín (sergio.velasco@blockchainworklabs.com) | DO (4C/8GB/100GB)  | wFzs8bAm7rqXExndooFNWNwAiBH8CcLo2IOR/XlKok4= | enode://c0267b8f5e0730b4cd32df69afb2f43ad4bb10a6e5cf350e894524c5b287df81140f3d6c8206b4c828c0a1c99d2e954b535b904ae8f66cbbfcd3e93b8b4132f2@139.59.132.158:21000?discport=0 |
 | Atmira | Román Fernández roman.fernandez@atmira.com | Google Cloud (2C/4Gb/100Gb) | ZRbupFwRp10BTdLuticEnJeV52HrbmFcVR4Lh/vvslY= | enode://3726250bb97c62176bfbf90589e17d1daf9ea1c6a2ca35e935721d4bbb5821ab1adfb6e47ce47d69ed8a8c5c449b58c7b8cb273b89863ad3d0929a9172a69c4b@35.195.122.131:21000?discport=0 |
 | CustomerComms | Jose Angel Corral (jacorral@atsistemas.com) | AWS (4C/16GB/30GB) | PByXZj9LhYxEIfge6zI+hzwFaJJ/zJsrG1GI5uEFE2g= | enode://6585fdba73a6e3e48b2b62041c98d6a1427d039bd86725ee64a0bd63b495f269a1488d9d0190d33303b8763c7f21958329b1af38c62275d18447386b0dcf5a92@18.200.48.220:21000?discport=0 |
+| eProcessMed | Alaro Armijos Leon (alvaro.armijos@e-processmed.com) | Contabo (6C/16Gb/400Gb) | eMl4sk1B6aMMZW/ORx4D9lnEoP4QKpcEztx9L/Cj+Gc= | enode://6ae821a6eea38e49740c2f2d8ab47b24a9eba0e0ff7b09f2098abc319f8ec559e155e128fc30340b4997483d804709cd7e6191eb3420ea45bb6cdf1e59a7388e@173.212.249.29:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
