@@ -68,5 +68,6 @@
 | CustomerComms | Jose Angel Corral (jacorral@atsistemas.com) | AWS (4C/16GB/30GB) | PByXZj9LhYxEIfge6zI+hzwFaJJ/zJsrG1GI5uEFE2g= | enode://6585fdba73a6e3e48b2b62041c98d6a1427d039bd86725ee64a0bd63b495f269a1488d9d0190d33303b8763c7f21958329b1af38c62275d18447386b0dcf5a92@18.200.48.220:21000?discport=0 |
 | Ejie | Oscar Guadilla (o-guadilla@ejie.eus) | Self Hosted (2C/4Gb/100Gb) | UncqrJuPbnOsW7zlung20NW97WaG4UkteHKkSpvB+zg= | enode://7a29de268bb5f63c1e4c61b6b1988a362bdbdb61dfff5ff2ec1983bf65980e9aec65e93462acbd8f6dbd8df3a0ad82b592c48bab32a514b00cd2174a3d26c591@185.161.117.14:21000?discport=0 |
 | Ministerio de la Presidencia, relaciones con las cortes e igualdad | Cesar Armando Aucay Pelaez (cesar.armando.aucay.pelaez@everis.com) | Everis (4C/16GB/100GB) | | enode://13cc20b96bec6da450673cee5e8166d08677e8bc810f09c9b5dfd0dc46a328cc9bb8f03584368fc8c1d9301637895423a4bd41c9c16def725159f0dbdcc5162f@40.89.160.65:21000?discport=0 |
+| eProcessMed | Alaro Armijos Leon (alvaro.armijos@e-processmed.com) | Contabo (6C/16Gb/400Gb) | eMl4sk1B6aMMZW/ORx4D9lnEoP4QKpcEztx9L/Cj+Gc= | enode://6ae821a6eea38e49740c2f2d8ab47b24a9eba0e0ff7b09f2098abc319f8ec559e155e128fc30340b4997483d804709cd7e6191eb3420ea45bb6cdf1e59a7388e@173.212.249.29:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
