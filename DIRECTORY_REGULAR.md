@@ -67,5 +67,6 @@
 | Atmira | Román Fernández roman.fernandez@atmira.com | Google Cloud (2C/4Gb/100Gb) | ZRbupFwRp10BTdLuticEnJeV52HrbmFcVR4Lh/vvslY= | enode://3726250bb97c62176bfbf90589e17d1daf9ea1c6a2ca35e935721d4bbb5821ab1adfb6e47ce47d69ed8a8c5c449b58c7b8cb273b89863ad3d0929a9172a69c4b@35.195.122.131:21000?discport=0 |
 | CustomerComms | Jose Angel Corral (jacorral@atsistemas.com) | AWS (4C/16GB/30GB) | PByXZj9LhYxEIfge6zI+hzwFaJJ/zJsrG1GI5uEFE2g= | enode://6585fdba73a6e3e48b2b62041c98d6a1427d039bd86725ee64a0bd63b495f269a1488d9d0190d33303b8763c7f21958329b1af38c62275d18447386b0dcf5a92@18.200.48.220:21000?discport=0 |
 | Ejie | Oscar Guadilla (o-guadilla@ejie.eus) | Self Hosted (2C/4Gb/100Gb) | UncqrJuPbnOsW7zlung20NW97WaG4UkteHKkSpvB+zg= | enode://7a29de268bb5f63c1e4c61b6b1988a362bdbdb61dfff5ff2ec1983bf65980e9aec65e93462acbd8f6dbd8df3a0ad82b592c48bab32a514b00cd2174a3d26c591@185.161.117.14:21000?discport=0 |
+| Ministerio de la Presidencia, relaciones con las cortes e igualdad | Cesar Armando Aucay Pelaez (cesar.armando.aucay.pelaez@everis.com) | Everis (4C/16GB/100GB) | | enode://13cc20b96bec6da450673cee5e8166d08677e8bc810f09c9b5dfd0dc46a328cc9bb8f03584368fc8c1d9301637895423a4bd41c9c16def725159f0dbdcc5162f@40.89.160.65:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
