@@ -1,6 +1,6 @@
 # ALASTRIA Red T #
 
-* Visit [What is alastria](https://alastria.io/sobre_alastria) page to know more about us.
+* Visit [What is alastria](https://alastria.io/en/) page to know more about us.
 
 This page contains technical information needed to work in the Alastria ecosystem on the possible different ways.
 
