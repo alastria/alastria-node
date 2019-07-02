@@ -71,4 +71,6 @@
 | eProcessMed | Alaro Armijos Leon (alvaro.armijos@e-processmed.com) | Contabo (6C/16Gb/400Gb) | eMl4sk1B6aMMZW/ORx4D9lnEoP4QKpcEztx9L/Cj+Gc= | enode://6ae821a6eea38e49740c2f2d8ab47b24a9eba0e0ff7b09f2098abc319f8ec559e155e128fc30340b4997483d804709cd7e6191eb3420ea45bb6cdf1e59a7388e@173.212.249.29:21000?discport=0 |
 | NFQ | Alex Viñas Salles (alex.vinas@nfq.es) | AWS (2C/4Gb/100Gb) | qD7VkQhq+rlY5fNr71c55tQ6W+PQ/KS0oy180i/tSl4= | enode://c5130f5e3740998e81d9e0b565e3f82f47e7f349a4322e335b820b45af350767d852342049e35e72e2024095289e24b48fadd15e2216936615591df99d8de714@52.58.89.110:21000?discport=0 |
 | Logalty | Juan Pablo Mora  (juanpablo.mora@logalty.com) | AWS t2.medium (2/4/80) | baYIJGRSJHMh06r+7MzyTMNNNfSBPPKPfddgalYCFFk= | enode://5cf938984099106ebf05288a775d5009155a8c71a3a79c655e3f099ef4452c0e3fd690181893a508232d8a497effe7798d737c383c7f73e2555524a8f6b4bb34@34.242.13.183:21000?discport=0 |
+| NFQ | Alex Viñas Salles (alex.vinas@nfq.es) | AWS (2C/4Gb/100Gb) | txu2+Uo6iqsXupg6mD2TO8Wr+co3jO/YxJiRIEJQLAM= | enode://004e64b2151b1452f969fb077a681ec5e3f0ab61354865a0dfda8f6d353a3ebec9c509b588b77f802146d62231eabeaec8db042fefec4a7929d49dd37d173e33@15.188.4.118:21000?discport=0 |
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
