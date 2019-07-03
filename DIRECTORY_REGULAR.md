@@ -74,5 +74,6 @@
 | NFQ | Alex Viñas Salles (alex.vinas@nfq.es) | AWS (2C/4Gb/100Gb) | txu2+Uo6iqsXupg6mD2TO8Wr+co3jO/YxJiRIEJQLAM= | enode://004e64b2151b1452f969fb077a681ec5e3f0ab61354865a0dfda8f6d353a3ebec9c509b588b77f802146d62231eabeaec8db042fefec4a7929d49dd37d173e33@15.188.4.118:21000?discport=0 |
 | SmartDegrees | Vicente Prior (vprior@smartdegrees.es), Jorge Fuster (j.fuster@pitagorinesgroup.com | Azure (2C/4Gb/128Gb) | uNRQuFJx8CxwZfgho5PbT57i0LUGRLetuVP+ZK3G6xI= | enode://debaabf04e99e1fca612d0e3d1cfa1301256ab1a8f29b3ad6c6a372e6424ee3148f172fc15a88e27fe455073bdbe54cdee015ce62041ec2fc3e2bc63aa02f43f@137.135.205.219:21000?discport=0 |
 | La Cometa Network | Carlos Alvarez Rivas (admin@lacometanetwork.com) | AWS (2/8/100) | HcVSUncwuunJlfbCxWtIBu7pMCAZCd/V2i3pQkT3yxE= | enode://d9b7cfcea580087f20e02d97726f013c460779a4409404575afcd2dd538340c434303ab9b318f1ba48411838f7f8e4286e773256a164de8d6c2dee932db508af@185.136.91.163:21000?discport=0 |
+| CEPSA | Daniel Garrote (daniel.garrote@cepsa.com) | AWS (4/8/1000) | XeEQlDUuj7q1vIkwB30wlkg98Cu9zfv/k1t7ynOdwxU= | enode://e3e3a6b5998af5279e61001232d29b6a31a0d5b7e38616a29d095cf9efaf33679e4ca5515422baa560e0ca133b1ce033629d4bcbe249adfa8b7758fd5bd8a141@52.30.193.39:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
