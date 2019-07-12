@@ -77,5 +77,6 @@
 | CEPSA | Daniel Garrote (daniel.garrote@cepsa.com) | AWS (4/8/1000) | XeEQlDUuj7q1vIkwB30wlkg98Cu9zfv/k1t7ynOdwxU= | enode://e3e3a6b5998af5279e61001232d29b6a31a0d5b7e38616a29d095cf9efaf33679e4ca5515422baa560e0ca133b1ce033629d4bcbe249adfa8b7758fd5bd8a141@52.30.193.39:21000?discport=0 |
 | Universidad Pontificia Comillas | David Contreras (davidcb@comillas.edu) | Self Hosted (20/128GB/1TB) | lA9xy5Ubt/L9n/qs99XsWQm75EgdhW+fZXulTlvLZ0s= | enode://b518a8fefa23383d1b9ab1228bb28c0250bca2d0d218179a228a58ea5a97cd29ccc1e2a55a002b8d2ec095c4e96595a1109cfc51ec7db5260562435553bcb1ef@130.206.64.6:21000?discport=0 |
 | Sngular | Lucas Sanz Allona (blockchain@sngular.com) | AWS (2/4/100) | PDMCz9KUUPwIQrPfM3KiBiO9MCLFo9xqXZQv+LnnISk= | enode://96c2fda2745d2699d8840889bfaf046a466b8316c094f754a1e15d5264e9127886cf1d42d5ee7ffee14024873091c729748c6f828f5e46ef90a03f8c5310ae4a@54.76.131.197:21000?discport=0 |
+| Lucentia Lab | Miguel A. Teruel (mteruel@lucentialab.es) | Self Hosted (8C/64Gb/5Tb) | RGfT8NAFe6F3z2jlrFdQYZEUCwdS1CYCPoDxrHWQfj8= | enode://b42e376f91982421cbd1a6d79ae061ddf8e5055eb94ae4e328dc5105de6feffe9f97296ce3526ef944dea6390f83fd177c24643b236f133a0447406bfc5676d1@83.56.10.69:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
