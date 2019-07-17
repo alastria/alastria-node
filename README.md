@@ -55,7 +55,7 @@ You'll need to open the following ports in both ways to deploy a node:
 
 ## Deployment of Smart Contracts on Alastria Network
 To know more about the use of Alastria Network, you can visit the Smart Contract Deployment Guide made by one of our associates, Roberto García, from Lleida University:
-* [Deploying to Alastria's network Telsius (Quorum)](https://github.com/rogargon/copyrightly.io/blob/master/docs/networkt.md)
+* [Deploying to Alastria's network T (Quorum)](https://github.com/rogargon/copyrightly.io/blob/master/docs/NetworkT.md)
 
 ## Alastria network resources
 
