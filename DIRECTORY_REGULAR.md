@@ -78,5 +78,6 @@
 | Sngular | Lucas Sanz Allona (blockchain@sngular.com) | AWS (2/4/100) | PDMCz9KUUPwIQrPfM3KiBiO9MCLFo9xqXZQv+LnnISk= | enode://96c2fda2745d2699d8840889bfaf046a466b8316c094f754a1e15d5264e9127886cf1d42d5ee7ffee14024873091c729748c6f828f5e46ef90a03f8c5310ae4a@54.76.131.197:21000?discport=0 |
 | Lucentia Lab | Miguel A. Teruel (mteruel@lucentialab.es) | Self Hosted (8C/64Gb/5Tb) | RGfT8NAFe6F3z2jlrFdQYZEUCwdS1CYCPoDxrHWQfj8= | enode://b42e376f91982421cbd1a6d79ae061ddf8e5055eb94ae4e328dc5105de6feffe9f97296ce3526ef944dea6390f83fd177c24643b236f133a0447406bfc5676d1@83.56.10.69:21000?discport=0 |
 | Alastria Identidad | Juan Luis Gozalo (juanluis@alastria.io) | AWS (2C/4GB/100GB) | +83YFTcH68u4qwi++dY61xLhPua/s92qj2xQb1nvc0I= | enode://652c0b369388fc5f9fd90c38a8e24f331fbf3f100a0d35aa60d2e7506dda5f1ef14d92d82a7e755e5e3c2231baa952360871cbf61d52cf920198d57e86f3de98@63.33.206.111:21000?discport=0 |
+| Blocknitive | Jorge Lopez García (jorge.lopez@blocknitive.com) | Sefl-Hosted (2C/4GB/100GB) | enode://6f812e4003bfd09a75ee5f8e42543a4a7689d868a6bfa2bc29c9b95f3e773adf0b2ba05dad3d9b02a8712833bb9bf10aa090ac1772c0e939af49bf37f8a4cfa6@185.170.96.5:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
