@@ -1,6 +1,7 @@
 
-## Cómo poner en marcha un nodo validador Alastria
+## Cómo poner en marcha un nodo validador Alastria de modo manual (sin usar la imagen Docker)
 
+(Nota: si se quiere usar la instalación Docker, por favor, revisa el documento en (https://github.com/alastria/alastria-node/blob/testnet2/README.md)
 
 Como la red Telsius está utilizando el protocolo de consensio Istanbul BFT, la forma de generar nuevos bloques en la test-net es teniendo disponibles nodos validadores en la red e integrarlos en el conjuto de nodos que forman parte de la ronda de validación.
 
