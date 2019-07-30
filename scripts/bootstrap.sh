@@ -57,7 +57,7 @@ function rhrequired {
   superuser yum -y update
   echo "Installing Libraries"
   superuser yum -y install gmp-devel gcc gcc-c++ make openssl-devel libdb-devel\
-                      ncurses-devel wget nmap-ncat libsodium-devel libdb-devel leveldb-devel
+                      ncurses-devel wget nmap-ncat libsodium-devel libdb-devel leveldb-devel bind-utils
 }
 
 function installconstellation {
@@ -115,7 +115,7 @@ function debrequired {
   superuser apt-get install -y software-properties-common unzip wget git\
        make gcc libsodium-dev build-essential libdb-dev zlib1g-dev \
        libtinfo-dev sysvbanner psmisc libleveldb-dev\
-       libsodium-dev libdb5.3-dev
+       libsodium-dev libdb5.3-dev dnsutils
 }
 
 function gopath {
