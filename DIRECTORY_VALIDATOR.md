@@ -1,4 +1,4 @@
-﻿# Directorio de nodos para la testnet - VALIDADORES
+﻿# Directorio de nodos para Red T - VALIDADORES
 
 | Entidad | Contacto (slack, email, git user...) | Hosting info (Cores/Mem/HDD) | enode |
 | ------- | ------------------------------------ | ---------------------------------- | ----- |
@@ -14,8 +14,8 @@
 | DXC Technology | Miguel Briales (mbrialesroma@dxc.com) | AWS (2C/4Gb/100GB) |  enode://9b622e1603f410beb135ec8de2532c615bae1001980a5d16ec3f00655359d7c3775836ac81e91dd4c0a0a7906eae7c58020a09cb9b641c8fd035388c7d0a031a@34.248.36.195:21000?discport=0|
 | AST-Gobierno de Aragón | Óscar Torrero (otorrero@aragon.es) | Sefl-Hosted (2C/4Gb/40GB) |  enode://367354e3bb59d015fce31967f5dda5c17cb3b9acc5b571695f94a13f89d2a2c64c3bca28da05b6751a7384c38152752de35787d97e9b8d6062b3371b7a9305c4@188.244.90.2:21000?discport=0|
 | Grant Thornton | Jaime Morales(jaime.morales@es.gt.com) Iñigo Garcia(inigo.garciademata@es.gt.com) | AWS (2C/4Gb/80GB) |  enode://a6a85eec3331e8b2474d8d24693a731ac0ff778676ff30bed74a30ec0a942a3a8b4e60591ad9c6f55dc62de04ff9042b8bc3c1046208cbfebaf34c2bf63b7a05@35.181.78.28:21000?discport=0|
-| Blocknitive | Jorge Lopez García (jorge.lopez@blocknitive.com) | IBM (4C/32GB/100GB) | enode://c8292c7e9d8b2d55b5a40456cc720d2955e204b1b0c3959ddf77d13b57f82ab98ced85ca74cb5fb87e94abe5b8bb98ceda026860e9449ff92a6aabd38772963e@159.8.108.7:21000?discport=0 |
 | EasyFeedback | Honorio Ros(hros@easyfeedback.com) | AWS (2C/4Gb/80GB) | enode://da4fb3b922ca734f66dd5fa04ca11fd31e4b9271e9a21014799944252ead0bfadf3f39b95050cbfd758bf22fa112a6a9c433c7798b647a5f7b5930e589c55b3a@63.35.247.87:21000?discport=0|
 | Ejie | Oscar Guadilla(o-guadilla@ejie.eus) | Self Hosted (2C/4Gb/100GB) | enode://7027961511b9b0cd5c2c6eb3d701a4e656a916bcee9bd9dbf7c6df5a80c962bb65c82fc7d1cc7337019564e83902cdf3a28c0b6a0ec117eb7cf9bfa5eb796ecd@185.161.117.16:21000?discport=0|
 | CEPSA | Daniel Garrote (daniel.garrote@cepsa.com) | AWS (4C/8Gb/1000GB) | enode://7a87c79254b66bd141238a5bbff26bddc9d98c345bfb0525b3e3779be6ca6607253b40883a9811140900a2d3e59417bc967ecf7eb68311def02e1d0ac287fab6@34.245.76.181:21000?discport=0|
 | Sngular | Lucas Sanz Allona (blockchain@sngular.com) | AWS (2/4/100) | enode://3a71890f849eedf9831a32cc0ec3215a0d50e6286327449b192ea00c0705213b1d27f7473b7bc4faa53723a28cb39f6d3a43341ab81f66b73258658a7e4e6661@54.194.230.12:21000?discport=0 |
+| Blocknitive | Jorge Lopez García (jorge.lopez@blocknitive.com) | Sefl-Hosted (2C/4GB/100GB) | enode://195b4b3c641c0b0554fcc845ddfe979a4f431cb6190cfbaa87d65fa22c55fbe1817893e86a30a40cc6e90569a5afd5f4b842c260b9047ac2f6afd9ee96ea7440@185.170.96.5:21000?discport=0 |

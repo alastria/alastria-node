@@ -1,5 +1,7 @@
 
-## Cómo poner en marcha un nodo regular Alastria
+## Cómo poner en marcha un nodo regular Alastria manualmente (sin usar la imagen Docker existente)
+
+(Nota: si se quiere usar la instalación Docker, por favor, revisa el documento en (https://github.com/alastria/alastria-node/blob/testnet2/README.md)
 
 Nuestra primera aproximación a esta red, es la generación de una red en pruebas con [Quorum](https://www.jpmorgan.com/global/Quorum) (derivado de [Ethereum](https://www.ethereum.org/)) que permite disponer de una red permisionada (necesitaremos solicitar el acceso a la misma) y con la posibilidad de generar transacciones privadas.
 
