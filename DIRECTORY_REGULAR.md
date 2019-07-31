@@ -80,5 +80,6 @@
 | Lucentia Lab | Miguel A. Teruel (mteruel@lucentialab.es) | Google Cloud Platform (2C/4Gb/100Gb) | TFgNtQZZWPds3euhgTcu5AeJIJ1xgs2iww50URIi3lo= | enode://cfcbda1a005acd1d440d7c565c9d100b12e9cefb4868955a26e7fb959adf710d743e9c143715be6fd3dbcd52e9f8abff53de6c5135c94febef278a7dab7d006a@35.206.158.163:21000?discport=0 |
 | Alastria Identidad | Juan Luis Gozalo (juanluis@alastria.io) | AWS (2C/4GB/100GB) | +83YFTcH68u4qwi++dY61xLhPua/s92qj2xQb1nvc0I= | enode://652c0b369388fc5f9fd90c38a8e24f331fbf3f100a0d35aa60d2e7506dda5f1ef14d92d82a7e755e5e3c2231baa952360871cbf61d52cf920198d57e86f3de98@63.33.206.111:21000?discport=0 |
 | Blocknitive | Jorge Lopez García (jorge.lopez@blocknitive.com) | Sefl-Hosted (2C/4GB/100GB) | enode://6f812e4003bfd09a75ee5f8e42543a4a7689d868a6bfa2bc29c9b95f3e773adf0b2ba05dad3d9b02a8712833bb9bf10aa090ac1772c0e939af49bf37f8a4cfa6@185.170.96.5:21000?discport=0 |
+| SGTesoro | Cesar Perez Chirinos (juanluis@alastria.io) | Sefl-Hosted (4C/8GB/100GB) | enode://093c8d0c1eefc7df9bcd7da84433daf9a8c026e4e0a7f77e577c543b0c9e1ef130320abc17de7096cb3ef2e445fa57da16d0356a21ba0a704cdd6f2bad2a091e@80.59.161.247:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
