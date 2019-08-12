@@ -82,5 +82,5 @@
 | Blocknitive | Jorge Lopez García (jorge.lopez@blocknitive.com) | Sefl-Hosted (2C/4GB/100GB) | enode://6f812e4003bfd09a75ee5f8e42543a4a7689d868a6bfa2bc29c9b95f3e773adf0b2ba05dad3d9b02a8712833bb9bf10aa090ac1772c0e939af49bf37f8a4cfa6@185.170.96.5:21000?discport=0 |
 | SGTesoro | Cesar Perez Chirinos (juanluis@alastria.io) | Sefl-Hosted (4C/8GB/100GB) | | enode://093c8d0c1eefc7df9bcd7da84433daf9a8c026e4e0a7f77e577c543b0c9e1ef130320abc17de7096cb3ef2e445fa57da16d0356a21ba0a704cdd6f2bad2a091e@80.59.161.247:21000?discport=0 |
 | kunfud | Ismael Arribas (kunfud@gmail.com) | Self-Hosted (2C/4GB/100GB) | | enode://ffbf29508c4f6da072291203cb40e24d9483f8588e6bbf02e838f75110b7b968444dc5d68b44d0aaaea16ef712c0b20146fdf4ea365b2f9ccd97fb299e683826@109.234.71.9:21000?discport=0 |
-
+| Camara de Comercio de Valladolid | Javier Gallo (javier.gallo@camaravalladolid.com) | Self Hosted (2C/4Gb/300Gb) | 98Lk+u1PxLjZ9RXhXWZgAddC5ZiDYV9YlAbcYKt2gFg= | enode://ffbf29508c4f6da072291203cb40e24d9483f8588e6bbf02e838f75110b7b968444dc5d68b44d0aaaea16ef712c0b20146fdf4ea365b2f9ccd97fb299e683826@109.234.71.9:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
