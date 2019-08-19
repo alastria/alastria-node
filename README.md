@@ -54,8 +54,10 @@ You'll need to open the following ports in both ways to deploy a node:
 * [(Spanish) Installation Guide](https://medium.com/babel-go2chain/c%C3%B3mo-poner-en-marcha-un-bootnode-en-la-red-telsius-de-alastria-18eacb20b224)
 
 ## Deployment of Smart Contracts on Alastria Network
-To know more about the use of Alastria Network, you can visit the Smart Contract Deployment Guide made by one of our associates, Roberto García, from Lleida University:
-* [Deploying to Alastria's network T (Quorum)](https://github.com/rogargon/copyrightly.io/blob/master/docs/NetworkT.md)
+To know more about the use of Alastria Network, you can visit the Smart Contract Deployment Guides:
+* [Deploying to Alastria's network T (Quorum)](https://github.com/rogargon/copyrightly.io/blob/master/docs/NetworkT.md), created by Roberto Garcia, from Lleida University
+* [Deploying to Alastria's Red T using Truffle & Metamask](https://medium.com/@jmolino/como-desplegar-un-smart-contract-en-la-red-t-de-alastria-utilizando-remix-y-metamask-782463997a34) created by Jose María del Molino, from AYESA
+* [Deploying to Alastria's Red T (Quorum)](https://medium.com/babel-go2chain/como-desplegar-un-smart-contract-contra-la-red-t-de-alastria-56939034e884) created by Guillermo Araujo, from Babel
 
 ## Alastria network resources
 
