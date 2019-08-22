@@ -1,5 +1,6 @@
-# ALASTRIA Arrakis #
+# ALASTRIA Arrakis (Testnet) #
 
+* If you want to use Telsius, please visit [Telsius](https://github.com/alastria/alastria-node/blob/testnet2/docker/README.md) for information
 * Visit [What is alastria](https://alastria.io/sobre_alastria) page to know more about us.
 
 This page contains technical information needed to work in the Alastria ecosystem on the possible different ways.
@@ -18,12 +19,12 @@ You'll need at least a host/node to interact with the network, please read the t
 |:------- |:-------- |:---------|
 | **CPU's**: | 2 |  4 |
 | **Memory**: | 4 Gb |  8 Gb |
-| **Hasrd Disc**: | 100 Gb |  1000 Gb |
+| **Hard Disk**: | 100 Gb |  1000 Gb |
 
 
 #### TCP/UDP PORTS
 
-You'll need to open the following ports in both ways to deploy de node:
+You'll need to open the following ports in both ways to deploy a node:
 
 [//]: # (También es necesario habilitar los siguientes puertos de E/S en la maquina en la que vamos a desplegar el nodo:)
 
