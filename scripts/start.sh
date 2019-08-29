@@ -147,11 +147,6 @@ else
     echo "Monitor disabled."
 fi
 
-if ([ $WATCH -gt 0 ])
-then
-  tail -100f ~/alastria/logs/quorum"${_TIME}".log
-fi
-
 if ([ $LOGROTATE -gt 0 ]) 
 then 
     RP=`readlink -m "$0"`
@@ -160,6 +155,13 @@ then
 else
    echo "Logrotate disabled."
 fi
-  
+
 set +u
 set +e
+
+if ([ $WATCH -gt 0 ])
+then
+  tail -100f ~/alastria/logs/quorum"${_TIME}".log
+fi
+  
+
