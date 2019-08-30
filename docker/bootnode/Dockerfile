@@ -32,7 +32,7 @@ RUN \
         dnsutils \
         nano \
     && cd \
-    && git clone -b $ALASTRIA_BRANCH https://github.com/alastria/alastria-node \
+    && git clone -b $ALASTRIA_BRANCH https://github.com/tlmat-unican/alastria-node \
     && apt-get autoremove \
     && apt-get clean
 
