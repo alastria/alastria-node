@@ -26,7 +26,7 @@ fi
 nginx -g "daemon off;"
 ARGS="--watch --local-rpc"
 if [ ! $MONITOR_ENABLED -eq 1 ]; then
-    AGRS="--watch --local-rpc --no-monitor"
+    ARGS="--watch --local-rpc --no-monitor"
 fi
 exec ./start.sh $ARGS &
 
