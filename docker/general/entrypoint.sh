@@ -11,6 +11,7 @@ git pull
 cd ./scripts
 sed -i 's/sudo//g' bootstrap.sh
 ./bootstrap.sh
+./monitor.sh build
 
 if [ ! -f ~/alastria/data/IDENTITY ]; then
     ./init.sh auto $NODE_TYPE $NODE_NAME
@@ -23,10 +24,9 @@ fi
 
 /etc/init.d/nginx start
 nginx -g "daemon off;"
-ARGS="--watch --local-rpc --no-monitor"
-if [ ! $MONITOR_ENABLED -eq 0 ]; then
-    ./monitor.sh build
-    ARGS="--watch --local-rpc"
+ARGS="--watch --local-rpc"
+if [ ! $MONITOR_ENABLED -eq 1 ]; then
+    ARGS="--watch --local-rpc --no-monitor"
 fi
 exec ./start.sh $ARGS &
 
