@@ -19,6 +19,7 @@ FROM ubuntu:16.04
 
 ARG DOCKER_VERSION=latest
 ARG ALASTRIA_BRANCH=testnet2
+ARG GITHUB_USER=tlmat-unican
 
 ENV \
     DOCKER_VERSION=$DOCKER_VERSION
@@ -36,8 +37,8 @@ RUN \
     && cd
 
 # Prevent Docker from caching git clone
-ADD https://api.github.com/repos/tlmat-unican/alastria-node/git/refs/heads/$ALASTRIA_BRANCH version.json
-RUN git clone -b $ALASTRIA_BRANCH https://github.com/tlmat-unican/alastria-node
+ADD https://api.github.com/repos/$GITHUB_USER/alastria-node/git/refs/heads/$ALASTRIA_BRANCH version.json
+RUN git clone -b $ALASTRIA_BRANCH https://github.com/$GITHUB_USER/alastria-node
 
 VOLUME /root/alastria
 EXPOSE 21000 21000/udp 8443
