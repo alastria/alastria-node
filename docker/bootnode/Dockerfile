@@ -19,7 +19,7 @@ FROM ubuntu:16.04
 
 ARG DOCKER_VERSION=latest
 ARG ALASTRIA_BRANCH=testnet2
-ARG GITHUB_USER=tlmat-unican
+ARG GITHUB_USER=alastria
 
 ENV \
     DOCKER_VERSION=$DOCKER_VERSION
@@ -33,12 +33,13 @@ RUN \
         dnsutils \
         nano \
     && apt-get autoremove \
-    && apt-get clean \
-    && cd
+    && apt-get clean
 
 # Prevent Docker from caching git clone
 ADD https://api.github.com/repos/$GITHUB_USER/alastria-node/git/refs/heads/$ALASTRIA_BRANCH version.json
-RUN git clone -b $ALASTRIA_BRANCH https://github.com/$GITHUB_USER/alastria-node
+RUN \
+    cd \
+    && git clone -b $ALASTRIA_BRANCH https://github.com/$GITHUB_USER/alastria-node
 
 VOLUME /root/alastria
 EXPOSE 21000 21000/udp 8443
