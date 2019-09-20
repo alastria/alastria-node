@@ -90,5 +90,6 @@
 | AMTEGA TEST | Coordinación Sistemas 2 (coordinacion-sistemas2.amtega@xunta.gal) | Self Hosted (2C/4Gb/100Gb) | WEcCIlj+b94KYlLC9t8YPMDpardGO+NTGWDHytR6czQ= | "enode://f715b91a37d4fd71bd9852f3f236d0c4bd929970adb965c03d27c243972cdb0c8c2dd566a6908ac57b7336c09c79ce8874906f46becd718051ff755bb42ea16e@85.91.64.72:21000?discport=0" | 
 | Fundación CARTIF | Víctor Carrión (admin@cartif.es) | Self-Hosted (2C/8GiB/100GiB) | Ys2gr7+azJ9hm0U03XcH3mJSrW3guFzW7RhGS+4LnCc= | + "enode://bf7f60ccec0323eb58f38131b04f6855a7315e7c73e895b534312feca7a62dd8c131be95e08ddb761c3754e7df57340c87b44de08693f2b26cf210513c31a0a9@193.146.230.59:21000?discport=0" | 
 | Asociación Española de Fundaciones | Isabel Peñalosa Esteban (ipenalosa@fundaciones.org) | ADW (2/8/100) | iG3zvA0hgtvZuTwLSFBBLbi1SG7reR8TZadwj3Z3XkE= | "enode://6f2c9d96fad236334854a1cf68543e7c5fdf10091571ab0b07fb15b1d927b165f39e93851491ab31443adc356e80705327577fa8942cfbc128135f4411b32b6b@185.136.91.174:21000?discport=0"| 
+| ITAINNOVA | David Escuín (descuin@itainnova.es) | Self Hosted (4C/8Gb/50Gb) | dlFZ3KjOV1yrykIpq8TOzce6PZ6ZSZ36A84vWLDJK2Y= | enode://53b4c136ea15c4d616aa06f5a53d815bbce81c831e5b55e6602b248b30cf6181df7830f6ea054353872c8beeebe7ab858a1838ceec636e8e54e84f1bba84025d@193.146.117.67:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
