@@ -60,7 +60,7 @@ To know more about the use of Alastria Network, you can visit the Smart Contract
 * [Deploying to Alastria's Red T using Truffle (Quorum)](https://medium.com/babel-go2chain/como-desplegar-un-smart-contract-contra-la-red-t-de-alastria-56939034e884) created by Guillermo Araujo, from Babel
 
 ## Connection from External Applications using WebSockets
-* Connecting to an Alastria's Red T node using WebSockets (https://tech.tribalyte.eu/blog-websockets-red-t-alastria) created by Ronny Demera, from Tribalyte
+* [Connecting to an Alastria's Red T node using WebSockets](https://tech.tribalyte.eu/blog-websockets-red-t-alastria) created by Ronny Demera, from Tribalyte
 
 ## Alastria network resources
 
