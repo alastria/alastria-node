@@ -93,5 +93,6 @@
 | INYCOM | Rodrigo Casamayor Moragriega (rodrigo.casamayor@inycom.es) | Self Hosted (2C/4GB/100GB) | 8OzUpHqehbYy3l2U9dQR0ucReCx1O7WXKscq6aDDMz8= | enode://012fce7130252483d64744c1df5b9d33cf3dcad1fc501a84a69138117f15ddbaa3ff7ccac4d394d4d5d4175ad5aeb1e9949dd50bec3644135f23bfa2793ca7da@212.75.174.237:21000?discport=0 | 
 | ITAINNOVA | David Escuín (descuin@itainnova.es) | Self Hosted (4C/8Gb/50Gb) | dlFZ3KjOV1yrykIpq8TOzce6PZ6ZSZ36A84vWLDJK2Y= | enode://53b4c136ea15c4d616aa06f5a53d815bbce81c831e5b55e6602b248b30cf6181df7830f6ea054353872c8beeebe7ab858a1838ceec636e8e54e84f1bba84025d@193.146.117.67:21000?discport=0 |
 | SIEMENS | Jason Perez Hornung (jason.perez_hornung.ext@siemens.com) | AWS (2C/4Gb/512GiB) | 0l7K+ddggUn9mOsQWwnnITh4PAgSq4LWCU0sVS014S8= | enode://bd5c89a8189405686cd90f2fb25f4c0e3d833858e9b973b7df1fb1b8a3b29fdb055ed5820fe02490f2f473dfe282bfd53a302c2a4e2cf3fde6151c08db1edef4@99.81.52.133:21000?discport=0 |
+| ZENITHWINGS | Joao Quintanilha (jquintanilha@zenithwings.com) | AZURE (2C/7Gb/100GiB) | kiPxL5W9djS9hioczKL5RpD0HwAT5a73h24XVz7szVk= | enode://2e4d1c7952d02ae32b2583805afded63f9a9ba0e83835730bf804d7b943da9a867540bdeea6d3f75a8de67d405fa595ae0413bced0c8b4e05962b5f6ba5020c1@13.95.9.93:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
