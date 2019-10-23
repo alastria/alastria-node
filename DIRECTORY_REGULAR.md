@@ -99,5 +99,6 @@
 | FundacionGrupoAL | Luis Arenas Martin (luis.arenas@asesoreslocales.com | Self Hosted (4c/8Gb/100Gb) | Gfq0W2BCCSKwjNSMdrsA5RqcN7dZ5gPWVfAG56RggDQ= | enode://38965f50c0f09a754db92ad062a24bc105fc0ebf862c14f1ed3404e4ce0dca8c3acf719c9e3d303f6e058e235e39f54c1a7e8251f7221faf935b88b4120afe49@195.77.33.226:21000?discport=0 |
 | Edosoft Factory | Aitor Carrera (aitor.carrera@edosoft.es) | Google Cloud Platform (2C/4Gb/1000Gb) | ZVoKrqRQHsq7AvViC1+q2+L2YFHuCmj1BkRdcLHqKk4= | enode://5464f7dd86bce03e4766a5ecc6cc51f4c5a1b343a1945688effd68a77aee9f0e6a68146e2de8010192fec133a3c2094db65dbb6a42eaa0820868c2d9980a8fab@35.240.44.152:21000?discport=0 |
 | UNIR | Jose Luis Nieto (joseluis.nieto@unir.net) | Self Hosted (2C/4Gb/150Gb) | WITHOUT_CONSTELLATION | enode://7a14da4a46478381e7572db8a20cf422075a69ca3db3b01de93569de34dfaea81bca13d105ace34aaba7877e2ff2c2ac41252fab449d3c6cf48b86266f9482c2@138.4.143.82:21000?discport=0 |
+| CaixaBank | Oriol Amat(oamat@silk.es) | Self Hosted (4C/16Gb/1000Gb) | tarm2EDqDsFvFQerMM/am9E0DMUVX9HiyyDvxxZ9whM= | enode://411807306a95add911d2e0c8082a9fbcfbcc600fd9bc7a3ac9707d80f3afa8877bd1f6e18700ea5efc21a82213ad4746c359f0a1d2e5acaba40c299b163732b5@35.181.152.50:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
