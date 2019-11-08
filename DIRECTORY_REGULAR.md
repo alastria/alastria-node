@@ -101,5 +101,6 @@
 | CaixaBank | Oriol Amat (oamat@silk.es) | Self Hosted (4C/16Gb/1000Gb) | tarm2EDqDsFvFQerMM/am9E0DMUVX9HiyyDvxxZ9whM= | enode://411807306a95add911d2e0c8082a9fbcfbcc600fd9bc7a3ac9707d80f3afa8877bd1f6e18700ea5efc21a82213ad4746c359f0a1d2e5acaba40c299b163732b5@35.181.152.50:21000?discport=0 |
 | Orbit Logistics | Sebastian Zintl(zintl@orbitlog.com) | Self Hosted (2C/4Gb/100Gb) | fvuKxQOzhyvJSj4gJrpUwFPcH+UP6PI9zwW8ZrLnelA= | enode://676a090085abf1a6b591f6f798b18e9be84f040a93364c2518ecbc481462ff3db4f0495c4cb5042b040db14876ec56e1e99907c4a45c3ca87c995aee347d45e0@193.29.54.35:21000?discport=0 |
 | Block0 | Benoit Antoine(benoit@block0.io) | AWS (2C/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://ca66d15abb33df1a2cb9314611dd057bbd8bb0ef68cc82bb699a3c0b8beb858dd0bf0b18a93b7ea78d4d4184e22c67043e52cd89e3cf26ed882c84f0e51838fb@18.184.155.74:21000?discport=0 |
+| Suma Gestión Tributaria | Alberto Salido (blockchain@suma.es) | Self Hosted (2C/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://cb2b9243f8c939b402f7c3aaf9aa6c99974b5ef02d78a8b9d39b9c26bc656ffbb12190f57f751f1e4226060c031ae93a4bed675e75fac53ca5492540131301c0@194.224.22.238:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
