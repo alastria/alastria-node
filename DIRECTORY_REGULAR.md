@@ -101,5 +101,5 @@
 | CaixaBank | Oriol Amat (oamat@silk.es) | Self Hosted (4C/16Gb/1000Gb) | tarm2EDqDsFvFQerMM/am9E0DMUVX9HiyyDvxxZ9whM= | enode://411807306a95add911d2e0c8082a9fbcfbcc600fd9bc7a3ac9707d80f3afa8877bd1f6e18700ea5efc21a82213ad4746c359f0a1d2e5acaba40c299b163732b5@35.181.152.50:21000?discport=0 |
 | Orbit Logistics | Sebastian Zintl(zintl@orbitlog.com) | Self Hosted (2C/4Gb/100Gb) | fvuKxQOzhyvJSj4gJrpUwFPcH+UP6PI9zwW8ZrLnelA= | enode://676a090085abf1a6b591f6f798b18e9be84f040a93364c2518ecbc481462ff3db4f0495c4cb5042b040db14876ec56e1e99907c4a45c3ca87c995aee347d45e0@193.29.54.35:21000?discport=0 |
 | Block0 | Benoit Antoine(benoit@block0.io) | AWS (2C/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://ca66d15abb33df1a2cb9314611dd057bbd8bb0ef68cc82bb699a3c0b8beb858dd0bf0b18a93b7ea78d4d4184e22c67043e52cd89e3cf26ed882c84f0e51838fb@18.184.155.74:21000?discport=0 |
-
+| Soltel | Belen Martin Sanchez(belen.martin@soltel.es) | Self Hosted (2C/4Gb/100Gb) | 9Ir1h1ySUZub7nJfq7MbaRN1VWZK37NyzCM4YMSM8Gw | enode://41897d9285ec8e185d7d84a41ee792200763aa97fc2aae8ec6d159a431070942c6b30d7b870fdaa8211128d744bb61e54e201f5c52f70930d4933f6bdf70fceb@93.90.21.232:21000?discport=0000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
