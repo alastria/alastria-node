@@ -103,5 +103,6 @@
 | Block0 | Benoit Antoine(benoit@block0.io) | AWS (2C/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://ca66d15abb33df1a2cb9314611dd057bbd8bb0ef68cc82bb699a3c0b8beb858dd0bf0b18a93b7ea78d4d4184e22c67043e52cd89e3cf26ed882c84f0e51838fb@18.184.155.74:21000?discport=0 |
 | Suma Gestión Tributaria | Alberto Salido (blockchain@suma.es) | Self Hosted (2C/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://cb2b9243f8c939b402f7c3aaf9aa6c99974b5ef02d78a8b9d39b9c26bc656ffbb12190f57f751f1e4226060c031ae93a4bed675e75fac53ca5492540131301c0@194.224.22.238:21000?discport=0 |
 | UAH | Carlos Cilleruelo Rodríguez(carlos.cilleruelo@uah.es) | Self Hosted (1C/4Gb/25Gb) | NksXK4GVIkgQ1wjz11N4zWcT0m7WefMgeHToeX2uSVY= | enode://5658f54c2c3c3fcfc51c0c3871573f64f0989eb0a174390a2a830a86d2c3fa18359108b05e25e41270ffd1d84052f09399dbb6d3790330f77fb0256cca58b048@206.189.26.139:21000?discport=0 |
+| ubo | test1.mounaji@gmail.com | Self Hosted (2C/4Gb/100Gb) | Ml7HPJWgvs1DQm6HL9iV8m65x5+oi8qZ8X+ykLxdoEk= | enode://7ee2edab98bcf59a1d5b6836bf0f22392bf5563d25804761b58ea1ce93fba23ce7f3d3c8abb05166da993806aaab1bcd3d8b65c2f80e8aaf251644c467189f6d@172.17.0.2:21000?discport=0" |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
