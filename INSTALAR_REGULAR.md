@@ -88,7 +88,7 @@ Y ahora sí, configuramos el nodo general llamando al script init.sh con los par
 
 * Company: Nombre de la compañia.
 
-* NET: Telsius.
+* NET: T.
 
 * CORES: El número de cores de la máquina.
 
