@@ -106,5 +106,6 @@
 | UAH | Carlos Cilleruelo Rodríguez(carlos.cilleruelo@uah.es) | Self Hosted (1C/4Gb/25Gb) | NksXK4GVIkgQ1wjz11N4zWcT0m7WefMgeHToeX2uSVY= | enode://5658f54c2c3c3fcfc51c0c3871573f64f0989eb0a174390a2a830a86d2c3fa18359108b05e25e41270ffd1d84052f09399dbb6d3790330f77fb0256cca58b048@206.189.26.139:21000?discport=0 |
 | Worldline | Jordi Escudero Subirana (jordi.escudero@worldline.com) | Amazon (2C/4GB/100GB) | +TLaqQqQk3hCyHjA90w5UiKXgvPhZJ2JPLuO6j9C1mo= | enode://ccbfe828e92cc5766603adf57be95cfa2d4f27309d371c5d4eb89b9c9505175899cad3fbdd859c7b15312cd960e5aef5d62b4f1cbbada31318f924eafc1799f5@34.240.81.85:21000?discport=0 |
 | Worldline | Jordi Escudero Subirana (jordi.escudero@worldline.com) | Amazon (2C/4GB/100GB) | pkdPj4qayks0LyPgBtLy5O1YVuSoEWexaXblpmHbinY= | enode://1d2f0e78f0055861d7b7831ba00853c1d350af9f57b1d5b2cf418e9e7336c6757330d4ee2415a93ebf723b4fcb1fa867242db318f5021d6722d2a7cda6c0632b@52.30.241.46:21000?discport=0 |
+| Uanataca-Bit4id | Sergio González (sgm@bit4id.com), Rodrigo López (rlg@bit4id.com) | AWS (2C/4GB/100GB) | +P23iRncRpK2OVooH6OC6prIkVfDI421FjN1WYJVDlI= | enode://d6eef4e19449bd485d68a6155e265b39008bdeb762fb1fbaaf08735d2ec55c26cb2a083c2259c7b9bbd8f6693271334508359af789ff25bda7b8cb914701ef48@35.159.24.70:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
