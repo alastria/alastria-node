@@ -5,26 +5,52 @@ NODE_NAME="REG_"
 
 function setCompanyName {
   echo "Write company name: "
-  read COMPANY_NAME
+  if [[ -z "${COMPANY_NAME}" ]]; then
+    read COMPANY_NAME
+  else
+    echo "COMPANY_NAME envvar set to: $COMPANY_NAME"
+    COMPANY_NAME=${COMPANY_NAME}
+  fi
   echo ""
 }
 function setCPUNumber {
   echo "Number of CPUs: "
-  read CPU
+  if [[ -z ${CPU} ]]; then
+    read CPU
+  else
+    echo "CPU envvar set to: $CPU"
+    CPU=${CPU}
+  fi
   echo ""
 }
 function setRAMNumber {
   echo "Number of RAM: "
-  read RAM
+  if [[ -z RAM ]]; then
+    read RAM
+  else
+    echo "RAM envvar set to: $RAM"
+    RAM=${RAM}
+  fi
   echo ""
 }
 function setSequential {
   echo "Sequential starting at 00: "
-  read SEQ
+  if [[ -z SEQ ]]; then
+    read SEQ
+  else
+    echo "SEQ envvar set to: $SEQ"
+    SEQ=${SEQ}
+  fi
   echo ""
 }
 
 function setConstellation {
+  if [[ ! -z ENABLE_CONSTELLATION ]]; then
+    echo "ENABLE_CONSTELLATION envvar set to: $ENABLE_CONSTELLATION"
+    ENABLE_CONSTELLATION=${ENABLE_CONSTELLATION}
+    return
+  fi
+
   PS3="Do you want to enable the constellation?"$'\n'"Press 1 (Yes) or 2 (No) => "
   options=("Yes" "No")
 
@@ -44,6 +70,12 @@ function setConstellation {
 }
 
 function setMonitor {
+  if [[ ! -z MONITOR_ENABLED ]]; then
+    echo "MONITOR_ENABLED envvar set to: $MONITOR_ENABLED"
+    MONITOR_ENABLED=${MONITOR_ENABLED}
+    return
+  fi
+
   PS3="Do you want to install the monitor?"$'\n'"Press 1 (Yes) or 2 (No) => "
   options=("Yes" "No")
 
@@ -86,6 +118,13 @@ function launchNode {
 }
 
 function checkName {
+  if [[ ! -z NO_LAUNCH_CONFIRM ]]; then
+    echo "NO_LAUNCH_CONFIRM enabled, skipping confirmation..."
+    echo "LAUNCHING with Node Type => $NODE_TYPE and Node Name => $NODE_NAME"
+    launchNode
+    return
+  fi
+
   PS3="Are you sure that these data are correct?"$'\n'"Node Type => $NODE_TYPE"$'\n'"Node Name => $NODE_NAME"$'\n'"Press 1 (Yes) or 2 (No) => "
   options=("Yes" "No")
 
