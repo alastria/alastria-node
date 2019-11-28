@@ -16,3 +16,6 @@ docker/scripts/backups
 docker/general/alastria-access-point
 docker/validator/alastria-access-point
 .DS_Store
+
+# Ansible
+*.retry
