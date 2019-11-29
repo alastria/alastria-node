@@ -25,7 +25,7 @@ function setCPUNumber {
 }
 function setRAMNumber {
   echo "Number of RAM: "
-  if [[ -z RAM ]]; then
+  if [[ -z ${RAM} ]]; then
     read RAM
   else
     echo "RAM envvar set to: $RAM"
@@ -35,7 +35,7 @@ function setRAMNumber {
 }
 function setSequential {
   echo "Sequential starting at 00: "
-  if [[ -z SEQ ]]; then
+  if [[ -z ${SEQ} ]]; then
     read SEQ
   else
     echo "SEQ envvar set to: $SEQ"
@@ -45,7 +45,7 @@ function setSequential {
 }
 
 function setConstellation {
-  if [[ ! -z ENABLE_CONSTELLATION ]]; then
+  if [[ ! -z ${ENABLE_CONSTELLATION} ]]; then
     echo "ENABLE_CONSTELLATION envvar set to: $ENABLE_CONSTELLATION"
     ENABLE_CONSTELLATION=${ENABLE_CONSTELLATION}
     return
@@ -70,7 +70,7 @@ function setConstellation {
 }
 
 function setMonitor {
-  if [[ ! -z MONITOR_ENABLED ]]; then
+  if [[ ! -z ${MONITOR_ENABLED} ]]; then
     echo "MONITOR_ENABLED envvar set to: $MONITOR_ENABLED"
     MONITOR_ENABLED=${MONITOR_ENABLED}
     return
