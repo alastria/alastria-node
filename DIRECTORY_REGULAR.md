@@ -108,5 +108,6 @@
 | Uanataca-Bit4id | Sergio González (sgm@bit4id.com), Rodrigo López (rlg@bit4id.com) | AWS (2C/4GB/100GB) | +P23iRncRpK2OVooH6OC6prIkVfDI421FjN1WYJVDlI= | enode://d6eef4e19449bd485d68a6155e265b39008bdeb762fb1fbaaf08735d2ec55c26cb2a083c2259c7b9bbd8f6693271334508359af789ff25bda7b8cb914701ef48@35.159.24.70:21000?discport=0 |
 | Satec | Miguel Ángel López (miguelangel.lopez@satec.es), Héctor Humanes (hector.humanes@satec.es), Lucila Maccio (lucila.maccio@satec.es) | AWS (2C/8GB/100GB) |   | enode://e831d61e1e7c7975cc821ae5d3182ee31e8605a74ae98bf5d92c3ad2418db179ae5fdfc0e0399c5b2e195b998cbf6b9fe7e5e3f92624d408efbd3771351dc0f0@18.216.43.208:21000?discport=0 |
 | SIGNATURIT | Dario Lo Buglio (dario.lo.buglio@signaturit.com) | Amazon (2C/4GB/100GB) | WITHOUT_CONSTELLATION | enode://b6a6cf4f1084d43518a3d5264949724144a23bf746dacb6240b56c3036836ba73f8eb2b6b442aa957cb109465d49764b9daaf1f636f3bc7745e39cf694aa7e95@52.51.84.139:21000?discport=0 |
+| SigmoidBell | Nikos Andrikogiannopoulos (andriko@sigmoidbell.com) | Self Hosted (2C/4GB/100GB) | 0qXZZu6dWHf5qlAWeBsApAUNv/GFl9vc2V0FQ6uUyDc= |enode://e6e0bc819bcade801e82be1781a09041490966a878a675112f825b72c0ab2f0d5c2a541319c6ba241b28c2247ca619d97abfeddde6c302d8ec8a739f301446a8@66.31.45.59:21000?discport=0|
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
