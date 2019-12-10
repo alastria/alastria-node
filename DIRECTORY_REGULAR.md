@@ -108,5 +108,7 @@
 | Uanataca-Bit4id | Sergio González (sgm@bit4id.com), Rodrigo López (rlg@bit4id.com) | AWS (2C/4GB/100GB) | +P23iRncRpK2OVooH6OC6prIkVfDI421FjN1WYJVDlI= | enode://d6eef4e19449bd485d68a6155e265b39008bdeb762fb1fbaaf08735d2ec55c26cb2a083c2259c7b9bbd8f6693271334508359af789ff25bda7b8cb914701ef48@35.159.24.70:21000?discport=0 |
 | Satec | Miguel Ángel López (miguelangel.lopez@satec.es), Héctor Humanes (hector.humanes@satec.es), Lucila Maccio (lucila.maccio@satec.es) | AWS (2C/8GB/100GB) |   | enode://e831d61e1e7c7975cc821ae5d3182ee31e8605a74ae98bf5d92c3ad2418db179ae5fdfc0e0399c5b2e195b998cbf6b9fe7e5e3f92624d408efbd3771351dc0f0@18.216.43.208:21000?discport=0 |
 | SIGNATURIT | Dario Lo Buglio (dario.lo.buglio@signaturit.com) | Amazon (2C/4GB/100GB) | WITHOUT_CONSTELLATION | enode://b6a6cf4f1084d43518a3d5264949724144a23bf746dacb6240b56c3036836ba73f8eb2b6b442aa957cb109465d49764b9daaf1f636f3bc7745e39cf694aa7e95@52.51.84.139:21000?discport=0 |
+| 4tic | Nicolás Manero Carbó (nicolas.manero@4tic.com) | Hetzner (2C/4GB/100GB) | pZj+3kw399oIxrgQz/VveLm/T3rONj+DPMsmlqnBrR0= | enode://0b26d9b32386570a2b54b1b0ebe7e975fb4f0ce28aa83cd726b09cc01e4ca65f7c1722af1fca9e2158dad903e6b16e840a98dec7df3a75ea0902fb542a2c557f@88.198.157.34:21000?discport=0 |
+
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
