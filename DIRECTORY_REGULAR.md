@@ -111,6 +111,5 @@
 | SIGNATURIT | Dario Lo Buglio (dario.lo.buglio@signaturit.com) | Amazon (2C/4GB/100GB) | ZdAa2rbenpiBge7B0EJM+PQeGB59yjk0IGNGhs7jHw4= | enode://bd62fba6cb8f09baecba6e0780e39d1afa61f3df54af289a4521bf6dce7b681e039ba86e563344ece8f6d35179dc3ff57353dd61c284207e4a9b5c633bff3ed9@52.51.84.139:21000?discport=0 |
 | FVE | Tomás De Andrés García (tomas.deandres@vodafone.com) | Self Hosted (2C/8GB/100GB) |  5yyEIB6Qjj8XXSuJ/FepDAizVM7/iZjhOKA98ofAISg= | enode://9cade3c0ddf1864311e0656e8305cd71b02d84192d42928b8c46e94b134160ee2f965276a5f0e041bf5da5bb13dd2f5f5f1d3961ed86a0928af622097672ebc8@212.145.137.53:21000?discport=0 |
 | 4tic | Nicolás Manero Carbó (nicolas.manero@4tic.com) | Hetzner (2C/4GB/100GB) | pZj+3kw399oIxrgQz/VveLm/T3rONj+DPMsmlqnBrR0= | enode://0b26d9b32386570a2b54b1b0ebe7e975fb4f0ce28aa83cd726b09cc01e4ca65f7c1722af1fca9e2158dad903e6b16e840a98dec7df3a75ea0902fb542a2c557f@88.198.157.34:21000?discport=0 |
-| SigmoidBell | Nikos Andriko (andriko@sigmoidbell.com) | Self Hosted (2C/4GB/100GB) | yhouuxr9rQTtmIzhYVel1DpumWx7IeMrS+kbf0tAtyM= | enode://816f072ccba2fe07796564650acef711da4f722439eea0fbe2ca49efdfc7f1fd07953169268effa0697d37440ec47d2c1abb34263f789e1c29b08d21d2ac86b7@66.31.45.59:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
