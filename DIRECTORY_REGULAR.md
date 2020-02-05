@@ -112,6 +112,6 @@
 | FVE | Self Hosted (2C/8GB/100GB) |  5yyEIB6Qjj8XXSuJ/FepDAizVM7/iZjhOKA98ofAISg= | enode://9cade3c0ddf1864311e0656e8305cd71b02d84192d42928b8c46e94b134160ee2f965276a5f0e041bf5da5bb13dd2f5f5f1d3961ed86a0928af622097672ebc8@212.145.137.53:21000?discport=0 |
 | 4tic | Hetzner (2C/4GB/100GB) | pZj+3kw399oIxrgQz/VveLm/T3rONj+DPMsmlqnBrR0= | enode://0b26d9b32386570a2b54b1b0ebe7e975fb4f0ce28aa83cd726b09cc01e4ca65f7c1722af1fca9e2158dad903e6b16e840a98dec7df3a75ea0902fb542a2c557f@88.198.157.34:21000?discport=0 |
 | Grupo Leben | ADW (2/8/100) | II5wYs7s4FdF0tJlTxXMdRxtn+IqwoZqX5XvVKLbxkU= | enode://b2dd053e12a4fe01f8baeface85119b5aa0b368628001a0cb3f137b29e204091475babad8c393648fc7aae3a868767a0662aa37ef3ddb627d98e5bd31bcb4755@46.231.5.10:21000?discport=0 |
-
+| Planisys | Planisys-EU-Cloud (4C/8G/80G) | SH7hfnPcYYT5la/I0k0oyblc7d6q+k3mmLQD+NrQ5y0= | enode://59b4a8f81b10f3206401fea5a6cef9ea51966b26625133c13aaffefa36fc180562633079b5b0f079f35e7e9ff3fde740431511f0b188a925a9aeb8bbd2888164@185.180.10.170:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
