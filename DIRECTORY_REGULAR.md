@@ -1,7 +1,7 @@
 ﻿# Directorio de nodos regulares
 
 | Entidad | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
-| ------- | ------------------------------------ | ---------------------------------- | ------------- | ----- |
+| ------- | ---------------------------------- | ------------- | ----- |
 | Alisys | Self hosted (1C/4GB/70GB) | AvVbQrGRfvMHHw+MO9KlW9g3NVY1ETTTRUGtAa07BS8= | enode://ee1cebf3111df175a5cd079c606cea7cc0a82e64c5900731d88cd79e00e8458068edeb2914167408856245a8731456205ef6bd6dfe6a63e112c5ee4e8a2d273c@154.62.228.24:21000?discport=0 |
 | Docuten | Stackscale (4C/8GB/100GB) | O+nm2OnJMsR76JIZYreRjpaD4SrcXgCq7MAaE/snpyA= | enode://8064fc030d09cff5690efbd7bd07dcb4ababbb1f04ae0a0b02776c6c60b86a78cda4baff33d44a681b3a76d36988232877f0ed9bb8c47ec95c5158b6409016ae@5.57.225.79:21000?discport=0 |
 | IoBuilders | Amazon (2C/4GB/100GB) | | enode://6dcccbad7a4e75701fef6fd0f578c7d3873a853c905a911c416c896914b7cbd46320c363659c46ea32abedd397cb592c001c274dd282c46ed0c63e95c242453c@34.241.169.145:21000?discport=0 |
