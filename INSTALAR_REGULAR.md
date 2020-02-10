@@ -302,6 +302,8 @@ Así mismo, para obtener la clave pública del nodo para realizar transacciones 
 
 Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “testnet2”.
 
+Debe además notificarse la petición de alta de nodo usando (el formulario online)[https://portal.r2docuo.com/alastria/forms/noderequest] donde se incluirán los datos necesarios para identificar el nodo y el peticionario.
+
 Si tiene dudas para realizar esta operación, sigua este tutorial (Enlace al F.A.Q. de la WIKI).
 
 ### Aceptación del pull request
