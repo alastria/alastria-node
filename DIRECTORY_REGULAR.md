@@ -112,5 +112,6 @@
 | SEAT | Self Hosted (4C/8GB/100GB | K6yX3yDiTJX6DdE9R7REB31fPyiYoXj/HhNdBbVjTg8= | enode://110a5bd545935d1334dd963208e2b29117ada05fe1394d2fbe8bd86fe3c8fa6d3bb2e0a766f872b8f0cc5b2e984420fad14141cfe459ceba3fb2a7c077b2e28b@88.20.177.191:21000?discport=0 |
 | Grupo Leben | ADW (2/8/100) | II5wYs7s4FdF0tJlTxXMdRxtn+IqwoZqX5XvVKLbxkU= | enode://b2dd053e12a4fe01f8baeface85119b5aa0b368628001a0cb3f137b29e204091475babad8c393648fc7aae3a868767a0662aa37ef3ddb627d98e5bd31bcb4755@46.231.5.10:21000?discport=0 |
 | ZENITHWINGS | Self Hosted (2C/4Gb/100GiB) | 9PbIBz9InbKejNi3+6vt0puXL/F/aoWZ/uB/oz2Qrm0= | enode://0d28129b49d051baecc741ddf93fba1796a2ed59dac4a1bb7609c3b36f2911e7dcd9fff2522683a037bb4c8f57d61c171cd46bf16cf39f71090de9cf140a1b93@161.230.108.89:21000?discport=0 |
+| Grupo 10 | Self Hosted (8C/16Gb/200GiB) | muIoRJBqof9ON3Po0EzNzzHftmpAcgfFuiOv8vHdJzE= | enode://65b1fcab60ca172c6e6e19149a6ce58464b3212f1d7a85463e9b2467bc69e1eeacfd2fbb426bd516141958c5ce83927c2475aa7767d56d3a00bed30c48321c10@80.58.150.165:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
