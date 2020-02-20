@@ -112,5 +112,6 @@
 | SEAT | Self Hosted (4C/8GB/100GB | K6yX3yDiTJX6DdE9R7REB31fPyiYoXj/HhNdBbVjTg8= | enode://110a5bd545935d1334dd963208e2b29117ada05fe1394d2fbe8bd86fe3c8fa6d3bb2e0a766f872b8f0cc5b2e984420fad14141cfe459ceba3fb2a7c077b2e28b@88.20.177.191:21000?discport=0 |
 | Grupo Leben | ADW (2/8/100) | II5wYs7s4FdF0tJlTxXMdRxtn+IqwoZqX5XvVKLbxkU= | enode://b2dd053e12a4fe01f8baeface85119b5aa0b368628001a0cb3f137b29e204091475babad8c393648fc7aae3a868767a0662aa37ef3ddb627d98e5bd31bcb4755@46.231.5.10:21000?discport=0 |
 | ZENITHWINGS | Self Hosted (2C/4Gb/100GiB) | 9PbIBz9InbKejNi3+6vt0puXL/F/aoWZ/uB/oz2Qrm0= | enode://0d28129b49d051baecc741ddf93fba1796a2ed59dac4a1bb7609c3b36f2911e7dcd9fff2522683a037bb4c8f57d61c171cd46bf16cf39f71090de9cf140a1b93@161.230.108.89:21000?discport=0 |
+| Planisys | Planisys-EU-Cloud (4C/8Gb/80GiB) | SH7hfnPcYYT5la/I0k0oyblc7d6q+k3mmLQD+NrQ5y0= | enode://59b4a8f81b10f3206401fea5a6cef9ea51966b26625133c13aaffefa36fc180562633079b5b0f079f35e7e9ff3fde740431511f0b188a925a9aeb8bbd2888164@185.180.10.170:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
