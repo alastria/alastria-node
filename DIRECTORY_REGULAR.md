@@ -89,5 +89,6 @@
 | Seven Row | Alex Lopez (alex.lopez@sevenrow.com) | Azure (2C/8GiB/100GiB) | 4YpgMUMrZv6uqtPCygD43JF1o6dhuuCI8rTRVGyLFBA= | "enode://d04a14d66cb9836e8a0129f3034c3f17f2bd3c57b1c0a49f26033703dfe9f8a908a87dfa68395763e0462bae52d3675f2496cd6dd38241591c48ea3973425c69@40.89.171.153:21000?discport=0" | 
 | AMTEGA TEST | Coordinación Sistemas 2 (coordinacion-sistemas2.amtega@xunta.gal) | Self Hosted (2C/4Gb/100Gb) | WEcCIlj+b94KYlLC9t8YPMDpardGO+NTGWDHytR6czQ= | "enode://d9b09f4cb573661a7519a195b29b6f76bc39731079c92fff542f0699d6fd91d463f78a9b65c1894834048ae20371bb0a208a59a9ce7405392d89c8f5f4f2743e@85.91.64.72:21000?discport=0" | 
 | Fundación CARTIF | Víctor Carrión (admin@cartif.es) | Self-Hosted (2C/8GiB/100GiB) | Ys2gr7+azJ9hm0U03XcH3mJSrW3guFzW7RhGS+4LnCc= | + "enode://bf7f60ccec0323eb58f38131b04f6855a7315e7c73e895b534312feca7a62dd8c131be95e08ddb761c3754e7df57340c87b44de08693f2b26cf210513c31a0a9@193.146.230.59:21000?discport=0" | 
+| AMTEGA | Coordinación Sistemas 2 (coordinacion-sistemas2.amtega@xunta.gal) | Self Hosted (4C/8Gb/100Gb) | ZEBp5O6231DJxy7tmdW2McJv7UiTYo90YZbtqVH2yX4= | "enode://450bcfe0ad8ff64ce3d32447e043bc3394294de4b22d346c38d05e749731f81db51ff6d4e15caaa91eac48edf9d528f08886c7a743c51b807cd5678818775457@85.91.64.75:21000?discport=0" |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
