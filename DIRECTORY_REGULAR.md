@@ -115,5 +115,6 @@
 | Grupo10 | Self Hosted (8C/16Gb/200GiB) | 9b5CTzvLTBzmFS3YySXb96iPssCzNg/1WInL0MKodXA= | enode://216ad0fbfcfee95683f59057d3976024c14bc9c11913af234ead6ef7dcc38dfe0e925a65c343d27bd4b3e910a0cccc72de6f6a1fc46dfaec1fe101674276dfec@80.58.150.165:21000?discport=0 |
 | Planisys | Planisys-EU-Cloud (4C/8Gb/80GiB) | SH7hfnPcYYT5la/I0k0oyblc7d6q+k3mmLQD+NrQ5y0= | enode://59b4a8f81b10f3206401fea5a6cef9ea51966b26625133c13aaffefa36fc180562633079b5b0f079f35e7e9ff3fde740431511f0b188a925a9aeb8bbd2888164@185.180.10.170:21000?discport=0 |
 | The Neon Project | Javier Aguirre (javi@tnpr.io) | AWS (2C/4GB/100GB) | WITHOUT_CONSTELLATION | enode://07c8dee8a6b9276560cb44fd1656cc4e8d78d53ee4fc699758ef8b117e1fb9111c449cb46da3211c0fde3db2f8af01974907941964c0a74a74bd437407b1376b@15.188.13.9:21000?discport=0 |
-
+| Nosolosoftware | Self Hosted (2C/7Gb/254GiB) | it9P9Bt5RHOSmRtcNaZR0FEhsCxrRf5f/dIObwzHNkY= |
+enode://cc6d110575b3b218ef5201e29528af70fa3985ba519cc40b855f5918a4eb0d4b7b2cbd264c08f60d8e9978a5eebf8fb89694ee752f18ffc645211627cded278d@149.202.166.162:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
