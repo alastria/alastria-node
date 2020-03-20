@@ -1,5 +1,5 @@
 ﻿# Directorio de nodos regulares
-
+ 
 | Entidad | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
 | ------- | ---------------------------------- | ------------- | ----- |
 | Alisys | Self hosted (1C/4GB/70GB) | AvVbQrGRfvMHHw+MO9KlW9g3NVY1ETTTRUGtAa07BS8= | enode://ee1cebf3111df175a5cd079c606cea7cc0a82e64c5900731d88cd79e00e8458068edeb2914167408856245a8731456205ef6bd6dfe6a63e112c5ee4e8a2d273c@154.62.228.24:21000?discport=0 |
@@ -116,5 +116,6 @@
 | Grupo10 | Self Hosted (8C/16Gb/200GiB) | 9b5CTzvLTBzmFS3YySXb96iPssCzNg/1WInL0MKodXA= | enode://216ad0fbfcfee95683f59057d3976024c14bc9c11913af234ead6ef7dcc38dfe0e925a65c343d27bd4b3e910a0cccc72de6f6a1fc46dfaec1fe101674276dfec@80.58.150.165:21000?discport=0 |
 | Planisys | Planisys-EU-Cloud (4C/8Gb/80GiB) | SH7hfnPcYYT5la/I0k0oyblc7d6q+k3mmLQD+NrQ5y0= | enode://59b4a8f81b10f3206401fea5a6cef9ea51966b26625133c13aaffefa36fc180562633079b5b0f079f35e7e9ff3fde740431511f0b188a925a9aeb8bbd2888164@185.180.10.170:21000?discport=0 |
 | The Neon Project | Javier Aguirre (javi@tnpr.io) | AWS (2C/4GB/100GB) | WITHOUT_CONSTELLATION | enode://07c8dee8a6b9276560cb44fd1656cc4e8d78d53ee4fc699758ef8b117e1fb9111c449cb46da3211c0fde3db2f8af01974907941964c0a74a74bd437407b1376b@15.188.13.9:21000?discport=0 |
+| AMTEGA | Self Hosted (4C/8Gb/100Gb) | ZEBp5O6231DJxy7tmdW2McJv7UiTYo90YZbtqVH2yX4= | "enode://450bcfe0ad8ff64ce3d32447e043bc3394294de4b22d346c38d05e749731f81db51ff6d4e15caaa91eac48edf9d528f08886c7a743c51b807cd5678818775457@85.91.64.75:21000?discport=0" |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
