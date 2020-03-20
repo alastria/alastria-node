@@ -91,7 +91,7 @@ Y ahora sí, configuramos el nodo validador llamando al script init.sh con los p
 
 * Company: Nombre de la compañia.
 
-* NET: Telsius.
+* NET: T.
 
 * CORES: El número de cores de la máquina.
 
@@ -306,6 +306,8 @@ Para identificar lo que ha cambiado en un fichero, podemos realizar:
 
 Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “testnet2”.
 
+Debe además notificarse la petición de alta de nodo usando (el formulario online)[https://portal.r2docuo.com/alastria/forms/noderequest] donde se incluirán los datos necesarios para identificar el nodo y el peticionario.
+
 Si tiene dudas para realizar esta operación, sigua este [tutorial](https://github.com/alastria/alastria-node/wiki/FAQ_EN#howto-pull-request-to-alastria-node).
 
 ### Aceptación del pull request
@@ -314,7 +316,7 @@ Si tiene dudas para realizar esta operación, sigua este [tutorial](https://gith
 
 El equipo core de plataforma, procederá entonces a la aceptación del pull request.
 
-Con estos cambios aceptados, todos los nodos validadores deben actualizar sus ficheros de permisionado, que se realiza con el monitor a través de una llamada a su API.
+Con estos cambios aceptados, los responsables de todos los nodos bootnodes deben actualizar sus ficheros de permisionado.
 
 Para verificar que se ha realizado, se debe consultar el [monitor de la red](http://netstats.telsius.alastria.io/) y comprobar que aumenta la columna de Peers y que la columna Last block aumenta hasta sincronizarse con el resto de nodos.
 
@@ -365,7 +367,5 @@ Por si mismo, el coinbase no sirve para mucho, a no ser que desde el conjunto de
 * istanbul.propose("0x...", false) vota para que el validador representado por el coinbase, sea excluido de la ronda de validación. Debe ser rechazado por al menos la mitad de los nodos.
 
 Todas estas operaciones están automatizadas a través de las herramientas de gestión de la red aportadas por el core de plataforma.
-
-Así mismo, el monitor de la red se está evolucionando para que muestre en su interfaz qué nodos son los que están involucrados en las rondas de votación, cuál es el nodo que está proponiendo el bloque y cuáles no están proponiendo el bloque provocando que la red mine más despacio.
 
 Basado en https://medium.com/@marcos_26856/2e3185659a6

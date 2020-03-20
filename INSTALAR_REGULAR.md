@@ -88,7 +88,7 @@ Y ahora sí, configuramos el nodo general llamando al script init.sh con los par
 
 * Company: Nombre de la compañia.
 
-* NET: Telsius.
+* NET: T.
 
 * CORES: El número de cores de la máquina.
 
@@ -302,13 +302,15 @@ Así mismo, para obtener la clave pública del nodo para realizar transacciones 
 
 Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “testnet2”.
 
+Debe además notificarse la petición de alta de nodo usando (el formulario online)[https://portal.r2docuo.com/alastria/forms/noderequest] donde se incluirán los datos necesarios para identificar el nodo y el peticionario.
+
 Si tiene dudas para realizar esta operación, sigua este tutorial (Enlace al F.A.Q. de la WIKI).
 
 ### Aceptación del pull request
 
 El equipo core de plataforma, procederá entonces a la aceptación del pull request.
 
-Con estos cambios aceptados, todos los nodos validadores deben actualizar sus ficheros de permisionado, que se realiza con el monitor a través de una llamada a su API.
+Con estos cambios aceptados, los responsables de todos los nodos permisionadores deben actualizar sus ficheros de permisionado.
 
 Para verificar que se ha realizado, se debe consultar el [monitor de la red](http://netstats.telsius.alastria.io/) y comprobar que aumenta la columna de Peers y que la columna Last block aumenta hasta sincronizarse con el resto de nodos.
 
