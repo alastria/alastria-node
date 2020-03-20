@@ -1,5 +1,5 @@
 ﻿# Directorio de nodos regulares
-
+ 
 | Entidad | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
 | ------- | ---------------------------------- | ------------- | ----- |
 | Alisys | Self hosted (1C/4GB/70GB) | AvVbQrGRfvMHHw+MO9KlW9g3NVY1ETTTRUGtAa07BS8= | enode://ee1cebf3111df175a5cd079c606cea7cc0a82e64c5900731d88cd79e00e8458068edeb2914167408856245a8731456205ef6bd6dfe6a63e112c5ee4e8a2d273c@154.62.228.24:21000?discport=0 |
@@ -112,9 +112,12 @@
 | SEAT | Self Hosted (4C/8GB/100GB | K6yX3yDiTJX6DdE9R7REB31fPyiYoXj/HhNdBbVjTg8= | enode://110a5bd545935d1334dd963208e2b29117ada05fe1394d2fbe8bd86fe3c8fa6d3bb2e0a766f872b8f0cc5b2e984420fad14141cfe459ceba3fb2a7c077b2e28b@88.20.177.191:21000?discport=0 |
 | Grupo Leben | ADW (2/8/100) | II5wYs7s4FdF0tJlTxXMdRxtn+IqwoZqX5XvVKLbxkU= | enode://b2dd053e12a4fe01f8baeface85119b5aa0b368628001a0cb3f137b29e204091475babad8c393648fc7aae3a868767a0662aa37ef3ddb627d98e5bd31bcb4755@46.231.5.10:21000?discport=0 |
 | ZENITHWINGS | Self Hosted (2C/4Gb/100GiB) | 9PbIBz9InbKejNi3+6vt0puXL/F/aoWZ/uB/oz2Qrm0= | enode://0d28129b49d051baecc741ddf93fba1796a2ed59dac4a1bb7609c3b36f2911e7dcd9fff2522683a037bb4c8f57d61c171cd46bf16cf39f71090de9cf140a1b93@161.230.108.89:21000?discport=0 |
+| ZENITHWINGS2 | Digital Ocean (4C/8Gb/160GiB) | 95UaMi0AAvsqkCAFKYZi3f2es+lpccdszGZkljwD53Y= | enode://31672f814c20dc88a0be891b1ce24df8178eda054e752aea9c6bbab972c5b01bf3f30bf69f9c44aec22804d112b15271cc4f7da58dff95902fd213f7fd725485@134.209.207.3:21000?discport=0 |
 | Grupo10 | Self Hosted (8C/16Gb/200GiB) | 9b5CTzvLTBzmFS3YySXb96iPssCzNg/1WInL0MKodXA= | enode://216ad0fbfcfee95683f59057d3976024c14bc9c11913af234ead6ef7dcc38dfe0e925a65c343d27bd4b3e910a0cccc72de6f6a1fc46dfaec1fe101674276dfec@80.58.150.165:21000?discport=0 |
 | Planisys | Planisys-EU-Cloud (4C/8Gb/80GiB) | SH7hfnPcYYT5la/I0k0oyblc7d6q+k3mmLQD+NrQ5y0= | enode://59b4a8f81b10f3206401fea5a6cef9ea51966b26625133c13aaffefa36fc180562633079b5b0f079f35e7e9ff3fde740431511f0b188a925a9aeb8bbd2888164@185.180.10.170:21000?discport=0 |
 | The Neon Project | Javier Aguirre (javi@tnpr.io) | AWS (2C/4GB/100GB) | WITHOUT_CONSTELLATION | enode://07c8dee8a6b9276560cb44fd1656cc4e8d78d53ee4fc699758ef8b117e1fb9111c449cb46da3211c0fde3db2f8af01974907941964c0a74a74bd437407b1376b@15.188.13.9:21000?discport=0 |
-|Universidad Sevilla| Self Hosted (4c/8Gb/100Gb) |ZP0mAyzso2ZBUqoNvYdMeFXMs1z/vGHsaEu4VH3CT2E= |
-enode://ab1e534dea40239b7ac6dba26ac3a5e516bcc7f70d8d70d7125306f1ffafea62859c561b4bfb8227d5d3dbe147b1f79645fb9df2913ea1ff82e815106e044f08@150.214.144.162:21000?discport=0 |
+| AMTEGA | Self Hosted (4C/8Gb/100Gb) | ZEBp5O6231DJxy7tmdW2McJv7UiTYo90YZbtqVH2yX4= | "enode://450bcfe0ad8ff64ce3d32447e043bc3394294de4b22d346c38d05e749731f81db51ff6d4e15caaa91eac48edf9d528f08886c7a743c51b807cd5678818775457@85.91.64.75:21000?discport=0" |
+| Universidad Sevilla | Self Hosted (4c/8Gb/100Gb) | ZP0mAyzso2ZBUqoNvYdMeFXMs1z/vGHsaEu4VH3CT2E= | enode://ab1e534dea40239b7ac6dba26ac3a5e516bcc7f70d8d70d7125306f1ffafea62859c561b4bfb8227d5d3dbe147b1f79645fb9df2913ea1ff82e815106e044f08@150.214.144.162:21000?discport=0 |
+| AMTEGA | Self Hosted (4C/8Gb/100Gb) | ZEBp5O6231DJxy7tmdW2McJv7UiTYo90YZbtqVH2yX4= | "enode://450bcfe0ad8ff64ce3d32447e043bc3394294de4b22d346c38d05e749731f81db51ff6d4e15caaa91eac48edf9d528f08886c7a743c51b807cd5678818775457@85.91.64.75:21000?discport=0" |
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
