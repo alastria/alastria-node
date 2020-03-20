@@ -1,0 +1,40 @@
+---
+
+- hosts: all
+  remote_user: ubuntu
+
+  tasks:
+    - name: Install docker
+      become: yes
+      apt:
+        name: docker.io
+        state: present
+
+    - name: 'add users to docker group'
+      become: yes
+      user:
+        name: '{{ deploy_user }}'
+        groups: 'docker'
+        append: 'yes'
+
+    - name: Clone and update the repo
+      git:
+        repo: '{{ project_repo }}'
+        dest: '{{ project_path }}'
+        version: '{{ project_repo_version }}'
+        force: yes
+        accept_hostkey: yes
+
+    - name: Execute init.sh to create the regular node
+      shell: ./init.sh
+      args:
+        chdir: '{{ project_path }}/docker/general'
+      environment:
+        COMPANY_NAME: '{{ company_name }}'
+        CPU: '{{ cpu_number }}'
+        RAM: '{{ ram_number }}'
+        SEQ: '{{ sequential }}'
+        ENABLE_CONSTELLATION: '{{ enable_constellation }}'
+        MONITOR_ENABLED: '{{ enable_monitor }}'
+        NO_LAUNCH_CONFIRM: '{{ no_launch_confirm }}'
+        EXTRA_DOCKER_ARGUMENTS: '{{ extra_docker_arguments }}'

@@ -1,0 +1,17 @@
+---
+
+# You can change all these variables to your needs
+
+deploy_user: ubuntu  # SSH user connecting to the server
+project_path: /home/{{ deploy_user }}/alastria-node
+project_repo: https://github.com/alastria-node/alastria-node
+project_repo_version: testnet2
+
+company_name: <SETME>
+cpu_number: <SETME>
+ram_number: <SETME>
+sequential: <SETME>
+enable_constellation: <SETME>
+enable_monitor: <SETME>
+no_launch_confirm: <SETME>
+extra_docker_arguments: <SETME>
