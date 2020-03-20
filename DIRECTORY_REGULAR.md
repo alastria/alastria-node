@@ -117,5 +117,7 @@
 | Planisys | Planisys-EU-Cloud (4C/8Gb/80GiB) | SH7hfnPcYYT5la/I0k0oyblc7d6q+k3mmLQD+NrQ5y0= | enode://59b4a8f81b10f3206401fea5a6cef9ea51966b26625133c13aaffefa36fc180562633079b5b0f079f35e7e9ff3fde740431511f0b188a925a9aeb8bbd2888164@185.180.10.170:21000?discport=0 |
 | The Neon Project | Javier Aguirre (javi@tnpr.io) | AWS (2C/4GB/100GB) | WITHOUT_CONSTELLATION | enode://07c8dee8a6b9276560cb44fd1656cc4e8d78d53ee4fc699758ef8b117e1fb9111c449cb46da3211c0fde3db2f8af01974907941964c0a74a74bd437407b1376b@15.188.13.9:21000?discport=0 |
 | AMTEGA | Self Hosted (4C/8Gb/100Gb) | ZEBp5O6231DJxy7tmdW2McJv7UiTYo90YZbtqVH2yX4= | "enode://450bcfe0ad8ff64ce3d32447e043bc3394294de4b22d346c38d05e749731f81db51ff6d4e15caaa91eac48edf9d528f08886c7a743c51b807cd5678818775457@85.91.64.75:21000?discport=0" |
+| Universidad Sevilla | Self Hosted (4c/8Gb/100Gb) | ZP0mAyzso2ZBUqoNvYdMeFXMs1z/vGHsaEu4VH3CT2E= | enode://ab1e534dea40239b7ac6dba26ac3a5e516bcc7f70d8d70d7125306f1ffafea62859c561b4bfb8227d5d3dbe147b1f79645fb9df2913ea1ff82e815106e044f08@150.214.144.162:21000?discport=0 |
+| AMTEGA | Self Hosted (4C/8Gb/100Gb) | ZEBp5O6231DJxy7tmdW2McJv7UiTYo90YZbtqVH2yX4= | "enode://450bcfe0ad8ff64ce3d32447e043bc3394294de4b22d346c38d05e749731f81db51ff6d4e15caaa91eac48edf9d528f08886c7a743c51b807cd5678818775457@85.91.64.75:21000?discport=0" |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
