@@ -121,5 +121,6 @@
 | AMTEGA | Self Hosted (4C/8Gb/100Gb) | ZEBp5O6231DJxy7tmdW2McJv7UiTYo90YZbtqVH2yX4= | "enode://450bcfe0ad8ff64ce3d32447e043bc3394294de4b22d346c38d05e749731f81db51ff6d4e15caaa91eac48edf9d528f08886c7a743c51b807cd5678818775457@85.91.64.75:21000?discport=0" |
 | Nosolosoftware | Self Hosted (2C/7Gb/254GiB) | it9P9Bt5RHOSmRtcNaZR0FEhsCxrRf5f/dIObwzHNkY= | enode://cc6d110575b3b218ef5201e29528af70fa3985ba519cc40b855f5918a4eb0d4b7b2cbd264c08f60d8e9978a5eebf8fb89694ee752f18ffc645211627cded278d@149.202.166.162:21000?discport=0 |
 | Climatetrade | AWS (2c/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://62c4116c9f6f334b07fb17699330db934875442924026e5268f317d348f8d9a1d292c711fe8448e7d113ee11f4ef29aa68838fa1ee459734ab7ca868bf5adb30@35.180.41.208:21000?discport=0 |
+| Andorra Telecom | Self Hosted (2c/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://d9a7cc984450bbbc08ad4845cb1ddaee58c1e4fca7fc65ce27bd2df00059d36d3e1d0eb39191bbfe36a716f9f3363a0fa0744172d2ded9a36bc8086e107503d1@194.158.74.21:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
