@@ -121,5 +121,6 @@
 | AMTEGA | Self Hosted (4C/8Gb/100Gb) | ZEBp5O6231DJxy7tmdW2McJv7UiTYo90YZbtqVH2yX4= | "enode://450bcfe0ad8ff64ce3d32447e043bc3394294de4b22d346c38d05e749731f81db51ff6d4e15caaa91eac48edf9d528f08886c7a743c51b807cd5678818775457@85.91.64.75:21000?discport=0" |
 | Nosolosoftware | Self Hosted (2C/7Gb/254GiB) | it9P9Bt5RHOSmRtcNaZR0FEhsCxrRf5f/dIObwzHNkY= | enode://cc6d110575b3b218ef5201e29528af70fa3985ba519cc40b855f5918a4eb0d4b7b2cbd264c08f60d8e9978a5eebf8fb89694ee752f18ffc645211627cded278d@149.202.166.162:21000?discport=0 |
 | Climatetrade | AWS (2c/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://62c4116c9f6f334b07fb17699330db934875442924026e5268f317d348f8d9a1d292c711fe8448e7d113ee11f4ef29aa68838fa1ee459734ab7ca868bf5adb30@35.180.41.208:21000?discport=0 |
+| DigitalOne | Self Hosted (2c/4Gb/100Gb) | eS4lbjOxSGA67Y1SIjEBJpqpml7LG87NAMlc5hu65A0= | enode://09cd8a59f938de74c75aea7872bb2d44ee5a1a5a00c67d6c062e8b9f597596a9a30961b2432055c0a182f78ea87d8be659ffe3b9acda345a16659a366cd2c6a8@94.130.175.17:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
