@@ -368,7 +368,7 @@ arroje
     On branch testnet2
     Your branch is up-to-date with 'origin/testnet2'.
 
-Se puede reintentar el update.sh
+se puede reintentar el update.sh
 
 ### Integrando el nodo validador en el pool de validadores
 
