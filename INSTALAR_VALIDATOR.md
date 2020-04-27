@@ -353,12 +353,22 @@ Si sale el siguiente error en update.sh
             data/constellation-nodes.json
             data/regular-nodes.json
 
-es que la rama testnet2 ha avanzado, y se debe forzar la sincroniación con la misma
+es que el repositorio local no coincide con el punto en el que estaba al hacer la instalación, y se debe forzar la sincronización con la rama
 
-    $ cd ~/alastria-node/data
+    $ cd ~/alastria-node/
     $ git fetch --all
     $ git reset --hard origin/testnet2
 
+Recién cuando el comando
+    
+    $ git status
+    
+arroje
+    
+    On branch testnet2
+    Your branch is up-to-date with 'origin/testnet2'.
+
+Se puede reintentar el update.sh
 
 ### Integrando el nodo validador en el pool de validadores
 
