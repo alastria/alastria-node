@@ -332,6 +332,7 @@ Desde la consola del nodo:
     $ git checkout -- validator-nodes.json
     $ git checkout -- static-nodes.json
 
+
 Si algún miembro del APCT solicita que se actualicen manualmente los ficheros de permisionado y una vez asegurado que el repositorio local alastria-node está limpio de cambios, procedemos a actualizar los ficheros utilizando la siguiente secuencia de comandos:
 
     $ cd ~/alastria-node/scripts
@@ -344,6 +345,20 @@ Si algún miembro del APCT solicita que se actualicen manualmente los ficheros d
     [*] Restarting node
     Relinking permissioning file
     [*] Starting quorum node
+      
+    
+Si sale el siguiente error en update.sh
+
+    error: Your local changes to the following files would be overwritten by merge:
+            data/constellation-nodes.json
+            data/regular-nodes.json
+
+es que la rama testnet2 ha avanzado, y se debe forzar la sincroniación con la misma
+
+    $ cd ~/alastria-node/data
+    $ git fetch --all
+    $ git reset --hard origin/testnet2
+
 
 ### Integrando el nodo validador en el pool de validadores
 
