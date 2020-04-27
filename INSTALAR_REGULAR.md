@@ -337,6 +337,32 @@ Si algún miembro del APCT solicita que se actualicen manualmente los ficheros d
     [*] Restarting node
     Relinking permissioning file
     [*] Starting quorum node
+    
+    
+Si sale el siguiente error en update.sh
+
+    error: Your local changes to the following files would be overwritten by merge:
+            data/constellation-nodes.json
+            data/regular-nodes.json
+
+es que el repositorio local no coincide con el punto en el que estaba al hacer la instalación, y se debe forzar la sincronización con la rama
+
+    $ cd ~/alastria-node/
+    $ git fetch --all
+    $ git reset --hard origin/testnet2
+
+Recién cuando el comando
+    
+    $ git status
+    
+arroje
+    
+    On branch testnet2
+    Your branch is up-to-date with 'origin/testnet2'.
+
+se puede reintentar el update.sh
+
+
 
 ### Probando el nodo regular
 
