@@ -115,7 +115,7 @@ function launchNode {
     docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria \
       ${EXTRA_DOCKER_ARGUMENTS} \
       -v $ACCESS_POINT_DIR:/etc/nginx/conf.d \
-      -p 21000:21000 -p 21000:21000/udp -p 9000:9000 -p 8443:8443 \
+      -p 21000:21000 -p 21000:21000/udp -p 22000:22000 -p 9000:9000 -p 8443:8443 \
       -p 80:80 -p 443:443 \
       -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME \
       -e MONITOR_ENABLED=$MONITOR_ENABLED \
@@ -125,7 +125,7 @@ function launchNode {
     docker run --name $NODE_NAME -v $DATA_DIR:/root/alastria \
       ${EXTRA_DOCKER_ARGUMENTS} \
       -v $ACCESS_POINT_DIR:/etc/nginx/conf.d \
-      -p 21000:21000 -p 21000:21000/udp -p 9000:9000 \
+      -p 21000:21000 -p 21000:21000/udp -p 22000:22000 -p 9000:9000 \
       -p 80:80 -p 443:443 \
       -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME
       -e MONITOR_ENABLED=$MONITOR_ENABLED -e ENABLE_CONSTELLATION=$ENABLE_CONSTELLATION \
