@@ -123,5 +123,7 @@
 | Climatetrade | AWS (2c/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://62c4116c9f6f334b07fb17699330db934875442924026e5268f317d348f8d9a1d292c711fe8448e7d113ee11f4ef29aa68838fa1ee459734ab7ca868bf5adb30@35.180.41.208:21000?discport=0 |
 | DigitalOne | Self Hosted (2c/4Gb/100Gb) | eS4lbjOxSGA67Y1SIjEBJpqpml7LG87NAMlc5hu65A0= | enode://09cd8a59f938de74c75aea7872bb2d44ee5a1a5a00c67d6c062e8b9f597596a9a30961b2432055c0a182f78ea87d8be659ffe3b9acda345a16659a366cd2c6a8@94.130.175.17:21000?discport=0 |
 | Andorra Telecom | Self Hosted (2c/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://d9a7cc984450bbbc08ad4845cb1ddaee58c1e4fca7fc65ce27bd2df00059d36d3e1d0eb39191bbfe36a716f9f3363a0fa0744172d2ded9a36bc8086e107503d1@194.158.74.21:21000?discport=0 |
+| FP_Galdakao | Self Hosted (4c/32Gb/100Gb) | KUuZrbv3MYgyXLUZMjA9Owqq1lQt95UBNGSXcNKafEw= | "enode://151a3413cb10ac72e4aef2362b0257ad7423a52d504c24af5b921fa08e98b11ae43c645c0c9bcb0346da29ad4a4cb22798e41afead2c905ff24f6cf90f34d50
+3@217.127.110.210:21000?discport=0" |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
