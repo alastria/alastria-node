@@ -125,5 +125,6 @@
 | Andorra Telecom | Self Hosted (2c/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://d9a7cc984450bbbc08ad4845cb1ddaee58c1e4fca7fc65ce27bd2df00059d36d3e1d0eb39191bbfe36a716f9f3363a0fa0744172d2ded9a36bc8086e107503d1@194.158.74.21:21000?discport=0 |
 | FP_Galdakao | Self Hosted (4c/32Gb/100Gb) | KUuZrbv3MYgyXLUZMjA9Owqq1lQt95UBNGSXcNKafEw= | "enode://151a3413cb10ac72e4aef2362b0257ad7423a52d504c24af5b921fa08e98b11ae43c645c0c9bcb0346da29ad4a4cb22798e41afead2c905ff24f6cf90f34d50
 3@217.127.110.210:21000?discport=0" |
+| IECISA | Víctor Nieves (victor.nieves@iecisa.com) | Self Hosted (2C/5Gb/120Gb) | Rd4UZUA/iOkFKaDUcpen91gtOLhxmuMFv15E4haFu0Y= | enode://a88c0c141f1ee5ba26a9870cc8f8326eacc15ddb9fd130e54adfcd37c32a2febca11fac025696fba312d05f0c653a76797295bf55b30d2c57ff814105efccad5@137.117.233.65:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
