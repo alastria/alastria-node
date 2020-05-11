@@ -125,5 +125,6 @@
 | Andorra Telecom | Self Hosted (2c/4Gb/100Gb) | WITHOUT_CONSTELLATION | enode://d9a7cc984450bbbc08ad4845cb1ddaee58c1e4fca7fc65ce27bd2df00059d36d3e1d0eb39191bbfe36a716f9f3363a0fa0744172d2ded9a36bc8086e107503d1@194.158.74.21:21000?discport=0 |
 | FP_Galdakao | Self Hosted (4c/32Gb/100Gb) | KUuZrbv3MYgyXLUZMjA9Owqq1lQt95UBNGSXcNKafEw= | "enode://151a3413cb10ac72e4aef2362b0257ad7423a52d504c24af5b921fa08e98b11ae43c645c0c9bcb0346da29ad4a4cb22798e41afead2c905ff24f6cf90f34d50
 3@217.127.110.210:21000?discport=0" |
+| Blockchain Italia | Self Hosted (4c/16Gb/888Gb) | Ml0LJutZ0HLbAQZL7enXa7A+xL4EA3S7v1WrvNEv71I= | "enode://a0fcf1dd170a4a345dd92b4b850cc437cbf66c17abc5b81d122113dc176bb81a17ce35db5f0ae2955df49dfdcea8150c97e3aa343901480b8a7a2fba0e8149ba@15.161.123.199:21000?discport=0" |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
