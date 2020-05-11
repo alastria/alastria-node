@@ -126,6 +126,6 @@
 | FP_Galdakao | Self Hosted (4c/32Gb/100Gb) | KUuZrbv3MYgyXLUZMjA9Owqq1lQt95UBNGSXcNKafEw= | "enode://151a3413cb10ac72e4aef2362b0257ad7423a52d504c24af5b921fa08e98b11ae43c645c0c9bcb0346da29ad4a4cb22798e41afead2c905ff24f6cf90f34d50
 3@217.127.110.210:21000?discport=0" |
 | Blockchain Italia | Self Hosted (4c/16Gb/888Gb) | Ml0LJutZ0HLbAQZL7enXa7A+xL4EA3S7v1WrvNEv71I= | "enode://a0fcf1dd170a4a345dd92b4b850cc437cbf66c17abc5b81d122113dc176bb81a17ce35db5f0ae2955df49dfdcea8150c97e3aa343901480b8a7a2fba0e8149ba@15.161.123.199:21000?discport=0" |
-| Sacyr | Self Hosted (4C/8GB/200GB) | ZAUuN/Fi0Vkz41nU/k3uZ252+DWnRUVebirfU6s7qUo= | enode://8e24b6db4b6ad1eca21b2c7dd81e1c8a684f762abb199e588487af6c9705f0ca41ffdee593295a9bbc1f91470d81c01ab6640c5d8d5649a03eaea6f29ec6399c@10.80.0.67:21000?discport=0 |
+| Sacyr | Self Hosted (4C/8GB/200GB) | ZAUuN/Fi0Vkz41nU/k3uZ252+DWnRUVebirfU6s7qUo= | enode://d4328d9a744b2770b4c46f5594c59f03e9c936538758cf53c119e1ff05c7cdb86e7ecfb107aa121d24c3342f2cb68090cea9e40d82f43f18c517215ae576b8ed@195.55.232.91:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
