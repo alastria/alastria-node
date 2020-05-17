@@ -1,4 +1,5 @@
 # ALASTRIA Red T #
+[![Slack Status](https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social)](https://alastria.slack.com/)
 
 * Visit [What is alastria](https://alastria.io/en/) page to know more about us.
 
