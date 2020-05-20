@@ -36,13 +36,17 @@ You'll need to open the following ports in both ways to deploy a node:
 |80 y 443| TCP | RPC Port if using the automatic installation with Alastria Open Access Component|
 
 
-## Installation & configuration of 
+## Installation & configuration of
 
 ### [Regular node] Quorum node + Constellation + Access point + Monitor
 
 * [(English) Installation Guide](https://medium.com/babel-go2chain/setting-in-motion-a-regular-node-in-the-telsius-network-of-alastria-c2d67b8369c7)
 * [(Spanish) Installation Guide](https://medium.com/babel-go2chain/c%C3%B3mo-poner-en-marcha-un-nodo-regular-en-la-red-telsius-de-alastria-876d9dcf7ccb)
 * Repository of the access-point that comes installed inside the docker of the regular node [Access-point](https://github.com/alastria/alastria-access-point)
+
+### [Regular node] Quorum node installation using Ansible from host machine
+
+* [(English) Installation Guide](https://github.com/alastria/alastria-node/blob/testnet2/ansible/README.md)
 
 ### [Validator node] Quorum node + Access point + Monitor
 
@@ -70,7 +74,7 @@ To know more about the use of Alastria Network, you can visit the Smart Contract
 List of links with resources for the Alastria Network
 
 * **WIKI**
-	* [Home](https://github.com/alastria/alastria-node/wiki) 
+	* [Home](https://github.com/alastria/alastria-node/wiki)
 	* [F.A.Q.](https://github.com/alastria/alastria-node/wiki/FAQ_INDEX_EN)
 
 * **Resources**
