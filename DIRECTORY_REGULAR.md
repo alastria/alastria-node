@@ -127,5 +127,5 @@
 | FP_Galdakao | Self Hosted (4c/32Gb/100Gb) | KUuZrbv3MYgyXLUZMjA9Owqq1lQt95UBNGSXcNKafEw= | "enode://151a3413cb10ac72e4aef2362b0257ad7423a52d504c24af5b921fa08e98b11ae43c645c0c9bcb0346da29ad4a4cb22798e41afead2c905ff24f6cf90f34d503@217.127.110.210:21000?discport=0" |
 | Blockchain Italia | Self Hosted (4c/16Gb/888Gb) | Ml0LJutZ0HLbAQZL7enXa7A+xL4EA3S7v1WrvNEv71I= | "enode://a0fcf1dd170a4a345dd92b4b850cc437cbf66c17abc5b81d122113dc176bb81a17ce35db5f0ae2955df49dfdcea8150c97e3aa343901480b8a7a2fba0e8149ba@15.161.123.199:21000?discport=0" |
 | Sacyr | Self Hosted (4C/8GB/200GB) | z7mTYXFfrwFzwE/gUOpqQvFGcoHA/zFwLZtdojdZMFg= | enode://d4328d9a744b2770b4c46f5594c59f03e9c936538758cf53c119e1ff05c7cdb86e7ecfb107aa121d24c3342f2cb68090cea9e40d82f43f18c517215ae576b8ed@195.55.232.91:21000?discport=0 |
-| Santander | Azure (4C/8Gb/256Gb) | WITHOUT CONSTELLATION | enode://0d4a388308f4ba1d430c4781033b375e47213e9027c19f434d2e7d590390549a4c7b83a5bb88350f21d92ee2031bd5e8edd52ac0ba9f81daf738729ffc49a504@51.138.52.114:21000?discport=0 |
+| Santander | Azure (4C/8Gb/256Gb) | WITHOUT CONSTELLATION | enode://55f1bb94df1fa78ddf677b42520ffa3991759545c34bfa74d6f1cab995a3946bd8c04c13d325d9216dfd5a1fd989fdc99a9e5d98f69ec2e36c7fdc2713e2e527@51.138.52.114:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
