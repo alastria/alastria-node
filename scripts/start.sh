@@ -47,8 +47,8 @@ do
   shift
 done
 
-VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
-CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
+VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com > /dev/null 2>&1 || curl -s --retry 2 icanhazip.com)"
+CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com > /dev/null 2>&1 || curl -s --retry 2 icanhazip.com)"
 CONSTELLATION_PORT=9000
 
 check_constellation_isStarted(){
@@ -152,11 +152,6 @@ else
     echo "Monitor disabled."
 fi
 
-if ([ $WATCH -gt 0 ])
-then
-  tail -100f ~/alastria/logs/quorum"${_TIME}".log
-fi
-
 if ([ $LOGROTATE -gt 0 ]) 
 then 
     RP=`readlink -m "$0"`
@@ -165,6 +160,13 @@ then
 else
    echo "Logrotate disabled."
 fi
-  
+
 set +u
 set +e
+
+if ([ $WATCH -gt 0 ])
+then
+  tail -100f ~/alastria/logs/quorum"${_TIME}".log
+fi
+  
+
