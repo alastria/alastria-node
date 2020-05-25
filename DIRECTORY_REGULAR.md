@@ -128,4 +128,8 @@
 | Blockchain Italia | Self Hosted (4c/16Gb/888Gb) | Ml0LJutZ0HLbAQZL7enXa7A+xL4EA3S7v1WrvNEv71I= | "enode://a0fcf1dd170a4a345dd92b4b850cc437cbf66c17abc5b81d122113dc176bb81a17ce35db5f0ae2955df49dfdcea8150c97e3aa343901480b8a7a2fba0e8149ba@15.161.123.199:21000?discport=0" |
 | Sacyr | Self Hosted (4C/8GB/200GB) | z7mTYXFfrwFzwE/gUOpqQvFGcoHA/zFwLZtdojdZMFg= | enode://d4328d9a744b2770b4c46f5594c59f03e9c936538758cf53c119e1ff05c7cdb86e7ecfb107aa121d24c3342f2cb68090cea9e40d82f43f18c517215ae576b8ed@195.55.232.91:21000?discport=0 |
 | Santander | Azure (4C/8Gb/256Gb) | WITHOUT CONSTELLATION | enode://be6a6eef8c5ea5e64414126e0bdc10481543416ed3baf9bb10e66842f011404035291d6f93b2a770ce232a687bdaf5c2602d3cd8f696a835456d693f7947b3d3@51.138.52.113:21000?discport=0 |
+| IECISA | Self-Hosted (1C/4Gb/100Gb) | 08uImQkwzTHj/gH3eZQeYqc41S8VF6W4dDyyspi/oQk= | "enode://e3749f27ff2970129e78ba404e0fb2bf8d34c5d1653813dd9f9af01992ac67ccd76c77240ea63c43ccac32ef98d6dfac4781b836dca0e116dc1289438c79341c@37.134.191.15 :21000?discport=0", |
+
+
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
