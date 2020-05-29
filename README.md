@@ -34,6 +34,7 @@ You'll need to open the following ports in your firewall inbound and outbound to
 |21000| TCP/UDP | Geth process application port (inbound and outbound for ethereum traffic) |
 |9000| TCP | Constellation port (private transactions, inbound and outbound)|
 |80 and 443| TCP | RPC Port if using the automatic installation with Alastria Open Access Component|
+|8086 | TCP | Outbound for InfluxDB statistics collection |
 
 
 ## Installation & configuration of
