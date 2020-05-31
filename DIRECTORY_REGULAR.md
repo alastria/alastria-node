@@ -129,4 +129,7 @@
 | Sacyr | Self Hosted (4C/8GB/200GB) | z7mTYXFfrwFzwE/gUOpqQvFGcoHA/zFwLZtdojdZMFg= | enode://d4328d9a744b2770b4c46f5594c59f03e9c936538758cf53c119e1ff05c7cdb86e7ecfb107aa121d24c3342f2cb68090cea9e40d82f43f18c517215ae576b8ed@195.55.232.91:21000?discport=0 |
 | Santander | Azure (4C/8Gb/256Gb) | WITHOUT CONSTELLATION | enode://be6a6eef8c5ea5e64414126e0bdc10481543416ed3baf9bb10e66842f011404035291d6f93b2a770ce232a687bdaf5c2602d3cd8f696a835456d693f7947b3d3@51.138.52.113:21000?discport=0 |
 | DigitelTS | AWS (2C/4Gb/64Gb) | WITHOUT CONSTELLATION | enode://0752557351410a2b31bb91a008c25510dccbbba53241937c77a061fe128c9e2102bbf3b7ee55cb85c37d980a85f5cf20ccde1f92bf10a12d68db8be78d3de705@52.50.15.212:21000?discport=0 |
+| RSI | Self Hosted (2C/4Gb/100Gb | 5Sy7l4m9fd6vrOdg/hEOrLsH0X5pFUCSnQ2V1oDFyx8= | enode://61e94549956d8a9500667f4f85b0b0609bb77ca12f80e9521348beaa1e09c76862dc2cde6a5bddb9b73a8a2a65b049e60ea8ea34d785ab8bdceebb59be955e72@195.235.162.158:21000?discport=0 |
+
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
