@@ -25,16 +25,17 @@ You'll need at least a host/node to interact with the network, please read the t
 
 #### TCP/UDP PORTS
 
-You'll need to open the following ports in both ways to deploy a node:
+You'll need to open the following ports in your firewall inbound and outbound to deploy a node:
 
 [//]: # (También es necesario habilitar los siguientes puertos de E/S en la maquina en la que vamos a desplegar el nodo:)
 
 | Port | Type | Definition |
 |:------:|:-----:|:---------- |
-|21000| TCP/UDP | Geth process application port |
-|9000| TCP | Constellation port (private transactions)|
-|22000| TCP | RPC Port (this can be internal only) |
-|80 y 443| TCP | RPC Port if using the automatic installation with Alastria Open Access Component|
+|21000| TCP/UDP | Geth process application port (inbound and outbound for ethereum traffic) |
+|9000| TCP | Constellation port (private transactions, inbound and outbound)|
+|80| TCP | Outbound for Websockets feed to netstats server |
+|80 and 443| TCP | Inbound RPC Port if using the automatic installation with Alastria Open Access Component|
+|8086 | TCP | Outbound for InfluxDB statistics collection |
 
 
 ## Installation & configuration of
