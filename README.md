@@ -38,6 +38,19 @@ You'll need to open the following ports in your firewall inbound and outbound to
 |80 and 443| TCP | Inbound RPC Port if using the automatic installation with Alastria Open Access Component|
 |8086 | TCP | Outbound for InfluxDB statistics collection |
 
+#### IP ADDRESSES
+
+The IP resulting out of the installation process (e.g. the IPv4 part of the enode) , must not be an RFC1918 IPv4 address
+
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
+
+These IP addresses are non-routable and will result in your node being unreachable and unable to participate in the blockchain.
+
+In case the installation process yields a non-routable IP address, you must verify if your node is behind a firewall, in which case you might use the firewall's external address only in the case the firewall provides for Full-cone NAT. 
+
+Restricted-Cone NAT has not been tested yet for p2p functionality.
 
 ## Installation & configuration of
 
