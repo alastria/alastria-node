@@ -83,6 +83,52 @@ To know more about the use of Alastria Network, you can visit the Smart Contract
 ## Connection from External Applications using WebSockets
 * [Connecting to an Alastria's Red T node using WebSockets](https://tech.tribalyte.eu/blog-websockets-red-t-alastria) created by Ronny Demera, from Tribalyte
 
+## Checking Node's Health
+
+In order to check if your node is operational, you can establish monitoring based on your node's ingress and egress P2P traffic during the last 5 minutes.
+
+As soon as the node comes up, e.g. starts to run, it will send metrics points to Alastria InfluxDB server.
+
+These are queries to the InfluxDB API you can translate into your preferred language and/or framework:
+
+Ingress traffic:
+```
+curl -G 'http://geth-metrics.planisys.net:8086/query?pretty=true' --data-urlencode "db=alastria" --data-urlencode "user=EDITED_USER" --data-urlencode "password=EDITED_PASSWORD" --data-urlencode "q=select mean(m1) from \"geth.p2p/InboundTraffic.meter\" where (time > now()-5m AND host =~ /^REG_YOUR_NODE_NAME$/)"
+```
+
+Egress traffic:
+```
+curl -G 'http://geth-metrics.planisys.net:8086/query?pretty=true' --data-urlencode "db=alastria" --data-urlencode "user=EDITED_USER" --data-urlencode "password=EDITED_PASSWORD" --data-urlencode "q=select mean(m1) from \"geth.p2p/OutboundTraffic.meter\" where (time > now()-5m AND host =~ /^REG_YOUR_NODE_NAME$/)"
+```
+
+The output are jsons that need to parsed and look like this (value is a pair where the second field should be > 0)
+
+```
+{
+    "results": [
+        {
+            "statement_id": 0,
+            "series": [
+                {
+                    "name": "geth.p2p/OutboundTraffic.meter",
+                    "columns": [
+                        "time",
+                        "mean"
+                    ],
+                    "values": [
+                        [
+                            "2020-06-15T08:40:12.772770668Z",
+                            1225.7697298713392
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}
+```
+
+
 ## Alastria network resources
 
 [//]: # ( Aquí encontrarás una lista con enlaces a diferentes servicios de la red alastria, netstats, blockexplorers, etc. )
