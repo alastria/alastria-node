@@ -80,6 +80,44 @@ To know more about the use of Alastria Network, you can visit the Smart Contract
 * [Deploying to Alastria's Red T using Remix & Metamask](https://medium.com/@jmolino/como-desplegar-un-smart-contract-en-la-red-t-de-alastria-utilizando-remix-y-metamask-782463997a34) created by Jose María del Molino, from AYESA
 * [Deploying to Alastria's Red T using Truffle (Quorum)](https://medium.com/babel-go2chain/como-desplegar-un-smart-contract-contra-la-red-t-de-alastria-56939034e884) created by Guillermo Araujo, from Babel
 
+(**IMPORTANT**) Be aware that the actual's Alastria network EVM version is *byzantium* and , therefore, the Smart Contracts **must** be compiled for this EVM's versión:
+
+- Remix: 
+
+  ![EVM Version - Remix](images/evm_version_remix.png)
+
+- Truffle: in truffle.js configuration file
+
+  ```js
+  compilers: {
+      solc: {
+        version: "0.5.17", // A version or constraint - Ex. "^0.5.0"
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 100   // Optimize for how many times you intend to run the code
+          },
+          evmVersion: "byzantium" // for T network
+        }
+      }
+    }
+  ```
+
+- Buidler: in buidler.config.ts configuration file
+
+  ```typescript
+  const config: BuidlerConfig = {
+    solc: {
+      version: '0.5.17',
+      evmVersion: 'byzantium',
+      optimizer: {
+        enabled: true,
+        runs: 100
+      }
+    },
+  ```
+
+
 ## Connection from External Applications using WebSockets
 * [Connecting to an Alastria's Red T node using WebSockets](https://tech.tribalyte.eu/blog-websockets-red-t-alastria) created by Ronny Demera, from Tribalyte
 
