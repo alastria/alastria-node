@@ -29,7 +29,7 @@ A DNS resolver must be available and accessible to make the installation process
 
 E.g. the command
 
-*dig +short netstats.telsius.alastria.io @resolver1.opendns.com 
+dig +short netstats.telsius.alastria.io @resolver1.opendns.com 
 
 must yield a valid, routable IPv4 address
 
