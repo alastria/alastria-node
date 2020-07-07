@@ -23,10 +23,19 @@ You'll need at least a host/node to interact with the network, please read the t
 | **Memory**: | 4 Gb |  8 Gb |
 | **Hard Disk**: | 100 Gb |  1000 Gb |
 
+#### Important Requirement
+
+A DNS resolver must be available and accessible to make the installation process possible.
+
+E.g. the command
+
+*dig +short netstats.telsius.alastria.io @resolver1.opendns.com 
+
+must yield a valid, routable IPv4 address
 
 #### TCP/UDP PORTS
 
-You'll need to open the following ports in your firewall inbound and outbound to deploy a node:
+You'll need to open the following ports in your firewall, inbound and outbound to deploy a node:
 
 [//]: # (También es necesario habilitar los siguientes puertos de E/S en la maquina en la que vamos a desplegar el nodo:)
 
@@ -37,6 +46,7 @@ You'll need to open the following ports in your firewall inbound and outbound to
 |80| TCP | Outbound for Websockets feed to netstats server |
 |80 and 443| TCP | Inbound RPC Port if using the automatic installation with Alastria Open Access Component|
 |8086 | TCP | Outbound for InfluxDB statistics collection |
+|53 | TCP/UDP | Access to external Internet based resolvers |
 
 #### IP ADDRESSES
 
