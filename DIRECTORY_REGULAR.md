@@ -136,4 +136,5 @@
 | DigitelTS-pro-03 | AWS (2C/4Gb/64Gb) | 6ZEC5Vq4iqR8NphLXg8GHc4Iha0fJngEKalt0aoQqlc= | enode://fdc2b2158886570d73abdef3be890aba41fba7be9ac22eedccc8db91ab659d112f8af8b5a8e9341b299c0989a1c4aa4e00a28bfcf0da7663ed706161f3d43251@63.34.97.73:21000?discport=0 |
 | IECISA | Self Hosted (2C/6Gb/50Gb) | H0nJN36j/LNwa6F12Juwn0hVF/oRBvYpm3A65YBdnyE= | enode://a75f818c5a33d775961d80082cb9b7029a320c769852009c632dd9976a4d32fae188c1bcace328b283ee705ca58ff7784c60e03645ba5e328f3fc7279158d333@87.216.148.237:21000?discport=0 |
 | CAMPOFRIO | Azure (4C/8Gb/100Gb) | WITHOUT CONSTELLATION | enode://f4de09a94171d6d02deaaa01e906ad14fd9dcb79bf5acda949b0d43cd41b5aa22e718314aa57bfb586cf3b08f3c09cc9c7e215397b6a679d6f48623ac89806f6@20.50.54.40:21000?discport=0 |
+|Vestigia| Azure (2C/8Gb/100GB) |  dgmYTskTQCeFtSF19nNoSFkupDVZgC2J9KHTJY0p7g8= | enode://3905f943ba5446eba164c07ab5f53a84ce17d74ec4d7591f6ec54b9d7608f57cae7cfdf946616385f59cfb5b910161a1f8520cb6f992bcc0d1ab932601205e91@40.114.249.250:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
