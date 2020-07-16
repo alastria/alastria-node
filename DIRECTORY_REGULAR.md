@@ -130,4 +130,5 @@
 | Santander | Azure (4C/8Gb/256Gb) | WITHOUT CONSTELLATION | enode://be6a6eef8c5ea5e64414126e0bdc10481543416ed3baf9bb10e66842f011404035291d6f93b2a770ce232a687bdaf5c2602d3cd8f696a835456d693f7947b3d3@51.138.52.113:21000?discport=0 |
 | Tecnalia | AZURE (2C/4GB/100GB) | /gYNkLLouUWk5Du/umJSJ8OKxusRE3nh/ngUh0TEahM= | enode://3905f943ba5446eba164c07ab5f53a84ce17d74ec4d7591f6ec54b9d7608f57cae7cfdf946616385f59cfb5b910161a1f8520cb6f992bcc0d1ab932601205e91@52.157.100.162:21000?discport=0 |
 | DigitelTS | AWS (2C/4Gb/64Gb) | WITHOUT CONSTELLATION | enode://0752557351410a2b31bb91a008c25510dccbbba53241937c77a061fe128c9e2102bbf3b7ee55cb85c37d980a85f5cf20ccde1f92bf10a12d68db8be78d3de705@52.50.15.212:21000?discport=0 |
+| Tecnalia | AWS (2C/4GB/100GB) | GRCTHjNADm/tmtaKcDmU1pveG3hHYH5C6IvYdVxV7zk= | enode://b149fc9af849cac934f68902f17f25f5503bd5c04e8166b59ba73d005e4e3286c01a03cd2c67fa2ea5959cc685c0f6981a3a3208b427eed107c1d48e7d0f7118@52.49.190.97:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
