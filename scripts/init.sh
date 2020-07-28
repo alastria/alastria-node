@@ -146,13 +146,15 @@ echo "Passw0rd" > ~/alastria/data/passwords.txt
 echo "[*] Initializing quorum"
 geth --datadir ~/alastria/data init ~/alastria-node/data/genesis.json
 cd ~/alastria/data/geth
-bootnode -genkey nodekey
+bootnode -genkey nodekey > 
 ENODE_KEY=$(bootnode -nodekey nodekey -writeaddress)
-if [ ! -f ~/alastria-node/data/keys/data/geth/nodekey ]; then
-    echo "[*] creating dir if not created and set nodekey"
-    mkdir -p ~/alastria-node/data/keys/data/geth
-    cp nodekey ~/alastria-node/data/keys/data/geth/nodekey
-fi
+# BEGIN commented out 2020-07-28 - Carlos Horowicz
+#if [ ! -f ~/alastria-node/data/keys/data/geth/nodekey ]; then
+#    echo "[*] creating dir if not created and set nodekey"
+#    mkdir -p ~/alastria-node/data/keys/data/geth
+#    cp nodekey ~/alastria-node/data/keys/data/geth/nodekey
+#fi
+# END 
 
 
 if ( [ "backup" == "$1" ]); then
