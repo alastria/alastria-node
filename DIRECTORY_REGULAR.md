@@ -139,4 +139,5 @@
 |Vestigia| Azure (2C/8Gb/100GB) |68GPJH61Ual0Rascc+Dqinkzz1qW0QP/jKcdRfiB/GM= | enode://beca01f2cdcace3676631d46c5024df209d869d659d63429a45df2b772a1eeb59732fc9da6a11e971cad46398713539ff017e00fc659661d734d715b58b477c4@@40.114.249.250:21000?discport=0 |
 | Tecnalia-2 | AWS (2C/4Gb/100Gb) | GRCTHjNADm/tmtaKcDmU1pveG3hHYH5C6IvYdVxV7zk= | enode://b149fc9af849cac934f68902f17f25f5503bd5c04e8166b59ba73d005e4e3286c01a03cd2c67fa2ea5959cc685c0f6981a3a3208b427eed107c1d48e7d0f7118@52.49.190.97:21000?discport=0 |
 | Caja Rural | Self Hosted (2C/4Gb/50Gb) | VvbKrIkOoqA8OAsmiF69yN9TgNW/wriI/pbm+iyw8V4= | enode://6191198d0a69019b71013a8259a5746daf5a3ac752a8f8df5887ccf2bf4b7f265d1cc59bbe47792fafd366a52c4c2b501d209abf9b24b3b5e3612917fcbe79b6@195.235.162.158:21000?discport=0 |
+| TechVottun | Luis(admin@vottun.tech) | AWS (2C/4Gb/100Gb) | nwaOCmQeUh32FaN77iV3dH5IkuZ8DMl1DD82IyJCnSQ= | enode://e389c6257a5ee7e93894ee6b8a733115a0e834f813fee775cb6e94d41b91706cd39f5f654de4f4de5e3a7cb838d3ef43ad4238f6c93c1dd35c4f3e420a3849f5@54.72.15.149:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
