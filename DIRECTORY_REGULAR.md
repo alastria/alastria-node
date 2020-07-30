@@ -140,4 +140,5 @@
 | Tecnalia-2 | AWS (2C/4Gb/100Gb) | GRCTHjNADm/tmtaKcDmU1pveG3hHYH5C6IvYdVxV7zk= | enode://b149fc9af849cac934f68902f17f25f5503bd5c04e8166b59ba73d005e4e3286c01a03cd2c67fa2ea5959cc685c0f6981a3a3208b427eed107c1d48e7d0f7118@52.49.190.97:21000?discport=0 |
 | Caja Rural | Self Hosted (2C/4Gb/50Gb) | VvbKrIkOoqA8OAsmiF69yN9TgNW/wriI/pbm+iyw8V4= | enode://6191198d0a69019b71013a8259a5746daf5a3ac752a8f8df5887ccf2bf4b7f265d1cc59bbe47792fafd366a52c4c2b501d209abf9b24b3b5e3612917fcbe79b6@195.235.162.158:21000?discport=0 |
 | TechVottun | Luis(admin@vottun.tech) | AWS (2C/4Gb/100Gb) | nwaOCmQeUh32FaN77iV3dH5IkuZ8DMl1DD82IyJCnSQ= | enode://e389c6257a5ee7e93894ee6b8a733115a0e834f813fee775cb6e94d41b91706cd39f5f654de4f4de5e3a7cb838d3ef43ad4238f6c93c1dd35c4f3e420a3849f5@54.72.15.149:21000?discport=0 |
+| GESOFT | Self Hosted (4C/4Gb/150Gb) | A3kc/eqWkgvneFUThmCLLGF744MNY4fr4QtNIGrFFDY= | enode://05a7ac31db319954199b410cf3f23b2251e61e0c75757ba2ee503917184680fca23460898c766463ff10a4a9fa8290491aebc429f7d0cfc67b0e67ee01bfc34f@188.65.20.13:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
