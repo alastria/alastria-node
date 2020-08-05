@@ -141,4 +141,5 @@
 | Caja Rural | Self Hosted (2C/4Gb/50Gb) | VvbKrIkOoqA8OAsmiF69yN9TgNW/wriI/pbm+iyw8V4= | enode://6191198d0a69019b71013a8259a5746daf5a3ac752a8f8df5887ccf2bf4b7f265d1cc59bbe47792fafd366a52c4c2b501d209abf9b24b3b5e3612917fcbe79b6@195.235.162.158:21000?discport=0 |
 | TechVottun | Luis(admin@vottun.tech) | AWS (2C/4Gb/100Gb) | nwaOCmQeUh32FaN77iV3dH5IkuZ8DMl1DD82IyJCnSQ= | enode://e389c6257a5ee7e93894ee6b8a733115a0e834f813fee775cb6e94d41b91706cd39f5f654de4f4de5e3a7cb838d3ef43ad4238f6c93c1dd35c4f3e420a3849f5@54.72.15.149:21000?discport=0 |
 | opencanarias | Google Cloud Platform (2C/4Gb/100Gb) | 6R7BGqMm7GHno1RJDua6DN/VHxqcQCbybWrz56SNjhY= | enode://fffff3828e95dc069357524a5235a5384ff069021283afc14a58ff6cf5576cb0491b592a3ca1ff8548d7258715e3309bee8d6ff5341af81d16ec5728a7fb3ea0@34.78.176.242:21000?discport=0 |
+| TrueWorld | Azure (2C/4Gb/100Gb) | aeCOp1bs+oGb7rei41/WLp6DXSh/PcDrwinwk6MA3Wk= | enode://3a6cae1b0fca30cc5dc4f6b1ea974cd8608675eca910b87eaab446719c35f07785d110f9df093f79db0d08bcc85a59528c9624fcb91a4314c9f081fbec0a8afa@138.91.55.3:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
