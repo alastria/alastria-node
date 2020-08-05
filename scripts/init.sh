@@ -11,7 +11,7 @@ if ( [ $# -ne 3 ] ); then
     exit
 fi
 
-VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com > 2>/dev/null || curl -s --retry 2 icanhazip.com)"
+VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com  2>/dev/null || curl -s --retry 2 icanhazip.com)"
 CURRENT_HOST_IP="$1"
 NODE_TYPE="$2"
 NODE_NAME="$3"
