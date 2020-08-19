@@ -6,4 +6,4 @@ services:
 before_install:
 - docker pull javaguirre/node-t-checker:latest
 script:
-- docker run javaguirre/node-t-checker /bin/sh -c "cd /code && poetry run main.py"
+- docker run javaguirre/node-t-checker /bin/sh -c "cd validator && poetry run python main.py"
