@@ -48,7 +48,7 @@ RUN \
 
 VOLUME /root/alastria
 VOLUME /etc/nginx/conf.d
-EXPOSE 9000 21000 21000/udp 22000 8443 80 443
+EXPOSE 9000 21000 21000/udp 22000 8443 80 443 9090
 
 COPY entrypoint.sh /usr/bin/
 
