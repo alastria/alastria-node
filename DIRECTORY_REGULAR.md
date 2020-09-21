@@ -144,4 +144,5 @@
 | GESOFT | Self Hosted (4C/4Gb/150Gb) | A3kc/eqWkgvneFUThmCLLGF744MNY4fr4QtNIGrFFDY= | enode://05a7ac31db319954199b410cf3f23b2251e61e0c75757ba2ee503917184680fca23460898c766463ff10a4a9fa8290491aebc429f7d0cfc67b0e67ee01bfc34f@188.65.20.13:21000?discport=0 |
 | Planisys | Planisys-EU-Cloud (4C/8Gb/80GiB) | WIF5T1Qf1t6/mQt4I31vSfv6u/9xnjgfyEaItzYHuU8= | enode://e8b477f10ac3472b6d1118bed66e3b1ced2c9be9dec83a4051d25ac89b00f7c9b741daa8e7083058d4ca1696c9a8e6b63a2a941ed317a721fbda26879e37f1a4@185.180.10.229:21000?discport=0 |
 | Fundeen Spain PFP | Scaleway (4C/16Gb/150Gb) | 7rtzojZ/rAViJIE5nsKNtqP1EPaiyvPFYkQ++h+V0SM= | enode://6d0e70d416274010942474cb9f6bf0226f757f546be720024c08e1453c1b35e262383003719610ff2e2e25dc2dd6ec3580e93fd79680c6e723e9854460857a41@51.158.122.207:21000?discport=0 |
+| Air Institute | AWS (2C/4Gb/100Gb) | WITHOUT CONSTELLATION | enode://ecdc766872dec94c918240c361244b06317086f10f9d6b52c0cde28e58b5f82d4960f4e88730b2e1289401ae9af15e65e9a2a54106fa010c905a033a197a24e8@52.59.228.65:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
