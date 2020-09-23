@@ -88,7 +88,7 @@ Y ahora sí, configuramos el nodo general llamando al script init.sh con los par
 
 * Company: Nombre de la compañia.
 
-* NET: Telsius.
+* NET: T.
 
 * CORES: El número de cores de la máquina.
 
@@ -302,13 +302,15 @@ Así mismo, para obtener la clave pública del nodo para realizar transacciones 
 
 Una vez identificados los ficheros que cambian y el contenido del cambio, se procede a enviar un pull request al repositorio github alastria-node a su rama “testnet2”.
 
+Debe además notificarse la petición de alta de nodo usando (el formulario online)[https://portal.r2docuo.com/alastria/forms/noderequest] donde se incluirán los datos necesarios para identificar el nodo y el peticionario.
+
 Si tiene dudas para realizar esta operación, sigua este tutorial (Enlace al F.A.Q. de la WIKI).
 
 ### Aceptación del pull request
 
 El equipo core de plataforma, procederá entonces a la aceptación del pull request.
 
-Con estos cambios aceptados, todos los nodos validadores deben actualizar sus ficheros de permisionado, que se realiza con el monitor a través de una llamada a su API.
+Con estos cambios aceptados, los responsables de todos los nodos permisionadores deben actualizar sus ficheros de permisionado.
 
 Para verificar que se ha realizado, se debe consultar el [monitor de la red](http://netstats.telsius.alastria.io/) y comprobar que aumenta la columna de Peers y que la columna Last block aumenta hasta sincronizarse con el resto de nodos.
 
@@ -335,6 +337,32 @@ Si algún miembro del APCT solicita que se actualicen manualmente los ficheros d
     [*] Restarting node
     Relinking permissioning file
     [*] Starting quorum node
+    
+    
+Si sale el siguiente error en update.sh
+
+    error: Your local changes to the following files would be overwritten by merge:
+            data/constellation-nodes.json
+            data/regular-nodes.json
+
+es que el repositorio local no coincide con el punto en el que estaba al hacer la instalación, y se debe forzar la sincronización con la rama
+
+    $ cd ~/alastria-node/
+    $ git fetch --all
+    $ git reset --hard origin/testnet2
+
+Recién cuando el comando
+    
+    $ git status
+    
+arroje
+    
+    On branch testnet2
+    Your branch is up-to-date with 'origin/testnet2'.
+
+se puede reintentar el update.sh
+
+
 
 ### Probando el nodo regular
 

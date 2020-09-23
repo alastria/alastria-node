@@ -11,7 +11,7 @@ if ( [ $# -ne 3 ] ); then
     exit
 fi
 
-VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
+VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com  2>/dev/null || curl -s --retry 2 icanhazip.com)"
 CURRENT_HOST_IP="$1"
 NODE_TYPE="$2"
 NODE_NAME="$3"
@@ -28,21 +28,6 @@ if ( [ "dockerfile" == "$1" ]); then
     echo "Getting IP from environmental variable ..."
     CURRENT_HOST_IP=$HOST_IP
     echo "Public host IP found: $CURRENT_HOST_IP"
-fi
-
-if ( [ "backup" == "$1" ]); then
-    echo "Backing up current node keys ..."
-    #Backup directory tree
-    mkdir ~/alastria-keysBackup
-    mkdir ~/alastria-keysBackup/data
-    mkdir ~/alastria-keysBackup/data/geth
-    mkdir ~/alastria-keysBackup/data/constellation
-    echo "Saving constellation keys ..."
-    cp -r ~/alastria/data/constellation/keystore ~/alastria-keysBackup/data/constellation/
-    echo "Saving node keys ..."
-    cp -r ~/alastria/data/keystore ~/alastria-keysBackup/data
-    echo "Saving enode ID ..."
-    cp ~/alastria/data/geth/nodekey ~/alastria-keysBackup/data/geth/nodekey
 fi
 
 PWD="$(pwd)"
@@ -161,13 +146,15 @@ echo "Passw0rd" > ~/alastria/data/passwords.txt
 echo "[*] Initializing quorum"
 geth --datadir ~/alastria/data init ~/alastria-node/data/genesis.json
 cd ~/alastria/data/geth
-bootnode -genkey nodekey
+bootnode -genkey nodekey 
 ENODE_KEY=$(bootnode -nodekey nodekey -writeaddress)
-if [ ! -f ~/alastria-node/data/keys/data/geth/nodekey ]; then
-    echo "[*] creating dir if not created and set nodekey"
-    mkdir -p ~/alastria-node/data/keys/data/geth
-    cp nodekey ~/alastria-node/data/keys/data/geth/nodekey
-fi
+# BEGIN commented out 2020-07-28 - Carlos Horowicz
+#if [ ! -f ~/alastria-node/data/keys/data/geth/nodekey ]; then
+#    echo "[*] creating dir if not created and set nodekey"
+#    mkdir -p ~/alastria-node/data/keys/data/geth
+#    cp nodekey ~/alastria-node/data/keys/data/geth/nodekey
+#fi
+# END 
 
 
 if ( [ "backup" == "$1" ]); then

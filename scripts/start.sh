@@ -47,8 +47,8 @@ do
   shift
 done
 
-VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
-CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
+VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com > /dev/null 2>&1 || curl -s --retry 2 icanhazip.com)"
+CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com > /dev/null 2>&1 || curl -s --retry 2 icanhazip.com)"
 CONSTELLATION_PORT=9000
 
 check_constellation_isStarted(){
@@ -70,10 +70,15 @@ NETID=83584648538
 mapfile -t IDENTITY <~/alastria/data/IDENTITY
 mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 
+#
+# options for metrics generation to InfluxDB server
+#
+INFLUX_METRICS=" --metrics --metrics.influxdb --metrics.influxdb.endpoint http://geth-metrics.planisys.net:8086 --metrics.influxdb.database alastria --metrics.influxdb.username alastriausr --metrics.influxdb.password ala0str1AX1 --metrics.influxdb.host.tag=${IDENTITY}"
+
 if [ "$NODE_TYPE" == "bootnode" ]; then
-   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --port 21000 --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --targetgaslimit 8000000 --syncmode fast --nodiscover "
+   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --port 21000 --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --targetgaslimit 8000000 --syncmode fast --nodiscover ${INFLUX_METRICS}"
  else
-   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 8000000 --syncmode full --gcmode $GCMODE --vmodule consensus/istanbul/core/core.go=5 --nodiscover "
+   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 8000000 --syncmode full --gcmode $GCMODE --vmodule consensus/istanbul/core/core.go=5 --nodiscover ${INFLUX_METRICS}"
 fi
 
 _TIME="_$(date +%Y%m%d%H%M%S)"
@@ -147,11 +152,6 @@ else
     echo "Monitor disabled."
 fi
 
-if ([ $WATCH -gt 0 ])
-then
-  tail -100f ~/alastria/logs/quorum"${_TIME}".log
-fi
-
 if ([ $LOGROTATE -gt 0 ]) 
 then 
     RP=`readlink -m "$0"`
@@ -160,6 +160,13 @@ then
 else
    echo "Logrotate disabled."
 fi
-  
+
 set +u
 set +e
+
+if ([ $WATCH -gt 0 ])
+then
+  tail -100f ~/alastria/logs/quorum"${_TIME}".log
+fi
+  
+

@@ -17,7 +17,7 @@ Requirements to be able to launch a node of any type with docker:
 |:------- |:-------- |:---------|
 | **CPU's**: | 2 |  4 |
 | **Memory**: | 4 Gb |  8 Gb |
-| **Hasrd Disc**: | 100 Gb |  1000 Gb |
+| **Hard Disc**: | 100 Gb |  1000 Gb |
 
 **Software**:
 
