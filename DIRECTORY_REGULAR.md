@@ -1,4 +1,4 @@
-﻿# Directorio de nodos regulares
+# Directorio de nodos regulares
  
 | Entidad | Hosting info (Cores/Mem/HDD) | Clave private for * | enode |
 | ------- | ---------------------------------- | ------------- | ----- |
@@ -86,7 +86,7 @@
 | Fundación CARTIF | Self-Hosted (2C/8GiB/100GiB) | Ys2gr7+azJ9hm0U03XcH3mJSrW3guFzW7RhGS+4LnCc= | + "enode://bf7f60ccec0323eb58f38131b04f6855a7315e7c73e895b534312feca7a62dd8c131be95e08ddb761c3754e7df57340c87b44de08693f2b26cf210513c31a0a9@193.146.230.59:21000?discport=0" | 
 | Asociación Española de Fundaciones | ADW (2/8/100) | iG3zvA0hgtvZuTwLSFBBLbi1SG7reR8TZadwj3Z3XkE= | "enode://6f2c9d96fad236334854a1cf68543e7c5fdf10091571ab0b07fb15b1d927b165f39e93851491ab31443adc356e80705327577fa8942cfbc128135f4411b32b6b@185.136.91.174:21000?discport=0"| 
 | INYCOM | Self Hosted (2C/4GB/100GB) | 8OzUpHqehbYy3l2U9dQR0ucReCx1O7WXKscq6aDDMz8= | enode://012fce7130252483d64744c1df5b9d33cf3dcad1fc501a84a69138117f15ddbaa3ff7ccac4d394d4d5d4175ad5aeb1e9949dd50bec3644135f23bfa2793ca7da@212.75.174.237:21000?discport=0 | 
-| ITAINNOVA | Self Hosted (4C/8Gb/50Gb) | dlFZ3KjOV1yrykIpq8TOzce6PZ6ZSZ36A84vWLDJK2Y= | enode://53b4c136ea15c4d616aa06f5a53d815bbce81c831e5b55e6602b248b30cf6181df7830f6ea054353872c8beeebe7ab858a1838ceec636e8e54e84f1bba84025d@193.146.117.67:21000?discport=0 |
+| ITAINNOVA | Self Hosted (4C/8Gb/100Gb) | PaWcpiIYWA3//8ghAOrGVtBSPQKivE08tKXplG2i92A= | enode://e11fa2c9692f1e94b54b6c1feb39f8aa22cac1a71fb9ebb4b1cee2482791f385c6af7c3853362beaa4efad93319972026b537e85fdbad6b0418bf36e84abaa7c@51.210.183.114:21000?discport=0 |
 | SIEMENS | AWS (2C/4Gb/512GiB) | 0l7K+ddggUn9mOsQWwnnITh4PAgSq4LWCU0sVS014S8= | enode://bd5c89a8189405686cd90f2fb25f4c0e3d833858e9b973b7df1fb1b8a3b29fdb055ed5820fe02490f2f473dfe282bfd53a302c2a4e2cf3fde6151c08db1edef4@99.81.52.133:21000?discport=0 |
 | ABANCA | AZURE (4C/8Gb/1000GiB) | WC14CzFrDr7vlifDYnPN+9sYzzg9o7xbU0BxZFsjcQc= | enode://e7ebb52bb2f95ed395308927c29ba4ea05c11bdcc5a4155af6a7cb9571e0d480584b0e5b0f6f51cdeefd6f3e491a67e66bfcd79481da6d3c2494de5b06959180@40.118.80.220:21000?discport=0 |
 | ChainGO | AWS (4C/16Gb/1000Gb) | wAOI9uxTa2+EzGzOr/NQczOTEH5ngG/Okguo4LfLpTk= | "enode://61a26cdb92d52ddeac398fbe5a5801c7ac0ee6781213de46fa70d6248fa48dbde96b2e03daa2ab64cd33d3ec67a0542696c6bafe738ad09fede075d4db4b629f@34.240.89.68:21000?discport=0", |
