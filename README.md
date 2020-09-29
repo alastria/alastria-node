@@ -53,7 +53,9 @@ You'll need to open the following ports in your firewall, inbound and outbound t
 The IP resulting out of the installation process (e.g. the IPv4 part of the enode) , must not be an RFC1918 IPv4 address
 
 10.0.0.0/8
+
 172.16.0.0/12
+
 192.168.0.0/16
 
 These IP addresses are non-routable and will result in your node being unreachable and unable to participate in the blockchain.
@@ -87,10 +89,16 @@ Restricted-Cone NAT has not been tested yet for p2p functionality.
 
 ## Upgrade to Quorum 2.6.0
 
+In case you installed directly on top of the operating system (without docker), please run this sequence and make sure you have port 6060 open for HTTP access of Prometheus remote server at IP address 185.180.8.244
+
 cd home/alastria-node/scripts
+
 ./update.sh
+
 ./stop.sh
+
 ./bootstrap.sh reinstall
+
 ENABLE_CONSTELLATION=true ./start.sh
 
 
