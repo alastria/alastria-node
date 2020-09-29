@@ -84,6 +84,17 @@ Restricted-Cone NAT has not been tested yet for p2p functionality.
 * [(English) Installation Guide](https://medium.com/babel-go2chain/setting-in-motion-a-bootnode-in-the-telsius-network-of-alastria-8e13915cb85d)
 * [(Spanish) Installation Guide](https://medium.com/babel-go2chain/c%C3%B3mo-poner-en-marcha-un-bootnode-en-la-red-telsius-de-alastria-18eacb20b224)
 
+
+## Upgrade to Quorum 2.6.0
+
+cd home/alastria-node/scripts
+./update.sh
+./stop.sh
+./bootstrap.sh reinstall
+ENABLE_CONSTELLATION=true ./start.sh
+
+
+
 ## Deployment of Smart Contracts on Alastria Network
 To know more about the use of Alastria Network, you can visit the Smart Contract Deployment Guides:
 * [Deploying to Alastria's network T (Quorum)](https://github.com/rogargon/copyrightly.io/blob/master/docs/NetworkT.md), created by Roberto Garcia, from Lleida University

@@ -10,7 +10,7 @@ trap kill_geth SIGTERM
 
 MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch> <--local-rpc> <--logrotate>'
 
-MONITOR=1
+MONITOR=0
 WATCH=0
 CLEAN=0
 GCMODE="full"
@@ -73,12 +73,15 @@ mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 #
 # options for metrics generation to InfluxDB server
 #
-INFLUX_METRICS=" --metrics --metrics.influxdb --metrics.influxdb.endpoint http://geth-metrics.planisys.net:8086 --metrics.influxdb.database alastria --metrics.influxdb.username alastriausr --metrics.influxdb.password ala0str1AX1 --metrics.influxdb.host.tag=${IDENTITY}"
+#INFLUX_METRICS=" --metrics --metrics.influxdb --metrics.influxdb.endpoint http://geth-metrics.planisys.net:8086 --metrics.influxdb.database alastria --metrics.influxdb.username alastriausr --metrics.influxdb.password ala0str1AX1 --metrics.influxdb.host.tag=${IDENTITY}"
+
+INFLUX_METRICS=" --metrics --metrics.expensive  --pprof --pprofaddr 0.0.0.0 --pprofport 6060 --metrics.influxdb --metrics.influxdb.endpoint http://geth-metrics.planisys.net:8086 --metrics.influxdb.database alastria --metrics.influxdb.username alastriausr --metrics.influxdb.password ala0str1AX1 --metrics.influxdb.tags host=${IDENTITY}"
 
 if [ "$NODE_TYPE" == "bootnode" ]; then
    GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --port 21000 --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --targetgaslimit 8000000 --syncmode fast --nodiscover ${INFLUX_METRICS}"
  else
-   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 8000000 --syncmode full --gcmode $GCMODE --vmodule consensus/istanbul/core/core.go=5 --nodiscover ${INFLUX_METRICS}"
+   #GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --verbosity 5 --debug --vmdebug --emitcheckpoints --targetgaslimit 8000000 --syncmode fast --gcmode archive --vmodule consensus/istanbul/core/core.go=5 --nodiscover ${INFLUX_METRICS} --memprofilerate 524288"
+   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --debug  --targetgaslimit 8000000 --syncmode fast --gcmode full --vmodule consensus/istanbul/core/core.go=5 --nodiscover ${INFLUX_METRICS} --cache 0 "
 fi
 
 _TIME="_$(date +%Y%m%d%H%M%S)"
@@ -109,7 +112,8 @@ fi
 
 CONSTELLATION=${ENABLE_CONSTELLATION:-}
 
-if [ "$NODE_TYPE" == "general" ] && [ ! -z "$CONSTELLATION" ]; then
+
+if [ "$NODE_TYPE" == "general" ] && [ ! -z "$CONSTELLATION"  ]; then
     echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation"${_TIME}".log &
     check_constellation_isStarted
@@ -141,6 +145,13 @@ else
         fi
     fi
 fi
+
+# have a unique path to look for logs
+if [ -L ~/alastria/logs/quorum.log ]; then
+	rm -f ~/alastria/logs/quorum.log
+fi
+ln -s ~/alastria/logs/quorum"${_TIME}".log ~/alastria/logs/quorum.log
+
 
 if ([ $MONITOR -gt 0 ])
 then
