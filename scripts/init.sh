@@ -11,7 +11,7 @@ if ( [ $# -ne 3 ] ); then
     exit
 fi
 
-VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com > /dev/null 2>&1 || curl -s --retry 2 icanhazip.com)"
+VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com  2>/dev/null || curl -s --retry 2 icanhazip.com)"
 CURRENT_HOST_IP="$1"
 NODE_TYPE="$2"
 NODE_NAME="$3"
@@ -20,7 +20,7 @@ ACCOUNT_PASSWORD='Passw0rd'
 
 if ( [ "auto" == "$1" -o "backup" == "$1" ]); then
     echo "Autodiscovering public host IP ..."
-    CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com > /dev/null 2>&1 || curl -s --retry 2 icanhazip.com)"
+    CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
     echo "Public host IP found: $CURRENT_HOST_IP"
 fi
 
@@ -146,13 +146,15 @@ echo "Passw0rd" > ~/alastria/data/passwords.txt
 echo "[*] Initializing quorum"
 geth --datadir ~/alastria/data init ~/alastria-node/data/genesis.json
 cd ~/alastria/data/geth
-bootnode -genkey nodekey
+bootnode -genkey nodekey 
 ENODE_KEY=$(bootnode -nodekey nodekey -writeaddress)
-if [ ! -f ~/alastria-node/data/keys/data/geth/nodekey ]; then
-    echo "[*] creating dir if not created and set nodekey"
-    mkdir -p ~/alastria-node/data/keys/data/geth
-    cp nodekey ~/alastria-node/data/keys/data/geth/nodekey
-fi
+# BEGIN commented out 2020-07-28 - Carlos Horowicz
+#if [ ! -f ~/alastria-node/data/keys/data/geth/nodekey ]; then
+#    echo "[*] creating dir if not created and set nodekey"
+#    mkdir -p ~/alastria-node/data/keys/data/geth
+#    cp nodekey ~/alastria-node/data/keys/data/geth/nodekey
+#fi
+# END 
 
 
 if ( [ "backup" == "$1" ]); then
