@@ -127,7 +127,7 @@ function launchNode {
       -v $ACCESS_POINT_DIR:/etc/nginx/conf.d \
       -p 21000:21000 -p 21000:21000/udp -p 22000:22000 -p 9000:9000 \
       -p 80:80 -p 443:443 \
-      -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME
+      -e NODE_TYPE=$NODE_TYPE -e NODE_NAME=$NODE_NAME \
       -e MONITOR_ENABLED=$MONITOR_ENABLED -e ENABLE_CONSTELLATION=$ENABLE_CONSTELLATION \
       --restart unless-stopped alastria/alastria-node-general
   fi
