@@ -134,7 +134,6 @@ function gopath {
     mkdir -p "$GOPATH"/{bin,src}
   fi
 
-  exec "$BASH"
 
 }
 
