@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-- docker pull javaguirre/node-t-checker:latest
+- docker pull wealizedigital/alastria-node-t-checker:latest
 
 script:
-- docker run javaguirre/node-t-checker /bin/sh -c "cd validator && poetry run python main.py"
+- docker run wealizedigital/alastria-node-t-checker /bin/sh -c "cd validator && poetry run python main.py"
