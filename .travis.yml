@@ -5,6 +5,5 @@ services:
 
 before_install:
 - docker pull wealizedigital/alastria-node-t-checker:latest
-
 script:
 - docker run wealizedigital/alastria-node-t-checker /bin/sh -c "cd validator && poetry run python main.py"
