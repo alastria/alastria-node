@@ -1,0 +1,10 @@
+language: bash
+
+services:
+  - docker
+
+before_install:
+- docker pull wealizedigital/alastria-node-t-checker:latest
+
+script:
+- docker run -v $PWD:/code/validator/alastria-node-data/ --env-file .env_travis_file wealizedigital/alastria-node-t-checker /bin/sh -c "cd validator && poetry run python main.py"
