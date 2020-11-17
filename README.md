@@ -9,6 +9,11 @@ This page contains technical information needed to work in the Alastria ecosyste
 
 You'll need at least a host/node to interact with the network, please read the technical requirements for it.
 
+> ### **IMPORTANT NEWS**:
+>
+>> **IF YOU HAVE ALREADY INSTALLED A NODE, PLEASE UPDATE TO THE LAST VERSION FOLLOWING (THESE INSTRUCTIONS)[https://github.com/alastria/alastria-node/blob/testnet2/UPGRADE_TO_LAST_VERSION.md]**
+
+
 [//]: # ( Para ello, necesitarás como mínimo un nodo para poder intercatuar, ese nodo ha de tener por lo menos las siguientes especificaciones: )
 
 ## System requirements
@@ -27,11 +32,9 @@ You'll need at least a host/node to interact with the network, please read the t
 
 A DNS resolver must be available and accessible to make the installation process possible.
 
-E.g. the command
-
-dig +short netstats.telsius.alastria.io @resolver1.opendns.com 
-
-must yield a valid, routable IPv4 address
+    E.g. the command
+    dig +short netstats.telsius.alastria.io @resolver1.opendns.com 
+    must yield a valid, routable IPv4 address
 
 #### TCP/UDP PORTS
 
