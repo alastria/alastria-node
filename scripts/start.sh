@@ -98,7 +98,7 @@ if [ "$NODE_TYPE" == "bootnode" ]; then
 
 else
 
-   # set --cache 0 to avoid memory fluctuations
+   # set --cache 10 to avoid issue #804
 
    GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --debug  --targetgaslimit 8000000 --syncmode fast --gcmode full --vmodule consensus/istanbul/core/core.go=5 --nodiscover ${INFLUX_METRICS}  --verbosity 5 --cache 10 "
 
