@@ -145,4 +145,5 @@
 | Air Institute | AWS (2C/4Gb/100Gb) | WITHOUT CONSTELLATION | enode://ecdc766872dec94c918240c361244b06317086f10f9d6b52c0cde28e58b5f82d4960f4e88730b2e1289401ae9af15e65e9a2a54106fa010c905a033a197a24e8@52.59.228.65:21000?discport=0 |
 | Universidad de Granada | Self Hosted (10C/16GB/480GB) | IR6GoWRRI9Qtj03GE4XJ9KqInBdrukJ1GZBlxy0dxTo= | enode://2faa05e9069167f8749c86f76894d7cb060644203984677c0808dd744c9c5b5923e1bda481bf6e578f84b8e3947dc06bdc66a248a3b5942491e001c482b50e0b@150.214.190.28:21000?discport=0 |
 | Fundacion Cibervoluntarios | Self Hosted (2C/4Gb/80Gb) | kfnc767zEcUecZDhX9hM2Y36PaQ2dJj0WnmjgmZy7GM= | enode://40de7ff4f6f8c0d2056b17cf2aa34a50295799ee136ca2e5df69aa380868846263e87a9fba480f13bebbf06aafed4e5a732b58ec07e34d3544800f459d94e273@82.196.13.19:21000?discport=0 |
+| UPC | Self Hosted (4C/16Gb/1000Gb) | 1Zc8ZfouG7XaYy2C3HlsRvMLz8/kIP/Q9APZdPf2XQk= | "enode://49632165a145183d6e449acd4c5303aff5fe3f8c45039ab82735c66e75d24d858c859f2c03530f00c6a85820785c1627d6d340961aa26f1124bb3bf8b9426513@84.88.85.36:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
