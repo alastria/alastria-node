@@ -1,32 +1,50 @@
 #!/bin/bash
 set -u
 set -e
+
 TMPFILE="/tmp/$(basename $0).$$.tmp"
-tmpfile=$(mktemp /tmp/updatePerm.XXXXXX)
+
+if [ -z $1 ]; then
+	echo "ERROR: nodetype not provided"
+	exit 1
+fi
+
 NODE_TYPE="$1"
 DESTDIR="$HOME/alastria/data/"
 DATADIR="$HOME/alastria-node/data/"
 
-echo "[" > $TMPFILE
+echo "Getting current nodes..."
 
-if [ "$NODE_TYPE" == "bootnode" ]; then
-   cat $DATADIR/boot-nodes.json $DATADIR/validator-nodes.json $DATADIR/regular-nodes.json >> $TMPFILE
- else
-   if [ "$NODE_TYPE" == "validator" ]; then
-     cat $DATADIR/boot-nodes.json $DATADIR/validator-nodes.json >> $TMPFILE
- else
-   if [ "$NODE_TYPE" == "general" ]; then
-     cat $DATADIR/boot-nodes.json >> $TMPFILE
-  fi
-  fi
-fi
-cat $TMPFILE | sed '$s/,$//' > $tmpfile
-echo "]" >> $tmpfile
-#cat $tmpfile
-cat $tmpfile > $DESTDIR/static-nodes.json
-cp $DESTDIR/static-nodes.json $DESTDIR/permissioned-nodes.json
-# echo "Removing temp files ..."
+for i in boot-nodes.json validator-nodes.json regular-nodes.json ; do
+	curl https://raw.githubusercontent.com/alastria/alastria-node/testnet2/data/${i} > ${DATADIR}/${i}
+done
+
+echo "Parsing correct node database..."
+
+case $NODE_TYPE in
+	"bootnode")
+		cat $DATADIR/boot-nodes.json $DATADIR/validator-nodes.json $DATADIR/regular-nodes.json >> $TMPFILE
+	;;
+	"validator")
+		cat $DATADIR/boot-nodes.json $DATADIR/validator-nodes.json >> $TMPFILE
+	;;
+	"general")
+		cat $DATADIR/boot-nodes.json >> $TMPFILE
+	;;
+	*)
+		echo "ERROR: nodetype not recognized"
+		exit 1
+	;;
+esac
+
+sed -e 's/^/[\n/' -i $TMPFILE
+sed -e 's/,$/]/' -i $TMPFILE
+
+cat $TMPFILE > $DESTDIR/static-nodes.json
+cat $TMPFILE > $DESTDIR/permissioned-nodes.json
+
+echo "Removing temp file..."
 rm $TMPFILE
-rm $tmpfile
+
 set +u
 set +e
