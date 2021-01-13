@@ -1,5 +1,7 @@
 
-## INSTRUCTIONS TO UPGRADE TO LAST VERSION OF CONSENSYS QUORUM
+## INSTRUCTIONS TO UPGRADE TO LAST VERSION OF CONSENSYS QUORUM (EXPERMIMENTAL)
+
+> Please note that the version update is still experimental, and may have consequences both in terms of performance and resource consumption, as well as the need to adapt your current web3 applications or development tools (remix, truffle)
 
 Please, follow these instructions to upgrade your binaries to the last versions provided by Consensys Quorum. As of November 2020, after the update, the outcome of *geth version* should be:
 
