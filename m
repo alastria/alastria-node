@@ -1,7 +1,3 @@
-﻿# Directorio de nodos para Red T - VALIDADORES
-
-| Entidad | Hosting info (Cores/Mem/HDD) | enode |
-| ------- | ---------------------------------- | ----- |
 | AST-Gobierno de Aragón | Sefl-Hosted (2C/4Gb/40GB) |  enode://367354e3bb59d015fce31967f5dda5c17cb3b9acc5b571695f94a13f89d2a2c64c3bca28da05b6751a7384c38152752de35787d97e9b8d6062b3371b7a9305c4@188.244.90.2:21000?discport=0|
 | Alisys | Self hosted (1C/4GB/70GB) | enode://3905f943ba5446eba164c07ab5f53a84ce17d74ec4d7591f6ec54b9d7608f57cae7cfdf946616385f59cfb5b910161a1f8520cb6f992bcc0d1ab932601205e91@154.62.228.6:21000?discport=0 |
 | Blocknitive | Sefl-Hosted (4C/8GB/100GB) | enode://6ee5504399ba5a6cbca15d7dd19c652017af0223f12af875044d103307cca82a8105cfb72455836bd52ba11cdbf5a752007af6000d59d146dade7f3738a4d148@185.170.96.121:21000?discport=0 |
