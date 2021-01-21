@@ -94,13 +94,13 @@ fi
 
 if [ "$NODE_TYPE" == "bootnode" ]; then
 
-   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --port 21000 --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --targetgaslimit 8000000 --syncmode fast --nodiscover ${INFLUX_METRICS} --verbosity 5"
-
+   #GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --port 21000 --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --targetgaslimit 8000000 --syncmode fast --nodiscover ${INFLUX_METRICS} --verbosity 5"
+   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --port 21000 --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --targetgaslimit 8000000 --syncmode fast --nodiscover ${INFLUX_METRICS}"
 else
 
    # set --cache 10 to avoid issue #804
-
-   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --debug  --targetgaslimit 8000000 --syncmode fast --gcmode full --vmodule consensus/istanbul/core/core.go=5 --nodiscover ${INFLUX_METRICS}  --verbosity 5 --cache 10 "
+   GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 8000000 --syncmode full --gcmode $GCMODE --vmodule consensus/istanbul/core/core.go=5 --nodiscover ${INFLUX_METRICS}"
+   #GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --debug  --targetgaslimit 8000000 --syncmode fast --gcmode full --vmodule consensus/istanbul/core/core.go=5 --nodiscover ${INFLUX_METRICS}  --verbosity 5 --cache 10 "
 
 fi
 
@@ -153,6 +153,7 @@ if [[ "$NODE_TYPE" == "general" ]]; then
       nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum"${_TIME}".log &
     else
       nohup env PRIVATE_CONFIG=ignore geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum"${_TIME}".log &
+      #nohup env geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum"${_TIME}".log &
   fi
 else
     if [[ "$NODE_TYPE" == "validator" ]]; then
