@@ -148,4 +148,6 @@
 | UPC | Self Hosted (4C/16Gb/1000Gb) | 1Zc8ZfouG7XaYy2C3HlsRvMLz8/kIP/Q9APZdPf2XQk= | enode://49632165a145183d6e449acd4c5303aff5fe3f8c45039ab82735c66e75d24d858c859f2c03530f00c6a85820785c1627d6d340961aa26f1124bb3bf8b9426513@84.88.85.36:21000?discport=0 |
 | Tribalyte Technologies | AWS (2C/8Gb/130Gb) | byy6DcSY+CDWtgcu3EX4NlgQeKcqshpK0etcxvE1my0= | enode://e7a41e753f4732bca8e6182b834df8d29d56f6bf99be2ff9553fb76f1392188c940a4fc3ee20dbb208d9fcd3f87b16cb469e3a06c41d146c19af9602862e0608@54.195.161.44:21000?discport=0 |
 | BABEL Sistemas de Información | Self Hosted (2C/4Gb/100Gb) | ZdARYLblSpLuik+hIYwKa1M7ZgJrx1fLki3ePMSTGzo= | enode://0cd07a709dd36f54fd3bd92923d4e29916cb16fe92c1999ace26e2b2bd6bf0d61bb92245a3e4699559d0d09cf2895d5642cd32862840e6c01302ac146e083770@213.27.216.170:21000?discport=0 |
+| Firmapro | Oscar Conesa (oconesa@firmaprofesional.com) | Self Hosted (4C/8Gb/50Gb) | 29U/AzEmTQaY29TnyIsPdx8QQjADXv+0DY6zf4mEaAc= | enode://9f6d9dccd3d284bb98ff5ab8f62040fd3275950be315ac0b31f4a233eaf4eeea3fe88f92d07e1fc5520fc5e2990b865c4cd13b5d12b55b540c0ecd729e7c5f35@90.160.140.196:21000?discport=0 |
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
