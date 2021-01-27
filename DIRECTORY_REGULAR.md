@@ -149,4 +149,5 @@
 | Tribalyte Technologies | AWS (2C/8Gb/130Gb) | byy6DcSY+CDWtgcu3EX4NlgQeKcqshpK0etcxvE1my0= | enode://e7a41e753f4732bca8e6182b834df8d29d56f6bf99be2ff9553fb76f1392188c940a4fc3ee20dbb208d9fcd3f87b16cb469e3a06c41d146c19af9602862e0608@54.195.161.44:21000?discport=0 |
 | BABEL Sistemas de Información | Self Hosted (2C/4Gb/100Gb) | ZdARYLblSpLuik+hIYwKa1M7ZgJrx1fLki3ePMSTGzo= | enode://0cd07a709dd36f54fd3bd92923d4e29916cb16fe92c1999ace26e2b2bd6bf0d61bb92245a3e4699559d0d09cf2895d5642cd32862840e6c01302ac146e083770@213.27.216.170:21000?discport=0 |
 | Instituto Tecnológico de Informática | Self Hosted (4C/8Gb/50Gb) |  | enode://82cfd076819f9dc8319f117ed903801d89b7bb1192906ed2b30986c5ed341179b5cb1a90f31d278a4ce71e4091e7631f8a4605ab0733665c6036bdc5d00cc5fc@158.42.156.219:21000?discport=0 |
+| CEDRO | AWS (2C/4Gb/300Gb | j+kYIxo4+5gl2Top5BNZNd0APibZEjxU0ql3m/cBcEM=root@2c78da1cb744 | "enode://3bf4365dd50537e67a06a3e7052cd8391fa8a186c054ee9cb7dba2e8332e01b60c2d47d7d7c96d679bef858bbcb18360d442ee241fa7c26e5cf4a09ff62352ac@184.73.186.24:21000?discport=0" |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
