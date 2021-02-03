@@ -19,6 +19,7 @@ FROM ubuntu:16.04
 
 ARG DOCKER_VERSION=latest
 ARG ALASTRIA_BRANCH=testnet2
+ARG GITHUB_USER=alastria
 
 ENV \
     DOCKER_VERSION=$DOCKER_VERSION
@@ -31,15 +32,20 @@ RUN \
         curl \
         dnsutils \
         nano \
-    && cd \
-    && git clone -b $ALASTRIA_BRANCH https://github.com/alastria/alastria-node \
     && apt-get autoremove \
     && apt-get clean
+
+# Prevent Docker from caching git clone
+ADD https://api.github.com/repos/$GITHUB_USER/alastria-node/git/refs/heads/$ALASTRIA_BRANCH version.json
+RUN \
+    cd \
+    && git clone -b $ALASTRIA_BRANCH https://github.com/$GITHUB_USER/alastria-node
 
 VOLUME /root/alastria
 EXPOSE 21000 21000/udp 8443
 
 COPY entrypoint.sh /usr/bin/
+
 WORKDIR /root/alastria-node
 ENTRYPOINT ["entrypoint.sh"]
 CMD

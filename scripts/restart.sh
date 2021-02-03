@@ -16,7 +16,7 @@ mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 
 if ( [ "auto" == "$1" ]); then 
     echo "Autodiscovering public host IP ..."
-    CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
+    CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com > /dev/null 2>&1 || curl -s --retry 2 icanhazip.com)"
     echo "Public host IP found: $CURRENT_HOST_IP"
 fi
 

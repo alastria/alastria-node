@@ -10,7 +10,7 @@ trap kill_geth SIGTERM
 
 MESSAGE='Usage: start.sh <--clean> <--no-monitor> <--watch> <--local-rpc> <--logrotate>'
 
-MONITOR=1
+MONITOR=0
 WATCH=0
 CLEAN=0
 GCMODE="full"
@@ -47,8 +47,8 @@ do
   shift
 done
 
-VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
-CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || curl -s --retry 2 icanhazip.com)"
+VALIDATOR0_HOST_IP="$(dig +short validator0.telsius.alastria.io @resolver1.opendns.com > /dev/null 2>&1 || curl -s --retry 2 icanhazip.com)"
+CURRENT_HOST_IP="$(dig +short myip.opendns.com @resolver1.opendns.com > /dev/null 2>&1 || curl -s --retry 2 icanhazip.com)"
 CONSTELLATION_PORT=9000
 
 check_constellation_isStarted(){
@@ -73,12 +73,35 @@ mapfile -t NODE_TYPE <~/alastria/data/NODE_TYPE
 #
 # options for metrics generation to InfluxDB server
 #
-INFLUX_METRICS=" --metrics --metrics.influxdb --metrics.influxdb.endpoint http://geth-metrics.planisys.net:8086 --metrics.influxdb.database alastria --metrics.influxdb.username alastriausr --metrics.influxdb.password ala0str1AX1 --metrics.influxdb.host.tag=${IDENTITY}"
+#!/bin/bash
+
+
+GETH_VERSION=$(geth version|grep ^Version|awk '{print $2}')
+if [[ $GETH_VERSION =~ 1\.8 ]]; then
+
+	INFLUX_METRICS=" --metrics --metrics.influxdb --metrics.influxdb.endpoint http://geth-metrics.planisys.net:8086 --metrics.influxdb.database alastria --metrics.influxdb.username alastriausr --metrics.influxdb.password ala0str1AX1 --metrics.influxdb.host.tag=${IDENTITY}"
+
+elif [[ $GETH_VERSION =~ 1\.9 ]]; then
+
+	# includes prometheus aside of influx with pprof options, slight change in influx options syntax
+
+	INFLUX_METRICS=" --metrics --metrics.expensive  --pprof --pprofaddr 0.0.0.0 --pprofport 9545 --metrics.influxdb --metrics.influxdb.endpoint http://geth-metrics.planisys.net:8086 --metrics.influxdb.database alastria --metrics.influxdb.username alastriausr --metrics.influxdb.password ala0str1AX1 --metrics.influxdb.tags host=${IDENTITY}"
+
+fi
+
+
+# increase verbosity 5 to collect more logs
 
 if [ "$NODE_TYPE" == "bootnode" ]; then
+
+   #GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --port 21000 --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --targetgaslimit 8000000 --syncmode fast --nodiscover ${INFLUX_METRICS} --verbosity 5"
    GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --port 21000 --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --targetgaslimit 8000000 --syncmode fast --nodiscover ${INFLUX_METRICS}"
- else
+else
+
+   # set --cache 10 to avoid issue #804
    GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --verbosity 3 --vmdebug --emitcheckpoints --targetgaslimit 8000000 --syncmode full --gcmode $GCMODE --vmodule consensus/istanbul/core/core.go=5 --nodiscover ${INFLUX_METRICS}"
+   #GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --permissioned --rpc --rpcaddr $RPCADDR --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 22000 --port 21000 --istanbul.requesttimeout 10000  --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@netstats.telsius.alastria.io:80 --debug  --targetgaslimit 8000000 --syncmode fast --gcmode full --vmodule consensus/istanbul/core/core.go=5 --nodiscover ${INFLUX_METRICS}  --verbosity 5 --cache 10 "
+
 fi
 
 _TIME="_$(date +%Y%m%d%H%M%S)"
@@ -109,7 +132,8 @@ fi
 
 CONSTELLATION=${ENABLE_CONSTELLATION:-}
 
-if [ "$NODE_TYPE" == "general" ] && [ ! -z "$CONSTELLATION" ]; then
+
+if [ "$NODE_TYPE" == "general" ] && [ ! -z "$CONSTELLATION"  ]; then
     echo "[*] Starting Constellation node"
     nohup constellation-node ~/alastria/data/constellation/constellation.conf 2>> ~/alastria/logs/constellation"${_TIME}".log &
     check_constellation_isStarted
@@ -128,7 +152,8 @@ if [[ "$NODE_TYPE" == "general" ]]; then
   if [[ ! -z "$CONSTELLATION" ]]; then
       nohup env PRIVATE_CONFIG=~/alastria/data/constellation/constellation.conf geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum"${_TIME}".log &
     else
-      nohup env geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum"${_TIME}".log &
+      nohup env PRIVATE_CONFIG=ignore geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum"${_TIME}".log &
+      #nohup env geth --datadir ~/alastria/data $GLOBAL_ARGS 2>> ~/alastria/logs/quorum"${_TIME}".log &
   fi
 else
     if [[ "$NODE_TYPE" == "validator" ]]; then
@@ -142,6 +167,13 @@ else
     fi
 fi
 
+# have a unique path to look for logs
+if [ -L ~/alastria/logs/quorum.log ]; then
+	rm -f ~/alastria/logs/quorum.log
+fi
+ln -s ~/alastria/logs/quorum"${_TIME}".log ~/alastria/logs/quorum.log
+
+
 if ([ $MONITOR -gt 0 ])
 then
     echo "[*] Monitor enabled. Starting monitor..."
@@ -152,11 +184,6 @@ else
     echo "Monitor disabled."
 fi
 
-if ([ $WATCH -gt 0 ])
-then
-  tail -100f ~/alastria/logs/quorum"${_TIME}".log
-fi
-
 if ([ $LOGROTATE -gt 0 ]) 
 then 
     RP=`readlink -m "$0"`
@@ -165,6 +192,13 @@ then
 else
    echo "Logrotate disabled."
 fi
-  
+
 set +u
 set +e
+
+if ([ $WATCH -gt 0 ])
+then
+  tail -100f ~/alastria/logs/quorum"${_TIME}".log
+fi
+  
+

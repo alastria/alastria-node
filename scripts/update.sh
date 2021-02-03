@@ -20,6 +20,6 @@ if [[ ! -z "$GETH" ]]; then
    echo " ~/alastria-node/scripts/start.sh"
  else
    echo "[*] Starting node" 
-   ~/alastria-node/scripts/start.sh 
+   env PRIVATE_CONFIG=ignore ~/alastria-node/scripts/start.sh 
 fi
 

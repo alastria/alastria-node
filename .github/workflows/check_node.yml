@@ -1,0 +1,22 @@
+name: Check Node
+
+on: [pull_request]
+
+jobs:
+  node-t-checker:
+    runs-on: ubuntu-latest
+    container: 
+      image: wealizedigital/alastria-node-t-checker:latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        TRAVIS_PULL_REQUEST: ${{ github.event.pull_request.number }}
+        REPOSITORY: ${{github.repository}}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create symlink to repository
+        run: ln -s "$(pwd)" /code/alastria-node
+      - name: Check Node
+        run: |
+          cd /code
+          poetry install
+          poetry run python ./validator/main.py

@@ -12,6 +12,7 @@ function superuser {
 
 function installgo {
   GOREL="go1.9.5.linux-amd64.tar.gz"
+  #GOREL="go1.15.2.linux-amd64.tar.gz"
   if ( ! type "go" > /dev/null 2>&1 )
   then
     PATH="$PATH:/usr/local/go/bin"
@@ -100,8 +101,13 @@ function installquorum {
     echo "Installing QUORUM"
     pushd /tmp
     git clone https://github.com/alastria/quorum.git
+    #git clone https://github.com/ConsenSys/quorum.git
     cd quorum
     git checkout 775aa2f5a6a52d9d84c85d5ed73521a1ea5b15b3
+    #git checkout 30d4d724765a0c82a39db33088a66057896e7c83 #2.2.4
+    #git checkout c894c2d70eacf30740d03b53ed2fb39e42641295 #2.2.5
+    #git checkout 9339be03f9119ee488b05cf087d103da7e68f053 #2.6.0
+    #git checkout af7525189f2cee801ef6673d438b8577c8c5aa34 #20.10.0
     make all
     superuser cp build/bin/geth /usr/local/bin
     superuser cp build/bin/bootnode /usr/local/bin
