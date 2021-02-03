@@ -46,5 +46,6 @@
 | S&M Services | Alexander Herranz (alexander.herranz@sm-services.es) | Azure (2C/4Gb/500Gb) | mSdWNE7q/RewTFg4UBpu0NZqnRR/ho/ABvd6GQzBxVM= | enode://68655541401b178ff2dc53e2f8585542af89be27053e17def9d896206483613f1641b93dae7f1ed321ab02d556059083cc10f105f50b8947b6519bdd09f2ad03@23.97.226.231:21000?discport=0 |
 | EY | Jordi Juan Guillem, Guillermo del Pino (eyblockchainsp@gmail.com) | Azure (2C/4Gb/100Gb) | A0RjBKA1vQz03MCBjkCd+v109EON56rLKchlvovYOXI= | enode://e2267fdb81fd4e600f1e2992179f8131980df45850f54917c9c13cb0765b4ad762a9b33b3c8c4bcc672d56a0d1d0b604dd7307c25ab014bedea2dbaff5d0a876@137.117.210.236:21000?discport=0 |
 | Indra | Javier Casanova (jcasanova@minsait.com) | Azure (2C/8Gb/100Gb) | tUfpT/WciNK/SB7CkxhQipqjEQjSGS+lcKQ8Z0I4j38= | enode://10a85e1407572d8c1d38135850f1105474686a0827a422b57ee02d2de39486d5b689757c946aa2200fd9d967202f5a7c808332a16764f9cc9f578b10b00ba539@23.102.47.3:21000?discport=0 |
+| Last Mile Team | Angel Batalla (abatalla@lastmile.team) | AWS (2C/4GB/100GB) | Q1OCKOX6YAnd5/H7trb1BiYBnBjDoUaaD4A+10NLtBc= | enode://3166c12f4861b9f59fd07eb203dd0f497b3c55f166c36c1f32e665e6928008de0b884ed6a57b3480896d830ca338a67be6701ac50dd6bf267e413bbbac2cfaaf@52.47.93.105:21000?discport=0 | 
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
