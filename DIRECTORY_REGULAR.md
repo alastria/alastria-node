@@ -152,4 +152,5 @@
 | Instituto Tecnológico de Informática | Self Hosted (4C/8Gb/50Gb) |  | enode://82cfd076819f9dc8319f117ed903801d89b7bb1192906ed2b30986c5ed341179b5cb1a90f31d278a4ce71e4091e7631f8a4605ab0733665c6036bdc5d00cc5fc@158.42.156.219:21000?discport=0 |
 | Aralegis | Self hosted (4C/8GB/470GB) | | enode://10a49be6e5208f960e80329eb3b9c9e29a2debc528bae91250bc64a489ae20832fff1894d3a0d062c5a96cb5e216f95e8b0921cc2628b1c8d531dfc93a4917b0@85.251.46.75:21000?discport=0 |
 | DigitelTS-labs-01 | AWS (2C/2Gb/128Gb) |  | enode://21bc5247d1c5f809aae679853e4ed3cbf6d8f97d9ecd24190b39eeb0e398a7d8b523d9a128e3792801dfdf9eb5ba02b6cd24dca7a341298b5014454c13ae17cc@47.62.49.210:21000?discport=0 |
+| CEDRO | AWS (4C/8GB/300GB)| j+kYIxo4+5gl2Top5BNZNd0APibZEjxU0ql3m/cBcEM | "enode://3bf4365dd50537e67a06a3e7052cd8391fa8a186c054ee9cb7dba2e8332e01b60c2d47d7d7c96d679bef858bbcb18360d442ee241fa7c26e5cf4a09ff62352ac@35.180.3.208:21000?discport=0" |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
