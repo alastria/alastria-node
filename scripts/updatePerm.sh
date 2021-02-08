@@ -21,7 +21,7 @@ DATADIR="/tmp/"
 echo "Getting current nodes..."
 
 for i in boot-nodes.json validator-nodes.json regular-nodes.json ; do
-	curl https://raw.githubusercontent.com/alastria/alastria-node/testnet2/data/${i} > ${DATADIR}/${i}
+	wget -q -O ${DATADIR}/${i} https://raw.githubusercontent.com/alastria/alastria-node/testnet2/data/${i} 
 	echo "Getting ${DATADIR}/${i} ..."
 done
 
