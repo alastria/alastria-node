@@ -154,4 +154,5 @@
 | DigitelTS-labs-01 | AWS (2C/2Gb/128Gb) |  | enode://21bc5247d1c5f809aae679853e4ed3cbf6d8f97d9ecd24190b39eeb0e398a7d8b523d9a128e3792801dfdf9eb5ba02b6cd24dca7a341298b5014454c13ae17cc@47.62.49.210:21000?discport=0 |
 | CEDRO | AWS (4C/8GB/300GB)| j+kYIxo4+5gl2Top5BNZNd0APibZEjxU0ql3m/cBcEM | enode://3bf4365dd50537e67a06a3e7052cd8391fa8a186c054ee9cb7dba2e8332e01b60c2d47d7d7c96d679bef858bbcb18360d442ee241fa7c26e5cf4a09ff62352ac@35.180.3.208:21000?discport=0 |
 | Last Mile Team | Angel Batalla (abatalla@lastmile.team) | AWS (2C/4GB/100GB) | Q1OCKOX6YAnd5/H7trb1BiYBnBjDoUaaD4A+10NLtBc= | enode://3166c12f4861b9f59fd07eb203dd0f497b3c55f166c36c1f32e665e6928008de0b884ed6a57b3480896d830ca338a67be6701ac50dd6bf267e413bbbac2cfaaf@52.47.93.105:21000?discport=0 |
+| UPC | Self Hosted (2C/8Gb/200Gb) | xKy7ZISuOazBHTZ3X8C27jqn6TdwRdZr6RBt+9St2WY= | enode://135b1e60cda236937c1362740890ec791bce9060bed0ec965390417132c5fa47d202b090f32f6d7754cb2b64dcd5533b42c0da68d96a659c3137c76bbc1acf18@84.88.85.41:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
