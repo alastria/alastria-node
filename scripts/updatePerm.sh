@@ -16,7 +16,7 @@ NODE_TYPE="$1"
 
 TMPFILE=$(mktemp /tmp/updatePerm.XXXXXX)
 DESTDIR="$HOME/alastria/data/"
-DATADIR="$HOME/alastria-node/data/"
+DATADIR="/tmp/data/"
 
 echo "Getting current nodes..."
 
