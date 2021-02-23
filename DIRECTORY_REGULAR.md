@@ -152,4 +152,5 @@
 | Instituto Tecnológico de Informática | Self Hosted (4C/8Gb/50Gb) |  | enode://82cfd076819f9dc8319f117ed903801d89b7bb1192906ed2b30986c5ed341179b5cb1a90f31d278a4ce71e4091e7631f8a4605ab0733665c6036bdc5d00cc5fc@158.42.156.219:21000?discport=0 |
 | Aralegis | Self hosted (4C/8GB/470GB) | | enode://10a49be6e5208f960e80329eb3b9c9e29a2debc528bae91250bc64a489ae20832fff1894d3a0d062c5a96cb5e216f95e8b0921cc2628b1c8d531dfc93a4917b0@85.251.46.75:21000?discport=0 |
 | DigitelTS-labs-01 | AWS (2C/2Gb/128Gb) |  | enode://21bc5247d1c5f809aae679853e4ed3cbf6d8f97d9ecd24190b39eeb0e398a7d8b523d9a128e3792801dfdf9eb5ba02b6cd24dca7a341298b5014454c13ae17cc@47.62.49.210:21000?discport=0 |
+|Calasanz| Self Hosted (2C/8Gb/100Gb)| | enode://7ecb5d1ff16992a903a2386277aab84a204af44a7c4c34703504fee4cbaa6153aae16cea6c5bfeb0ff9743572a204038be86f21405c656b77e8eb0af177c6310@194.224.103.2:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
