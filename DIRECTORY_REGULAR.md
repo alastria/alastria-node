@@ -155,4 +155,5 @@
 | Last Mile Team | AWS (2C/4GB/100GB) | Q1OCKOX6YAnd5/H7trb1BiYBnBjDoUaaD4A+10NLtBc= | enode://50dc160435b7a563271e620f25b47741091c3f1ca87b19568487cb80d04631701378f18d11c8eccdb9027a024f9e0b3a4bdd818211bf033a7e6e374ec89da7e2@52.47.93.105:21000?discport=0 |
 | UPC | Self Hosted (2C/8Gb/200Gb) | xKy7ZISuOazBHTZ3X8C27jqn6TdwRdZr6RBt+9St2WY= | enode://135b1e60cda236937c1362740890ec791bce9060bed0ec965390417132c5fa47d202b090f32f6d7754cb2b64dcd5533b42c0da68d96a659c3137c76bbc1acf18@84.88.85.41:21000?discport=0 |
 | Calasanz | Self Hosted (2C/8Gb/100Gb) | mwjxNcZjUhBa/+srUc9ODSJSqAykqZfNR0eu3ljSLyY= | enode://7ecb5d1ff16992a903a2386277aab84a204af44a7c4c34703504fee4cbaa6153aae16cea6c5bfeb0ff9743572a204038be86f21405c656b77e8eb0af177c6310@194.224.103.2:21000?discport=0 |
+| BME | AWS (2C/4GB/100GB) | lYn4DWfJ2dJt4FXL2T2RqQx3d7i7LXsz/Njf+2Ca3Cg= | enode://589b8453c264cc9aa84bafcc3e70bb57e6096dfab7196804f78794cb0122907312a709495cba74d35d1bc8bd056b0eb65748f565d39d3b1608f58a4474382955@35.180.128.78:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
