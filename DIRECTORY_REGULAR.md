@@ -156,4 +156,5 @@
 | UPC | Self Hosted (2C/8Gb/200Gb) | xKy7ZISuOazBHTZ3X8C27jqn6TdwRdZr6RBt+9St2WY= | enode://135b1e60cda236937c1362740890ec791bce9060bed0ec965390417132c5fa47d202b090f32f6d7754cb2b64dcd5533b42c0da68d96a659c3137c76bbc1acf18@84.88.85.41:21000?discport=0 |
 | Calasanz | Self Hosted (2C/8Gb/100Gb) | mwjxNcZjUhBa/+srUc9ODSJSqAykqZfNR0eu3ljSLyY= | enode://7ecb5d1ff16992a903a2386277aab84a204af44a7c4c34703504fee4cbaa6153aae16cea6c5bfeb0ff9743572a204038be86f21405c656b77e8eb0af177c6310@194.224.103.2:21000?discport=0 |
 | BME | AWS (2C/4GB/100GB) | | enode://8223d04317950c05d168bdc22e25c98a1536618442f59d05cdee800a119fd1e90d837f74f565d19ddababc91a8e981579e523269c5206b1da40742e186303c90@15.236.207.80?discport=0 |
+| Docuten | Azure (2C/8GB/128GB) | | enode://b6dbb952941a1bcca7e8dfc5688cc4bdea1e74cae62f0a58fa9462343629f655795f8ee3befb2cc4c03c2bc0b195a3d9652985c31520e4e19cc793bc7b456546@52.142.92.232:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
