@@ -111,7 +111,7 @@
 | SIGNATURIT | Amazon (2C/4GB/100GB) | ZdAa2rbenpiBge7B0EJM+PQeGB59yjk0IGNGhs7jHw4= | enode://bd62fba6cb8f09baecba6e0780e39d1afa61f3df54af289a4521bf6dce7b681e039ba86e563344ece8f6d35179dc3ff57353dd61c284207e4a9b5c633bff3ed9@52.51.84.139:21000?discport=0 |
 | FVE | Self Hosted (2C/8GB/100GB) |  5yyEIB6Qjj8XXSuJ/FepDAizVM7/iZjhOKA98ofAISg= | enode://9cade3c0ddf1864311e0656e8305cd71b02d84192d42928b8c46e94b134160ee2f965276a5f0e041bf5da5bb13dd2f5f5f1d3961ed86a0928af622097672ebc8@212.145.137.53:21000?discport=0 |
 | 4tic | Hetzner (2C/4GB/100GB) | pZj+3kw399oIxrgQz/VveLm/T3rONj+DPMsmlqnBrR0= | enode://0b26d9b32386570a2b54b1b0ebe7e975fb4f0ce28aa83cd726b09cc01e4ca65f7c1722af1fca9e2158dad903e6b16e840a98dec7df3a75ea0902fb542a2c557f@88.198.157.34:21000?discport=0 |
-| SEAT | Self Hosted (4C/8GB/100GB | 0fdFyQbYUalp38WXt3byLjLnj+rm/60tKw+AJtPzSDY= | enode://f09fdd75a89305a16459b1a4285bf3d73769c28638345ae0d0a6cf86fc6c8f25c95589a697682055c3fcafa655e21f2ab2ad2db91feb26ad11b69d12331051df@3.142.145.81:21000?discport=0 |
+| SEAT | AWS (4C/8GB/100GB |  | enode://dc61dbce0943936b3d6af36a4193ac413beb7f583e413f1dbe7686650233ece22c95211251cae5305c84886370c12ef95e10b1f8eb0e5ed7e376bf5df3593331@3.64.158.101:21000?discport=0 |
 | Grupo Leben | ADW (2/8/100) | II5wYs7s4FdF0tJlTxXMdRxtn+IqwoZqX5XvVKLbxkU= | enode://b2dd053e12a4fe01f8baeface85119b5aa0b368628001a0cb3f137b29e204091475babad8c393648fc7aae3a868767a0662aa37ef3ddb627d98e5bd31bcb4755@46.231.5.10:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
