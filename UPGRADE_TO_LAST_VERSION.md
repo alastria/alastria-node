@@ -82,6 +82,15 @@ Step 4: Then run *geth version* to verify that you've changed version. If it is 
 
 Step 5: You will find your logs now in a fixed path, namely **XXXXXXXXXXXXXXXXXXXXXXXXXXX/root/alastria/logs/quorum.log** with increased verbosity
 
+## ELIMINATE OLD LOGS
+
+In order to keep your disk space consumption controlled, it's recommended that geth be periodically restarted in order to recycle the log file, and old log files can be deleted.
+
+You can install this line in your crontab by issuing **crontab -e** and copying-pasting this line
+
+0 1 * * * find /root/alastria/logs -type f -name '*log' -mtime +1 -exec /bin/rm -f {} \; 2>/dev/null > /tmp/deletelogs.out
+
+
 
 ## FUTURE ENHANCEMENTS TO THE PROCESESS
 
