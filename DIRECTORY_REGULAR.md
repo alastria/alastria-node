@@ -159,4 +159,5 @@
 | Docuten | Azure (2C/8GB/128GB) | | enode://b6dbb952941a1bcca7e8dfc5688cc4bdea1e74cae62f0a58fa9462343629f655795f8ee3befb2cc4c03c2bc0b195a3d9652985c31520e4e19cc793bc7b456546@52.142.92.232:21000?discport=0 |
 | Secom UIB | Self Hosted (2C/4Gb/1Tb) | qVD0QkMBfmTKderfb5Xa/kB4x3KnZvsiiK9GdOoRaCo= | enode://e8bd92fc8021d1a2fc1db67db1088f39e8877b059d52557d03923931511944f8db168554a7b0647606fbf245649bc76b652da28e105bd1cf39784d614bc09328@130.206.32.22:21000?discport=0 |
 | SEAT | AWS (4C/8GB/100GB) | | enode://dc61dbce0943936b3d6af36a4193ac413beb7f583e413f1dbe7686650233ece22c95211251cae5305c84886370c12ef95e10b1f8eb0e5ed7e376bf5df3593331@3.64.158.101:21000?discport=0 |
+| Orange labs | Self Hosted (2C/8Gb/100Gb) | | enode://c5f9010783e37ebf6ac840e9549f0ce2ff6594ecd383ecb51b406f11538ebe954ffcde8fe3ef5080b27b416a6a622a387a1f266c9e01fe2dc14f88d7dfea1724@90.84.193.56:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
