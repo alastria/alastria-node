@@ -161,4 +161,5 @@
 | SEAT | AWS (4C/8GB/100GB) | | enode://dc61dbce0943936b3d6af36a4193ac413beb7f583e413f1dbe7686650233ece22c95211251cae5305c84886370c12ef95e10b1f8eb0e5ed7e376bf5df3593331@3.64.158.101:21000?discport=0 |
 | Orange labs | Self Hosted (2C/8Gb/100Gb) | | enode://c5f9010783e37ebf6ac840e9549f0ce2ff6594ecd383ecb51b406f11538ebe954ffcde8fe3ef5080b27b416a6a622a387a1f266c9e01fe2dc14f88d7dfea1724@90.84.193.56:21000?discport=0 |
 | SEAT_02 | Self Hosted (4C/8GB/100GB) | 0fdFyQbYUalp38WXt3byLjLnj+rm/60tKw+AJtPzSDY= | enode://753dc29255975606b87644b169eb12fef217522e23310c36cddedc86c80364ade7d7dc64edf4258284b5770a8d45f71a94aa80c4b73aa345fcac971f27930935@3.142.145.81:21000?discport=0 |
+| SEAT_03 | Self Hosted (4C/8GB/100GB) |  | enode://9478a66cbdf90448ed43fb92279a58507fb30a49334a65832f0e4a19c4dc8dacd68a6d92a7e8529c136987a2e7b3e090a5ec492857db9686341bad914d531a6d@18.198.29.55:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
