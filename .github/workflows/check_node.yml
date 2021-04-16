@@ -1,6 +1,6 @@
 name: Check Node
 
-on: [pull_request]
+on: [pull_request_target]
 
 jobs:
   node-t-checker:
