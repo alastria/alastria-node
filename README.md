@@ -26,7 +26,10 @@ You'll need at least a host/node to interact with the network, please read the t
 |:------- |:-------- |:---------|
 | **CPU's**: | 2 |  4 |
 | **Memory**: | 4 Gb |  8 Gb |
-| **Hard Disk**: | 100 Gb |  1000 Gb |
+| **Hard Disk**: | 128 Gb |  256 Gb |
+
+At mid-2021, the database takes 80Gb, and grows 0.5Gb every week 
+ (~1GB growth per week)
 
 #### Important Requirement
 
