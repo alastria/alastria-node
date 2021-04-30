@@ -1,6 +1,6 @@
 name: Check Node
 
-on: [pull_request]
+on: [pull_request_target]
 
 jobs:
   node-t-checker:
@@ -8,7 +8,7 @@ jobs:
     container: 
       image: wealizedigital/alastria-node-t-checker:latest
       env:
-        GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TRAVIS_PULL_REQUEST: ${{ github.event.pull_request.number }}
         REPOSITORY: ${{github.repository}}
     steps:

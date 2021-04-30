@@ -163,4 +163,6 @@
 | SEAT_02 | Self Hosted (4C/8GB/100GB) | 0fdFyQbYUalp38WXt3byLjLnj+rm/60tKw+AJtPzSDY= | enode://753dc29255975606b87644b169eb12fef217522e23310c36cddedc86c80364ade7d7dc64edf4258284b5770a8d45f71a94aa80c4b73aa345fcac971f27930935@3.142.145.81:21000?discport=0 |
 | SEAT_03 | Self Hosted (4C/8GB/100GB) |  | enode://9478a66cbdf90448ed43fb92279a58507fb30a49334a65832f0e4a19c4dc8dacd68a6d92a7e8529c136987a2e7b3e090a5ec492857db9686341bad914d531a6d@18.198.29.55:21000?discport=0 |
 | SIEMENS | AWS (2C/4Gb/512GiB) | SxR1Utp812aY9vf8n0AuqGbNVBFhEiqUwtWTKjpYDUw= | enode://e691e8d1b30631123fdc5bc5708a9a49a78fa4e4a58cc6e6c462077a9fe926cd2cad76be85469f297da8f9be3a2fc525b482a265f716d3f806eced15eed7d39c@99.81.52.133:21000?discport=0 |
+| REG_TestTavira_T_4_8_00 | | | enode://d0dc66e49a413cd5972d71eb6462118372faaa9e2764311ee4f8044e0ab76ee059caa614ec5caad396122fdfc60b1743da049653c8c6a3b4c14f7b19fe9454a1@81.44.192.220:21000?discport=0 |
+| REG_TruBLo_T_2_4_00 | AWS (2C/4GB/96GB) | | enode://08dac1ef2853b84c613c96c7cf123ea7b9b022ff596ec6039f683943e62b82883fb0640dcd27879e11533e2032a8a3493fdccb1f502e9a4c5968c18db2eb955c@108.129.68.174:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
