@@ -166,4 +166,5 @@
 | REG_TestTavira_T_4_8_00 | | | enode://d0dc66e49a413cd5972d71eb6462118372faaa9e2764311ee4f8044e0ab76ee059caa614ec5caad396122fdfc60b1743da049653c8c6a3b4c14f7b19fe9454a1@81.44.192.220:21000?discport=0 |
 | REG_TruBLo_T_2_4_00 | AWS (2C/4GB/96GB) | | enode://08dac1ef2853b84c613c96c7cf123ea7b9b022ff596ec6039f683943e62b82883fb0640dcd27879e11533e2032a8a3493fdccb1f502e9a4c5968c18db2eb955c@108.129.68.174:21000?discport=0 |
 | Gradiant | OVH (4C/8G/130GB) | nH/4s0gZECGmt4Pu4aJWqpA7Oix7AGfJXtocF/ydriE= | enode://7d69ce40cbf55aa2eefce238f6bc9199ecfc1507360a73e63f4e7783f5b85c3a658dd7d45ccfaa40c5ea36431d21797a78ff7e5a10a9a132d3a151a615eb7eee@141.94.26.213:21000?discport=0 |
+| Infinitelabs | AWS (2C/4Gb/128GB) | cWvGKZ4y23viJ1Iv4sRRFOAVeCrT3Qyp4zcMaLThrRo= | enode://19799d627de3671c9982d96cac7d08e4d9b80a0afa9760669946ce76b0df9cdb2274a05f7fa50958916b9bfd2ec324d39b8c3d93f4e0dcc563b03990392e12ef@18.184.68.119:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
