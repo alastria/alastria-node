@@ -166,5 +166,6 @@
 | Gradiant | OVH (4C/8G/130GB) | nH/4s0gZECGmt4Pu4aJWqpA7Oix7AGfJXtocF/ydriE= | enode://7d69ce40cbf55aa2eefce238f6bc9199ecfc1507360a73e63f4e7783f5b85c3a658dd7d45ccfaa40c5ea36431d21797a78ff7e5a10a9a132d3a151a615eb7eee@141.94.26.213:21000?discport=0 |
 | InfiniteLabs | AWS (2C/4Gb/128GB) | G5EBAxmaIPXSsSxMuxEwT7K1tl9R05wB+t5hCrcZ6Wc= | enode://468d389d19b1fe09fa42e2e25330802421566a2e43d85f5520090b1b095861f028cbeba3c5e7b08f620b8cf1627c3c70780990178bc9e7f338d552e84193b5b1@18.184.68.119:21000?discport=0 |
 | WiseSecurityGlobal | Self Hosted (2C/4Gb/100GB) | | node://47dd1dc47fb8eea559f81a9a93ec02e1423deca829f2b25884243a7c0d412a76974c7c01bf65e33c4cd0a9a663d148f1de6b3d381f872dbffe86034f68bdb352@15.236.10.89:21000?discport=0 |
-| S&M Services | Azure (4C/16Gb/1100Gb) | SEHT16itcrWWxisKt09qvfIMXtQrBjNTL5ON+/tlTDw= | "enode://bf19be6ab080fb6ca4eca78a270699193115114abd1eb9a279da6a86c1ab7543dc4341632b8f4bd9b1ac0c62cd43f9ca86136b0304e3a164ae4f1f6eac33cf12@20.71.117.227:21000?discport=0" |
+| S&M Services | Azure (4C/16Gb/1100Gb) | SEHT16itcrWWxisKt09qvfIMXtQrBjNTL5ON+/tlTDw= | enode://bf19be6ab080fb6ca4eca78a270699193115114abd1eb9a279da6a86c1ab7543dc4341632b8f4bd9b1ac0c62cd43f9ca86136b0304e3a164ae4f1f6eac33cf12@20.71.117.227:21000?discport=0 |
+| REG_UEx_T_2_4_00 | AWS (2C/4GB/180GB) | | enode://156d27b244d3902c155adb26fe5894b1037e26c02939e83177f1070b25efb1eef08e1344ab316d01ae6a7d7604d088683041502dd2649f09b7d9588a7bcbb3ca@34.252.17.130:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
