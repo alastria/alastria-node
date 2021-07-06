@@ -168,4 +168,6 @@
 | WiseSecurityGlobal | Self Hosted (2C/4Gb/100GB) | | node://47dd1dc47fb8eea559f81a9a93ec02e1423deca829f2b25884243a7c0d412a76974c7c01bf65e33c4cd0a9a663d148f1de6b3d381f872dbffe86034f68bdb352@15.236.10.89:21000?discport=0 |
 | S&M Services | Azure (4C/16Gb/1100Gb) | SEHT16itcrWWxisKt09qvfIMXtQrBjNTL5ON+/tlTDw= | enode://bf19be6ab080fb6ca4eca78a270699193115114abd1eb9a279da6a86c1ab7543dc4341632b8f4bd9b1ac0c62cd43f9ca86136b0304e3a164ae4f1f6eac33cf12@20.71.117.227:21000?discport=0 |
 | REG_UEx_T_2_4_00 | AWS (2C/4GB/180GB) | | enode://156d27b244d3902c155adb26fe5894b1037e26c02939e83177f1070b25efb1eef08e1344ab316d01ae6a7d7604d088683041502dd2649f09b7d9588a7bcbb3ca@34.252.17.130:21000?discport=0 |
+| REG_Ecoembes_T_2_4_00 | Azure (2C/4GB/256GB) | XVpehqQkwtdCe73Mr0j1QbGnhH13fixr7dJ1v7ADmEc= | enode://e69ef27639868ea262e064837f723103447d7be0a80cb2a2b578d33a6f96986be4008d3aa82a8e1e6dc58de8eef409251d783e54835a3ca32868cf902c5c1c33@13.74.217.139:21000?discport=0
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
