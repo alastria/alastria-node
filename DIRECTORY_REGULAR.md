@@ -168,7 +168,7 @@
 | WiseSecurityGlobal | Self Hosted (2C/4Gb/100GB) | | node://47dd1dc47fb8eea559f81a9a93ec02e1423deca829f2b25884243a7c0d412a76974c7c01bf65e33c4cd0a9a663d148f1de6b3d381f872dbffe86034f68bdb352@15.236.10.89:21000?discport=0 |
 | S&M Services | Azure (4C/16Gb/1100Gb) | SEHT16itcrWWxisKt09qvfIMXtQrBjNTL5ON+/tlTDw= | enode://bf19be6ab080fb6ca4eca78a270699193115114abd1eb9a279da6a86c1ab7543dc4341632b8f4bd9b1ac0c62cd43f9ca86136b0304e3a164ae4f1f6eac33cf12@20.71.117.227:21000?discport=0 |
 | REG_UEx_T_2_4_00 | AWS (2C/4GB/180GB) | | enode://156d27b244d3902c155adb26fe5894b1037e26c02939e83177f1070b25efb1eef08e1344ab316d01ae6a7d7604d088683041502dd2649f09b7d9588a7bcbb3ca@34.252.17.130:21000?discport=0 |
-| REG_Ecoembes_T_2_4_00 | Azure (2C/4GB/256GB) | XVpehqQkwtdCe73Mr0j1QbGnhH13fixr7dJ1v7ADmEc= | enode://3905f943ba5446eba164c07ab5f53a84ce17d74ec4d7591f6ec54b9d7608f57cae7cfdf946616385f59cfb5b910161a1f8520cb6f992bcc0d1ab932601205e91@13.74.217.139:21000?discport=0
+| REG_Ecoembes_T_2_4_00 | Azure (2C/4GB/256GB) | XVpehqQkwtdCe73Mr0j1QbGnhH13fixr7dJ1v7ADmEc= | enode://3905f943ba5446eba164c07ab5f53a84ce17d74ec4d7591f6ec54b9d7608f57cae7cfdf946616385f59cfb5b910161a1f8520cb6f992bcc0d1ab932601205e91@13.74.217.139:21000?discport=0 |
 | REG_Innogando_T_2_4_00 | Google Cloud (2C/4GB/128GB) | 3ipSxvSFrxJL8vad7grh0Cwz44GjjE2SfoHBBQctxWo= | enode://44a1f9321e6bad117bab3cac0e85c215cfb5376d0591afe3727a9b0640f6aece5a73302830d6013fc8ac32ba4c7450f9a12423f2b23931ef0f20384c9d2171ff@34.77.112.117:21000?discport=0 
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
