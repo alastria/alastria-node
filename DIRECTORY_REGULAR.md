@@ -170,5 +170,4 @@
 | REG_UEx_T_2_4_00 | AWS (2C/4GB/180GB) | | enode://156d27b244d3902c155adb26fe5894b1037e26c02939e83177f1070b25efb1eef08e1344ab316d01ae6a7d7604d088683041502dd2649f09b7d9588a7bcbb3ca@34.252.17.130:21000?discport=0 |
 | REG_Ecoembes_T_2_4_00 | Azure (2C/4GB/256GB) | XVpehqQkwtdCe73Mr0j1QbGnhH13fixr7dJ1v7ADmEc= | enode://3905f943ba5446eba164c07ab5f53a84ce17d74ec4d7591f6ec54b9d7608f57cae7cfdf946616385f59cfb5b910161a1f8520cb6f992bcc0d1ab932601205e91@13.74.217.139:21000?discport=0 |
 | Tecnalia3_T_2_4_00 | Azure (2C/4GB/256GB) |  | enode://0304453cf755bb709ec72d84d5a76bb5e60a9bbdbc1e35fd203732c39fda0b8dd12f57f31039b948c833658c90a1767adebbf6cc4777956937efb8bd7be9f6a7@40.69.74.213:21000?discport=0 |
-
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
