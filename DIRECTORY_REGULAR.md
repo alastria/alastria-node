@@ -170,5 +170,5 @@
 | REG_UEx_T_2_4_00 | AWS (2C/4GB/180GB) | | enode://156d27b244d3902c155adb26fe5894b1037e26c02939e83177f1070b25efb1eef08e1344ab316d01ae6a7d7604d088683041502dd2649f09b7d9588a7bcbb3ca@34.252.17.130:21000?discport=0 |
 | REG_Ecoembes_T_2_4_00 | Azure (2C/4GB/256GB) | XVpehqQkwtdCe73Mr0j1QbGnhH13fixr7dJ1v7ADmEc= | enode://51469930e6e44324cf5ed860b24b6248df67bef3ff06241abc86f8d5c574a8908b076ea6961277027149e11a0d8cdc4524230d8d62f16878668d7dc1df7494bf@13.74.217.139:21000?discport=0 |
 | Tecnalia3_T_2_4_00 | Azure (2C/4GB/256GB) |  | enode://0304453cf755bb709ec72d84d5a76bb5e60a9bbdbc1e35fd203732c39fda0b8dd12f57f31039b948c833658c90a1767adebbf6cc4777956937efb8bd7be9f6a7@40.69.74.213:21000?discport=0 |
-| Innogando | (pdte)|  | enode://44a1f9321e6bad117bab3cac0e85c215cfb5376d0591afe3727a9b0640f6aece5a73302830d6013fc8ac32ba4c7450f9a12423f2b23931ef0f20384c9d2171ff@34.77.112.117:21000?discport=0 |
+| REG_Innogando_T_2_4_00 | Google Cloud Plataform (2C/4GB/128GB) | 3ipSxvSFrxJL8vad7grh0Cwz44GjjE2SfoHBBQctxWo=  | enode://44a1f9321e6bad117bab3cac0e85c215cfb5376d0591afe3727a9b0640f6aece5a73302830d6013fc8ac32ba4c7450f9a12423f2b23931ef0f20384c9d2171ff@34.77.112.117:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
