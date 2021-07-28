@@ -171,4 +171,5 @@
 | REG_Ecoembes_T_2_4_00 | Azure (2C/4GB/256GB) | XVpehqQkwtdCe73Mr0j1QbGnhH13fixr7dJ1v7ADmEc= | enode://51469930e6e44324cf5ed860b24b6248df67bef3ff06241abc86f8d5c574a8908b076ea6961277027149e11a0d8cdc4524230d8d62f16878668d7dc1df7494bf@13.74.217.139:21000?discport=0 |
 | Tecnalia3_T_2_4_00 | Azure (2C/4GB/256GB) |  | enode://0304453cf755bb709ec72d84d5a76bb5e60a9bbdbc1e35fd203732c39fda0b8dd12f57f31039b948c833658c90a1767adebbf6cc4777956937efb8bd7be9f6a7@40.69.74.213:21000?discport=0 |
 | REG_Innogando_T_2_4_00 | Google Cloud Plataform (2C/4GB/128GB) | | enode://55b2e4c037c9efcf6167865793208d3c25f6f80eefc684dbb952ae1f91b37fbb8310be58648fda9ba4f7cabe88f7d78679f2b8c6a5f2c6b8ef2e4b4085fc5c9d@34.79.5.142:21000?discport=0 |
+| REG_BlockchaIP_T_8_16_00 | Self Hosted (8C/16Gb/200GiB) | | enode://55b2e4c037c9efcf6167865793208d3c25f6f80eefc684dbb952ae1f91b37fbb8310be58648fda9ba4f7cabe88f7d78679f2b8c6a5f2c6b8ef2e4b4085fc5c9d@34.79.5.142:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
