@@ -170,6 +170,6 @@
 | Tecnalia3_T_2_4_00 | Azure (2C/4GB/256GB) |  | enode://0304453cf755bb709ec72d84d5a76bb5e60a9bbdbc1e35fd203732c39fda0b8dd12f57f31039b948c833658c90a1767adebbf6cc4777956937efb8bd7be9f6a7@40.69.74.213:21000?discport=0 |
 | REG_Innogando_T_2_4_00 | Google Cloud Plataform (2C/4GB/128GB) | | enode://55b2e4c037c9efcf6167865793208d3c25f6f80eefc684dbb952ae1f91b37fbb8310be58648fda9ba4f7cabe88f7d78679f2b8c6a5f2c6b8ef2e4b4085fc5c9d@34.79.5.142:21000?discport=0 |
 | REG_BlockchaIP_T_8_16_00 | Self Hosted (8C/16Gb/200GiB)  | | enode://91e52455cb13944f1c7289530c307995ece714e7a6018d02c1b6412b4796746bf3a7beb3bd32c6e9ed875e1f92534647e1237093b26ccdd2d064da7c2b50453f@212.81.169.173:21000?discport=0 |
-| WiseSecurityGlobalDES | Self Hosted (2C/4Gb/100GB) | | enode://871b679aabceb6b2ed95ac87e5eeac5886a872725294eafe86a982f88d627a1153abc6b73adb11b1d08ced937c441f8690fdf7ca7af194e27ffd0f85b60356c6@178.32.176.177:21000?discport=0 |
+| WiseSecurityGlobalDES | Self Hosted (2C/4Gb/100GB) | | enode://e33e8b0b83ecf8bf5b15bcd50efceea33f52e50c8ef6e404bdca3df4307fcaa9ff51fe99c761d433a072e6cf93c690f7d22a2fa04aaff203392a2a8726e70d52@51.38.122.170:21000?discport=0 |
 | REG_BCdiploma_T_4_16_01 | AWS (4C/16Gb/1000GB) | G8fSmrR4CSc4geWuQTgxtlL3vd6tif0MV9dMt/oDG2I= | enode://9d4f929ea01581b7c6426083625ceae9d312246c0f07c154f0fe4e4b7f47c4802e864cce926b380b3c8f56f6571ccace53ca79e426a5c0da1b164ac75f86f92e@15.236.207.8:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
