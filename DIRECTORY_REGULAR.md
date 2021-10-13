@@ -173,4 +173,5 @@
 | WiseSecurityGlobalDES | Self Hosted (2C/4Gb/100GB) | | enode://e33e8b0b83ecf8bf5b15bcd50efceea33f52e50c8ef6e404bdca3df4307fcaa9ff51fe99c761d433a072e6cf93c690f7d22a2fa04aaff203392a2a8726e70d52@51.38.122.170:21000?discport=0 |
 | REG_BCdiploma_T_4_16_01 | AWS (4C/16Gb/1000GB) | G8fSmrR4CSc4geWuQTgxtlL3vd6tif0MV9dMt/oDG2I= | enode://9d4f929ea01581b7c6426083625ceae9d312246c0f07c154f0fe4e4b7f47c4802e864cce926b380b3c8f56f6571ccace53ca79e426a5c0da1b164ac75f86f92e@15.236.207.8:21000?discport=0 |
 | REG_ATR_T_2_4_00 | AWS (2C/4GB/50GB) | WITHOUT_CONSTELLATION | enode://75e03b1092ba624b766ce5feebee243c2960771de217c4b0029848ae6ceb01e9d61c0cc74fe274a0f7983e76a2f85846a00032113dd3cda2269af5b604613529@63.35.92.38:21000?discport=0 |
+| IMDEANetworksInstitute | Self Hosted (4C/8GB/1000GB) | EFF9vz7bZZtKHw8ogtV+t2rpx9BrzHwNGNmbN+XSDSM= | enode://924330e150a8735ac816e692a8fcc09a8faf6dce56665190efcd54c190a99e4b5b53cba0b22327d6dc68d918ef9352a6d9c94f0dbca23c63874cb604525e711f@193.147.104.2:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
