@@ -175,4 +175,5 @@
 | REG_ATR_T_2_4_00 | AWS (2C/4GB/50GB) | WITHOUT_CONSTELLATION | enode://75e03b1092ba624b766ce5feebee243c2960771de217c4b0029848ae6ceb01e9d61c0cc74fe274a0f7983e76a2f85846a00032113dd3cda2269af5b604613529@63.35.92.38:21000?discport=0 |
 | eProcessMed | Contabo (4C/16Gb/400Gb) | AdmTDUAN/24hwS8pwlmJNlf+nQyCtNPxtf8odn7cfyc= | enode://237bdd20233c003471ce022a3a77d525f7acd836ad6c7e3998058c695028d755b64937227d32f90e52445ff00d9e36bc94d7c3e30b5c1d32303dee7fd386227e@75.119.152.191:21000?discport=0 |
 | IMDEANetworksInstitute | Self Hosted (4C/8GB/1000GB) | EFF9vz7bZZtKHw8ogtV+t2rpx9BrzHwNGNmbN+XSDSM= | enode://924330e150a8735ac816e692a8fcc09a8faf6dce56665190efcd54c190a99e4b5b53cba0b22327d6dc68d918ef9352a6d9c94f0dbca23c63874cb604525e711f@193.147.104.2:21000?discport=0 |
+| IZERTIS                                                      | Azure (2C/4Gb/128Gb) |  | enode://04a63e481d5878520fe4dd8984381fa0590244329ce4aca90268c03d9af8eb8940053293ebc225641ae4652d3018691805b02b321b6d215e50dfbcaf8978fbba@40.68.63.110:21000 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
