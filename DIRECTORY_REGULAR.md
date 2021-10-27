@@ -176,4 +176,5 @@
 | eProcessMed | Contabo (4C/16Gb/400Gb) | AdmTDUAN/24hwS8pwlmJNlf+nQyCtNPxtf8odn7cfyc= | enode://237bdd20233c003471ce022a3a77d525f7acd836ad6c7e3998058c695028d755b64937227d32f90e52445ff00d9e36bc94d7c3e30b5c1d32303dee7fd386227e@75.119.152.191:21000?discport=0 |
 | IMDEANetworksInstitute | Self Hosted (4C/8GB/1000GB) | EFF9vz7bZZtKHw8ogtV+t2rpx9BrzHwNGNmbN+XSDSM= | enode://924330e150a8735ac816e692a8fcc09a8faf6dce56665190efcd54c190a99e4b5b53cba0b22327d6dc68d918ef9352a6d9c94f0dbca23c63874cb604525e711f@193.147.104.2:21000?discport=0 |
 | Orange OBS | Self Hosted (4C/8Gb/256Gb) | enode://55da08a932da784e1e40b8fe76ee29fc081438ef2a3bc841838cb6a45183d3f56d4422c247713de6296d531a3212d0c300c25ff362bc80a21097caac7488c410@90.84.168.59:21000?discport=0 |
+| IZERTIS | Azure (2C/4Gb/128Gb) |  | enode://04a63e481d5878520fe4dd8984381fa0590244329ce4aca90268c03d9af8eb8940053293ebc225641ae4652d3018691805b02b321b6d215e50dfbcaf8978fbba@40.68.63.110:21000 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
