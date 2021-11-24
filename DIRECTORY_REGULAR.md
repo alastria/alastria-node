@@ -180,4 +180,5 @@
 | SCAYLE | Self Hosted (2C/4Gb/100Gb) |  | enode://63492ef0fde20fa899001a635233222e9f1ab21da2c72f860c9c4f264ee84dad58468d183f04a8645d692f771c1c448481fa74fa0cd2fe466a43a3785dfbedbf@185.179.104.24:21000?discport=0 |
 | REG_Universitario_Vasco_Navarro_SL_00 | Self Hosted (4C/10Gb/500Gb) |  | enode://33a99bc9b960cf7d44e5593f5b89bc43cb382684cac7aa74989c118234bab795960ebb61f71f86c9a32ebe1cf8919dc233635ddbe58dd73655784f31919a9443@46.26.254.245:21000?discport=0 |
 | REG_Calasanz_Santurtzi_00 | Self Hosted (2C/4Gb/500Gb) |  | enode://6ac1bc2d6bf9b3cb7426b79fa35839db3da14a74fefdbcaed06e87545c40eaa2f2c52d7c2efa7e1e6ae3965db3608dc4c99b41165b7a0260c1666f1459855398@195.53.127.242:21000?discport=0 |
+| Ixnet | Arsys (2C/4Gb/300Gb) | | enode://5c205a6556f1c4c5342cf9a626062b3c0ed1699fc171dad8c0a67a818a5cb59d1946c729a46fe2c6c1711972af1f7535860be953a20fd8c7511d26d8f8b185fe@82.223.249.97:21000?discport=0 |
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
