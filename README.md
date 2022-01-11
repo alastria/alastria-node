@@ -12,7 +12,7 @@ You'll need at least a host/node to interact with the network, please read the t
 ---
 
 - :sunglasses: _ - Please, consider installing Quorum node following [this guide](https://github.com/alastria/alastria-node-quorum/).
-- :warning: _ - In you have alreday installed a node, please update to the last version following [these instruccionts]([https://github.com/alastria/alastria-node/blob/testnet2/UPGRADE_TO_LAST_VERSION.md]).
+- :warning: _ - In you have alreday installed a node, please update to the last version following [these instruccionts](https://github.com/alastria/alastria-node/blob/testnet2/UPGRADE_TO_LAST_VERSION.md).
 
 ---
 
