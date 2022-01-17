@@ -182,4 +182,6 @@
 | REG_Calasanz_Santurtzi_00 | Self Hosted (2C/4Gb/500Gb) |  | enode://6ac1bc2d6bf9b3cb7426b79fa35839db3da14a74fefdbcaed06e87545c40eaa2f2c52d7c2efa7e1e6ae3965db3608dc4c99b41165b7a0260c1666f1459855398@195.53.127.242:21000?discport=0 |
 | Ixnet | Arsys (2C/4Gb/300Gb) | | enode://5c205a6556f1c4c5342cf9a626062b3c0ed1699fc171dad8c0a67a818a5cb59d1946c729a46fe2c6c1711972af1f7535860be953a20fd8c7511d26d8f8b185fe@82.223.249.97:21000?discport=0 |
 | FP_Galdakao_02 | IBM Cloud (4C/8Gb/100Gb) |  n/a | enode://eb67927057cee126255516c766719df6aed62da7e070323bd505be9d8271ebdf2a7d1a643a065aff1812bdc7c094ec64f149dd0937cced5d338962e29ae95daa@169.50.11.24:21000?discport=0 |
+| REG_ISERN_T_6_8_00 | n/a |  n/a | enode://b6f2d30b9bed07631daefd1030c7135029a197a9e1b65ca999dd2f7fd5d51bb3bc460092531e345de14d605952e74f0c0a6873393a273d87bb6c50b3c707b005@2.139.174.6:21000?discport=0 |
+
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
