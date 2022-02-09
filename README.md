@@ -68,10 +68,11 @@ You'll need to open the following ports in your firewall, inbound and outbound t
 |80 and 443| TCP | Inbound RPC Port if using the automatic installation with Alastria Open Access Component|
 |8086 | TCP | Outbound for InfluxDB statistics collection |
 |53 | TCP/UDP | Access to external Internet based resolvers |
+|6060| TCP | Allow Prometheus scraping from 185.180.8.152 |
 
 #### IP ADDRESSES
 
-The IP resulting out of the installation process (e.g. the IPv4 part of the enode) , must not be an RFC1918 IPv4 address
+The IP resulting out of the installation process (e.g. the IPv4 part of the enode) , **must not** be an RFC1918 IPv4 address
 
 10.0.0.0/8
 172.16.0.0/12
