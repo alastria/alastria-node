@@ -9,6 +9,18 @@ This page contains technical information needed to work in the Alastria ecosyste
 
 You'll need at least a host/node to interact with the network, please read the technical requirements for it.
 
+
+---
+
+## Monitoring
+
+RedT dashboard is at https://alastria-netstats2.planisys.net:8443/login , user alastria, pass alastria
+In order for your Node to be listed here please run geth with following options:
+
+* --metrics --pprof --pprof.addr=0.0.0.0
+
+and open port 6060 to IP address 185.180.8.152
+
 ---
 
 - :sunglasses: _ - Please, consider installing Quorum node following [this guide](https://github.com/alastria/alastria-node-quorum/).
