@@ -1,7 +1,7 @@
 ## WARNING
 THIS REPOSITORY IS DEPRECATED. 
-* TO INSTALL A NODE ON T NETWORK (QUORUM) PLEASE VISIT HERE: https://github.com/alastria/alastria-node-quorum (https://github.com/alastria/alastria-node-quorum)
-* TO INSTALL A NODE ON B NETWORK (HYPERLEDGER BESU) PLEASE VISIT: https://github.com/alastria/alastria-node-besu (https://github.com/alastria/alastria-node-besu)
+* TO INSTALL A NODE ON T NETWORK (QUORUM) PLEASE VISIT: https://github.com/alastria/alastria-node-quorum 
+* TO INSTALL A NODE ON B NETWORK (HYPERLEDGER BESU) PLEASE VISIT: https://github.com/alastria/alastria-node-besu 
 
 ---
 
