@@ -1,3 +1,10 @@
+## WARNING
+THIS REPOSITORY IS DEPRECATED. 
+* TO INSTALL A NODE ON T NETWORK (QUORUM) PLEASE VISIT HERE: https://github.com/alastria/alastria-node-quorum (https://github.com/alastria/alastria-node-quorum)
+* TO INSTALL A NODE ON B NETWORK (HYPERLEDGER BESU) PLEASE VISIT: https://github.com/alastria/alastria-node-besu (https://github.com/alastria/alastria-node-besu)
+
+---
+
 # ALASTRIA Red T #
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/alastria/alastria-node/blob/testnet2/LICENSE)
 [![Slack Status](https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social)](https://alastria.slack.com/)
