@@ -1,3 +1,10 @@
+## WARNING
+THIS REPOSITORY IS DEPRECATED. 
+* TO INSTALL A NODE ON **T NETWORK (QUORUM)** PLEASE VISIT: https://github.com/alastria/alastria-node-quorum 
+* TO INSTALL A NODE ON **B NETWORK (HYPERLEDGER BESU)** PLEASE VISIT: https://github.com/alastria/alastria-node-besu 
+
+---
+
 # ALASTRIA Red T #
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/alastria/alastria-node/blob/testnet2/LICENSE)
 [![Slack Status](https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social)](https://alastria.slack.com/)
@@ -9,10 +16,22 @@ This page contains technical information needed to work in the Alastria ecosyste
 
 You'll need at least a host/node to interact with the network, please read the technical requirements for it.
 
+
+---
+
+## Monitoring
+
+RedT dashboard is at https://alastria-netstats2.planisys.net:8443/login , user alastria, pass alastria
+In order for your Node to be listed here please run geth with following options:
+
+* --metrics --pprof --pprof.addr=0.0.0.0
+
+and open port 6060 to IP address 185.180.8.152
+
 ---
 
 - :sunglasses: _ - Please, consider installing Quorum node following [this guide](https://github.com/alastria/alastria-node-quorum/).
-- :warning: _ - In you have alreday installed a node, please update to the last version following [these instruccionts](https://github.com/alastria/alastria-node/blob/testnet2/UPGRADE_TO_LAST_VERSION.md).
+- :warning: _ - In you have alreday installed a node, please update to the last version following [these instructions](https://github.com/alastria/alastria-node/blob/testnet2/UPGRADE_TO_LAST_VERSION.md).
 
 ---
 
@@ -56,10 +75,11 @@ You'll need to open the following ports in your firewall, inbound and outbound t
 |80 and 443| TCP | Inbound RPC Port if using the automatic installation with Alastria Open Access Component|
 |8086 | TCP | Outbound for InfluxDB statistics collection |
 |53 | TCP/UDP | Access to external Internet based resolvers |
+|6060| TCP | Allow Prometheus scraping from 185.180.8.152 |
 
 #### IP ADDRESSES
 
-The IP resulting out of the installation process (e.g. the IPv4 part of the enode) , must not be an RFC1918 IPv4 address
+The IP resulting out of the installation process (e.g. the IPv4 part of the enode) , **must not** be an RFC1918 IPv4 address
 
 10.0.0.0/8
 172.16.0.0/12
