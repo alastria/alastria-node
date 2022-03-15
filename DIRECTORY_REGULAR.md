@@ -185,5 +185,6 @@
 | REG_ISERN_T_6_8_00 | n/a |  n/a | enode://b6f2d30b9bed07631daefd1030c7135029a197a9e1b65ca999dd2f7fd5d51bb3bc460092531e345de14d605952e74f0c0a6873393a273d87bb6c50b3c707b005@2.139.174.6:21000?discport=0 |
 | REG_OPENC_TestNet_2_4_0 | Google Cloud (2C/8Gb/100Gb) | SvAxhZdSb9QlJNzwozBP5RchE3Yq4B4pNSGrCTd253s= | enode://4e08c364f309dc2821c41cfdb04db14c4f23b5156ad2ad501d4cd111bba759d60c510a0918dc52293346258574b003e9cedf1d50d2fe3124273dc44a31159595@34.140.99.176:21000?discport=0 |
 | REG_SERES_T_2_8_01 | Oracle Cloud (2C/8Gb/200Gb) |  | enode://e4ce8afa8edb13cc38c810ba7468f071870ba45eebf4bd1de56c9c558e660e175158c81cefd914d6c5ff04fd12d6ce413d19a1ab210657caef896b61353f3e65@130.162.220.48:21000?discport=0 |
+| TheBasement | AWS (2C/4GB/100GB) | | enode://b070f0039c6ce010c5ea5939b08ff9bc8d781493e6be449d4b2c14c0ca1f68edcaaec3c5f375cb4eac669b8afc870ec7984514fa004c7d50afc1e2c5930a5de3@127.0.0.1:21000?discport=0 |
 
 * **Clave private for**: se extrae del fichero `~/alastria/data/constellation/keystore/node.pub`.
